@@ -71,7 +71,7 @@ pub(crate) fn show(ctx: &egui::Context) {
                         ctx.layer_painter(egui::LayerId::new(egui::Order::Foreground, egui::Id::unique("pe-tour-highlight"))).rect_stroke(
                             rect.expand(3.0),
                             4.0,
-                            egui::Stroke::new(2.0, egui::Color32::from_rgb(84, 213, 238)),
+                            egui::Stroke::new(2.0, egui::Color32::from_rgb(189, 155, 250)),
                             egui::StrokeKind::Outside,
                         );
                     }
@@ -80,7 +80,7 @@ pub(crate) fn show(ctx: &egui::Context) {
                     if let Some(shortcut) = tool.shortcut() {
                         ui.label(format!("Shortcut: {shortcut}"));
                     }
-                    egui::Frame::new().fill(egui::Color32::from_rgb(16, 30, 44)).corner_radius(12.0).inner_margin(14.0).show(ui, |ui| {
+                    egui::Frame::new().fill(egui::Color32::from_rgb(33, 21, 51)).corner_radius(12.0).inner_margin(14.0).show(ui, |ui| {
                         let key = format!("{tool:?}");
                         let descriptions =
                             serde_json::from_str::<std::collections::BTreeMap<String, String>>(include_str!("../../../pixaeffects/manual/tools.json"))

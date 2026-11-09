@@ -27,3 +27,5 @@ https://aiwebdesignfirm.com/pixaeffects
 https://aiwebdesignfirm.com/pixaeffects/manual
 https://aiwebdesignfirm.com/pixaeffects/activate
 No billing files or Stripe configuration were changed.
+
+BRANDING UPDATE: user requested purple branding and a clean pixel A mark (not E), matching PixaShop styling. pixaeffects/icons.py now generates original pixel A icons in #bd9bfa on #211533. Help tour highlights and updater accent match. Product website now uses the PixaShop centered visual layout with the new A logo. Homepage product cards advertise PixaShop and PixaEffects together. Billing is unchanged. This source change requires a new native build; never reuse an older E-logo installer as the new A-logo release.

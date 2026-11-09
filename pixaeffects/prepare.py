@@ -38,7 +38,7 @@ def prepare():
  edit('crates/ui-egui/src/lib.rs','pub mod updates_ui;','pub mod updates_ui;\nmod pixaeffects_updater;\nmod pixaeffects_help;')
  # Windows upstream finish helper is not used: custom verified installation is Mac-only.
  p=ROOT/'apps/effectcraft/src/main.rs';s=p.read_text();s=re.sub(r'    #\[cfg\(windows\)\]\n    if let Some\(result\) = craft_update::self_update::finish[\s\S]*?\n    }\n','',s,count=1);p.write_text(s)
- p=ROOT/'crates/ui-egui/src/lib.rs';s=p.read_text().replace('accent: Some([0xe0, 0x36, 0x8f])','accent: Some([0x54, 0xd5, 0xee])').replace('..craft_update::suite::EFFECTCRAFT','developer: "AIWebDesignFirm",\n    ..craft_update::app::App::new("pixaeffects", "PixaEffects", "Motion graphics and compositing", "lukeybird/pixaeffects")');p.write_text(s)
+ p=ROOT/'crates/ui-egui/src/lib.rs';s=p.read_text().replace('accent: Some([0xe0, 0x36, 0x8f])','accent: Some([0xbd, 0x9b, 0xfa])').replace('..craft_update::suite::EFFECTCRAFT','developer: "AIWebDesignFirm",\n    ..craft_update::app::App::new("pixaeffects", "PixaEffects", "Motion graphics and compositing", "lukeybird/pixaeffects")');p.write_text(s)
  p=ROOT/'crates/host/src/app_dirs.rs';s=p.read_text().replace('"effectcraft"','"pixaeffects"').replace('EFFECTCRAFT_CONFIG_DIR','PIXAEFFECTS_CONFIG_DIR');p.write_text(s)
  # Replace promotional surfaces; retain truthful contributor and license notices.
  p=ROOT/'crates/engine/src/menus.rs';s=p.read_text();s='\n'.join(l for l in s.split('\n') if not any(t in l for t in ['| help.discord','| help.github']));s=s.replace('ArtCraft Website','AIWebDesignFirm Website').replace('In-App Tutorials... |','Quick Tool Tour... |').replace('PixaEffects Help... |','PixaEffects User Manual... |');p.write_text(s)
