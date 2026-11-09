@@ -1,0 +1,51 @@
+# PixaEffects User Manual
+
+by AIWebDesignFirm
+
+## Welcome to PixaEffects
+
+PixaEffects by AIWebDesignFirm is a motion graphics and compositing editor. Build a composition from layers, animate properties, apply effects and render a video. It is an early-access product; keep backup copies. Projects use .ecproj; a project file is not an exported movie.
+
+## Install and activate
+
+On Mac, open the installer and drag PixaEffects into Applications. Launch it, choose Activate this device, sign into your AIWebDesignFirm account and approve the code shown on your own device. Access uses the existing trial or subscription. No additional subscription is created by activation. An internet connection is required for access checks. Project media stays on your computer.
+
+## Create a composition
+
+Choose Composition → New Composition. Set the width, height, frame rate and duration. Start with 1920 × 1080 and a short duration. Add layers using Layer → New. Save using File → Save. Change size and duration later under Composition Settings.
+
+## Import and arrange footage
+
+Choose File → Import → File to add footage or images. Drag an imported item from Project onto the composition or Timeline. Layers are stacked: upper layers cover lower layers. Keep original media accessible; projects may refer to external files. Missing media needs to be relinked.
+
+## Animate with keyframes
+
+Expand a layer and Transform in the Timeline. Set a starting Position, click its stopwatch, move the playhead forward and change Position. The second keyframe is created. Select keyframes and press F9 for Easy Ease. Preview with Space. The Graph Editor lets you inspect speed and value curves.
+
+## Text and shapes
+
+Use the Type tool for titles. Adjust font and paragraph settings in their panels. Shape tools create rectangles, ellipses, polygons and stars; choose fill and stroke in the toolbar. With a selected layer, shape and pen tools may create masks instead. Work on a duplicate layer while learning.
+
+## Effects and compositing
+
+Select a layer and choose an effect from Effect or Effects & Presets. Adjust it in Effect Controls. Use masks, opacity and blend modes to combine images. Track mattes use another layer to control visibility. Start with small previews before adding expensive effects.
+
+## Masks, roto and puppet
+
+Draw masks with Pen; adjust feather for softer edges. Roto tools separate subjects, while Puppet pins deform a layer. Optional trained models may need a download and can produce imperfect edges. These features need testing on your own footage; inspect every frame of an important export.
+
+## 3D layers and cameras
+
+Enable 3D on a layer to place it in space. Add Camera and Light layers from Layer → New. Orbit, Pan Camera and Dolly navigate the scene. Rotation changes a selected layer; Pan Behind changes its anchor point. A camera changes the view, not the source footage.
+
+## Render and export
+
+Choose Composition → Add to Render Queue. Set Render Settings, Output Module and Output To, then Render. H.264 MP4 is a common delivery format. For transparency choose a supported format, such as ProRes or PNG Sequence, and RGB + Alpha. Render a short sample first to check timing, sound and color.
+
+## Saving and troubleshooting
+
+Save .ecproj frequently and keep source media with your project. A render is a separate file. If preview is slow, reduce resolution and shorten the work area. If media is missing, restore or relink the original. If a GPU fails, update its driver or report the exact error. This app does not guarantee complete After Effects project or plugin compatibility.
+
+## Account, updates and privacy
+
+Manage your existing trial or subscription at aiwebdesignfirm.com/account. Help → Check for Updates checks PixaEffects releases only. On Mac, Install and restart verifies the checksum, publisher signature and notarization before replacing the app. Save first. Windows and Linux use the website installer flow. Signing private keys stay with the publisher, never inside the download.

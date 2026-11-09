@@ -1,0 +1,11 @@
+PIXAEFFECTS STATUS — 2026-11-09
+Read this file and AGENTS.md before making changes.
+User explicitly authorized a PixaShop-style product fork called PixaEffects.
+Repo lukeybird/pixaeffects; working branch pixaeffects-product. Never push main directly.
+Source base 4ed549588ef2ad43a3e445404295bf36003060c0. Version 0.1.0.
+Product overlay pixaeffects/prepare.py applies branding, activation, manual, 31-tool tour and own Mac updater to a clean checkout. Generated source changes are not maintained manually.
+Four Python integration checks passed. Native compilation and platform builds are not yet verified. Do not call the app ready until actual builds and QA pass.
+Mac signing script uses existing publisher Mac Keychain identity/profile; private keys never belong in GitHub or downloads. CI signing is not configured.
+PixaShop billing/behavior must remain unchanged. Existing entitlement service is reused by a PixaEffects endpoint alias and separate activation page. No new subscription is created.
+Website source is newer than lukeybird/aiwebdesignfirm main. NEVER deploy a fresh clone or stale main 4aa058de205a132f75a0f2fd8ce27bf1c58e01e2. Preserve CURRENT production Vercel source, not an old snapshot, before each change. Never publish recovered private live source to public GitHub.
+Download enablement must remain off until a signed verified release exists. Unfinished builds must not be advertised as available.
