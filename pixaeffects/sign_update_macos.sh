@@ -2,11 +2,11 @@
 # Run on the publisher's Mac. Credentials stay in its login Keychain.
 set -euo pipefail
 if [[ $(uname -s) != Darwin || $# != 1 || ! -f $1 ]]; then
-  echo 'Usage on Mac: bash sign_update_macos.sh /path/to/pixaeffects-0.20.2-macos-universal.dmg' >&2
+  echo 'Usage on Mac: bash sign_update_macos.sh /path/to/pixaeffects-0.1.0-macos-universal.dmg' >&2
   exit 1
 fi
 identity='Developer ID Application: Luke Barger (945M5X4DY3)'
-profile='PixaEffects-Notary'
+profile='PixaShop-Notary'
 source_dmg=$(cd "$(dirname "$1")" && pwd)/$(basename "$1")
 work=$(mktemp -d "${TMPDIR:-/tmp}/pixaeffects-release.XXXXXXXX")
 mount="$work/mounted"

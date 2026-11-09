@@ -129,7 +129,7 @@ impl AccessApp {
             self.start();
         }
     }
-    fn locked_ui(&mut self, ui: &mut Ui) {
+    fn locked_ui(&mut self, ui: &mut Ui, frame: &mut eframe::Frame) {
         egui::CentralPanel::default().show(ui, |ui| {
             ui.vertical_centered(|ui| {
                 ui.add_space(70.0);
@@ -173,12 +173,16 @@ impl AccessApp {
                 }
             });
         });
+        // The save-only action remains usable when a lease expires; do not run editor commands.
+        if let Some(asked) = &self.inner.file_dialogs {
+            crate::sheet_dialogs::show_asked(asked, frame, ui.ctx());
+        }
     }
 }
 impl eframe::App for AccessApp {
     fn logic(&mut self, ctx: &Context, frame: &mut eframe::Frame) {
         self.tick();
-        // Continue saves/background jobs even if a lease ends, so work is not lost.
+        // Hold the editor and its native menu actions behind the live lease.
         if self.allowed() {
             self.inner.logic(ctx, frame);
         }
@@ -193,7 +197,7 @@ impl eframe::App for AccessApp {
         if self.allowed() {
             self.inner.ui(ui, frame);
         } else {
-            self.locked_ui(ui);
+            self.locked_ui(ui, frame);
         }
     }
     fn raw_input_hook(&mut self, ctx: &Context, raw: &mut egui::RawInput) {

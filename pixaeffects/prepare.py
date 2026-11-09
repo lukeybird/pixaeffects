@@ -19,7 +19,7 @@ def prepare():
    if any(x in p.name.lower() for x in ['license','attribution','notice']) or 'credits' in p.parts:continue
    try:s=p.read_text()
    except UnicodeDecodeError:continue
-   s='\n'.join(line if 'copyright' in line.lower() else line.replace('EffectCraft','PixaEffects') for line in s.split('\n'))
+   s='\n'.join(line if 'copyright' in line.lower() else line.replace('EffectCraft','PixaEffects').replace('ArtCraft','AIWebDesignFirm') for line in s.split('\n'))
    s=s.replace('ai.storyteller.effectcraft','com.aiwebdesignfirm.pixaeffects')
    s=s.replace('https://github.com/storytold/effectcraft/issues','https://aiwebdesignfirm.com/pixaeffects').replace('https://github.com/storytold/effectcraft','https://aiwebdesignfirm.com/pixaeffects/manual')
    s=s.replace('https://getartcraft.com/apps/effectcraft','https://aiwebdesignfirm.com/pixaeffects').replace('https://getartcraft.com','https://aiwebdesignfirm.com').replace('https://discord.gg/artcraft','https://aiwebdesignfirm.com/account')
@@ -51,15 +51,18 @@ def prepare():
  # Header-generated title, About and Home promotional labels.
  for p in (ROOT/'crates/ui-egui/src').rglob('*.rs'):
   if p.name=='i18n.rs' or 'credits' in p.parts:continue
-  s=p.read_text().replace('ArtCraft Website','AIWebDesignFirm Website').replace('Join the ArtCraft Discord','Manage your account').replace('Join the ArtCraft community on Discord','Manage your account')
+  s=p.read_text().replace('ArtCraft Website','AIWebDesignFirm Website').replace('Join the ArtCraft Discord','Manage your account').replace('Join the AIWebDesignFirm Discord','Manage your account').replace('Join the ArtCraft community on Discord','Manage your account').replace('Join the AIWebDesignFirm community on Discord','Manage your account')
   p.write_text(s)
  # Product About/Home have account and website links, no source repository promotion.
  for rel in ['crates/ui-egui/src/panels/dialogs.rs','crates/ui-egui/src/panels/home.rs']:
   p=ROOT/rel;s=p.read_text();s='\n'.join(line for line in s.split('\n') if not ('Icon::Code' in line and 'help.github' in line))
   s=s.replace("let links: [(Icon, &str, &str, &'static str); 4]", "let links: [(Icon, &str, &str, &'static str); 3]")
-  s=s.replace('Part of the ArtCraft family of creative apps.', 'PixaEffects by AIWebDesignFirm.').replace('ArtCraft website','AIWebDesignFirm website').replace('getartcraft.com','aiwebdesignfirm.com').replace('More ArtCraft apps','by AIWebDesignFirm').replace('tr("Community")','tr("Your workspace")')
+  s=s.replace('Part of the AIWebDesignFirm family of creative apps.', 'PixaEffects by AIWebDesignFirm.').replace('AIWebDesignFirm website','AIWebDesignFirm website').replace('getartcraft.com','aiwebdesignfirm.com').replace('More AIWebDesignFirm apps','by AIWebDesignFirm').replace('tr("Community")','tr("Your workspace")')
   p.write_text(s)
  edit('crates/ui-egui/src/header.rs','        tool_slot(app, ui, p, si, slot, r, held_id);','        for tool in *slot { crate::pixaeffects_help::record_tool(ui.ctx(), *tool, r); }\n        tool_slot(app, ui, p, si, slot, r, held_id);')
+ for p in [ROOT/'crates/ui-egui/src/i18n.rs', ROOT/'crates/ui-egui/src/i18n/ui.rs']:
+  s=p.read_text();s='\n'.join(line for line in s.split('\n') if not any(k in line for k in ['(\"Manage your account\",','(\"Join the AIWebDesignFirm','(\"help.discord\",','(\"help.github\",']))
+  p.write_text(s)
  # Intercept existing Help commands without editing projects or adding engine state.
  edit('crates/ui-egui/src/menus/invoke.rs','    crate::control::check_script_render(app, id)?;','''    if id == "help.docs" { crate::pixaeffects_help::open_manual(ctx); return Ok(Value::Null); }
     if id == "help.inAppTutorials" { crate::pixaeffects_help::open_tour(ctx); return Ok(Value::Null); }
