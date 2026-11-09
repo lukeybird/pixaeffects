@@ -15,7 +15,8 @@
       "package": "vectorcraft",
       "distribution": "unpublished",
       "activation": "pending-integration",
-      "updates": "pending-integration"
+      "updates": "pending-integration",
+      "rust_toolchain": "1.95.0"
     },
     {
       "upstream": "storytold/filmcraft",
@@ -31,7 +32,8 @@
       "package": "filmcraft",
       "distribution": "unpublished",
       "activation": "pending-integration",
-      "updates": "pending-integration"
+      "updates": "pending-integration",
+      "rust_toolchain": "1.95.0"
     },
     {
       "upstream": "storytold/lightcraft",
@@ -47,7 +49,8 @@
       "package": "lightcraft",
       "distribution": "unpublished",
       "activation": "pending-integration",
-      "updates": "pending-integration"
+      "updates": "pending-integration",
+      "rust_toolchain": "1.95.0"
     },
     {
       "upstream": "storytold/pdfcraft",
@@ -63,7 +66,8 @@
       "package": "pdfcraft",
       "distribution": "unpublished",
       "activation": "pending-integration",
-      "updates": "pending-integration"
+      "updates": "pending-integration",
+      "rust_toolchain": "1.95.0"
     },
     {
       "upstream": "storytold/designcraft",
@@ -79,7 +83,8 @@
       "package": "designcraft",
       "distribution": "unpublished",
       "activation": "pending-integration",
-      "updates": "pending-integration"
+      "updates": "pending-integration",
+      "rust_toolchain": "1.95.0"
     },
     {
       "upstream": "storytold/figcraft",
@@ -95,7 +100,8 @@
       "package": "figcraft",
       "distribution": "unpublished",
       "activation": "pending-integration",
-      "updates": "pending-integration"
+      "updates": "pending-integration",
+      "rust_toolchain": "1.95.0"
     },
     {
       "upstream": "storytold/texturecraft",
@@ -111,7 +117,8 @@
       "package": "texturecraft",
       "distribution": "unpublished",
       "activation": "pending-integration",
-      "updates": "pending-integration"
+      "updates": "pending-integration",
+      "rust_toolchain": "1.95.0"
     },
     {
       "upstream": "storytold/materialcraft",
@@ -127,7 +134,8 @@
       "package": "materialcraft",
       "distribution": "unpublished",
       "activation": "pending-integration",
-      "updates": "pending-integration"
+      "updates": "pending-integration",
+      "rust_toolchain": "1.95.0"
     },
     {
       "upstream": "storytold/wordcraft",
@@ -143,7 +151,8 @@
       "package": "wordcraft",
       "distribution": "unpublished",
       "activation": "pending-integration",
-      "updates": "pending-integration"
+      "updates": "pending-integration",
+      "rust_toolchain": "1.95.0"
     },
     {
       "upstream": "storytold/soundcraft",
@@ -159,7 +168,8 @@
       "package": "soundcraft",
       "distribution": "unpublished",
       "activation": "pending-integration",
-      "updates": "pending-integration"
+      "updates": "pending-integration",
+      "rust_toolchain": "1.95.0"
     },
     {
       "upstream": "storytold/deckcraft",
@@ -175,7 +185,8 @@
       "package": "deckcraft",
       "distribution": "unpublished",
       "activation": "pending-integration",
-      "updates": "pending-integration"
+      "updates": "pending-integration",
+      "rust_toolchain": "1.95.0"
     },
     {
       "upstream": "storytold/cadcraft",
@@ -191,7 +202,8 @@
       "package": "cadcraft",
       "distribution": "unpublished",
       "activation": "pending-integration",
-      "updates": "pending-integration"
+      "updates": "pending-integration",
+      "rust_toolchain": "1.95.0"
     },
     {
       "upstream": "storytold/gridcraft",
@@ -207,7 +219,8 @@
       "package": "gridcraft",
       "distribution": "unpublished",
       "activation": "pending-integration",
-      "updates": "pending-integration"
+      "updates": "pending-integration",
+      "rust_toolchain": "1.95.0"
     },
     {
       "upstream": "storytold/craft-anything",
@@ -223,7 +236,37 @@
       "package": "craft-anything",
       "distribution": "unpublished",
       "activation": "pending-integration",
-      "updates": "pending-integration"
+      "updates": "pending-integration",
+      "rust_toolchain": "1.97.0"
+    }
+  ],
+  "separate_products": [
+    {
+      "upstream": "storytold/artcraft",
+      "name": "PixaStudio",
+      "revision": "1218293fe290d75c7341e27907384f9a7300cba4",
+      "status": "assessed-not-integrated",
+      "reason": "Separate AI Studio frontend depends on hosted backend services and upstream account/session APIs; not one of the sixteen Craft editors. Do not relabel the hosted service as a working Pixa backend."
+    }
+  ],
+  "existing_products": [
+    {
+      "id": "pixashop",
+      "name": "PixaShop",
+      "repository": "lukeybird/pixashop",
+      "branch": "pixashop-product",
+      "revision": "c45a616caed3a420376d7a2eefbdf44029f44de6",
+      "status": "existing-product-unchanged",
+      "note": "Use its existing product overlay and release process; no changes made by suite preparation."
+    },
+    {
+      "id": "pixaeffects",
+      "name": "PixaEffects",
+      "repository": "lukeybird/pixaeffects",
+      "branch": "pixaeffects-product",
+      "revision": "f65ef0b65a384550c53d5ac3330a2c1c77d2c696",
+      "status": "existing-unpublished-product-unchanged",
+      "note": "Use its existing product overlay and release process; not newly release-verified by suite preparation."
     }
   ]
 }

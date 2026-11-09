@@ -5,6 +5,8 @@ class PreparationTests(unittest.TestCase):
  def test_catalog_is_unique_and_pinned(self):
   apps=p.CATALOG
   self.assertEqual(len(apps),14)
+  existing=json.loads((p.ROOT/'catalog.json').read_text())['existing_products']
+  self.assertEqual(len({a['id'] for a in apps+existing}),16)
   for key in ['id','name','bundle_id','source']:self.assertEqual(len({a[key] for a in apps}),14)
   for a in apps:
    self.assertRegex(a['revision'],r'^[0-9a-f]{40}$')
@@ -13,6 +15,11 @@ class PreparationTests(unittest.TestCase):
  def test_rust_balancer_ignores_strings_and_comments(self):
   s='(Thing { text: "(()", raw: r#"())"#, /* ) */ call: foo() }) trailing'
   self.assertEqual(s[p.matching_paren(s,0)+1:],' trailing')
+ def test_module_insertion_preserves_mac_only_condition(self):
+  original='//! App docs\n#![deny(unsafe_code)]\n#[cfg(target_os = "macos")]\nmod apple_events;\nuse eframe::App;\n'
+  result=p.insert_shell_module(original)
+  self.assertIn('mod pixa_shell;\n#[cfg(target_os = "macos")]\nmod apple_events;',result)
+  self.assertTrue(result.startswith('//! App docs\n#![deny(unsafe_code)]'))
  def test_unbalanced_expression_fails(self):
   with self.assertRaises(ValueError):p.matching_paren('(foo()',0)
  def test_icon_generation_is_deterministic_and_distinct(self):

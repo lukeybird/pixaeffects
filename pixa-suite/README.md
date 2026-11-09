@@ -1,6 +1,6 @@
 # Pixa suite — unpublished development sources
 
-This directory prepares 14 additional Pixa-branded editors from exact pinned upstream commits. PixaShop and PixaEffects remain in their existing product branches. No website, billing, subscription, price, or production configuration changes are included. There is no launcher yet.
+This directory prepares 14 additional Pixa-branded editors from exact pinned upstream commits. PixaShop and PixaEffects remain in their existing product branches. No website, billing, subscription, price, or production configuration changes are included. There is no launcher yet. The separate ArtCraft Studio AI application is assessed in the catalog but is not prepared by this native-editor pipeline: its hosted backend and account integrations require separate implementation.
 
 ## Products
 
@@ -25,7 +25,7 @@ This directory prepares 14 additional Pixa-branded editors from exact pinned ups
 
 ## Prepare and build
 
-Requires Git, Python 3.11+, Pillow, Rust 1.95 and each upstream app's native build prerequisites. macOS and Windows binaries must be built on the corresponding platform/toolchain; this Linux workspace cannot verify a Mac installer.
+Requires Git, Python 3.11+, Pillow, Rust 1.95 (1.97 for PixaAnything) and each upstream app's native build prerequisites. macOS and Windows binaries must be built on the corresponding platform/toolchain; this Linux workspace cannot verify a Mac installer.
 
 ```
 python -m pip install -r requirements.txt

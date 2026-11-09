@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Check preparation invariants and optionally run real native Cargo checks/builds."""
 from pathlib import Path
-import argparse, concurrent.futures, json, os, re, subprocess, time
+import argparse, concurrent.futures, json, os, re, subprocess, sys, time
 ROOT=Path(__file__).resolve().parent
 APPS=json.loads((ROOT/'catalog.json').read_text())['apps']
 def check(app, native=False, release=False):
@@ -10,7 +10,7 @@ def check(app, native=False, release=False):
   p=subprocess.run(args,cwd=root,capture_output=True,text=True,timeout=timeout)
   if p.returncode:errors.append(p.stderr[-2500:])
   return p
- meta=call(['cargo','metadata','--no-deps','--format-version','1'])
+ meta=call(['cargo','+'+app['rust_toolchain'],'metadata','--no-deps','--format-version','1'])
  if meta.returncode==0:
   data=json.loads(meta.stdout)
   if not any(p['name']==app['package'] for p in data['packages']):errors.append('Desktop package missing')
@@ -26,10 +26,10 @@ def check(app, native=False, release=False):
     if not (p.parent/rel).exists():errors.append('Missing include: '+str(p.relative_to(root))+': '+rel)
  for name in ['main.rs','pixa_shell.rs']:
   call(['rustfmt','--edition','2024','--emit','stdout',str((main.parent/name).resolve())])
- status={'app':app['name'],'source_revision':app['revision'],'source_checks':'passed' if not errors else 'failed','errors':errors,'native_check':'not-run','release_ready':False}
+ status={'platform':sys.platform,'verification':'cargo-build-release' if release else 'cargo-check','app':app['name'],'source_revision':app['revision'],'source_checks':'passed' if not errors else 'failed','errors':errors,'native_check':'not-run','release_ready':False}
  if native and not errors:
   logs=ROOT/'build-logs';logs.mkdir(exist_ok=True)
-  command=['cargo','build' if release else 'check','-p',app['package']]
+  command=['cargo','+'+app['rust_toolchain'],'build' if release else 'check','-p',app['package']]
   if release:command.append('--release')
   env=os.environ.copy();env['CARGO_TARGET_DIR']=str(ROOT/'target')
   with (logs/(app['id']+'.log')).open('w') as log:
@@ -41,10 +41,15 @@ def check(app, native=False, release=False):
  print(app['name']+': '+status['source_checks']+'; native '+status['native_check'],flush=True)
  return status
 if __name__=='__main__':
- p=argparse.ArgumentParser();p.add_argument('--native',action='store_true');p.add_argument('--release',action='store_true');args=p.parse_args()
+ p=argparse.ArgumentParser();p.add_argument('--native',action='store_true');p.add_argument('--release',action='store_true');p.add_argument('--app',default='all');args=p.parse_args()
  envpath='/home/agent/.cargo/bin'
  if Path(envpath).exists():os.environ['PATH']=envpath+os.pathsep+os.environ.get('PATH','')
  # One native compile at a time to avoid exhausting shared disk and RAM.
- results=[check(a,args.native,args.release) for a in APPS]
- (ROOT/('BUILD_STATUS.json' if args.native else 'SOURCE_STATUS.json')).write_text(json.dumps({'apps':results},indent=2)+'\n')
+ selected=[a for a in APPS if args.app in ('all',a['id'])]
+ if not selected:p.error('Unknown app')
+ results=[]
+ output=ROOT/((args.app+'-' if args.app!='all' else '')+('BUILD_STATUS.json' if args.native else 'SOURCE_STATUS.json'))
+ for a in selected:
+  results.append(check(a,args.native,args.release))
+  output.write_text(json.dumps({'apps':results,'complete':len(results)==len(selected)},indent=2)+'\n')
  raise SystemExit(1 if any(a['source_checks']=='failed' or a['native_check'] in {'failed','timed-out'} for a in results) else 0)

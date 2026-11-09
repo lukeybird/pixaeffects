@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Reproducible Pixa source preparation. No release, billing or credential operations."""
 from pathlib import Path
-import argparse, hashlib, json, re, subprocess
+import argparse, hashlib, json, re, subprocess, tomllib
 from PIL import Image, ImageDraw
 ROOT = Path(__file__).resolve().parent
 CATALOG = json.loads((ROOT/'catalog.json').read_text())['apps']
@@ -39,6 +39,18 @@ def matching_paren(s, start):
         i+=1
     raise ValueError('Unbalanced Rust expression')
 
+def promotional_labels(line):
+    for old,new in [('"Discord"','"Account"'),('"GitHub"','"Help"'),('"Join our Discord"','"Your account"'),('"Join the Discord"','"Your account"'),('"Source code on GitHub"','"Product help"'),('"GitHub repository"','"Product help"')]:
+        line=line.replace(old,new)
+    return line.replace('getartcraft.com','aiwebdesignfirm.com').replace('discord.gg/artcraft','aiwebdesignfirm.com/settings')
+
+def insert_shell_module(s):
+    pos=re.search(r'(?m)^(?:use |mod |const |fn |pub |struct |enum |type |extern crate)',s)
+    if not pos:raise RuntimeError('No module insertion point')
+    outer=re.search(r'(?m)^#\[',s)
+    insertion=min(pos.start(),outer.start()) if outer else pos.start()
+    return s[:insertion]+'mod pixa_shell;\n'+s[insertion:]
+
 def icon(app,size):
     im=Image.new('RGBA',(size,size),(18,24,35,255));d=ImageDraw.Draw(im)
     # Original Pixa family pixel-P, with a distinct product accent and a small index marker.
@@ -69,7 +81,7 @@ def brand_assets(root,app):
                 elif p.suffix.lower()=='.ico':icon(app,256).save(p,format='ICO')
                 else:im.save(p,format='PNG')
             rel=p.relative_to(root).as_posix();changed.append(rel)
-            Path(str(p)+'.attribution').write_text(f'asset: {p.name}\ntitle: {app["name"]} original pixel mark\nauthor: AIWebDesignFirm\nsource: original work\nlicense: MIT OR Apache-2.0\nnotes: Procedural Pixa family mark, not upstream trademark artwork.\n')
+            Path(str(p)+'.attribution').write_text(f'asset: {p.name}\ntitle: {app["name"]} original pixel mark\nauthor: AIWebDesignFirm\nsource: original work\nlicense: MIT OR Apache-2.0\nlicense-file: LICENSE-MIT\nadded: 2026-11-09 by AIWebDesignFirm\nnotes: Procedural Pixa family mark, not upstream trademark artwork.\n')
     return changed
 
 def prepare(app, sources):
@@ -100,6 +112,7 @@ def prepare(app, sources):
                     line=line.replace('https://github.com/'+app['upstream']+'/issues','https://aiwebdesignfirm.com').replace('https://github.com/'+app['upstream'],'https://aiwebdesignfirm.com')
                     line=line.replace('Join the AIWebDesignFirm Discord','Manage your account').replace('Join the AIWebDesignFirm community on Discord','Manage your account')
                     line=line.replace('.join(\"'+app['source']+'\")','.join(\"'+app['id']+'\")')
+                    if 'i18n' not in str(p) and p.suffix=='.rs':line=promotional_labels(line)
                     line=line.replace('https://getartcraft.com/apps/'+app['source'],'https://aiwebdesignfirm.com')
                     line=line.replace('https://getartcraft.com','https://aiwebdesignfirm.com')
                 lines.append(line)
@@ -123,16 +136,25 @@ def prepare(app, sources):
     cargo=root/'Cargo.toml';s=cargo.read_text();s,n=re.subn(r'(?m)^version = "[^"]+"',f'version = "{app["version"]}"',s,count=1)
     if n!=1:raise RuntimeError('Workspace version not found')
     cargo.write_text(s)
+    upstream_manifest=tomllib.loads(run(['git','show','HEAD:Cargo.toml'],root))
+    original_version=upstream_manifest['workspace']['package']['version']
+    # Path dependencies with explicit requirements must follow the local workspace version.
+    for manifest in root.rglob('Cargo.toml'):
+        text=manifest.read_text();lines=[]
+        for line in text.splitlines(keepends=True):
+            if 'path =' in line and 'version = "'+original_version+'"' in line:
+                line=line.replace('version = "'+original_version+'"','version = "'+app['version']+'"')
+            lines.append(line)
+        updated=''.join(lines)
+        if updated!=text:manifest.write_text(updated)
     main=root/'apps'/app['source']/'src/main.rs';s=main.read_text()
     marker='Ok(Box::new('
     starts=[m.start() for m in re.finditer(re.escape(marker),s)]
     if len(starts)!=1:raise RuntimeError(f'Expected one desktop creation expression, got {len(starts)}')
     start=starts[0]+len('Ok(');end=matching_paren(s,start+len('Box::new'))
     s=s[:start]+'pixa_shell::wrap('+s[start:end+1]+')'+s[end+1:]
-    # Insert after crate-level attrs/docs, before first ordinary item.
-    pos=re.search(r'(?m)^(?:use |mod |const |fn |pub |struct |enum |type |extern crate)',s)
-    if not pos:raise RuntimeError('No module insertion point')
-    s=s[:pos.start()]+'mod pixa_shell;\n'+s[pos.start():];main.write_text(s)
+    # Keep outer cfg attributes attached to their original modules.
+    main.write_text(insert_shell_module(s))
     shell=(ROOT/'templates/shell.rs').read_text()
     on_exit='fn on_exit(&mut self) { self.inner.on_exit(); }'
     # eframe unifies glow across the workspace for Light/PDF; use its actual desktop feature set.

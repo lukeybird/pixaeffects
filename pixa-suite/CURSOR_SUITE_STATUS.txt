@@ -1,0 +1,41 @@
+PIXA SUITE DEVELOPMENT STATUS — 2026-11-09
+
+User authorized preparing the entire sixteen-app Craft editor family as Pixa applications, with publishing and a launcher deferred. Do not change billing, existing subscriptions or the live website.
+
+Repository: lukeybird/pixaeffects
+Working branch: pixa-suite-product
+Suite files: pixa-suite/
+Existing PixaShop and PixaEffects remain on their own product branches. Those branches and production downloads were not changed.
+
+Fourteen additional development source preparations exist:
+PixaVector, PixaFilm, PixaLight, PixaPDF, PixaDesign, PixaInterface,
+PixaTexture, PixaMaterial, PixaWord, PixaSound, PixaDeck, PixaCAD,
+PixaGrid, PixaAnything.
+
+catalog.json records exact public upstream commit pins, original source/package IDs, Pixa names, separate bundle IDs, original pixel-icon colors and Rust toolchain requirements. It also records the existing two product repositories. Generated source trees are not committed; prepare.py reconstructs them from the pinned public sources. Never overwrite dirty or already prepared source trees.
+
+IMPLEMENTED:
+Pixa display branding and app bundle identifiers, matching original pixel icons and attribution, publisher footer, brief getting-started window, lifecycle/save/shutdown delegation, product-specific update identities with development checks refused, source preparation/check/build commands, and development packaging guarded by a hash-bound build receipt. Copyright, licenses, contributors and internal file-format/crate names are preserved.
+
+VERIFIED:
+All fourteen source-preparation checks passed.
+All fourteen final Linux native cargo check commands passed after the final source edits.
+Six Python preparation tests passed, including a regression test preserving macOS-only module conditions.
+A separate clean PixaVector checkout reproduced the same prepared main, wrapper, UI library and workspace manifest.
+PixaAnything requires Rust 1.97.0 due its pinned Oxc dependencies; the other products were checked with 1.95.0. Required official ALSA development files were supplied locally for Linux audio checks; they are not bundled or committed.
+BUILD_STATUS.json records cargo-check verification on Linux, NOT linked binaries or release builds.
+
+NOT FINISHED / DO NOT CLAIM READY:
+No new installers were built, signed, notarized, uploaded or published.
+No Mac/Windows compile or runtime QA is claimed.
+No complete per-tool manuals/tours, complete localization/branding audits, per-app subscription enforcement or verified production update delivery is claimed.
+The getting-started window is intentionally a brief introduction, not a full manual.
+Development binaries must not be exposed to customers or advertised as available.
+Do not enable downloads until each product's activation, save/import/export, native install, signing, notarization and verified updater tests pass.
+
+The separate ArtCraft Studio AI app is assessed but NOT converted. It uses hosted backend and account/session services, unlike the sixteen standalone Craft editors. Do not point a relabeled frontend at the upstream hosted account/billing services and call that a finished PixaStudio product.
+
+NEXT IMPLEMENTATION WORK:
+Finish shared entitlement integration with per-editor save-safe adapters and disable ungated automation surfaces before distribution; integrate independently verified Pixa update feeds; complete branded manuals/tool tours and promotional-brand/localization audits; build and test each target platform; then review each product with the user before publishing. Keep a future launcher optional and editors independently installable. Never export signing keys or credentials to source control.
+
+The website repository main is stale relative to production. Never deploy a fresh clone of its main branch over the live site. This suite branch contains no recovered private website source, new environment secrets, or billing edits.

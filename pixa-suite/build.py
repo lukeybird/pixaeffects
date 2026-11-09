@@ -21,7 +21,7 @@ if __name__=='__main__':
  receipt=logs/(app['id']+'-release.json')
  if receipt.exists():receipt.unlink()
  env=os.environ.copy();env['CARGO_TARGET_DIR']=str(ROOT/'target')
- command=['cargo','build','-p',app['package']]+(['--release'] if args.release else [])
+ command=['cargo','+'+app['rust_toolchain'],'build','-p',app['package']]+(['--release'] if args.release else [])
  with (logs/(app['id']+'-build.log')).open('w') as log:
   result=subprocess.run(command,cwd=source,env=env,stdout=log,stderr=subprocess.STDOUT)
  if result.returncode:raise SystemExit(result.returncode)
