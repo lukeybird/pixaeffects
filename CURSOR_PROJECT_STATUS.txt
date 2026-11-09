@@ -15,3 +15,15 @@ Website deployment dpl_5QQ7jzzn5S7nnoJzFWJTPSKP3WSz was READY. Current productio
 Automated approval review blocked production activation test record creation, so no end-to-end activation pass is claimed. Browser page/manual/activation-form rendering was checked. Existing PixaShop source and billing files were preserved.
 The signing script reuses PixaShop-Notary (existing Keychain profile) and validates com.aiwebdesignfirm.pixaeffects. No new certificate is needed. Mac private-key signing and full platform QA remain release blockers.
 Current build run 42709155214 began native checks on Mac (macos-15-intel), Windows, Linux. Later source fixes may produce newer runs; inspect exact branch head before signing or publishing. Do not sign an obsolete or missing artifact.
+
+FINAL VERIFIED CHECKPOINT
+Application source commit: 2e600e4f82473ad9fde8c6347001304998196e0e.
+Latest desktop build run: 42710069715. All three jobs reached Check native application; none is claimed complete.
+Four Python product checks passed from a clean prepared checkout. Final UI crate cargo check passed (45.88s). Two Rust tests passed for 12 manual chapters and help coverage of all 31 registered tools. Full native app checking was unavailable locally due missing ALSA development metadata. No real editor rendering/export, paid activation or Mac in-place update pass is claimed.
+Native Mac signing still requires the publisher's Mac Keychain. No credentials were exported or uploaded. Do not enable downloads until signed installers and QA are complete.
+Website current production: dpl_8zc7SEkHrWK4stmojYEQJwrCKSyN, READY.
+https://aiwebdesignfirm-bfgudjua9-luke-bargers-projects.vercel.app
+https://aiwebdesignfirm.com/pixaeffects
+https://aiwebdesignfirm.com/pixaeffects/manual
+https://aiwebdesignfirm.com/pixaeffects/activate
+No billing files or Stripe configuration were changed.
