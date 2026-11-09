@@ -35,7 +35,7 @@ pub(crate) fn show(ctx: &egui::Context) {
             ui.text_edit_singleline(&mut state.search);
             let query = state.search.to_lowercase();
             egui::ScrollArea::vertical().show(ui, |ui| {
-                if let Ok(chapters) = serde_json::from_str::<Vec<(String, String)>>(include_str!("../../../../pixaeffects/manual/guide.json")) {
+                if let Ok(chapters) = serde_json::from_str::<Vec<(String, String)>>(include_str!("../../../pixaeffects/manual/guide.json")) {
                     for (title, body) in chapters {
                         if query.is_empty() || format!("{title} {body}").to_lowercase().contains(&query) {
                             egui::CollapsingHeader::new(title).default_open(!query.is_empty()).show(ui, |ui| {
@@ -83,7 +83,7 @@ pub(crate) fn show(ctx: &egui::Context) {
                     egui::Frame::new().fill(egui::Color32::from_rgb(16, 30, 44)).corner_radius(12.0).inner_margin(14.0).show(ui, |ui| {
                         let key = format!("{tool:?}");
                         let descriptions =
-                            serde_json::from_str::<std::collections::BTreeMap<String, String>>(include_str!("../../../../pixaeffects/manual/tools.json"))
+                            serde_json::from_str::<std::collections::BTreeMap<String, String>>(include_str!("../../../pixaeffects/manual/tools.json"))
                                 .unwrap_or_default();
                         if let Some(text) = descriptions.get(&key) {
                             ui.label(egui::RichText::new(text).color(egui::Color32::WHITE));
@@ -115,7 +115,7 @@ mod tests {
     use super::*;
     #[test]
     fn every_registered_tool_has_help() {
-        let map: std::collections::BTreeMap<String, String> = serde_json::from_str(include_str!("../../../../pixaeffects/manual/tools.json")).unwrap();
+        let map: std::collections::BTreeMap<String, String> = serde_json::from_str(include_str!("../../../pixaeffects/manual/tools.json")).unwrap();
         assert_eq!(map.len(), Tool::ALL.len());
         for tool in Tool::ALL {
             assert!(map.get(&format!("{tool:?}")).is_some_and(|s| !s.is_empty()));
@@ -123,7 +123,7 @@ mod tests {
     }
     #[test]
     fn manual_has_chapters() {
-        let chapters: Vec<(String, String)> = serde_json::from_str(include_str!("../../../../pixaeffects/manual/guide.json")).unwrap();
+        let chapters: Vec<(String, String)> = serde_json::from_str(include_str!("../../../pixaeffects/manual/guide.json")).unwrap();
         assert_eq!(chapters.len(), 12);
     }
 }

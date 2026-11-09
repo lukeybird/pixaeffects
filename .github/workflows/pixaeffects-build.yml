@@ -4,6 +4,9 @@ on:
   push:
     branches: [pixaeffects-product]
     paths: [pixaeffects/**, .github/workflows/pixaeffects-build.yml]
+concurrency:
+  group: pixaeffects-desktop-${{ github.ref }}
+  cancel-in-progress: true
 permissions:
   contents: read
 jobs:
