@@ -31,3 +31,10 @@ No billing files or Stripe configuration were changed.
 BRANDING UPDATE: user requested purple branding and a clean pixel A mark (not E), matching PixaShop styling. pixaeffects/icons.py now generates original pixel A icons in #bd9bfa on #211533. Help tour highlights and updater accent match. Product website now uses the PixaShop centered visual layout with the new A logo. Homepage product cards advertise PixaShop and PixaEffects together. Billing is unchanged. This source change requires a new native build; never reuse an older E-logo installer as the new A-logo release.
 
 Purple A branding website deployment is READY: dpl_GazhFHR7hQqANE2P1hmMvM8EhsW5, aliased to aiwebdesignfirm.com. Homepage now has PixaShop and PixaEffects product cards. /pixaeffects uses the same centered visual layout as PixaShop with purple A logo. Desktop icon/help/updater branding source commit d722113257a2b857e810d9ae4e85c31b39ce4013; await a build from that application source before signing. No billing changes.
+
+HOMEPAGE DIRECTION UPDATE — 2026-11-09
+User explicitly deprioritized the website builder. Homepage now leads with the Pixa creative apps, headline "Your ideas. Made possible.", PixaShop cyan P and PixaEffects purple A product cards. Builder sales pitch and tier cards are removed from the homepage; existing builder functionality remains available through a quiet /builder footer link. Existing billing, subscription prices, checkout and app access behavior were not changed.
+Production deployment dpl_6w71EygorJmZkXWmq1vvTQG8GYLe is READY and aliased to aiwebdesignfirm.com.
+https://aiwebdesignfirm-jnk5za4pk-luke-bargers-projects.vercel.app
+Website changes: app/page.tsx, new app/creative-home.module.css, and components/auth/SiteChrome.tsx (only root homepage suppresses old builder navigation/chat; other routes retain existing chrome).
+Live homepage and product-anchor navigation were browser verified. PixaEffects is still correctly marked in preparation; no release-readiness claim was added. Preserve this app-first direction in future website work. Always recover the CURRENT production source before deployment; stale website main is still unsafe to deploy.
