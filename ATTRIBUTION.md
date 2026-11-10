@@ -148,3 +148,7 @@ under [`docs/brand/LICENSE-brand.txt`](docs/brand/LICENSE-brand.txt). Forks and 
 | `docs/brand/artcraft-mark.svg` | ArtCraft Team | Original work: first-party ArtCraft brand mark (ArtCraft symbol ("A" mark), blue) | ArtCraft brand terms, not open source (`docs/brand/LICENSE-brand.txt`) |
 
 - Appearance theme previews, drawn procedurally from original shapes: `crates/ui-egui/src/panels/settings.rs` (original work, MIT OR Apache-2.0).
+
+
+## Pixa product-initial icon revision
+`pixaeffects/icons.py` generates the original pixel E letterform in raster and SVG formats. Author: AIWebDesignFirm. Source: original work. License: MIT OR Apache-2.0. Generated assets retain their existing packaging attribution sidecars. No third-party artwork or fonts.
