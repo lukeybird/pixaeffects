@@ -1,3 +1,15 @@
+PIXA SUITE — LOCAL DEVELOPMENT VERIFICATION COMPLETE; HOSTED CHECKS PENDING
+
+Read PIXA_SUITE_VERIFICATION.json first. All fourteen additional Linux x86-64 executables linked successfully in subscription-preview mode. All fourteen ELF hashes, exact dependency snapshots, upstream pins, runtime library scans and --version entry points are verified. Earlier checks passed all 28 development/subscription Linux compilations, all 14 native recovery products, 15 Python regressions and 17 runtime tests with warnings-denied Clippy. The strengthened Anything noncanonical-folder test also passes on Linux.
+
+Current hosted run: https://github.com/lukeybird/pixaeffects/actions/runs/42758533188 for verification-fixture commit d8e807a79d3783d33434f1b3593c35bf2afbee83. At this checkpoint 24 jobs passed; the rest are pending/running. Do not claim this corrected matrix is finished. Application/runtime code is unchanged from cc3befe9a83928a35c2b18e3715b797a6df1ac87. The pixa-suite source tree is a009412aee64836b07232d80a65c69cf92a55e8b; this commit only adds verification records.
+
+GUI testing is NOT passed: the managed desktop created the PixaVector window, but Mesa could not present frames because X11 shared-memory attachment failed. Test windows were closed. No account was connected and no customer documents were opened. Real graphical/editor/access-expiry/vault QA, signed Mac/Windows installers and configured verified updates remain release work. The launcher and publication remain deferred; PixaStudio remains separate backend work. No production website, billing, existing product releases/downloads or private signing identities changed. Never deploy stale website main.
+
+PIXA_SUITE_BUILD_LOCKS/ preserves the Linux dependency graphs. pixa-suite/CURSOR_SUITE_STATUS.txt describes the underlying code checkpoint before these final linked-build records; the root verification report takes precedence for test status.
+
+PREVIOUS CHECKPOINTS (historical):
+
 PIXA SUITE VERIFICATION IN PROGRESS — WINDOWS FIXTURE PATH NORMALIZATION
 
 Application and runtime code remain unchanged from cc3befe9a83928a35c2b18e3715b797a6df1ac87. The Anything recovery fixture now compares canonical filesystem paths on both sides, exercises an aliased selected folder on every OS, and checks both recovered attachment references after deleting the original. Its updated Linux native roundtrip and the 15 Python regressions pass.

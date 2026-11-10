@@ -1,0 +1,430 @@
+{
+  "schema_version": 1,
+  "scope": "Fourteen additional unpublished Pixa desktop editors; development verification only",
+  "application_runtime_source_commit": "cc3befe9a83928a35c2b18e3715b797a6df1ac87",
+  "verification_fixture_commit": "d8e807a79d3783d33434f1b3593c35bf2afbee83",
+  "suite_tree": "a009412aee64836b07232d80a65c69cf92a55e8b",
+  "branch": "pixa-suite-product",
+  "application_runtime_unchanged_by_fixture_fix": true,
+  "linux_linked_builds": {
+    "complete": true,
+    "release_ready": false,
+    "results": [
+      {
+        "app": "pixavector",
+        "platform": "linux",
+        "access_mode": "subscription",
+        "verification": "cargo-build-debug",
+        "passed": true,
+        "binary_bytes": 198222944,
+        "release_ready": false,
+        "sha256": "1d36480ed6ab19db3ebe5123ae5a84950805ae603c6c2b63f18cae67747d89e6",
+        "architecture": "x86_64",
+        "lock_sha256": "1c17578a52a21546045d2167c90a40877c8a4a9e021872d69c3d5662092e6d74",
+        "upstream_revision": "25cfa9d3cfdb3510c48f951d57562f0f7b8700cc"
+      },
+      {
+        "app": "pixafilm",
+        "platform": "linux",
+        "access_mode": "subscription",
+        "verification": "cargo-build-debug",
+        "passed": true,
+        "binary_bytes": 111675520,
+        "release_ready": false,
+        "sha256": "d435bbc8918532dde354c12746d9e23353458fea1f4a727fb0d592bf11ef1437",
+        "architecture": "x86_64",
+        "lock_sha256": "bc19e5f44139b5f16307ebfbc769e3d41392557ac9f02e715fd32ece3b2f2f3c",
+        "upstream_revision": "f4090d7b34a467a1bcabc91652d166a94f68dfbe"
+      },
+      {
+        "app": "pixalight",
+        "platform": "linux",
+        "access_mode": "subscription",
+        "verification": "cargo-build-debug",
+        "passed": true,
+        "binary_bytes": 122690200,
+        "release_ready": false,
+        "sha256": "9d122a2bb4a2516b2f0a0ea0b3f65e608ce45a5881ecc6cd608fdd2c13aa0a43",
+        "architecture": "x86_64",
+        "lock_sha256": "7e6ddee5b46968d162d11002321dbaff3a5874cfd1f9a6e6f6a26f71b582b5f2",
+        "upstream_revision": "e9c29e2c5c5dd1f86cc98677b5dc389f6612fcac"
+      },
+      {
+        "app": "pixapdf",
+        "platform": "linux",
+        "access_mode": "subscription",
+        "verification": "cargo-build-debug",
+        "passed": true,
+        "binary_bytes": 134093888,
+        "release_ready": false,
+        "sha256": "14cc74e59fdacbcf01b5b62a43c65eeafd08b5d12d2828574f7f76201da4fac4",
+        "architecture": "x86_64",
+        "lock_sha256": "6fdc1212fe105394f57eafa61a74195d17db03e35b3ee877a06a49e5e640ad7e",
+        "upstream_revision": "efd7c9fc245d1660388208a37df3d3b5036584ba"
+      },
+      {
+        "app": "pixadesign",
+        "platform": "linux",
+        "access_mode": "subscription",
+        "verification": "cargo-build-debug",
+        "passed": true,
+        "binary_bytes": 136745768,
+        "release_ready": false,
+        "sha256": "9a90a5371a0f6897e956270baeda8e26bd1db96589f900d84581407e48e455fd",
+        "architecture": "x86_64",
+        "lock_sha256": "26d77757424889d25f4caa980939ffc13d7749753bbdf38d622bb3ffb0720f49",
+        "upstream_revision": "32a1dbc7345fe14e010a36c691f1095562c387a9"
+      },
+      {
+        "app": "pixainterface",
+        "platform": "linux",
+        "access_mode": "subscription",
+        "verification": "cargo-build-debug",
+        "passed": true,
+        "binary_bytes": 123728616,
+        "release_ready": false,
+        "sha256": "760db584b955bfd673f8d2014559c9cc4d11aedeef438ac7d6a63ab0d32bd00b",
+        "architecture": "x86_64",
+        "lock_sha256": "482e21b643362f8c3d17d82cc0374fa1984f99370eecfa8e4188cdf31583e46b",
+        "upstream_revision": "a2e87433d8bda2b0c909587da08cb27c51e3b17e"
+      },
+      {
+        "app": "pixatexture",
+        "platform": "linux",
+        "access_mode": "subscription",
+        "verification": "cargo-build-debug",
+        "passed": true,
+        "binary_bytes": 71240304,
+        "release_ready": false,
+        "sha256": "eab13447608675389fa1580747e329e7f572863a8bc509076bd12d9cc0bffbdd",
+        "architecture": "x86_64",
+        "lock_sha256": "4ac04ada7046f20ea63340bdc37efb1928cbb2fc50d6703c32a7762a6dd82918",
+        "upstream_revision": "f5e41e759f63f68993eafa855f1fd585de9ec289"
+      },
+      {
+        "app": "pixamaterial",
+        "platform": "linux",
+        "access_mode": "subscription",
+        "verification": "cargo-build-debug",
+        "passed": true,
+        "binary_bytes": 65916552,
+        "release_ready": false,
+        "sha256": "3d02d105bda0f57a097fd7cc44e39f6e12c4a42b689d55d46b4958f27ddec3ab",
+        "architecture": "x86_64",
+        "lock_sha256": "3550da4ff92b89eab6e5c570094df28ff9ddb98238c3e25922d2dfdfa2d6a447",
+        "upstream_revision": "29857f653d894d7c177d56eca5e3305a0709808b"
+      },
+      {
+        "app": "pixaword",
+        "platform": "linux",
+        "access_mode": "subscription",
+        "verification": "cargo-build-debug",
+        "passed": true,
+        "binary_bytes": 122206104,
+        "release_ready": false,
+        "sha256": "4f2465744acb1209bb8798d7936cd394de895412550c7f480583f5a1414afacb",
+        "architecture": "x86_64",
+        "lock_sha256": "555fcd7873634bd6bd601342f96026582f10b6cf79c1591b400ba573565e5d33",
+        "upstream_revision": "d40d1b27181b61990c84c75f77d5fd23ef81d452"
+      },
+      {
+        "app": "pixasound",
+        "platform": "linux",
+        "access_mode": "subscription",
+        "verification": "cargo-build-debug",
+        "passed": true,
+        "binary_bytes": 69166184,
+        "release_ready": false,
+        "sha256": "4b0cb5d127377d59fdfc59e365dd66825378ce064e426c203c1ee2514437d26d",
+        "architecture": "x86_64",
+        "lock_sha256": "3fcee8cfbe809cf6a28863539ccbcebab3b9b263c9dd7800d0c48a249d4df9a0",
+        "upstream_revision": "ef58a90f4a418a282a15fc71d2e03c3d8e8f40fa"
+      },
+      {
+        "app": "pixadeck",
+        "platform": "linux",
+        "access_mode": "subscription",
+        "verification": "cargo-build-debug",
+        "passed": true,
+        "binary_bytes": 88814856,
+        "release_ready": false,
+        "sha256": "a397232fa12afb29015f6d89c7327c3f288a3220a85daf5df1e1b0067f8eac78",
+        "architecture": "x86_64",
+        "lock_sha256": "1bbd7179f93723534e010d20c3abae70ff0ca17ad4e72443086948c1f0a12c6f",
+        "upstream_revision": "0623b430324cf4c3d1962e6ae7885cf30c011c5e"
+      },
+      {
+        "app": "pixacad",
+        "platform": "linux",
+        "access_mode": "subscription",
+        "verification": "cargo-build-debug",
+        "passed": true,
+        "binary_bytes": 102493488,
+        "release_ready": false,
+        "sha256": "4795fd870fc272e3be7ab91ade5c06edd11a93f6dbf4124538ac3da9a870ba56",
+        "architecture": "x86_64",
+        "lock_sha256": "0b5df5da51c51125b56696bb3629acadbf1475dfe0e2e025e859bee3f569d7cb",
+        "upstream_revision": "a3d9348f63c2ad35391cc93980dc7ee7366f2ad6"
+      },
+      {
+        "app": "pixagrid",
+        "platform": "linux",
+        "access_mode": "subscription",
+        "verification": "cargo-build-debug",
+        "passed": true,
+        "binary_bytes": 76587872,
+        "release_ready": false,
+        "sha256": "3015e738bc90c3673fec0e501ee043aea48e3757392223a9203407ca00e58d55",
+        "architecture": "x86_64",
+        "lock_sha256": "3c916e973cf434e6d98be1ce7cec13ee05227c62865c3905e3ab211322486a4d",
+        "upstream_revision": "e9addf52fe68847e6c1310fcfa5d42b7aa8b9650"
+      },
+      {
+        "app": "pixaanything",
+        "platform": "linux",
+        "access_mode": "subscription",
+        "verification": "cargo-build-debug",
+        "passed": true,
+        "binary_bytes": 100088032,
+        "release_ready": false,
+        "sha256": "9efb8e1fe7c1bb2e60eec8d2e6a3fa453d7e1c13e7f059abd22557934ed95c54",
+        "architecture": "x86_64",
+        "lock_sha256": "9fc0f35ce878489edda29b0defc9d6972f33f992abdf923af23dd3d6416cb507",
+        "upstream_revision": "2e7f27631be78d499ca61d29f5cdee701e71b54f"
+      }
+    ]
+  },
+  "linux_runtime_library_resolution": [
+    {
+      "app": "pixavector",
+      "passed": true,
+      "missing": []
+    },
+    {
+      "app": "pixafilm",
+      "passed": true,
+      "missing": []
+    },
+    {
+      "app": "pixalight",
+      "passed": true,
+      "missing": []
+    },
+    {
+      "app": "pixapdf",
+      "passed": true,
+      "missing": []
+    },
+    {
+      "app": "pixadesign",
+      "passed": true,
+      "missing": []
+    },
+    {
+      "app": "pixainterface",
+      "passed": true,
+      "missing": []
+    },
+    {
+      "app": "pixatexture",
+      "passed": true,
+      "missing": []
+    },
+    {
+      "app": "pixamaterial",
+      "passed": true,
+      "missing": []
+    },
+    {
+      "app": "pixaword",
+      "passed": true,
+      "missing": []
+    },
+    {
+      "app": "pixasound",
+      "passed": true,
+      "missing": []
+    },
+    {
+      "app": "pixadeck",
+      "passed": true,
+      "missing": []
+    },
+    {
+      "app": "pixacad",
+      "passed": true,
+      "missing": []
+    },
+    {
+      "app": "pixagrid",
+      "passed": true,
+      "missing": []
+    },
+    {
+      "app": "pixaanything",
+      "passed": true,
+      "missing": []
+    }
+  ],
+  "offline_checks": {
+    "python_regressions": 15,
+    "runtime_tests": 17,
+    "runtime_clippy": "all-targets; warnings denied; passed",
+    "linux_compilation_checks": 28,
+    "native_recovery_products": 14,
+    "corrected_anything_alias_path_roundtrip": "passed on Linux; includes original deletion and both recovered references"
+  },
+  "checkpoint_records": {
+    "linux_compilation": "pixa-suite/FINAL_CHECKS.json",
+    "linux_recovery": "pixa-suite/RECOVERY_STATUS.json",
+    "note": "The checkpoint records precede the test-only path-normalization fix; app/runtime code is unchanged."
+  },
+  "source_reconstruction": {
+    "pixainterface": "clean exact-pin reconstruction matched nine integration files",
+    "pixaanything": "clean exact-pin reconstruction matched eight integration files"
+  },
+  "viewport_audit": "Only Interface has a production deferred editing viewport; its independent monotonic deadline is gated. Other extra windows use synchronous immediate viewports inside the guarded editor callback.",
+  "graphical_verification": {
+    "status": "blocked by test-display environment",
+    "attempted_product": "pixavector",
+    "native_window_created": true,
+    "observed_title": "PixaVector",
+    "observed_app_id": "com.aiwebdesignfirm.pixavector",
+    "renderer": "llvmpipe / OpenGL",
+    "display_error": "MESA failed to attach to X11 shared memory; eglSwapBuffers 0x300d / xcb_shm_attach_checked",
+    "visual_gui_passed": false,
+    "manual_popup_tested": false,
+    "account_connected": false,
+    "customer_documents_opened": false,
+    "owned_test_app_and_terminal_closed": true,
+    "note": "Do not interpret successful linking or window creation as graphical/editor acceptance."
+  },
+  "cli_version_smokes": [
+    {
+      "app": "pixavector",
+      "exit_code": 0,
+      "stdout": "vectorcraft 0.1.0",
+      "stderr": "",
+      "passed": true
+    },
+    {
+      "app": "pixafilm",
+      "exit_code": 0,
+      "stdout": "filmcraft 0.1.0",
+      "stderr": "",
+      "passed": true
+    },
+    {
+      "app": "pixalight",
+      "exit_code": 0,
+      "stdout": "lightcraft 0.1.0",
+      "stderr": "",
+      "passed": true
+    },
+    {
+      "app": "pixapdf",
+      "exit_code": 0,
+      "stdout": "pdfcraft 0.1.0",
+      "stderr": "",
+      "passed": true
+    },
+    {
+      "app": "pixadesign",
+      "exit_code": 0,
+      "stdout": "designcraft 0.1.0",
+      "stderr": "",
+      "passed": true
+    },
+    {
+      "app": "pixainterface",
+      "exit_code": 0,
+      "stdout": "PixaInterface 0.1.0",
+      "stderr": "",
+      "passed": true
+    },
+    {
+      "app": "pixatexture",
+      "exit_code": 0,
+      "stdout": "PixaTexture 0.1.0 (f5e41e7 2026-11-10)",
+      "stderr": "",
+      "passed": true
+    },
+    {
+      "app": "pixamaterial",
+      "exit_code": 0,
+      "stdout": "PixaMaterial 0.1.0 (29857f6 2026-11-10)",
+      "stderr": "",
+      "passed": true
+    },
+    {
+      "app": "pixaword",
+      "exit_code": 0,
+      "stdout": "wordcraft 0.1.0 (dev)",
+      "stderr": "",
+      "passed": true
+    },
+    {
+      "app": "pixasound",
+      "exit_code": 0,
+      "stdout": "soundcraft 0.1.0 (linux x86_64)",
+      "stderr": "",
+      "passed": true
+    },
+    {
+      "app": "pixadeck",
+      "exit_code": 0,
+      "stdout": "deckcraft 0.1.0",
+      "stderr": "",
+      "passed": true
+    },
+    {
+      "app": "pixacad",
+      "exit_code": 0,
+      "stdout": "cadcraft 0.1.0 (dev)",
+      "stderr": "",
+      "passed": true
+    },
+    {
+      "app": "pixagrid",
+      "exit_code": 0,
+      "stdout": "PixaGrid 0.1.0",
+      "stderr": "",
+      "passed": true
+    },
+    {
+      "app": "pixaanything",
+      "exit_code": 0,
+      "stdout": "craft-anything 0.1.0",
+      "stderr": "",
+      "passed": true
+    }
+  ],
+  "dependency_snapshots": "PIXA_SUITE_BUILD_LOCKS/; all fourteen match the verified Linux source lockfiles",
+  "hosted_verification": {
+    "run_id": 42758533188,
+    "source_commit": "d8e807a79d3783d33434f1b3593c35bf2afbee83",
+    "status": "pending",
+    "expected_product_os_jobs": 42,
+    "scope": "Development and subscription compilation plus native recovery fixtures; runtime tests on Film rows. Not linked Mac/Windows installers or GUI tests.",
+    "observed_passed_jobs": 24,
+    "observed_running_jobs": 12
+  },
+  "release_ready": false,
+  "published": false,
+  "launcher_created": false,
+  "unchanged_by_this_work": [
+    "live website",
+    "billing and prices",
+    "existing PixaShop/PixaEffects release branches and downloads",
+    "private signing identities"
+  ],
+  "remaining_release_work": [
+    "Real activation/access-expiry and OS credential-vault UI testing",
+    "Native editor, import/export/save and graphics QA",
+    "Linked Mac/Windows release builds and signed/notarized installers",
+    "Signed update feed, publisher key and verified native installation/restart/rollback",
+    "Full tool guides for thirteen products and complete branding/localization audit"
+  ],
+  "separate_studio": "ArtCraft Studio/PixaStudio remains assessed, not integrated; its hosted backend is separate from the sixteen native editors.",
+  "complete": false
+}
