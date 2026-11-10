@@ -1,0 +1,80 @@
+PIXA RELEASE AND WEBSITE HANDOFF — READ BEFORE RUNNING ANYTHING
+
+This is a continuation task, not a statement that all apps are finished.
+Read CURSOR_PROJECT_STATUS.txt and PIXA_SUITE_VERIFICATION.json next, then pixa-suite/README.md and RECOVERY.md. Inspect the current branch and working-tree changes before changing anything. Preserve existing uncommitted work. Do not reset, clean, force-push, or export private signing keys.
+
+SOURCE LOCATIONS
+
+Fourteen additional editors: lukeybird/pixaeffects, branch pixa-suite-product. The product-initial icon revision is fbb0747d32e1d77c95fa45b2d6f9a2b6b9e18c1d. This handoff commit adds website-overlay/ and release-tools/; it does not change the Rust editor/account runtime.
+Existing PixaShop: lukeybird/pixashop, branch pixashop-product, icon revision e889b17a355a3108992eb206ea48aaf9b9b3c7cf.
+Existing PixaEffects: lukeybird/pixaeffects, branch pixaeffects-product, icon revision 5370819eba2cdc2e76358f75e024ad515413af1b.
+Use each product branch's own current preparation/build instructions. Do not substitute upstream ArtCraft binaries or overwrite the prepared source of another product.
+
+WHAT IS ACTUALLY VERIFIED
+
+The earlier suite runtime/recovery implementation passed 42 product/OS jobs at d8e807a79d3783d33434f1b3593c35bf2afbee83:
+https://github.com/lukeybird/pixaeffects/actions/runs/42758533188
+All fourteen Linux development executables linked, with version-entry, library-resolution and binary-hash evidence in PIXA_SUITE_VERIFICATION.json. These are not release installers.
+The later icon revision has its own run:
+https://github.com/lukeybird/pixaeffects/actions/runs/42832068751
+Check its actual terminal result; do not assume it is done from the older result.
+New local checks: four bundle-validation tests for the Mac candidate helper, two website patch tests (including preservation of billing and builder files), and five icon tests in the previous icon revision. The candidate helper's actual Apple commands were NOT run in this Linux environment. No fresh Mac/Windows release binaries were linked here. Native GUI/editor/account-vault acceptance remains incomplete.
+
+WEBSITE — IMPORTANT PRODUCTION PRESERVATION
+
+Project aiwebdesignfirm, Vercel team luke-bargers-projects, domain https://aiwebdesignfirm.com.
+The inspected production baseline was dpl_6w71EygorJmZkXWmq1vvTQG8GYLe, aliased to the live domain. Its files include builder/account/product changes absent from GitHub main. GitHub main is still 4aa058de205a132f75a0f2fd8ce27bf1c58e01e2. The CLI deployment's Git metadata is not proof its uploaded files match that commit.
+DO NOT deploy a fresh clone of that website main. DO NOT promote the standalone catalog review preview: it intentionally lacks the website's account, billing, builder and backend sources. Its legacy links redirect to production only for review.
+
+The finished marketing patch is website-overlay/: homepage, /products, all sixteen /products/<product-id> pages, /launcher, matching SVG icons, shared CSS and catalog data. Existing /pixashop and /pixaeffects pages/APIs are deliberately preserved. Unreleased products and the unbuilt launcher are honestly labeled unavailable; no placeholder download files or fake installers were created.
+The product detail routes and all sixteen catalog icons were checked in a real browser; the review build passed Next.js compilation/type checking. New pages have no checkout mutations or new subscription prices.
+
+Find the COMPLETE local website source currently used for production, including its uncommitted builder files. Preserve it first. Then, from this repository:
+  python3 website-overlay/apply_website_overlay.py /absolute/path/to/the/full/website
+This is read-only. It intentionally refuses an incomplete checkout. Inspect its 24-file plan and the current local source before applying:
+  python3 website-overlay/apply_website_overlay.py /absolute/path/to/the/full/website --apply
+It creates a backup outside the website/Git tree, then copies only marketing files. Keep the printed backup location until deployment is verified. Review the diff. Do not copy the standalone preview's package.json, layout or redirect config over production; those are not part of the marketing patch.
+Use the complete site's existing dependency lockfile/build commands. Test /, /products, every product detail, /launcher, unknown-product 404, responsive layouts, keyboard navigation, existing /pixashop download gating, existing /pixaeffects gating, /account, /settings and builder routes. Do not change billing plans, subscriptions, tax settings or backend entitlement rules merely to make a button appear available.
+Stage a production build without assigning the domain, test it, then promote that tested COMPLETE deployment. Confirm the domain alias and source content. Keep a rollback target. Never replace the production site with the standalone review build.
+
+APP COMPLETION — THESE TASKS PRECEDE CUSTOMER RELEASE
+
+There are sixteen desktop products: PixaShop, PixaEffects, PixaVector, PixaFilm, PixaLight, PixaPDF, PixaDesign, PixaInterface, PixaTexture, PixaMaterial, PixaWord, PixaSound, PixaDeck, PixaCAD, PixaGrid and PixaAnything. PixaStudio remains a separately assessed hosted-backend project. The launcher is not built.
+
+For EACH app, maintain a per-product release worksheet with source SHA, version, bundle ID, architecture, actual test results, artifact SHA256, Apple submission IDs and published/unpublished state. Do not mark pending steps passed. Start with one complete vertical slice, PixaVector, before batching the rest.
+
+1. Prepare from clean exact-pinned upstream source. Preserve existing work and use a separate clean folder if needed. Install the documented pinned Rust toolchain and native prerequisites, Python and Pillow. Recheck current CI.
+2. Build a linked release executable on the target OS, not merely cargo check. For the fourteen new suite editors, read build.py and package.py, then run from the repository root:
+     python3 pixa-suite/prepare.py pixavector
+     python3 pixa-suite/build.py pixavector --release --access-mode subscription
+     python3 pixa-suite/package.py pixavector
+   Repeat with other catalog IDs after the first app works. The source preparation/build may take time; preserve logs. package.py validates its source/binary receipt and produces an UNPUBLISHED development package. Packaging is not product acceptance. Do not hide compile errors or replace a restricted build with development access mode.
+3. On a real desktop, open the editor, create/edit a representative document, save, close and reopen it, and exercise import/export. Test undo/redo, Help/manual and tour, all secondary editor windows, and product-specific operations. Test microphone/audio devices for Sound, RAW references for Light, attachments for Anything and representative PDFs/DWG files for PDF/CAD. Do not use customer documents as disposable tests. Finish the thirteen remaining full tool guides and audit branding/localization beyond the starter guides.
+4. Test account activation, valid trial/subscription, expired access, offline behavior, reconnect, logout, OS vault save/delete and recovery. Use deliberate test accounts/test fixtures; do not charge customers or change real subscriptions as a test. Validate the existing first-party device API for every product identity; the generic integration does not prove backend product entitlement behavior. Keep billing behavior unchanged unless a separately identified defect requires a focused fix.
+5. Finish actual signed update installation and restart/rollback. The shared Rust verifier exists, but no new suite product has a configured publisher key/feed or verified installer/restart pipeline. Do not enable upstream update feeds or claim the in-app updater is finished. Keep the signing private key secure; commit only the public verification key. Verify product, platform, version, architecture, size, SHA256, publisher signature and Mac signing identity before installation. Preserve unsaved work and validate rollback. Test installing a newer build over the previous one.
+
+MAC CERTIFICATE / NOTARIZATION
+
+The existing Developer ID Application private key must stay in the user's local Keychain. No .p12 export, credentials pasted into chat, passwords in shell arguments, secrets committed to Git, or private keys uploaded to GitHub/Vercel. The public certificate is embedded through code signing; customers do not install the developer's private key or Keychain profile.
+Check locally that Xcode command-line tools, xcrun notarytool and the signing identity are available. Use an existing local notarytool Keychain profile (the helper defaults to PixaShop-Notary); do not recreate a paid membership. If a password/Keychain prompt occurs, let the user answer it locally.
+
+For the fourteen NEW suite editors, release-tools/macos_candidate.py signs a COPY, validates bundle ID/version and requested architecture, signs nested code inside out with hardened runtime/secure timestamp, submits the app to Apple, staples/validates it, runs Gatekeeper assessment, creates a drag-to-Applications DMG with license notices, signs/notarizes/staples that DMG and writes a hash/submission report. It never publishes. Its four pure bundle-validation tests passed; the full Mac flow still must be executed/reviewed locally.
+
+Example AFTER a real Mac release build and package stage exist:
+  python3 release-tools/macos_candidate.py pixavector /absolute/path/to/PixaVector.app --architecture arm64 --identity "Developer ID Application: exact local signing identity" --profile PixaShop-Notary --output /absolute/path/to/a/fresh/candidate-output
+Use x86_64 on an Intel-only build. Use universal ONLY for a real combined arm64+x86_64 executable; the helper checks lipo output and refuses mislabeled architecture. Do not call the default host-only build universal. By default, license notices come from the Licenses folder beside the app in package.py's stage; --notices can name the matching folder explicitly. Retain all license/attribution material. Finish the desired Finder icon/arrow presentation before the public DMG is frozen.
+
+The resulting file is a NOTARIZED TEST CANDIDATE, not automatically a finished release. Test a fresh downloaded/quarantined copy on the target architecture, verify codesign, stapler and spctl, install by dragging to Applications, activate, edit/save/reopen, and test updating. On Invalid/Rejected, fetch the Apple notary log for the submission ID using the local profile and fix the specific issue. Do not disable Gatekeeper or remove quarantine as a substitute for successful distribution testing. Use the existing product-specific release scripts for Shop/Effects after reviewing their latest source and artifacts.
+
+Official references:
+https://developer.apple.com/documentation/security/notarizing-macos-software-before-distribution
+https://developer.apple.com/documentation/security/customizing-the-notarization-workflow
+
+PUBLISHING / FINAL ACCEPTANCE
+
+Only enable each product's website download after its actual artifact, architecture, signature/notarization, native QA, account gating and update behavior are verified. Preserve the existing PixaShop release until a replacement passes those checks. Windows release/signing and Linux package testing are separate; Mac notarization does not verify them. Update the shared website catalog/status presentation when real releases become available; the current patch intentionally has no download URLs for unreleased apps.
+The launcher page remains planned until a launcher is actually implemented, tested and packaged. Do not advertise it as downloadable. Do not mark PixaStudio integrated.
+
+Keep a running status document and finish independently where the available machine permits. Report exact remaining blockers and tested artifacts, not a blanket "all finished" based only on compilation or a certificate. When handing back, provide the real live website deployment URL, each tested/published installer URL and SHA256, exact app source versions and the remaining per-product release tasks.
+
+REVIEW PREVIEW (not production; do not promote): https://aiwebdesignfirm-6f40xnk7s-luke-bargers-projects.vercel.app/products

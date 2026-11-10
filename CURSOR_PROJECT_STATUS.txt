@@ -1,3 +1,13 @@
+PIXA WEBSITE REVIEW + LOCAL MAC HANDOFF — NOT CUSTOMER RELEASE COMPLETE
+
+Read CURSOR_PIXA_RELEASE_HANDOFF.txt first, then PIXA_NEXT_PHASE_STATUS.json. The 16-product marketing showcase has a READY standalone review deployment at https://aiwebdesignfirm-6f40xnk7s-luke-bargers-projects.vercel.app/products. Its individual product pages and catalog icons were browser checked. The website-overlay/ patch is ready for the COMPLETE local production source. The preview intentionally lacks production account/billing/builder code; DO NOT promote it to aiwebdesignfirm.com. Production is unchanged. Vercel source retrieval truncates and the available local website checkout is incomplete; deploying stale GitHub main would lose live changes.
+
+release-tools/macos_candidate.py prepares signed/notarized TEST CANDIDATES on the Mac holding the private key. It validates product identity/architecture, preserves notices, signs a copy, notarizes/staples app and DMG, checks Gatekeeper and writes a hash/submission record. Four bundle-validation tests pass; actual Apple commands were not run here. website-overlay/apply_website_overlay.py backs up marketing destinations and refuses incomplete website source; two tests verify that guard and preservation of billing/builder files. Do not export or commit private keys/passwords.
+
+No new native release executable or signed installer was produced in this phase. The Rust runtime is unchanged; graphical/editor/account-vault QA, complete tool guides, actual updater installation and signed platform releases remain outstanding. The launcher is not implemented. Native CI for the previous icon revision is separate; the earlier 42 passing results do not verify these unresolved release tasks. See the detailed handoff before proceeding.
+
+HISTORICAL CHECKPOINTS (current status above takes precedence):
+
 PIXA ICON REVISION — PRODUCT INITIALS
 
 All sixteen icon generators now use product initials: S, E, V, F, L, PDF, D, I, T, M, W, S, D, CAD, G, A. Original pixel letterforms, consistent rounded tiles, matching raster/SVG geometry and revised category palettes replace the shared P and binary index bars. PDF and CAD are the only multi-letter marks. PixaDesign's inline About mark changes to D. New artwork applies during source preparation; regenerate previously prepared sources from clean pins. Existing released installers, live downloads, website and billing are unchanged.

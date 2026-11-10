@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "overall": "not_customer_release_ready",
+  "website": {
+    "status": "review_preview_ready_not_production",
+    "preview_url": "https://aiwebdesignfirm-6f40xnk7s-luke-bargers-projects.vercel.app/products",
+    "deployment_id": "dpl_FNUea1KVpfw7nRXCPHjBVqPepdBX",
+    "baseline_production_deployment": "dpl_6w71EygorJmZkXWmq1vvTQG8GYLe",
+    "production_unchanged": true,
+    "product_pages": 16,
+    "catalog_icons": 16,
+    "browser_checks": "All 16 product headings and download-status sections; all 16 catalog icons loaded; launcher page; no desktop horizontal overflow; preview Next.js build/type checking passed. Final preview changes only feature copy after this browser pass.",
+    "source_patch": "website-overlay/",
+    "blocker": "Complete current production website source is absent locally and Vercel source responses truncate; do not replace it with stale GitHub main or promote the standalone marketing preview."
+  },
+  "apps": {
+    "new_suite_products": 14,
+    "existing_products": 2,
+    "launcher_built": false,
+    "release_ready": false,
+    "native_runtime_changed": false,
+    "previous_verified_run": "https://github.com/lukeybird/pixaeffects/actions/runs/42758533188",
+    "icon_revision_run": "https://github.com/lukeybird/pixaeffects/actions/runs/42832068751",
+    "icon_run_status": "in_progress_at_checkpoint",
+    "linked_release_builds_this_phase": 0,
+    "apple_commands_run": false,
+    "actual_apple_signing_requires": "Local Mac Keychain identity and notarization profile"
+  },
+  "new_tools": {
+    "macos_candidate": "release-tools/macos_candidate.py",
+    "website_apply": "website-overlay/apply_website_overlay.py",
+    "mac_bundle_validation_tests": 4,
+    "website_patch_tests": 2,
+    "tests_passed": true,
+    "signing_tool_status": "candidate tooling; actual Mac execution unverified; not an installer publication mechanism"
+  },
+  "handoff": "CURSOR_PIXA_RELEASE_HANDOFF.txt",
+  "remaining": [
+    "Linked native release builds and actual editor/import/export/save tests",
+    "Live test-account activation/expiry and OS vault acceptance",
+    "Verified updater install/restart/rollback",
+    "Full tool guides and branding/localization audit",
+    "Apple signing/notarization and fresh-download acceptance",
+    "Windows signing and platform packaging acceptance",
+    "Apply marketing patch to complete current site, build and test, then deploy",
+    "Implement launcher before advertising an actual launcher download"
+  ]
+}
