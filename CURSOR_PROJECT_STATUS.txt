@@ -1,3 +1,14 @@
+PIXA SUITE ACCESS/RECOVERY CHECKPOINT — 2026-11-10
+Read pixa-suite/CURSOR_SUITE_STATUS.txt and pixa-suite/runtime/README.md first.
+All 14 development apps passed final Linux cargo check; PixaFilm and PixaTexture also passed subscription-mode checks and actual native recovery-copy roundtrips.
+Secure OS credential storage, serialized account operations, logout race handling and two experimental restricted editor adapters are implemented. Default development builds remain unrestricted. Twelve adapters remain unfinished; no new app is release-ready.
+11 Python and 16 Rust tests passed; runtime all-targets Clippy passed with warnings denied. Hosted cross-platform CI is restarted by this commit; inspect actual results, not old runs.
+No website, billing, production downloads, existing product branches or signing keys were changed. Publication and launcher remain deferred.
+Never deploy stale website main over live production. Detailed limitations and next work are in the suite status file.
+
+
+PREVIOUS CHECKPOINT (historical):
+
 PIXA SUITE CURRENT CHECKPOINT — 2026-11-10
 Read pixa-suite/CURSOR_SUITE_STATUS.txt and pixa-suite/runtime/README.md first.
 Current work is on pixa-suite-product, not main or the existing product branches.

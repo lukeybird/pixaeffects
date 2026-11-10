@@ -1,3 +1,24 @@
+PIXA SUITE CHECKPOINT — 2026-11-10 — ACCESS/RECOVERY WORK
+
+Scope: unpublished suite branch only. No website, billing, product branch or customer download changes.
+
+IMPLEMENTED THIS CHECKPOINT:
+- Explicit UTF-8 source handling fixes the Windows CP1252 preparation failure. Regression runs with Python UTF-8 mode disabled.
+- OS-backed persistent sign-in via macOS Keychain, Windows Credential Manager and Linux Secret Service. No plaintext credential fallback. Actual vault UI remains untested; offline tests use mocks.
+- Bounded serialized account worker, fresh verification for restored tokens, monotonic grants anchored before the request, stale response rejection, and logout deletion acknowledgement. Race tests cover pending secure writes during logout.
+- Fail-closed restricted-preview mode with editor callback gating and explicit locked-close decisions. Default development builds remain unrestricted.
+- PixaFilm and PixaTexture native recovery adapters save copies without overwriting originals; their subscription mode disables control servers. Other twelve products are refused by the subscription builder until adapters exist.
+- Actual linked native engine examples passed locally for both pilots: recovery copies reopen with edits, originals remain byte-identical and live dirty state/path remain intact.
+- Hosted CI now checks both pilot modes, runs recovery roundtrips and shared runtime tests. All14 platform checks restart on this checkpoint; inspect their actual results.
+
+VERIFICATION:
+11 Python tests and 16 runtime tests passed; runtime all-targets Clippy passed with warnings denied. Final Linux compile result is recorded in BUILD_STATUS.json. No Mac/Windows result for this new checkpoint is claimed yet.
+
+REMAINING:
+Twelve per-editor recovery/access adapters; real login/expiry and OS vault GUI tests; full per-tool help and branding/localization audits; actual platform builds and editor/import/export/save QA; signed/notarized installers; configured signed feeds and native save-safe update install/restart/rollback. No new app is release-ready. ArtCraft Studio is still separately assessed, not converted. Keep launcher and publication deferred. Never commit private keys or deploy stale website main.
+
+HISTORICAL CHECKPOINTS (above takes precedence):
+
 PIXA SUITE CHECKPOINT — 2026-11-10
 
 User asked to continue the unfinished suite work. Publishing and a launcher remain deferred; website, billing, existing subscriptions and current PixaShop/PixaEffects product branches stay unchanged.

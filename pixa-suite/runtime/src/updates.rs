@@ -128,6 +128,7 @@ pub fn verify_download(mut input: impl Read, manifest: &Manifest) -> Result<(), 
     Ok(())
 }
 #[cfg(test)]
+#[allow(clippy::unwrap_used, clippy::expect_used, clippy::panic)]
 mod tests {
     use super::*;
     use ed25519_dalek::{Signer, SigningKey};

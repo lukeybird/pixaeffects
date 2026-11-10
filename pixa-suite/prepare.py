@@ -4,11 +4,11 @@ from pathlib import Path
 import argparse, hashlib, json, os, re, subprocess, tomllib
 from PIL import Image, ImageDraw
 ROOT = Path(__file__).resolve().parent
-CATALOG = json.loads((ROOT/'catalog.json').read_text())['apps']
+CATALOG = json.loads((ROOT/'catalog.json').read_text(encoding="utf-8"))['apps']
 SUFFIXES = {'.rs','.toml','.plist','.xml','.desktop','.in','.html','.tsv','.rc','.wxs','.wxl'}
 
 def run(args, cwd=None):
-    return subprocess.run(args, cwd=cwd, check=True, text=True, capture_output=True).stdout
+    return subprocess.run(args, cwd=cwd, check=True, text=True, capture_output=True, encoding="utf-8").stdout
 
 def matching_paren(s, start):
     """Balance a Rust expression, skipping comments and ordinary/raw string literals."""
@@ -71,7 +71,7 @@ def brand_assets(root,app):
                 im=icon(app,128)
                 # SVG matches original pixel geometry; no inherited trademark artwork.
                 cells=[(0,0),(1,0),(2,0),(0,1),(2,1),(0,2),(1,2),(2,2),(0,3),(0,4)]
-                p.write_text('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80"><rect width="80" height="80" rx="16" fill="#121823"/>'+''.join(f'<rect x="{(x+2)*10}" y="{(y+1.5)*10}" width="8.6" height="8.6" rx="1.2" fill="{app["color"]}"/>' for x,y in cells)+'</svg>\n')
+                p.write_text('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80"><rect width="80" height="80" rx="16" fill="#121823"/>'+''.join(f'<rect x="{(x+2)*10}" y="{(y+1.5)*10}" width="8.6" height="8.6" rx="1.2" fill="{app["color"]}"/>' for x,y in cells)+'</svg>\n', encoding="utf-8")
             else:
                 try:
                     with Image.open(p) as old:size=old.width
@@ -81,7 +81,7 @@ def brand_assets(root,app):
                 elif p.suffix.lower()=='.ico':icon(app,256).save(p,format='ICO')
                 else:im.save(p,format='PNG')
             rel=p.relative_to(root).as_posix();changed.append(rel)
-            Path(str(p)+'.attribution').write_text(f'asset: {p.name}\ntitle: {app["name"]} original pixel mark\nauthor: AIWebDesignFirm\nsource: original work\nlicense: MIT OR Apache-2.0\nlicense-file: LICENSE-MIT\nadded: 2026-11-09 by AIWebDesignFirm\nnotes: Procedural Pixa family mark, not upstream trademark artwork.\n')
+            Path(str(p)+'.attribution').write_text(f'asset: {p.name}\ntitle: {app["name"]} original pixel mark\nauthor: AIWebDesignFirm\nsource: original work\nlicense: MIT OR Apache-2.0\nlicense-file: LICENSE-MIT\nadded: 2026-11-09 by AIWebDesignFirm\nnotes: Procedural Pixa family mark, not upstream trademark artwork.\n', encoding="utf-8")
     return changed
 
 def prepare(app, sources):
@@ -101,7 +101,7 @@ def prepare(app, sources):
         for p in (root/folder).rglob('*'):
             if not p.is_file() or p.suffix not in SUFFIXES:continue
             if any(t in p.name.lower() for t in ['license','notice','attribution','contributors']) or 'credits' in p.parts:continue
-            try:s=p.read_text()
+            try:s=p.read_text(encoding="utf-8")
             except UnicodeDecodeError:continue
             old=s
             # Keep copyright/license lines truthful; internal crate and file-format identifiers stay intact.
@@ -134,47 +134,31 @@ def prepare(app, sources):
                 block=block.replace('"storytold/'+app['source']+'"','"lukeybird/'+app['id']+'"')
                 block=block.replace('    accent:', '    developer: "AIWebDesignFirm",\n    accent:')
                 s=s[:a]+block+s[b:]
-            if s!=old:p.write_text(s);changed.append(p.relative_to(root).as_posix())
-    cargo=root/'Cargo.toml';s=cargo.read_text();s,n=re.subn(r'(?m)^version = "[^"]+"',f'version = "{app["version"]}"',s,count=1)
+            if s!=old:p.write_text(s, encoding="utf-8");changed.append(p.relative_to(root).as_posix())
+    cargo=root/'Cargo.toml';s=cargo.read_text(encoding="utf-8");s,n=re.subn(r'(?m)^version = "[^"]+"',f'version = "{app["version"]}"',s,count=1)
     if n!=1:raise RuntimeError('Workspace version not found')
-    cargo.write_text(s)
+    cargo.write_text(s, encoding="utf-8")
     upstream_manifest=tomllib.loads(run(['git','show','HEAD:Cargo.toml'],root))
     original_version=upstream_manifest['workspace']['package']['version']
     # Path dependencies with explicit requirements must follow the local workspace version.
     for manifest in root.rglob('Cargo.toml'):
-        text=manifest.read_text();lines=[]
+        text=manifest.read_text(encoding="utf-8");lines=[]
         for line in text.splitlines(keepends=True):
             if 'path =' in line and 'version = "'+original_version+'"' in line:
                 line=line.replace('version = "'+original_version+'"','version = "'+app['version']+'"')
             lines.append(line)
         updated=''.join(lines)
-        if updated!=text:manifest.write_text(updated)
-    main=root/'apps'/app['source']/'src/main.rs';s=main.read_text()
+        if updated!=text:manifest.write_text(updated, encoding="utf-8")
+    main=root/'apps'/app['source']/'src/main.rs';s=main.read_text(encoding="utf-8")
     marker='Ok(Box::new('
     starts=[m.start() for m in re.finditer(re.escape(marker),s)]
     if len(starts)!=1:raise RuntimeError(f'Expected one desktop creation expression, got {len(starts)}')
     start=starts[0]+len('Ok(');end=matching_paren(s,start+len('Box::new'))
     s=s[:start]+'pixa_shell::wrap('+s[start:end+1]+')'+s[end+1:]
     # Keep outer cfg attributes attached to their original modules.
-    main.write_text(insert_shell_module(s))
-    shell=(ROOT/'templates/shell.rs').read_text()
-    on_exit='fn on_exit(&mut self) { self.inner.on_exit(); }'
-    # eframe unifies glow across the workspace for Light/PDF; use its actual desktop feature set.
-    if app['source'] in {'lightcraft','pdfcraft'}:on_exit='fn on_exit(&mut self, gl: Option<&eframe::glow::Context>) { self.inner.on_exit(gl); }'
-    for k,v in {'NAME':app['name'],'TAGLINE':app['tagline'],'UPSTREAM':app['upstream_name'],'ON_EXIT':on_exit}.items():shell=shell.replace('@'+k+'@',v)
-    (main.parent/'pixa_shell.rs').write_text(shell)
-    account_ui=(ROOT/'templates/account_ui.rs').read_text().replace('@NAME@',app['name'])
-    (main.parent/'pixa_account.rs').write_text(account_ui)
-    from manuals import guide
-    (main.parent/'pixa-guide.json').write_text(json.dumps(guide(app),indent=2)+'\n')
-    help_ui=(ROOT/'templates/help_ui.rs').read_text().replace('@NAME@',app['name']).replace('@ID@',app['id'])
-    (main.parent/'pixa_help.rs').write_text(help_ui)
-    manifest=main.parent.parent/'Cargo.toml'
-    text=manifest.read_text()
-    if '[dependencies]' not in text:raise RuntimeError('Desktop dependencies section missing')
-    runtime_path=Path(os.path.relpath(ROOT/'runtime',manifest.parent)).as_posix()
-    text=text.replace('[dependencies]', '[dependencies]\npixa-runtime = { path = '+json.dumps(runtime_path)+' }',1)
-    manifest.write_text(text)
+    main.write_text(insert_shell_module(s), encoding="utf-8")
+    from integrations import install
+    install(root,app)
     # Source references use the Pixa bundle ID; keep physical asset names in sync.
     for p in list((root/'assets').rglob('*')) + list((root/'packaging').rglob('*')):
         if p.is_file() and 'ai.storyteller.'+app['source'] in p.name:
@@ -184,7 +168,7 @@ def prepare(app, sources):
     with attribution.open('a') as f:
         f.write('\n## Pixa product overlay\nOriginal procedural pixel marks by AIWebDesignFirm, MIT OR Apache-2.0. Generated by pixa-suite/prepare.py.\n')
         for p in assets:f.write(f'- `{p}` — original Pixa pixel mark; AIWebDesignFirm; MIT OR Apache-2.0.\n')
-    stamp.write_text(json.dumps({'app':app,'source_changes':changed,'assets':assets,'release_ready':False},indent=2)+'\n')
+    stamp.write_text(json.dumps({'app':app,'source_changes':changed,'assets':assets,'release_ready':False},indent=2)+'\n', encoding="utf-8")
     print(app['name']+': source prepared; unpublished',flush=True)
 
 def main():

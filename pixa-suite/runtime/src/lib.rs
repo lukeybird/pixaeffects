@@ -9,5 +9,10 @@
     clippy::unreachable
 )]
 pub mod account;
+pub mod guard;
 pub mod help;
+pub mod recovery;
 pub mod updates;
+
+pub mod account_worker;
+pub mod credentials;

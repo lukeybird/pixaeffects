@@ -26,6 +26,9 @@ impl DeviceToken {
             Err("Invalid activation token.".into())
         }
     }
+    pub(crate) fn secret(&self) -> &str {
+        &self.0
+    }
     pub fn is_empty(&self) -> bool {
         self.0.is_empty()
     }
@@ -49,6 +52,30 @@ pub struct Account {
     lease: Option<Instant>,
     generation: u64,
 }
+impl Answer {
+    pub(crate) fn validate(&self) -> Result<(), String> {
+        if !self.token.is_empty() {
+            let _ = DeviceToken::parse(self.token.clone())?;
+        }
+        if !self.code.is_empty()
+            && (self.code.len() > 32
+                || !self
+                    .code
+                    .bytes()
+                    .all(|b| b.is_ascii_alphanumeric() || b == b'-'))
+        {
+            return Err("Invalid activation code.".into());
+        }
+        Ok(())
+    }
+    pub(crate) fn issued_token(&self) -> Result<Option<DeviceToken>, String> {
+        if self.token.is_empty() {
+            Ok(None)
+        } else {
+            DeviceToken::parse(self.token.clone()).map(Some)
+        }
+    }
+}
 impl Account {
     pub fn token(&self) -> DeviceToken {
         self.token.clone()
@@ -61,6 +88,21 @@ impl Account {
     }
     pub fn allowed(&self, now: Instant) -> bool {
         self.lease.is_some_and(|until| now < until)
+    }
+    pub fn apply_checked(
+        &mut self,
+        generation: u64,
+        token: DeviceToken,
+        answer: Answer,
+        now: Instant,
+    ) -> Result<(), String> {
+        if generation != self.generation {
+            return Err("Ignored an outdated account check.".into());
+        }
+        if self.token.is_empty() {
+            self.token = token;
+        }
+        self.apply(generation, answer, now)
     }
     pub fn forget(&mut self) {
         self.token = DeviceToken::default();
@@ -75,6 +117,7 @@ impl Account {
         }
         // A malformed response immediately revokes the lease; never keep a stale grant.
         self.lease = None;
+        answer.validate()?;
         if !answer.token.is_empty() {
             self.token = DeviceToken::parse(answer.token)?;
         }
@@ -129,6 +172,7 @@ pub fn check(token: &DeviceToken) -> Result<Answer, String> {
         .map_err(|_| "The account service returned an invalid response.".into())
 }
 #[cfg(test)]
+#[allow(clippy::unwrap_used, clippy::expect_used, clippy::panic)]
 mod tests {
     use super::*;
     fn answer(access: bool, seconds: u64) -> Answer {
@@ -166,6 +210,16 @@ mod tests {
         response.code = "<script>".into();
         assert!(a.apply(0, response, Instant::now()).is_err());
         assert!(!a.allowed(Instant::now()));
+    }
+    #[test]
+    fn credential_prompt_delay_cannot_extend_a_server_lease() {
+        let current = Instant::now();
+        let issued = current.checked_sub(Duration::from_secs(600)).unwrap();
+        let mut account = Account::default();
+        account
+            .apply_checked(0, DeviceToken::default(), answer(true, 300), issued)
+            .unwrap();
+        assert!(!account.allowed(current));
     }
     #[test]
     fn debug_never_prints_token() {

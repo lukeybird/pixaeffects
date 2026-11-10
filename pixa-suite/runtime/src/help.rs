@@ -31,6 +31,7 @@ pub fn read(bytes: &str, expected_product: &str) -> Result<Guide, String> {
     Ok(guide)
 }
 #[cfg(test)]
+#[allow(clippy::unwrap_used, clippy::expect_used, clippy::panic)]
 mod tests {
     use super::*;
     #[test]

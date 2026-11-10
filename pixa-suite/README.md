@@ -54,7 +54,7 @@ Use `python prepare.py pixavector` for one product. Preparation refuses dirty, a
 
 ## What is NOT finished
 
-These are development preparations, not 14 verified shipping applications. Subscription enforcement, per-app device/backend integration, comprehensive Pixa manuals/tool tours, complete promotional-brand audits, per-platform native builds, real editor/import/export/save QA, and verified signed Pixa updates remain work. The starter manuals and four-step orientations are not complete manuals or tours of every tool. Account connectivity is integrated, but editing enforcement, secure persistent sign-in and save-safe expiry handling remain incomplete. Signed-update validation is implemented, but a feed, publisher verification key and native install/restart integration remain unset. Upstream alpha features are not promised as professional-product parity.
+These are development preparations, not 14 verified shipping applications. Subscription enforcement, per-app device/backend integration, comprehensive Pixa manuals/tool tours, complete promotional-brand audits, per-platform native builds, real editor/import/export/save QA, and verified signed Pixa updates remain work. The starter manuals and four-step orientations are not complete manuals or tours of every tool. OS credential storage and a serialized account worker are implemented, with offline race tests. PixaFilm and PixaTexture have experimental subscription gates, disabled control servers and native save-copy recovery adapters. Other twelve editors cannot be built in subscription mode yet. Actual OS vault behavior and account/expiry GUI flows remain unverified. Signed-update validation is implemented, but a feed, publisher verification key and native install/restart integration remain unset. Upstream alpha features are not promised as professional-product parity.
 
 Development packaging deliberately says it is unsigned and unnotarized. No secrets are needed or stored. Do not upload these packages to customer downloads, enable a release flag, publish GitHub releases, or claim completion until the gates pass. Mac signing and notarization happen later using the publisher's secure Keychain or an explicitly configured secure signing service.
 
@@ -65,3 +65,7 @@ Keep each editor independently installable. A future launcher should consume a s
 ## Hosted platform checks
 
 The `Pixa suite native checks` workflow verifies each product on Linux, Windows and Intel macOS through `storytold/craft-common-actions` (contents-read permission only). A successful run means compilation checks, not linked installers, editor runtime QA, signing or notarization. No unsigned customer downloads are uploaded. Inspect the actual workflow run before claiming a platform passed.
+
+## Restricted previews
+
+`python build.py pixafilm --release --access-mode subscription` selects an experimental restricted build; PixaTexture is the other supported pilot. Default builds are development mode. Unknown modes fail closed. Native recovery roundtrip examples cover saved-copy contents, original preservation and dirty state. Hosted CI runs both pilot compile modes plus recovery examples, and the shared runtime tests on all three operating systems. These are not release approvals.

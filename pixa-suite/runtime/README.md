@@ -6,12 +6,14 @@ Shared, UI-independent development code for account connection, offline guide da
 
 - Uses the existing first-party PixaShop device API; no billing endpoint or subscription configuration changes.
 - Network calls happen on a worker after a person's account action, never during tests or editor startup.
-- Tokens stay in memory, redact Debug output and zero their owned strings on drop.
+- Tokens redact Debug output and zero their owned strings on drop. Sign-in can persist through OS Keychain, Credential Manager or Secret Service; unavailable storage falls back to RAM only, with a visible warning.
 - Leases use monotonic time and last at most five minutes.
 - A stale response from a disconnected account cannot restore its access state.
 - TLS uses the operating system's certificate verifier; redirects are disabled and responses are bounded.
 
-This provides an account **connection test** in the development apps. It does not enforce editing access. Safe enforcement still needs per-editor save/recovery adapters and automation gating. Persistent sign-in needs OS credential storage. Do not publish the development apps as subscription-protected products.
+Default development builds permit editing. Experimental subscription builds are permitted only for PixaFilm and PixaTexture: their wrapper gates editor callbacks, disables the control server, and offers native Save a Copy recovery while locked. Other editors remain blocked from restricted builds until their recovery adapters exist. Locked close always requires an explicit decision. This is not verified production protection: live account flows and interactive platform QA remain outstanding.
+
+One bounded worker serializes network and credential operations. Restored credentials require fresh server verification. Logout completes only after credential deletion acknowledges; stale operations cannot restore the disconnected lease. An already-started secure write is followed by deletion. Tests use mock stores; interactive OS vault behavior is not verified here.
 
 ## Update behavior
 
@@ -23,7 +25,7 @@ This is the validation layer, not an installer. No release feed or publisher ver
 
 ```
 cargo +1.95.0 test --manifest-path pixa-suite/runtime/Cargo.toml
-cargo +1.95.0 clippy --manifest-path pixa-suite/runtime/Cargo.toml --lib -- -D warnings
+cargo +1.95.0 clippy --manifest-path pixa-suite/runtime/Cargo.toml --all-targets -- -D warnings
 ```
 
 Tests use local fixtures only. They do not create production device records, use billing credentials, or contact the account service.

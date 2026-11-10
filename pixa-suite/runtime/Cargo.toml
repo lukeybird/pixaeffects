@@ -19,3 +19,10 @@ zeroize = "1"
 
 # Keep the SDK independent when the suite lives inside the existing PixaEffects workspace.
 [workspace]
+
+[target.'cfg(target_os = "macos")'.dependencies]
+keyring = { version = "=3.6.3", default-features = false, features = ["apple-native"] }
+[target.'cfg(windows)'.dependencies]
+keyring = { version = "=3.6.3", default-features = false, features = ["windows-native"] }
+[target.'cfg(all(unix, not(target_os = "macos")))'.dependencies]
+keyring = { version = "=3.6.3", default-features = false, features = ["async-secret-service", "async-io", "crypto-rust"] }

@@ -141,6 +141,5 @@
       "release_ready": false
     }
   ],
-  "complete": true,
-  "note": "Linux cargo check with shared account/help modules; not release builds, enforcement or runtime QA."
+  "complete": true
 }

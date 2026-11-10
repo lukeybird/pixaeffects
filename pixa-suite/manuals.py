@@ -2,7 +2,7 @@
 from pathlib import Path
 import json
 ROOT=Path(__file__).resolve().parent
-WORKFLOWS=json.loads((ROOT/'manuals/workflows.json').read_text())
+WORKFLOWS=json.loads((ROOT/'manuals/workflows.json').read_text(encoding="utf-8"))
 def guide(app):
  w=WORKFLOWS[app['id']]
  chapters=[{'title':'Start a first project','body':w['start']},{'title':'Make a first edit','body':w['work']},{'title':'Keep your work organized','body':w['organize']},{'title':'Save and export','body':w['finish']},{'title':'Your account','body':'Use Your account in the Pixa footer to open the account connection window. Passwords and payment details stay in your browser. Only approve an activation code displayed on your own device. This unpublished build tests account connectivity; editing enforcement and persistent sign-in are not yet release-ready.'},{'title':'Updates','body':'Use Updates in the Pixa footer to see update availability. Updates are deliberately disabled until the publisher configures a signed release feed and completes platform installation tests. You do not need to install an ArtCraft update for a Pixa product.'}]
