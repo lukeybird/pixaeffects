@@ -1,3 +1,24 @@
+PIXA SUITE CURRENT CHECKPOINT — RECOVERY, HELP, WINDOWS PATH FIX
+
+Scope: pixa-suite-product only, unpublished. No production website, billing, subscriptions, existing product branches or downloads changed. No signing credentials accessed or exported.
+
+NEW WORK:
+- Fixed the second Windows setup failure: tests used C: temporary sources while the repo/runtime lived on D:. Cargo dependencies now use an absolute forward-slash path across drives; a regression exercises that fallback. Keep the previous explicit UTF-8 fix.
+- Added PixaDesign and PixaDeck restricted-preview adapters. Native recovery covers all unsaved documents, and restricted builds disable their control servers. Four supported pilots total: Film, Texture, Design, Deck. Ten other editors remain blocked from restricted builds.
+- Linked and executed Design/Deck recovery fixtures using two distinct edited documents, byte-preserved originals, unchanged live paths/dirty state, a failed destination, reopened copy comparisons, and independent checkpoint preservation. Synthetic projects only.
+- PixaDesign offline manual now includes explanations for all 37 pinned toolbar tools. Help menu entries open the Manual or Tool Tutorial. Passive toolbar highlights and a connector identify the visible tool group; a read-only explanation bubble has Back/Next/Finish. Nothing automatically selects a tool or changes a document. Other13 still have starter orientations, not full tool tours.
+- Further display-name cleanup preserves internal command IDs, legal attribution and contributor credits. Replaced the Design inline publisher outline with the Pixa pixel mark. Existing product links use /pixashop and /pixaeffects; unpublished siblings are not advertised there.
+- PixaLight's external-editor lookup uses the existing PixaShop bundle ID com.aiwebdesignfirm.pixashop, Mac app PixaShop.app, Windows PixaShop.exe, and Linux pixashop. Actual cross-app handoff is not tested.
+- Updated catalog readiness fields and improved hosted failure diagnostics. No release flags enabled.
+
+VERIFIED:
+All14 development apps passed the final Linux cargo check. All4 restricted pilot checks run separately. 15 Python regression tests and 16 Rust runtime tests pass; runtime all-targets Clippy passes with warnings denied. Clean pinned Design reconstruction matched ten current integration files. Current Mac/Windows CI will restart at this commit; inspect actual results before claiming them passed. Engine examples are not full editor GUI tests.
+
+REMAINING / DO NOT CLAIM DONE:
+Ten per-editor recovery/access adapters; full tool tours for thirteen apps; real login/expiry and OS credential-vault UI tests; full branding/localization and inter-app QA; linked platform builds, import/export/save/editor GUI QA; signed/notarized installers and independently verified signed update install/restart/rollback. Mac signing requires the private identity on the publisher's Mac or a separately configured signing environment. No new app is release-ready. Publication and launcher remain deferred. ArtCraft Studio is not converted. Do not deploy stale website main.
+
+PREVIOUS CHECKPOINTS (historical; above takes precedence):
+
 PIXA SUITE CHECKPOINT — 2026-11-10 — ACCESS/RECOVERY WORK
 
 Scope: unpublished suite branch only. No website, billing, product branch or customer download changes.

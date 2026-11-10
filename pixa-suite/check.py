@@ -38,6 +38,9 @@ def check(app, native=False, release=False):
     status['native_check']='passed' if p.returncode==0 else 'failed'
    except subprocess.TimeoutExpired:status['native_check']='timed-out'
   status['log']='build-logs/'+app['id']+'.log'
+  if status['native_check']!='passed':
+   print((logs/(app['id']+'.log')).read_text(encoding='utf-8',errors='replace')[-12000:],file=sys.stderr)
+ if errors:print('\n'.join(errors),file=sys.stderr)
  print(app['name']+': '+status['source_checks']+'; native '+status['native_check'],flush=True)
  return status
 if __name__=='__main__':

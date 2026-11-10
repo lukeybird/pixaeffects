@@ -1,3 +1,13 @@
+PIXA SUITE CURRENT CHECKPOINT — RECOVERY, HELP AND WINDOWS PATH FIX
+Read pixa-suite/CURSOR_SUITE_STATUS.txt and pixa-suite/runtime/README.md first.
+All14 development apps pass Linux cargo check. Four restricted pilots now have native recovery adapters: Film, Texture, Design, Deck. Design/Deck multi-document recovery examples execute successfully. Ten adapters remain unfinished.
+PixaDesign has a 37-tool guided explanation with toolbar-group highlights and offline Help menu integration. Other13 tool tours remain incomplete. Native visual QA is still required.
+Fixed cross-drive Windows temp/runtime dependency paths with a regression; native CI restarts with this commit. 15 Python and16 Rust tests pass; runtime Clippy passes. Check actual hosted results before claiming Mac/Windows success.
+No production, billing, download, existing product branch or private signing-key changes. New apps remain unpublished and not release-ready. See suite notes for exact blockers. Never deploy stale website main over live production.
+
+
+PREVIOUS CHECKPOINT (historical):
+
 PIXA SUITE ACCESS/RECOVERY CHECKPOINT — 2026-11-10
 Read pixa-suite/CURSOR_SUITE_STATUS.txt and pixa-suite/runtime/README.md first.
 All 14 development apps passed final Linux cargo check; PixaFilm and PixaTexture also passed subscription-mode checks and actual native recovery-copy roundtrips.

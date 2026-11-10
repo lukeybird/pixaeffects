@@ -4,6 +4,8 @@ use serde::Deserialize;
 pub struct Chapter {
     pub title: String,
     pub body: String,
+    #[serde(default)]
+    pub tool_id: Option<String>,
 }
 #[derive(Deserialize)]
 pub struct Guide {
@@ -14,6 +16,8 @@ pub struct Guide {
     pub scope: String,
     pub chapters: Vec<Chapter>,
     pub tour: Vec<Chapter>,
+    #[serde(default)]
+    pub tools: Vec<Chapter>,
 }
 pub fn read(bytes: &str, expected_product: &str) -> Result<Guide, String> {
     if bytes.len() > 262_144 {

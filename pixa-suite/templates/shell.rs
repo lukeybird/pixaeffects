@@ -71,13 +71,16 @@ impl eframe::App for PixaShell {
             ui.horizontal(|ui| {
                 ui.small("@NAME@ by AIWebDesignFirm");ui.separator();
                 if ui.small_button("Manual").clicked(){self.help.open=true;}
-                if ui.small_button("Quick orientation").clicked(){self.help.start_tour();}
+                if ui.small_button("Quick tour").clicked(){self.help.start_tour();}
                 if ui.small_button("Your account").clicked(){self.account.open=true;}
                 if ui.small_button("Updates").clicked(){self.updates_open=true;}
                 ui.small(if subscription_build(){"Restricted preview"}else{"Development preview"});
             });
         });
         if self.can_edit(){eframe::App::ui(self.inner.as_mut(),ui,frame);}else{self.locked(ui);}
+        if let Some(request)=ui.ctx().data_mut(|d|d.remove_temp::<String>(egui::Id::unique("pixa-help-request"))) {
+            if request=="pixa:manual" {self.help.open=true;} else if request=="pixa:tool-tour" {self.help.start_tour();}
+        }
         self.account.show(ui.ctx());self.help.show(ui.ctx());
         if self.discard_prompt {
             egui::Window::new("Close this editing session?").resizable(false).show(ui.ctx(),|ui|{

@@ -62,6 +62,38 @@ class PreparationTests(unittest.TestCase):
    result=subprocess.run([sys.executable,'-X','utf8=0','-c',code,str(p.ROOT),json.dumps(app),str(root)],env=environment,capture_output=True,text=True,encoding='utf-8')
    self.assertEqual(result.returncode,0,result.stderr)
    self.assertIn('Ω —',(checkout/'apps/vectorcraft/src/main.rs').read_text(encoding='utf-8'))
+ def test_runtime_dependency_path_handles_windows_cross_drive_temp(self):
+  import sys,ntpath
+  from unittest.mock import patch
+  sys.path.insert(0,str(p.ROOT))
+  import integrations
+  with self.assertRaises(ValueError):ntpath.relpath('D:/repo/runtime','C:/Temp/project')
+  with patch('integrations.os.path.relpath',side_effect=ValueError('different drive')):
+   result=integrations.dependency_path(p.ROOT/'runtime',Path('/temporary/project'))
+  self.assertEqual(result,(p.ROOT/'runtime').resolve().as_posix())
+ def test_recovery_pilots_have_native_examples_and_control_gates(self):
+  import sys
+  sys.path.insert(0,str(p.ROOT))
+  from integrations import PILOTS
+  examples={'pixafilm':'film','pixatexture':'texture','pixadesign':'design','pixadeck':'deck'}
+  self.assertEqual(PILOTS,set(examples))
+  for value in examples.values():self.assertTrue((p.ROOT/'recovery-checks'/(value+'.rs')).is_file())
+ def test_display_branding_preserves_internal_identifiers(self):
+  import sys
+  sys.path.insert(0,str(p.ROOT));from branding import display_strings
+  original='fn editInPhotoCraft() { run("photo.editInPhotoCraft"); label("Edit in PhotoCraft"); label("PixaDesign on GitHub…"); }'
+  updated=display_strings(original,{'PhotoCraft':'PixaShop'})
+  self.assertIn('fn editInPhotoCraft()',updated)
+  self.assertIn('"photo.editInPhotoCraft"',updated)
+  self.assertIn('"Edit in PixaShop"',updated)
+  self.assertIn('"PixaDesign help…"',updated)
+ def test_design_tool_catalog_drift_fails_instead_of_silent_incomplete_tour(self):
+  import sys
+  sys.path.insert(0,str(p.ROOT));from manuals import tool_chapters
+  with tempfile.TemporaryDirectory() as td:
+   root=Path(td);file=root/'crates/tools/src/catalog.rs';file.parent.mkdir(parents=True)
+   file.write_text('t("unknownTool", "Unknown tool", None, "icon"),',encoding='utf-8')
+   with self.assertRaisesRegex(RuntimeError,'Missing tool explanation'):tool_chapters({'id':'pixadesign'},root)
  def test_restricted_build_is_blocked_without_a_recovery_adapter(self):
   import sys
   result=subprocess.run([sys.executable,str(p.ROOT/'build.py'),'pixavector','--access-mode','subscription'],capture_output=True,text=True,encoding='utf-8')
