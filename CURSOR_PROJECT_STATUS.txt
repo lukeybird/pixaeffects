@@ -1,3 +1,19 @@
+PIXA SUITE — DEVELOPMENT IMPLEMENTATION AND BUILD/RECOVERY VERIFICATION COMPLETE
+
+Read PIXA_SUITE_VERIFICATION.json first. All fourteen additional editors have experimental restricted-preview recovery integrations. All 42 hosted platform jobs passed: fourteen products across Linux, Windows and Intel Mac, each checking development/subscription compilation and native recovery fixtures. Verified run: https://github.com/lukeybird/pixaeffects/actions/runs/42758533188, completed successfully at 2026-11-10T06:32:40Z, source d8e807a79d3783d33434f1b3593c35bf2afbee83. No jobs failed, skipped or canceled.
+
+All fourteen Linux x86-64 subscription-preview executables linked locally. Their ELF architecture, SHA256, exact upstream pins, preserved Cargo.lock snapshots, runtime-library resolution and --version entry points are verified. The 28 Linux compilation checks, 14 native recovery products, 15 Python regressions, 17 runtime tests and warnings-denied Clippy passed. The corrected Anything recovery fixture also passed on all three hosted platforms. This matrix does not build or publish signed customer installers.
+
+Application/runtime code remains cc3befe9a83928a35c2b18e3715b797a6df1ac87; d8e807a79d3783d33434f1b3593c35bf2afbee83 changes the verification fixture and adds dependency snapshots. The pixa-suite source tree is a009412aee64836b07232d80a65c69cf92a55e8b. This final evidence commit changes only root status/report files and preserves that tested tree.
+
+NOT CUSTOMER RELEASE-READY. Graphical acceptance is not passed: PixaVector created a window, but the managed display could not present frames because Mesa/X11 shared-memory attachment failed. No account was connected or customer documents opened; owned test windows were closed. Remaining release work: real activation/access-expiry and OS credential-vault QA; native editor/import/export/save/graphics QA; linked Mac/Windows release builds and signed/notarized installers; publisher key and signed update feed with verified install/restart/rollback; full tool guides for thirteen apps and full branding/localization audit. Only Design has the exhaustive 37-tool guide; other guides are starters.
+
+Publication and launcher remain deferred as requested. PixaStudio remains assessed separate hosted-backend work, not a converted desktop editor. No live website, billing/prices, existing PixaShop/PixaEffects release branches or downloads, or private signing identities changed. Never deploy stale website main. Signing private keys stay out of the repository.
+
+PIXA_SUITE_BUILD_LOCKS/ contains fourteen verified Linux dependency snapshots for manual reproduction; prepare.py does not automatically apply them. Preserve the source pins, overlay/runtime and lock snapshot together. Read pixa-suite/CURSOR_SUITE_STATUS.txt, README.md and RECOVERY.md for architecture; this root report takes precedence for final test status.
+
+PREVIOUS CHECKPOINTS (historical; current status above takes precedence):
+
 PIXA SUITE — LOCAL DEVELOPMENT VERIFICATION COMPLETE; HOSTED CHECKS PENDING
 
 Read PIXA_SUITE_VERIFICATION.json first. All fourteen additional Linux x86-64 executables linked successfully in subscription-preview mode. All fourteen ELF hashes, exact dependency snapshots, upstream pins, runtime library scans and --version entry points are verified. Earlier checks passed all 28 development/subscription Linux compilations, all 14 native recovery products, 15 Python regressions and 17 runtime tests with warnings-denied Clippy. The strengthened Anything noncanonical-folder test also passes on Linux.

@@ -403,11 +403,395 @@
   "hosted_verification": {
     "run_id": 42758533188,
     "source_commit": "d8e807a79d3783d33434f1b3593c35bf2afbee83",
-    "status": "pending",
+    "status": "success",
     "expected_product_os_jobs": 42,
     "scope": "Development and subscription compilation plus native recovery fixtures; runtime tests on Film rows. Not linked Mac/Windows installers or GUI tests.",
-    "observed_passed_jobs": 24,
-    "observed_running_jobs": 12
+    "observed_passed_jobs": 42,
+    "observed_running_jobs": 0,
+    "run_url": "https://github.com/lukeybird/pixaeffects/actions/runs/42758533188",
+    "conclusion": "success",
+    "completed_at": "2026-11-10T06:32:40Z",
+    "coverage_verified": true,
+    "jobs": [
+      {
+        "name": "pixafilm / gate (ubuntu-24.04)",
+        "id": 129638490150,
+        "url": "https://github.com/lukeybird/pixaeffects/actions/runs/42758533188/job/129638490150",
+        "status": "completed",
+        "conclusion": "success",
+        "started_at": "2026-11-10T04:52:08Z",
+        "completed_at": "2026-11-10T05:03:24Z"
+      },
+      {
+        "name": "pixalight / gate (windows-latest)",
+        "id": 129638490391,
+        "url": "https://github.com/lukeybird/pixaeffects/actions/runs/42758533188/job/129638490391",
+        "status": "completed",
+        "conclusion": "success",
+        "started_at": "2026-11-10T04:52:09Z",
+        "completed_at": "2026-11-10T05:12:35Z"
+      },
+      {
+        "name": "pixalight / gate (ubuntu-24.04)",
+        "id": 129638490394,
+        "url": "https://github.com/lukeybird/pixaeffects/actions/runs/42758533188/job/129638490394",
+        "status": "completed",
+        "conclusion": "success",
+        "started_at": "2026-11-10T04:52:08Z",
+        "completed_at": "2026-11-10T05:01:20Z"
+      },
+      {
+        "name": "pixapdf / gate (ubuntu-24.04)",
+        "id": 129638490448,
+        "url": "https://github.com/lukeybird/pixaeffects/actions/runs/42758533188/job/129638490448",
+        "status": "completed",
+        "conclusion": "success",
+        "started_at": "2026-11-10T04:52:08Z",
+        "completed_at": "2026-11-10T05:06:58Z"
+      },
+      {
+        "name": "pixavector / gate (windows-latest)",
+        "id": 129638490498,
+        "url": "https://github.com/lukeybird/pixaeffects/actions/runs/42758533188/job/129638490498",
+        "status": "completed",
+        "conclusion": "success",
+        "started_at": "2026-11-10T04:52:10Z",
+        "completed_at": "2026-11-10T05:16:57Z"
+      },
+      {
+        "name": "pixavector / gate (macos-15-intel)",
+        "id": 129638490538,
+        "url": "https://github.com/lukeybird/pixaeffects/actions/runs/42758533188/job/129638490538",
+        "status": "completed",
+        "conclusion": "success",
+        "started_at": "2026-11-10T04:52:08Z",
+        "completed_at": "2026-11-10T05:24:08Z"
+      },
+      {
+        "name": "pixalight / gate (macos-15-intel)",
+        "id": 129638490553,
+        "url": "https://github.com/lukeybird/pixaeffects/actions/runs/42758533188/job/129638490553",
+        "status": "completed",
+        "conclusion": "success",
+        "started_at": "2026-11-10T04:52:10Z",
+        "completed_at": "2026-11-10T05:14:37Z"
+      },
+      {
+        "name": "pixavector / gate (ubuntu-24.04)",
+        "id": 129638490580,
+        "url": "https://github.com/lukeybird/pixaeffects/actions/runs/42758533188/job/129638490580",
+        "status": "completed",
+        "conclusion": "success",
+        "started_at": "2026-11-10T04:52:09Z",
+        "completed_at": "2026-11-10T05:09:43Z"
+      },
+      {
+        "name": "pixapdf / gate (windows-latest)",
+        "id": 129638490592,
+        "url": "https://github.com/lukeybird/pixaeffects/actions/runs/42758533188/job/129638490592",
+        "status": "completed",
+        "conclusion": "success",
+        "started_at": "2026-11-10T04:52:08Z",
+        "completed_at": "2026-11-10T05:20:52Z"
+      },
+      {
+        "name": "pixafilm / gate (macos-15-intel)",
+        "id": 129638490597,
+        "url": "https://github.com/lukeybird/pixaeffects/actions/runs/42758533188/job/129638490597",
+        "status": "completed",
+        "conclusion": "success",
+        "started_at": "2026-11-10T04:52:10Z",
+        "completed_at": "2026-11-10T05:13:17Z"
+      },
+      {
+        "name": "pixafilm / gate (windows-latest)",
+        "id": 129638490621,
+        "url": "https://github.com/lukeybird/pixaeffects/actions/runs/42758533188/job/129638490621",
+        "status": "completed",
+        "conclusion": "success",
+        "started_at": "2026-11-10T04:52:08Z",
+        "completed_at": "2026-11-10T05:04:05Z"
+      },
+      {
+        "name": "pixapdf / gate (macos-15-intel)",
+        "id": 129638490659,
+        "url": "https://github.com/lukeybird/pixaeffects/actions/runs/42758533188/job/129638490659",
+        "status": "completed",
+        "conclusion": "success",
+        "started_at": "2026-11-10T04:52:13Z",
+        "completed_at": "2026-11-10T05:20:58Z"
+      },
+      {
+        "name": "pixadesign / gate (macos-15-intel)",
+        "id": 129645574324,
+        "url": "https://github.com/lukeybird/pixaeffects/actions/runs/42758533188/job/129645574324",
+        "status": "completed",
+        "conclusion": "success",
+        "started_at": "2026-11-10T05:13:21Z",
+        "completed_at": "2026-11-10T05:37:05Z"
+      },
+      {
+        "name": "pixadesign / gate (windows-latest)",
+        "id": 129645574384,
+        "url": "https://github.com/lukeybird/pixaeffects/actions/runs/42758533188/job/129645574384",
+        "status": "completed",
+        "conclusion": "success",
+        "started_at": "2026-11-10T05:13:19Z",
+        "completed_at": "2026-11-10T05:41:05Z"
+      },
+      {
+        "name": "pixadesign / gate (ubuntu-24.04)",
+        "id": 129645574412,
+        "url": "https://github.com/lukeybird/pixaeffects/actions/runs/42758533188/job/129645574412",
+        "status": "completed",
+        "conclusion": "success",
+        "started_at": "2026-11-10T05:13:19Z",
+        "completed_at": "2026-11-10T05:26:10Z"
+      },
+      {
+        "name": "pixainterface / gate (ubuntu-24.04)",
+        "id": 129646037215,
+        "url": "https://github.com/lukeybird/pixaeffects/actions/runs/42758533188/job/129646037215",
+        "status": "completed",
+        "conclusion": "success",
+        "started_at": "2026-11-10T05:14:39Z",
+        "completed_at": "2026-11-10T05:27:15Z"
+      },
+      {
+        "name": "pixainterface / gate (windows-latest)",
+        "id": 129646037221,
+        "url": "https://github.com/lukeybird/pixaeffects/actions/runs/42758533188/job/129646037221",
+        "status": "completed",
+        "conclusion": "success",
+        "started_at": "2026-11-10T05:14:39Z",
+        "completed_at": "2026-11-10T05:34:06Z"
+      },
+      {
+        "name": "pixainterface / gate (macos-15-intel)",
+        "id": 129646037271,
+        "url": "https://github.com/lukeybird/pixaeffects/actions/runs/42758533188/job/129646037271",
+        "status": "completed",
+        "conclusion": "success",
+        "started_at": "2026-11-10T05:14:40Z",
+        "completed_at": "2026-11-10T05:40:03Z"
+      },
+      {
+        "name": "pixatexture / gate (windows-latest)",
+        "id": 129648217780,
+        "url": "https://github.com/lukeybird/pixaeffects/actions/runs/42758533188/job/129648217780",
+        "status": "completed",
+        "conclusion": "success",
+        "started_at": "2026-11-10T05:20:59Z",
+        "completed_at": "2026-11-10T05:31:51Z"
+      },
+      {
+        "name": "pixatexture / gate (ubuntu-24.04)",
+        "id": 129648217795,
+        "url": "https://github.com/lukeybird/pixaeffects/actions/runs/42758533188/job/129648217795",
+        "status": "completed",
+        "conclusion": "success",
+        "started_at": "2026-11-10T05:21:00Z",
+        "completed_at": "2026-11-10T05:32:11Z"
+      },
+      {
+        "name": "pixatexture / gate (macos-15-intel)",
+        "id": 129648217814,
+        "url": "https://github.com/lukeybird/pixaeffects/actions/runs/42758533188/job/129648217814",
+        "status": "completed",
+        "conclusion": "success",
+        "started_at": "2026-11-10T05:21:01Z",
+        "completed_at": "2026-11-10T05:38:26Z"
+      },
+      {
+        "name": "pixamaterial / gate (macos-15-intel)",
+        "id": 129649309609,
+        "url": "https://github.com/lukeybird/pixaeffects/actions/runs/42758533188/job/129649309609",
+        "status": "completed",
+        "conclusion": "success",
+        "started_at": "2026-11-10T05:24:10Z",
+        "completed_at": "2026-11-10T05:35:42Z"
+      },
+      {
+        "name": "pixamaterial / gate (ubuntu-24.04)",
+        "id": 129649309650,
+        "url": "https://github.com/lukeybird/pixaeffects/actions/runs/42758533188/job/129649309650",
+        "status": "completed",
+        "conclusion": "success",
+        "started_at": "2026-11-10T05:24:10Z",
+        "completed_at": "2026-11-10T05:32:15Z"
+      },
+      {
+        "name": "pixamaterial / gate (windows-latest)",
+        "id": 129649309669,
+        "url": "https://github.com/lukeybird/pixaeffects/actions/runs/42758533188/job/129649309669",
+        "status": "completed",
+        "conclusion": "success",
+        "started_at": "2026-11-10T05:24:09Z",
+        "completed_at": "2026-11-10T05:37:29Z"
+      },
+      {
+        "name": "pixaword / gate (windows-latest)",
+        "id": 129653796193,
+        "url": "https://github.com/lukeybird/pixaeffects/actions/runs/42758533188/job/129653796193",
+        "status": "completed",
+        "conclusion": "success",
+        "started_at": "2026-11-10T05:37:31Z",
+        "completed_at": "2026-11-10T06:01:14Z"
+      },
+      {
+        "name": "pixaword / gate (macos-15-intel)",
+        "id": 129653796226,
+        "url": "https://github.com/lukeybird/pixaeffects/actions/runs/42758533188/job/129653796226",
+        "status": "completed",
+        "conclusion": "success",
+        "started_at": "2026-11-10T05:37:33Z",
+        "completed_at": "2026-11-10T06:00:45Z"
+      },
+      {
+        "name": "pixaword / gate (ubuntu-24.04)",
+        "id": 129653796247,
+        "url": "https://github.com/lukeybird/pixaeffects/actions/runs/42758533188/job/129653796247",
+        "status": "completed",
+        "conclusion": "success",
+        "started_at": "2026-11-10T05:37:32Z",
+        "completed_at": "2026-11-10T05:52:22Z"
+      },
+      {
+        "name": "pixasound / gate (ubuntu-24.04)",
+        "id": 129654108644,
+        "url": "https://github.com/lukeybird/pixaeffects/actions/runs/42758533188/job/129654108644",
+        "status": "completed",
+        "conclusion": "success",
+        "started_at": "2026-11-10T05:38:28Z",
+        "completed_at": "2026-11-10T05:48:51Z"
+      },
+      {
+        "name": "pixasound / gate (windows-latest)",
+        "id": 129654108672,
+        "url": "https://github.com/lukeybird/pixaeffects/actions/runs/42758533188/job/129654108672",
+        "status": "completed",
+        "conclusion": "success",
+        "started_at": "2026-11-10T05:38:28Z",
+        "completed_at": "2026-11-10T05:44:51Z"
+      },
+      {
+        "name": "pixasound / gate (macos-15-intel)",
+        "id": 129654108736,
+        "url": "https://github.com/lukeybird/pixaeffects/actions/runs/42758533188/job/129654108736",
+        "status": "completed",
+        "conclusion": "success",
+        "started_at": "2026-11-10T05:38:30Z",
+        "completed_at": "2026-11-10T05:55:31Z"
+      },
+      {
+        "name": "pixadeck / gate (macos-15-intel)",
+        "id": 129654639870,
+        "url": "https://github.com/lukeybird/pixaeffects/actions/runs/42758533188/job/129654639870",
+        "status": "completed",
+        "conclusion": "success",
+        "started_at": "2026-11-10T05:40:06Z",
+        "completed_at": "2026-11-10T06:08:24Z"
+      },
+      {
+        "name": "pixadeck / gate (windows-latest)",
+        "id": 129654639873,
+        "url": "https://github.com/lukeybird/pixaeffects/actions/runs/42758533188/job/129654639873",
+        "status": "completed",
+        "conclusion": "success",
+        "started_at": "2026-11-10T05:40:06Z",
+        "completed_at": "2026-11-10T05:55:18Z"
+      },
+      {
+        "name": "pixadeck / gate (ubuntu-24.04)",
+        "id": 129654639966,
+        "url": "https://github.com/lukeybird/pixaeffects/actions/runs/42758533188/job/129654639966",
+        "status": "completed",
+        "conclusion": "success",
+        "started_at": "2026-11-10T05:40:06Z",
+        "completed_at": "2026-11-10T05:47:06Z"
+      },
+      {
+        "name": "pixacad / gate (macos-15-intel)",
+        "id": 129654983552,
+        "url": "https://github.com/lukeybird/pixaeffects/actions/runs/42758533188/job/129654983552",
+        "status": "completed",
+        "conclusion": "success",
+        "started_at": "2026-11-10T05:41:08Z",
+        "completed_at": "2026-11-10T05:57:23Z"
+      },
+      {
+        "name": "pixacad / gate (ubuntu-24.04)",
+        "id": 129654983602,
+        "url": "https://github.com/lukeybird/pixaeffects/actions/runs/42758533188/job/129654983602",
+        "status": "completed",
+        "conclusion": "success",
+        "started_at": "2026-11-10T05:41:07Z",
+        "completed_at": "2026-11-10T05:52:07Z"
+      },
+      {
+        "name": "pixacad / gate (windows-latest)",
+        "id": 129654983613,
+        "url": "https://github.com/lukeybird/pixaeffects/actions/runs/42758533188/job/129654983613",
+        "status": "completed",
+        "conclusion": "success",
+        "started_at": "2026-11-10T05:41:08Z",
+        "completed_at": "2026-11-10T05:58:30Z"
+      },
+      {
+        "name": "pixagrid / gate (ubuntu-24.04)",
+        "id": 129659726774,
+        "url": "https://github.com/lukeybird/pixaeffects/actions/runs/42758533188/job/129659726774",
+        "status": "completed",
+        "conclusion": "success",
+        "started_at": "2026-11-10T05:55:33Z",
+        "completed_at": "2026-11-10T06:01:36Z"
+      },
+      {
+        "name": "pixagrid / gate (macos-15-intel)",
+        "id": 129659726851,
+        "url": "https://github.com/lukeybird/pixaeffects/actions/runs/42758533188/job/129659726851",
+        "status": "completed",
+        "conclusion": "success",
+        "started_at": "2026-11-10T05:55:34Z",
+        "completed_at": "2026-11-10T06:13:29Z"
+      },
+      {
+        "name": "pixagrid / gate (windows-latest)",
+        "id": 129659726900,
+        "url": "https://github.com/lukeybird/pixaeffects/actions/runs/42758533188/job/129659726900",
+        "status": "completed",
+        "conclusion": "success",
+        "started_at": "2026-11-10T05:55:33Z",
+        "completed_at": "2026-11-10T06:10:06Z"
+      },
+      {
+        "name": "pixaanything / gate (windows-latest)",
+        "id": 129660696700,
+        "url": "https://github.com/lukeybird/pixaeffects/actions/runs/42758533188/job/129660696700",
+        "status": "completed",
+        "conclusion": "success",
+        "started_at": "2026-11-10T05:58:33Z",
+        "completed_at": "2026-11-10T06:23:42Z"
+      },
+      {
+        "name": "pixaanything / gate (macos-15-intel)",
+        "id": 129660696759,
+        "url": "https://github.com/lukeybird/pixaeffects/actions/runs/42758533188/job/129660696759",
+        "status": "completed",
+        "conclusion": "success",
+        "started_at": "2026-11-10T05:58:35Z",
+        "completed_at": "2026-11-10T06:32:39Z"
+      },
+      {
+        "name": "pixaanything / gate (ubuntu-24.04)",
+        "id": 129660696775,
+        "url": "https://github.com/lukeybird/pixaeffects/actions/runs/42758533188/job/129660696775",
+        "status": "completed",
+        "conclusion": "success",
+        "started_at": "2026-11-10T05:58:33Z",
+        "completed_at": "2026-11-10T06:11:29Z"
+      }
+    ]
   },
   "release_ready": false,
   "published": false,
@@ -426,5 +810,6 @@
     "Full tool guides for thirteen products and complete branding/localization audit"
   ],
   "separate_studio": "ArtCraft Studio/PixaStudio remains assessed, not integrated; its hosted backend is separate from the sixteen native editors.",
-  "complete": false
+  "complete": true,
+  "completion_scope": "Development implementation and recorded compilation/recovery verification complete; customer release and graphical acceptance are not complete."
 }
