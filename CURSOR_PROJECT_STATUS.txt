@@ -1,3 +1,9 @@
+PIXA ICON CI FINAL — 2026-11-10
+Run https://github.com/lukeybird/pixaeffects/actions/runs/42832068751 completed successfully at 2026-11-10T16:28:26Z (11:28 AM Eastern), source fbb0747d32e1d77c95fa45b2d6f9a2b6b9e18c1d, attempt 1. Exact source SHA verified. All 42 unique expected product/OS jobs passed: fourteen products across ubuntu-24.04, windows-latest and macos-15-intel. No failed, canceled, skipped, missing, unexpected or incomplete jobs. Exact per-job and per-step conclusions are in root PIXA_ICON_CI_FINAL.json. The old green run 42758533188 is a different source.
+This is compile/recovery verification only, not installers or release approval. This evidence-only commit changes just PIXA_ICON_CI_FINAL.json and this checkpoint; no suite/native/workflow, billing, deployment/routing, downloads, release settings or signing changes. Existing production backend dpl_6w71EygorJmZkXWmq1vvTQG8GYLe and the live showcase configuration recorded below are untouched. Do not deploy stale website main or promote standalone previews. Installer build 42853073739 is separate and is not evaluated by this record. Do not infer that it produced a PixaVector .app or that signing may begin.
+Prior website/source/release constraints and history remain below. The icon-result watcher is to be disabled after this record is saved and reported.
+
+PRIOR CHECKPOINTS (preserved in full):
 PIXA SHOWCASE LIVE — 2026-11-10
 Public catalog: https://aiwebdesignfirm.com/products
 Homepage, catalog, sixteen individual product pages, launcher coming-soon page and /pixaeffects marketing are now live via twelve host-scoped project rewrites. Unreleased products have disabled Coming soon controls; PixaShop links to its existing download page (observed v0.20.3). No new installer, native release, update feed or download flag was published/enabled.
