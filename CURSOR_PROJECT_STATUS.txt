@@ -1,3 +1,13 @@
+PIXA SUITE VERIFICATION IN PROGRESS — WINDOWS FIXTURE PATH NORMALIZATION
+
+Application and runtime code remain unchanged from cc3befe9a83928a35c2b18e3715b797a6df1ac87. The Anything recovery fixture now compares canonical filesystem paths on both sides, exercises an aliased selected folder on every OS, and checks both recovered attachment references after deleting the original. Its updated Linux native roundtrip and the 15 Python regressions pass.
+
+The preceding hosted run passed 40 jobs; Windows Anything failed at a lexical path assertion, and Intel Mac Anything was still running when the fix was prepared. Inspect the new workflow before claiming the corrected platform matrix passed. Twelve Linux executables have linked; the batch is still building Grid and Anything. No new release is ready or published.
+
+PIXA_SUITE_BUILD_LOCKS/ preserves the Linux dependency graphs for reproduction. The final PIXA_SUITE_VERIFICATION.json will be added when the remaining checks finish. Read this current checkpoint before historical notes below. No production website, billing, existing product release or signing-key changes.
+
+PREVIOUS CHECKPOINTS (historical):
+
 PIXA SUITE CURRENT CHECKPOINT
 
 Read pixa-suite/CURSOR_SUITE_STATUS.txt first, then pixa-suite/README.md and pixa-suite/RECOVERY.md. All fourteen additional editors have experimental restricted-preview recovery integrations; publication and launcher are deferred. Check FINAL_CHECKS.json, RECOVERY_STATUS.json and the commit-specific GitHub Actions results. No new product is shipping-ready; no production website/billing/download changes were made. Do not deploy stale website main. Private signing keys stay out of this repository.
