@@ -1,6 +1,9 @@
 name: PixaVector Mac candidate
 on:
   workflow_dispatch:
+  push:
+    branches: [pixa-suite-product]
+    paths: [.github/workflows/pixavector-macos.yml]
 permissions:
   contents: read
 jobs:
