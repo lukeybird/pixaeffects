@@ -1,4 +1,17 @@
 //! Subscription-preview policy. An unimplemented recovery adapter always blocks protected editing.
+use std::time::Instant;
+/// A captured grant for independently repainted native child windows.
+/// Checking the deadline here prevents a hidden main window from extending access.
+#[derive(Clone, Copy, Debug)]
+pub struct ViewportPermit {
+    development: bool,
+    deadline: Option<Instant>,
+}
+impl ViewportPermit {
+    pub fn allows(&self, now: Instant) -> bool {
+        self.development || self.deadline.is_some_and(|until| now < until)
+    }
+}
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum BuildMode {
     Development,
@@ -33,6 +46,16 @@ impl Guard {
         self.mode == BuildMode::Development
             || (self.mode == BuildMode::Subscription && self.recovery_ready && access)
     }
+    pub fn viewport_permit(&self, deadline: Option<Instant>) -> ViewportPermit {
+        ViewportPermit {
+            development: self.mode == BuildMode::Development,
+            deadline: if self.mode == BuildMode::Subscription && self.recovery_ready {
+                deadline
+            } else {
+                None
+            },
+        }
+    }
     pub fn configuration_valid(&self) -> bool {
         self.mode != BuildMode::Invalid
     }
@@ -65,6 +88,35 @@ impl Guard {
 #[allow(clippy::unwrap_used)]
 mod tests {
     use super::*;
+    #[test]
+    fn child_window_cannot_extend_an_expired_or_unconfigured_grant() {
+        use std::time::Duration;
+        let now = Instant::now();
+        let until = now + Duration::from_secs(2);
+        let permit = Guard::new(BuildMode::Subscription, true).viewport_permit(Some(until));
+        assert!(permit.allows(now));
+        assert!(!permit.allows(until));
+        assert!(
+            !Guard::new(BuildMode::Subscription, false)
+                .viewport_permit(Some(until))
+                .allows(now)
+        );
+        assert!(
+            !Guard::new(BuildMode::Subscription, true)
+                .viewport_permit(None)
+                .allows(now)
+        );
+        assert!(
+            !Guard::new(BuildMode::Invalid, true)
+                .viewport_permit(Some(until))
+                .allows(now)
+        );
+        assert!(
+            Guard::new(BuildMode::Development, false)
+                .viewport_permit(None)
+                .allows(until)
+        );
+    }
     #[test]
     fn protected_editing_requires_both_access_and_adapter() {
         assert!(!Guard::new(BuildMode::Subscription, false).can_edit(true));

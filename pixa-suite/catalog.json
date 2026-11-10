@@ -14,10 +14,10 @@
       "revision": "25cfa9d3cfdb3510c48f951d57562f0f7b8700cc",
       "package": "vectorcraft",
       "distribution": "unpublished",
-      "activation": "account-connection-only",
+      "activation": "restricted-preview-unverified",
       "updates": "pending-integration",
       "rust_toolchain": "1.95.0",
-      "recovery": "not-integrated",
+      "recovery": "native-adapter-offline-tested",
       "tool_tour": "starter-orientation-only"
     },
     {
@@ -52,10 +52,10 @@
       "revision": "e9c29e2c5c5dd1f86cc98677b5dc389f6612fcac",
       "package": "lightcraft",
       "distribution": "unpublished",
-      "activation": "account-connection-only",
+      "activation": "restricted-preview-unverified",
       "updates": "pending-integration",
       "rust_toolchain": "1.95.0",
-      "recovery": "not-integrated",
+      "recovery": "native-adapter-offline-tested",
       "tool_tour": "starter-orientation-only"
     },
     {
@@ -71,10 +71,10 @@
       "revision": "efd7c9fc245d1660388208a37df3d3b5036584ba",
       "package": "pdfcraft",
       "distribution": "unpublished",
-      "activation": "account-connection-only",
+      "activation": "restricted-preview-unverified",
       "updates": "pending-integration",
       "rust_toolchain": "1.95.0",
-      "recovery": "not-integrated",
+      "recovery": "native-adapter-offline-tested",
       "tool_tour": "starter-orientation-only"
     },
     {
@@ -109,10 +109,10 @@
       "revision": "a2e87433d8bda2b0c909587da08cb27c51e3b17e",
       "package": "figcraft",
       "distribution": "unpublished",
-      "activation": "account-connection-only",
+      "activation": "restricted-preview-unverified",
       "updates": "pending-integration",
       "rust_toolchain": "1.95.0",
-      "recovery": "not-integrated",
+      "recovery": "native-adapter-offline-tested",
       "tool_tour": "starter-orientation-only"
     },
     {
@@ -147,10 +147,10 @@
       "revision": "29857f653d894d7c177d56eca5e3305a0709808b",
       "package": "materialcraft",
       "distribution": "unpublished",
-      "activation": "account-connection-only",
+      "activation": "restricted-preview-unverified",
       "updates": "pending-integration",
       "rust_toolchain": "1.95.0",
-      "recovery": "not-integrated",
+      "recovery": "native-adapter-offline-tested",
       "tool_tour": "starter-orientation-only"
     },
     {
@@ -166,10 +166,10 @@
       "revision": "d40d1b27181b61990c84c75f77d5fd23ef81d452",
       "package": "wordcraft",
       "distribution": "unpublished",
-      "activation": "account-connection-only",
+      "activation": "restricted-preview-unverified",
       "updates": "pending-integration",
       "rust_toolchain": "1.95.0",
-      "recovery": "not-integrated",
+      "recovery": "native-adapter-offline-tested",
       "tool_tour": "starter-orientation-only"
     },
     {
@@ -185,10 +185,10 @@
       "revision": "ef58a90f4a418a282a15fc71d2e03c3d8e8f40fa",
       "package": "soundcraft",
       "distribution": "unpublished",
-      "activation": "account-connection-only",
+      "activation": "restricted-preview-unverified",
       "updates": "pending-integration",
       "rust_toolchain": "1.95.0",
-      "recovery": "not-integrated",
+      "recovery": "native-adapter-offline-tested",
       "tool_tour": "starter-orientation-only"
     },
     {
@@ -223,10 +223,10 @@
       "revision": "a3d9348f63c2ad35391cc93980dc7ee7366f2ad6",
       "package": "cadcraft",
       "distribution": "unpublished",
-      "activation": "account-connection-only",
+      "activation": "restricted-preview-unverified",
       "updates": "pending-integration",
       "rust_toolchain": "1.95.0",
-      "recovery": "not-integrated",
+      "recovery": "native-adapter-offline-tested",
       "tool_tour": "starter-orientation-only"
     },
     {
@@ -242,10 +242,10 @@
       "revision": "e9addf52fe68847e6c1310fcfa5d42b7aa8b9650",
       "package": "gridcraft",
       "distribution": "unpublished",
-      "activation": "account-connection-only",
+      "activation": "restricted-preview-unverified",
       "updates": "pending-integration",
       "rust_toolchain": "1.95.0",
-      "recovery": "not-integrated",
+      "recovery": "native-adapter-offline-tested",
       "tool_tour": "starter-orientation-only"
     },
     {
@@ -261,10 +261,10 @@
       "revision": "2e7f27631be78d499ca61d29f5cdee701e71b54f",
       "package": "craft-anything",
       "distribution": "unpublished",
-      "activation": "account-connection-only",
+      "activation": "restricted-preview-unverified",
       "updates": "pending-integration",
       "rust_toolchain": "1.97.0",
-      "recovery": "not-integrated",
+      "recovery": "native-adapter-offline-tested",
       "tool_tour": "starter-orientation-only"
     }
   ],

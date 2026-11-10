@@ -86,6 +86,9 @@ impl Account {
     pub fn generation(&self) -> u64 {
         self.generation
     }
+    pub fn deadline(&self) -> Option<Instant> {
+        self.lease
+    }
     pub fn allowed(&self, now: Instant) -> bool {
         self.lease.is_some_and(|until| now < until)
     }

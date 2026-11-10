@@ -54,7 +54,7 @@ Use `python prepare.py pixavector` for one product. Preparation refuses dirty, a
 
 ## What is NOT finished
 
-These are development preparations, not 14 verified shipping applications. Subscription enforcement, per-app device/backend integration, comprehensive Pixa manuals/tool tours, complete promotional-brand audits, per-platform native builds, real editor/import/export/save QA, and verified signed Pixa updates remain work. The starter manuals and four-step orientations are not complete manuals or tours of every tool. OS credential storage and a serialized account worker are implemented, with offline race tests. PixaFilm, PixaTexture, PixaDesign and PixaDeck have experimental subscription gates, disabled control servers and native save-copy recovery adapters. Other ten editors cannot be built in subscription mode yet. Actual OS vault behavior and account/expiry GUI flows remain unverified. Signed-update validation is implemented, but a feed, publisher verification key and native install/restart integration remain unset. Upstream alpha features are not promised as professional-product parity.
+These are development preparations, not 14 verified shipping applications. All fourteen have experimental restricted-preview gates and native recovery adapters with offline native roundtrip checks. Real account/expiry and OS vault UI tests, comprehensive manuals/tool tours, complete promotional-brand audits, linked per-platform builds and editor/import/export/save QA remain outstanding. PixaDesign has a 37-tool guide; the other thirteen have starter orientations. Signed-update validation exists, but the publisher key/feed, native installation, restart and rollback are not configured. Upstream alpha features are not promised as professional-product parity.
 
 Development packaging deliberately says it is unsigned and unnotarized. No secrets are needed or stored. Do not upload these packages to customer downloads, enable a release flag, publish GitHub releases, or claim completion until the gates pass. Mac signing and notarization happen later using the publisher's secure Keychain or an explicitly configured secure signing service.
 
@@ -68,6 +68,19 @@ The `Pixa suite native checks` workflow verifies each product on Linux, Windows 
 
 ## Restricted previews
 
-`python build.py pixafilm --release --access-mode subscription` selects an experimental restricted build; PixaTexture, PixaDesign and PixaDeck are the other supported pilots. Default builds are development mode. Unknown modes fail closed. Native recovery roundtrip examples cover saved-copy contents, original preservation and dirty state. Hosted CI runs development and restricted pilot compile modes plus recovery examples, and the shared runtime tests on all three operating systems. These are not release approvals.
+`python build.py pixafilm --release --access-mode subscription` selects an experimental restricted build; all fourteen catalog products support the experimental mode. Default builds are development mode. Unknown modes fail closed. Native recovery roundtrip examples cover saved-copy contents, original preservation and dirty state. Hosted CI runs development and restricted pilot compile modes plus recovery examples, and the shared runtime tests on all three operating systems. These are not release approvals.
 
 The PixaDesign Help menu now opens an offline Manual and a read-only 37-tool tutorial. Tool groups are highlighted when visible, with a connector to the explanation bubble; the tour does not select tools or alter documents. Its actual GUI layout still needs native visual QA. Other products retain starter orientations, not complete per-tool tutorials. Display-name cleanup preserves internal command IDs and legal attribution. PixaDesign uses an original pixel-P mark instead of the inherited inline publisher outline. PixaLight uses the existing PixaShop bundle/executable names for its external-image-editor lookup; actual handoff still needs native testing.
+
+
+## Recovery behavior
+
+Every restricted preview preserves the live editor in memory when access expires and offers recovery to a newly created folder. Local automation/control servers are disabled in restricted builds. Recovery files never replace the original project files. Native roundtrip fixtures cover all fourteen adapters; these are engine/model checks, not complete editor UI tests.
+
+- Vector, Film, PDF, Design, Interface, Texture, Material, Word, Sound, Deck, CAD and Grid write native project copies. Interface includes branch/version data; CAD includes pending block edits. Password-protected Word documents remain encrypted. Sound copies memory-only audio into its recovery package and stops recording/playback on the access transition.
+- Light snapshots its current catalogue, presets, view and preferences. Original photos remain referenced in place; retain them.
+- Anything snapshots drafts/chat and bounded attachment copies, excluding provider settings, provider keys and account credentials. Restore drafts requires a fresh idle session and refuses existing drafts. Keep original project folders; active jobs are not resumed.
+
+Interface detached windows check the same monotonic access deadline even if the main window is hidden. Locked close still requires an explicit decision after recovery; unfinished text fields or external/background operations may require reconnecting first.
+
+The final local verification checkpoint records 28 passed Linux compilation checks (all fourteen apps in development and subscription modes), 14 passed native recovery roundtrips, 15 Python regressions and 17 runtime tests. See FINAL_CHECKS.json and RECOVERY_STATUS.json. These results do not approve customer releases.

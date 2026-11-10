@@ -1,3 +1,29 @@
+PIXA SUITE CURRENT CHECKPOINT — FOURTEEN RECOVERY ADAPTERS
+
+Scope: unpublished pixa-suite-product only. Publication and the launcher remain deferred. No production website, billing, subscriptions, existing product branches or customer downloads changed. No private signing identity accessed or exported.
+
+IMPLEMENTED:
+- All fourteen prepared products now support experimental subscription-mode callback gates and native recovery. Restricted builds disable their local automation/control servers. Default builds remain explicit development previews.
+- Added native adapters for Vector, Grid, Word, PDF, Material, CAD, Light, Sound, Interface and Anything to the previous Film, Texture, Design and Deck adapters.
+- Interface preserves branches/version histories and detached windows independently check the monotonic account deadline even if the main window is hidden.
+- CAD includes pending Block Editor data; Sound preserves memory-only audio and stops playback/recording when access locks; Word protects encrypted recovery copies with the existing password.
+- Light snapshots unflushed catalogue changes, presets/view/preferences. Original photos remain in place and must be retained.
+- Anything snapshots drafts/chat and bounded attachment copies, excluding provider settings, keys and account credentials. Restore drafts refuses a busy session or existing drafts. It retains native project references; keep original project folders. Jobs are not automatically resumed.
+- Recovery outputs are independent and refuse overwriting originals. Locked close still requires an explicit review decision. Unfinished text fields and external/background operations may need reconnection.
+- Added RECOVERY.md with exact per-product boundaries; manuals explain recovery. Design has its 37-tool tutorial; the other thirteen retain starter orientations.
+
+VERIFICATION:
+- Fifteen Python regression tests; seventeen runtime tests, plus warnings-denied runtime Clippy.
+- Individual native recovery examples have passed for every adapter. They exercise real models/codecs with synthetic data and no production account requests. All fourteen passed the final rerun sweep in RECOVERY_STATUS.json.
+- Clean exact-pin reconstruction matched nine Interface and eight Anything integration files. Earlier Design reconstruction also passed.
+- The preceding pushed commit 9716353 passed all 42 hosted product/platform jobs (14 apps x Linux/Windows/Intel macOS), run 42736182480. This proves the prior checkpoint, NOT the new ten adapters. Check the new commit's workflow before claiming the new code passed hosted platforms.
+- FINAL_CHECKS.json records 28 passed checks: all fourteen products in both development and subscription modes on Linux. Compilation is not a linked installer or GUI acceptance test.
+
+REMAINING RELEASE WORK:
+Real login/access-expiry and operating-system credential-vault UI tests; native visual/editor/import/export/save QA; full per-tool guides for thirteen products; complete branding/localization and cross-app QA; linked platform builds and signed/notarized installers; configured publisher key/feed with verified native update installation, save-safe restart and rollback. No new product is release-ready. ArtCraft Studio is assessed but not converted. Mac signing uses the publisher's secure Mac Keychain. Never deploy stale website main.
+
+PREVIOUS CHECKPOINTS (historical; above takes precedence):
+
 PIXA SUITE CURRENT CHECKPOINT — RECOVERY, HELP, WINDOWS PATH FIX
 
 Scope: pixa-suite-product only, unpublished. No production website, billing, subscriptions, existing product branches or downloads changed. No signing credentials accessed or exported.

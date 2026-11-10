@@ -33,6 +33,7 @@ impl AccountUi {
             Err(error)=>{self.pending=false;self.disconnecting=false;self.message=error;}
         }
     }
+    pub fn deadline(&self)->Option<Instant>{self.state.deadline()}
     pub fn allowed(&self)->bool{self.state.allowed(Instant::now())}
     pub fn needs_tick(&self)->bool{self.pending || self.next_check.is_some()}
     pub fn tick(&mut self){

@@ -14,14 +14,20 @@ struct PixaShell {
     recovery_message: String,
     discard_prompt: bool,
     discard_confirmed: bool,
+    last_editable: bool,
+    restore_message: String,
 }
 pub fn subscription_build() -> bool { BuildMode::parse(option_env!("PIXA_ACCESS_MODE")) != BuildMode::Development }
 pub fn wrap(inner: Box<Editor>) -> Box<dyn eframe::App> {
     Box::new(PixaShell { inner, help: help_ui::HelpUi::default(), account: account_ui::AccountUi::default(),
         guard: Guard::new(BuildMode::parse(option_env!("PIXA_ACCESS_MODE")), recovery::ready()), updates_open: false,
-        recovery_message: String::new(), discard_prompt: false, discard_confirmed: false })
+        recovery_message: String::new(), discard_prompt: false, discard_confirmed: false, last_editable: false, restore_message: String::new() })
 }
 impl PixaShell {
+    fn publish_permit(&self,ctx:&egui::Context){
+        let permit=self.guard.viewport_permit(self.account.deadline());
+        ctx.data_mut(|d|d.insert_temp(egui::Id::unique("pixa-editor-permit"),permit));
+    }
     fn can_edit(&self) -> bool { self.guard.can_edit(self.account.allowed()) }
     fn locked(&mut self, ui: &mut egui::Ui) {
         egui::CentralPanel::default().show(ui, |ui| {
@@ -56,8 +62,11 @@ impl PixaShell {
 }
 impl eframe::App for PixaShell {
     fn logic(&mut self, ctx: &egui::Context, frame: &mut eframe::Frame) {
-        self.account.tick();
-        if self.can_edit() {
+        self.account.tick();self.publish_permit(ctx);
+        let editable=self.can_edit();
+        if self.last_editable && !editable {self.recovery_message=recovery::pause(self.inner.as_mut()).unwrap_or_default();}
+        self.last_editable=editable;
+        if editable {
             self.discard_confirmed=false;self.discard_prompt=false;self.recovery_message.clear();
             self.guard.note_editor_used(self.account.allowed());
             eframe::App::logic(self.inner.as_mut(),ctx,frame);
@@ -67,10 +76,14 @@ impl eframe::App for PixaShell {
         if self.account.needs_tick() { ctx.request_repaint_after(std::time::Duration::from_millis(500)); }
     }
     fn ui(&mut self, ui: &mut egui::Ui, frame: &mut eframe::Frame) {
+        self.publish_permit(ui.ctx());
         egui::Panel::bottom("pixa-publisher").exact_size(26.0).show(ui, |ui| {
             ui.horizontal(|ui| {
                 ui.small("@NAME@ by AIWebDesignFirm");ui.separator();
                 if ui.small_button("Manual").clicked(){self.help.open=true;}
+                if recovery::can_restore() && ui.add_enabled(self.can_edit(),egui::Button::new("Restore drafts…").small()).clicked(){
+                    if let Some(file)=recovery::choose_file(){self.restore_message=match recovery::restore(self.inner.as_mut(),&file){Ok(())=>"Drafts restored. Project files stay in their existing folders. Resume jobs manually when ready.".into(),Err(error)=>error};}
+                }
                 if ui.small_button("Quick tour").clicked(){self.help.start_tour();}
                 if ui.small_button("Your account").clicked(){self.account.open=true;}
                 if ui.small_button("Updates").clicked(){self.updates_open=true;}
@@ -81,7 +94,10 @@ impl eframe::App for PixaShell {
         if let Some(request)=ui.ctx().data_mut(|d|d.remove_temp::<String>(egui::Id::unique("pixa-help-request"))) {
             if request=="pixa:manual" {self.help.open=true;} else if request=="pixa:tool-tour" {self.help.start_tour();}
         }
-        self.account.show(ui.ctx());self.help.show(ui.ctx());
+        self.account.show(ui.ctx());self.publish_permit(ui.ctx());self.help.show(ui.ctx());
+        if !self.restore_message.is_empty(){
+            egui::Window::new("Draft recovery").resizable(false).show(ui.ctx(),|ui|{ui.label(&self.restore_message);if ui.button("OK").clicked(){self.restore_message.clear();}});
+        }
         if self.discard_prompt {
             egui::Window::new("Close this editing session?").resizable(false).show(ui.ctx(),|ui|{
                 ui.label(if self.guard.recovery_saved(){"The recovery copy contains committed project data. Reconnect before closing if you need unfinished fields or background jobs."}else{"Closing without a recovery copy can lose unsaved changes. Reconnect if you need to finish an edit first."});

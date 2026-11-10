@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "platform": "linux",
+  "verification": "native-model-codec-roundtrip",
+  "suite_inputs_sha256": "73855bf3ec1a9d00e9b89c0763edb7c8d8d72dc7f4a505a16a9554a4ebc720cb",
+  "complete": true,
+  "release_ready": false,
+  "results": [
+    {
+      "app": "pixavector",
+      "native_recovery_roundtrip": true
+    },
+    {
+      "app": "pixafilm",
+      "native_recovery_roundtrip": true
+    },
+    {
+      "app": "pixalight",
+      "native_recovery_roundtrip": true
+    },
+    {
+      "app": "pixapdf",
+      "native_recovery_roundtrip": true
+    },
+    {
+      "app": "pixadesign",
+      "native_recovery_roundtrip": true
+    },
+    {
+      "app": "pixainterface",
+      "native_recovery_roundtrip": true
+    },
+    {
+      "app": "pixatexture",
+      "native_recovery_roundtrip": true
+    },
+    {
+      "app": "pixamaterial",
+      "native_recovery_roundtrip": true
+    },
+    {
+      "app": "pixaword",
+      "native_recovery_roundtrip": true
+    },
+    {
+      "app": "pixasound",
+      "native_recovery_roundtrip": true
+    },
+    {
+      "app": "pixadeck",
+      "native_recovery_roundtrip": true
+    },
+    {
+      "app": "pixacad",
+      "native_recovery_roundtrip": true
+    },
+    {
+      "app": "pixagrid",
+      "native_recovery_roundtrip": true
+    },
+    {
+      "app": "pixaanything",
+      "native_recovery_roundtrip": true
+    }
+  ]
+}

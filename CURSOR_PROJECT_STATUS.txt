@@ -1,3 +1,9 @@
+PIXA SUITE CURRENT CHECKPOINT
+
+Read pixa-suite/CURSOR_SUITE_STATUS.txt first, then pixa-suite/README.md and pixa-suite/RECOVERY.md. All fourteen additional editors have experimental restricted-preview recovery integrations; publication and launcher are deferred. Check FINAL_CHECKS.json, RECOVERY_STATUS.json and the commit-specific GitHub Actions results. No new product is shipping-ready; no production website/billing/download changes were made. Do not deploy stale website main. Private signing keys stay out of this repository.
+
+PREVIOUS CHECKPOINTS (historical; current suite status takes precedence):
+
 PIXA SUITE CURRENT CHECKPOINT — RECOVERY, HELP AND WINDOWS PATH FIX
 Read pixa-suite/CURSOR_SUITE_STATUS.txt and pixa-suite/runtime/README.md first.
 All14 development apps pass Linux cargo check. Four restricted pilots now have native recovery adapters: Film, Texture, Design, Deck. Design/Deck multi-document recovery examples execute successfully. Ten adapters remain unfinished.

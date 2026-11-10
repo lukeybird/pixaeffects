@@ -26,8 +26,8 @@ if __name__=='__main__':
   if app['id'] in PILOTS:
    restricted=os.environ.copy();restricted['PIXA_ACCESS_MODE']='subscription'
    run([str(python),str(ROOT/'check.py'),'--native','--app',app['id']],env=restricted)
-   fixture=os.environ.copy();fixture['CARGO_TARGET_DIR']=str(ROOT/'target');fixture['CARGO_PROFILE_DEV_DEBUG']='0'
-   run(['cargo','+'+app['rust_toolchain'],'run','--manifest-path',str(ROOT/'sources'/app['source']/'Cargo.toml'),'-p',app['source']+'-engine','--example','pixa_recovery_check'],env=fixture)
+   fixture=os.environ.copy();fixture['CARGO_TARGET_DIR']=str(ROOT/'target');fixture['CARGO_PROFILE_DEV_DEBUG']='0';fixture['CARGO_BUILD_JOBS']='2'
+   run(['cargo','+'+app['rust_toolchain'],'run','--manifest-path',str(ROOT/'sources'/app['source']/'Cargo.toml'),'-p',app['source']+('-ui-egui' if app['id']=='pixaanything' else '-engine'),'--example','pixa_recovery_check'],env=fixture)
   if app['id']=='pixafilm':
    run(['cargo','+1.95.0','test','--manifest-path',str(ROOT/'runtime/Cargo.toml')])
 

@@ -1,0 +1,150 @@
+{
+  "schema_version": 1,
+  "platform": "linux",
+  "verification": "cargo-check-development-and-subscription",
+  "suite_inputs_sha256": "73855bf3ec1a9d00e9b89c0763edb7c8d8d72dc7f4a505a16a9554a4ebc720cb",
+  "complete": true,
+  "release_ready": false,
+  "results": [
+    {
+      "app": "pixavector",
+      "mode": "development",
+      "passed": true
+    },
+    {
+      "app": "pixafilm",
+      "mode": "development",
+      "passed": true
+    },
+    {
+      "app": "pixalight",
+      "mode": "development",
+      "passed": true
+    },
+    {
+      "app": "pixapdf",
+      "mode": "development",
+      "passed": true
+    },
+    {
+      "app": "pixadesign",
+      "mode": "development",
+      "passed": true
+    },
+    {
+      "app": "pixainterface",
+      "mode": "development",
+      "passed": true
+    },
+    {
+      "app": "pixatexture",
+      "mode": "development",
+      "passed": true
+    },
+    {
+      "app": "pixamaterial",
+      "mode": "development",
+      "passed": true
+    },
+    {
+      "app": "pixaword",
+      "mode": "development",
+      "passed": true
+    },
+    {
+      "app": "pixasound",
+      "mode": "development",
+      "passed": true
+    },
+    {
+      "app": "pixadeck",
+      "mode": "development",
+      "passed": true
+    },
+    {
+      "app": "pixacad",
+      "mode": "development",
+      "passed": true
+    },
+    {
+      "app": "pixagrid",
+      "mode": "development",
+      "passed": true
+    },
+    {
+      "app": "pixaanything",
+      "mode": "development",
+      "passed": true
+    },
+    {
+      "app": "pixavector",
+      "mode": "subscription",
+      "passed": true
+    },
+    {
+      "app": "pixafilm",
+      "mode": "subscription",
+      "passed": true
+    },
+    {
+      "app": "pixalight",
+      "mode": "subscription",
+      "passed": true
+    },
+    {
+      "app": "pixapdf",
+      "mode": "subscription",
+      "passed": true
+    },
+    {
+      "app": "pixadesign",
+      "mode": "subscription",
+      "passed": true
+    },
+    {
+      "app": "pixainterface",
+      "mode": "subscription",
+      "passed": true
+    },
+    {
+      "app": "pixatexture",
+      "mode": "subscription",
+      "passed": true
+    },
+    {
+      "app": "pixamaterial",
+      "mode": "subscription",
+      "passed": true
+    },
+    {
+      "app": "pixaword",
+      "mode": "subscription",
+      "passed": true
+    },
+    {
+      "app": "pixasound",
+      "mode": "subscription",
+      "passed": true
+    },
+    {
+      "app": "pixadeck",
+      "mode": "subscription",
+      "passed": true
+    },
+    {
+      "app": "pixacad",
+      "mode": "subscription",
+      "passed": true
+    },
+    {
+      "app": "pixagrid",
+      "mode": "subscription",
+      "passed": true
+    },
+    {
+      "app": "pixaanything",
+      "mode": "subscription",
+      "passed": true
+    }
+  ]
+}
