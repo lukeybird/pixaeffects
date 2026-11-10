@@ -1,3 +1,29 @@
+PIXA SUITE CHECKPOINT — 2026-11-10
+
+User asked to continue the unfinished suite work. Publishing and a launcher remain deferred; website, billing, existing subscriptions and current PixaShop/PixaEffects product branches stay unchanged.
+
+NEW IMPLEMENTATION:
+- Shared pixa-runtime Rust library with bounded first-party device-account requests, monotonic five-minute leases, stale-response rejection and redacted/zeroed in-memory tokens.
+- Account connection window in all 14 new development apps, using the existing device/activation/settings routes. No live activation tests were run. Connectivity is NOT editor access enforcement and sign-in is not persisted yet.
+- Ed25519 signed-manifest validation, stable-version and identity/platform checks, trusted release URL checks, and streaming size/SHA-256 download verification. No signing key or feed is configured and no installer is executed.
+- Product-specific, searchable offline starter manuals and four-step read-only orientation windows for all 14 apps. These are not complete per-tool manuals or tool tours.
+- Build receipts now include the shared runtime source; a runtime change invalidates an old binary receipt.
+- SDK workspace isolation and tests cover use inside the actual parent product repository.
+- Native platform-check workflow calls the existing shared Craft gate on Linux, Windows and Intel macOS. It only checks source; no installers or public downloads are created. Check its actual run before claiming success.
+
+LOCAL VERIFICATION:
+All 14 new development apps passed Linux cargo check with the new account/help modules.
+9 Python preparation/integration tests passed.
+8 Rust runtime tests passed using offline fixtures, and runtime library Clippy passed with -D warnings.
+Mac/Windows CI results are not yet verified. No editor visual, import/export/save runtime QA or live billing/activation pass is claimed.
+
+REMAINING RELEASE BLOCKERS:
+Per-editor editing-access enforcement that still permits saving/recovery when access expires; disable or gate automation entry points; OS credential storage; complete tool-specific help and localization/branding audits; actual platform builds and editor QA; signed/notarized installers; configured signed update feeds and publisher verification keys; native installer checks and save-safe install/restart/rollback. No new app is shipping-ready, and no production download flag should be enabled.
+
+See runtime/README.md for the exact shared-library boundary. Keep all source reconstruction pins and account/update checks intact. Never put private signing identities or credentials in GitHub. Existing production source is newer than the website's GitHub main; do not deploy a fresh clone over it.
+
+PREVIOUS CHECKPOINT (historical; the checkpoint above takes precedence):
+
 PIXA SUITE DEVELOPMENT STATUS — 2026-11-09
 
 User authorized preparing the entire sixteen-app Craft editor family as Pixa applications, with publishing and a launcher deferred. Do not change billing, existing subscriptions or the live website.

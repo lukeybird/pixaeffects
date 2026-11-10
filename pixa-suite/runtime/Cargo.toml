@@ -1,0 +1,21 @@
+[package]
+name = "pixa-runtime"
+version = "0.1.0"
+edition = "2024"
+license = "MIT OR Apache-2.0"
+publish = false
+
+[dependencies]
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+ureq = { version = "3.4", default-features = false, features = ["json", "rustls-no-provider", "_ring", "platform-verifier"] }
+base64 = "0.22"
+ed25519-dalek = "2.2"
+sha2 = "0.10"
+semver = "1"
+chrono = { version = "0.4", default-features = false, features = ["std", "serde"] }
+url = "2"
+zeroize = "1"
+
+# Keep the SDK independent when the suite lives inside the existing PixaEffects workspace.
+[workspace]

@@ -1,3 +1,11 @@
+PIXA SUITE CURRENT CHECKPOINT — 2026-11-10
+Read pixa-suite/CURSOR_SUITE_STATUS.txt and pixa-suite/runtime/README.md first.
+Current work is on pixa-suite-product, not main or the existing product branches.
+Shared account connectivity, signed update validation, searchable starter manuals and four-step read-only orientations are integrated in the fourteen new development sources. All fourteen passed Linux cargo check. Nine Python tests and eight Rust tests passed; runtime library Clippy passed with warnings denied.
+Account connectivity is NOT editing-access enforcement. Signed update validation is NOT enabled installer delivery. Starter manuals are NOT exhaustive tool references. No new app is release-ready. Mac/Windows hosted checks are configured but must be verified in the actual Actions run. Nothing was published and no website/billing configuration changed.
+
+PREVIOUS HISTORY (the current checkpoint above takes precedence):
+
 PIXA SUITE DEVELOPMENT STATUS — 2026-11-09
 
 User authorized preparing the entire sixteen-app Craft editor family as Pixa applications, with publishing and a launcher deferred. Do not change billing, existing subscriptions or the live website.

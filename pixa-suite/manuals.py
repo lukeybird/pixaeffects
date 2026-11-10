@@ -1,0 +1,12 @@
+"""Generate original product-specific starter guides. This is not an exhaustive tool reference."""
+from pathlib import Path
+import json
+ROOT=Path(__file__).resolve().parent
+WORKFLOWS=json.loads((ROOT/'manuals/workflows.json').read_text())
+def guide(app):
+ w=WORKFLOWS[app['id']]
+ chapters=[{'title':'Start a first project','body':w['start']},{'title':'Make a first edit','body':w['work']},{'title':'Keep your work organized','body':w['organize']},{'title':'Save and export','body':w['finish']},{'title':'Your account','body':'Use Your account in the Pixa footer to open the account connection window. Passwords and payment details stay in your browser. Only approve an activation code displayed on your own device. This unpublished build tests account connectivity; editing enforcement and persistent sign-in are not yet release-ready.'},{'title':'Updates','body':'Use Updates in the Pixa footer to see update availability. Updates are deliberately disabled until the publisher configures a signed release feed and completes platform installation tests. You do not need to install an ArtCraft update for a Pixa product.'}]
+ return {'schema_version':1,'product':app['id'],'name':app['name'],'title':app['name']+' Starter Manual','scope':'Starter workflow and orientation; not a complete reference for every tool.','chapters':chapters,'tour':chapters[:4]}
+def markdown(app):
+ data=guide(app)
+ return '# '+data['title']+'\n\nby AIWebDesignFirm\n\n'+data['scope']+'\n\n'+ '\n\n'.join('## '+c['title']+'\n\n'+c['body'] for c in data['chapters'])+'\n'

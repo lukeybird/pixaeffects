@@ -142,5 +142,5 @@
     }
   ],
   "complete": true,
-  "note": "All checks are Linux cargo check results, not release builds or runtime QA."
+  "note": "Linux cargo check with shared account/help modules; not release builds, enforcement or runtime QA."
 }

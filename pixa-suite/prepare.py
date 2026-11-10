@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Reproducible Pixa source preparation. No release, billing or credential operations."""
 from pathlib import Path
-import argparse, hashlib, json, re, subprocess, tomllib
+import argparse, hashlib, json, os, re, subprocess, tomllib
 from PIL import Image, ImageDraw
 ROOT = Path(__file__).resolve().parent
 CATALOG = json.loads((ROOT/'catalog.json').read_text())['apps']
@@ -87,7 +87,9 @@ def brand_assets(root,app):
 def prepare(app, sources):
     root=sources/app['source']
     if not root.exists():
-        run(['git','clone','--no-checkout','https://github.com/'+app['upstream']+'.git',str(root)])
+        run(['git','init',str(root)])
+        run(['git','remote','add','origin','https://github.com/'+app['upstream']+'.git'],root)
+        run(['git','fetch','--depth','1','origin',app['revision']],root)
         run(['git','checkout','--detach',app['revision']],root)
     revision=run(['git','rev-parse','HEAD'],root).strip()
     if revision!=app['revision']:raise RuntimeError(f'{app["id"]}: unexpected source revision')
@@ -161,6 +163,18 @@ def prepare(app, sources):
     if app['source'] in {'lightcraft','pdfcraft'}:on_exit='fn on_exit(&mut self, gl: Option<&eframe::glow::Context>) { self.inner.on_exit(gl); }'
     for k,v in {'NAME':app['name'],'TAGLINE':app['tagline'],'UPSTREAM':app['upstream_name'],'ON_EXIT':on_exit}.items():shell=shell.replace('@'+k+'@',v)
     (main.parent/'pixa_shell.rs').write_text(shell)
+    account_ui=(ROOT/'templates/account_ui.rs').read_text().replace('@NAME@',app['name'])
+    (main.parent/'pixa_account.rs').write_text(account_ui)
+    from manuals import guide
+    (main.parent/'pixa-guide.json').write_text(json.dumps(guide(app),indent=2)+'\n')
+    help_ui=(ROOT/'templates/help_ui.rs').read_text().replace('@NAME@',app['name']).replace('@ID@',app['id'])
+    (main.parent/'pixa_help.rs').write_text(help_ui)
+    manifest=main.parent.parent/'Cargo.toml'
+    text=manifest.read_text()
+    if '[dependencies]' not in text:raise RuntimeError('Desktop dependencies section missing')
+    runtime_path=Path(os.path.relpath(ROOT/'runtime',manifest.parent)).as_posix()
+    text=text.replace('[dependencies]', '[dependencies]\npixa-runtime = { path = '+json.dumps(runtime_path)+' }',1)
+    manifest.write_text(text)
     # Source references use the Pixa bundle ID; keep physical asset names in sync.
     for p in list((root/'assets').rglob('*')) + list((root/'packaging').rglob('*')):
         if p.is_file() and 'ai.storyteller.'+app['source'] in p.name:

@@ -10,6 +10,10 @@ def source_digest(source):
   if not raw:continue
   rel=os.fsdecode(raw);file=source/rel
   if file.is_file():digest.update(raw+b'\0'+hashlib.sha256(file.read_bytes()).digest())
+ runtime=ROOT/'runtime'
+ runtime_inputs=[runtime/'Cargo.toml']+list((runtime/'src').rglob('*.rs'))
+ for file in sorted(runtime_inputs):
+  if file.is_file():digest.update(('pixa-runtime/'+file.relative_to(runtime).as_posix()).encode()+b'\0'+hashlib.sha256(file.read_bytes()).digest())
  return digest.hexdigest()
 if __name__=='__main__':
  p=argparse.ArgumentParser();p.add_argument('app');p.add_argument('--release',action='store_true');args=p.parse_args()
