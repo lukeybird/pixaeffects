@@ -1,15 +1,25 @@
-name: PixaVector Mac candidate
+name: Pixa Mac candidate
 on:
   workflow_dispatch:
+    inputs:
+      product:
+        description: Suite product id, such as pixavector
+        required: true
+        default: pixavector
+        type: string
   push:
     branches: [pixa-suite-product]
-    paths: [.github/workflows/pixavector-macos.yml]
+    paths:
+      - pixa-suite/mac-release.txt
 permissions:
   contents: read
+concurrency:
+  group: pixa-mac-candidate-${{ github.ref }}
+  cancel-in-progress: false
 jobs:
   build:
     runs-on: macos-15-intel
-    timeout-minutes: 180
+    timeout-minutes: 360
     env:
       PYTHONUTF8: "1"
       CARGO_BUILD_JOBS: "2"
@@ -21,49 +31,99 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+      - name: Select one product
+        id: product
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [ -n "${{ github.event.inputs.product }}" ]; then
+            printf '%s' "${{ github.event.inputs.product }}" > /tmp/pixa-product-id
+          else
+            tr -d '[:space:]' < pixa-suite/mac-release.txt > /tmp/pixa-product-id
+          fi
+          python3 - /tmp/pixa-product-id "$GITHUB_OUTPUT" << 'PY'
+          import json, sys
+          from pathlib import Path
+          product_id = Path(sys.argv[1]).read_text().strip()
+          apps = json.loads(Path("pixa-suite/catalog.json").read_text())["apps"]
+          allowed = {item["id"] for item in apps}
+          if product_id not in allowed:
+              raise SystemExit("unknown product: " + product_id)
+          product = next(item for item in apps if item["id"] == product_id)
+          lines = [
+              "id=" + product["id"],
+              "package=" + product["package"],
+              "source=" + product["source"],
+              "toolchain=" + product["rust_toolchain"],
+              "name=" + product["name"],
+          ]
+          Path(sys.argv[2]).write_text("\n".join(lines) + "\n")
+          print("selected " + product["id"])
+          PY
       - name: Install packaging dependency
         run: python -m pip install -r pixa-suite/requirements.txt
       - name: Install Rust
         shell: bash
         run: |
-          rustup toolchain install 1.95.0 --profile minimal
-          rustup default 1.95.0
+          set -euo pipefail
+          rustup toolchain install ${{ steps.product.outputs.toolchain }} --profile minimal
+          rustup default ${{ steps.product.outputs.toolchain }}
           rustup target add aarch64-apple-darwin x86_64-apple-darwin
-      - name: Prepare PixaVector
-        run: python pixa-suite/prepare.py pixavector
+      - name: Prepare selected product
+        run: python pixa-suite/prepare.py ${{ steps.product.outputs.id }}
       - name: Build both Mac slices
         shell: bash
+        env:
+          PRODUCT_SOURCE: ${{ steps.product.outputs.source }}
+          PRODUCT_PACKAGE: ${{ steps.product.outputs.package }}
+          PRODUCT_TOOLCHAIN: ${{ steps.product.outputs.toolchain }}
         run: |
           set -euo pipefail
           export CARGO_TARGET_DIR="$GITHUB_WORKSPACE/pixa-suite/target"
-          cd pixa-suite/sources/vectorcraft
-          cargo +1.95.0 build --release -p vectorcraft --target aarch64-apple-darwin
-          cargo +1.95.0 build --release -p vectorcraft --target x86_64-apple-darwin
+          cd "pixa-suite/sources/$PRODUCT_SOURCE"
+          BIN="$(python3 - "$PRODUCT_PACKAGE" << 'PY'
+          import json, os, subprocess, sys
+          package = sys.argv[1]
+          metadata = json.loads(subprocess.check_output(["cargo", "+" + os.environ["PRODUCT_TOOLCHAIN"], "metadata", "--no-deps", "--format-version", "1"]))
+          selected = next(item for item in metadata["packages"] if item["name"] == package)
+          bins = [target["name"] for target in selected["targets"] if "bin" in target["kind"]]
+          exact = [name for name in bins if name == package]
+          gui = [name for name in bins if not name.endswith("-cli")]
+          choice = (exact or gui or bins)[0]
+          print(choice)
+          PY
+          )"
+          echo "GUI binary: $BIN"
+          printf '%s' "$BIN" > "$GITHUB_WORKSPACE/pixa-suite/target-binary-name"
+          cargo "+$PRODUCT_TOOLCHAIN" build --release -p "$PRODUCT_PACKAGE" --target aarch64-apple-darwin --bin "$BIN"
+          cargo "+$PRODUCT_TOOLCHAIN" build --release -p "$PRODUCT_PACKAGE" --target x86_64-apple-darwin --bin "$BIN"
           mkdir -p "$CARGO_TARGET_DIR/release"
           lipo -create \
-            "$CARGO_TARGET_DIR/aarch64-apple-darwin/release/vectorcraft" \
-            "$CARGO_TARGET_DIR/x86_64-apple-darwin/release/vectorcraft" \
-            -output "$CARGO_TARGET_DIR/release/vectorcraft"
-          lipo -info "$CARGO_TARGET_DIR/release/vectorcraft"
+            "$CARGO_TARGET_DIR/aarch64-apple-darwin/release/$BIN" \
+            "$CARGO_TARGET_DIR/x86_64-apple-darwin/release/$BIN" \
+            -output "$CARGO_TARGET_DIR/release/$BIN"
+          lipo -info "$CARGO_TARGET_DIR/release/$BIN"
       - name: Assemble unsigned app
         shell: bash
+        env:
+          PRODUCT_ID: ${{ steps.product.outputs.id }}
         run: |
           set -euo pipefail
-          python3 - << 'PY'
+          python3 - "$PRODUCT_ID" << 'PY'
           from pathlib import Path
-          import hashlib, json, plistlib, shutil
+          import hashlib, json, os, plistlib, shutil, sys
           root = Path("pixa-suite")
-          app = json.loads((root/"catalog.json").read_text())["apps"]
-          product = next(item for item in app if item["id"] == "pixavector")
-          binary = root/"target/release/vectorcraft"
+          product = next(item for item in json.loads((root/"catalog.json").read_text())["apps"] if item["id"] == sys.argv[1])
+          binary_name = (root/"target-binary-name").read_text().strip()
+          binary = root/"target/release"/binary_name
           source = root/"sources"/product["source"]
           icons = list((source/"assets/app-icon").rglob("*.icns"))
           if not binary.is_file() or not icons:
               raise SystemExit("release binary or icon is missing")
-          out = Path("dist/pixavector-candidate")
+          out = Path("dist")/product["id"]
           if out.exists():
               shutil.rmtree(out)
-          contents = out/"PixaVector.app/Contents"
+          contents = out/(product["name"] + ".app")/"Contents"
           (contents/"MacOS").mkdir(parents=True)
           (contents/"Resources").mkdir()
           executable = contents/"MacOS"/product["id"]
@@ -98,6 +158,7 @@ jobs:
               "version": product["version"],
               "bundle_id": product["bundle_id"],
               "revision": product["revision"],
+              "binary": binary_name,
               "access_mode": "subscription",
               "architectures": ["arm64", "x86_64"],
               "sha256": digest,
@@ -105,11 +166,11 @@ jobs:
               "notarized": False,
               "published": False,
           }, indent=2) + "\n")
-          print(digest)
+          print(product["id"], digest)
           PY
       - uses: actions/upload-artifact@v4
         with:
-          name: PixaVector-macos-universal-unsigned
-          path: dist/pixavector-candidate/
+          name: ${{ steps.product.outputs.id }}-macos-universal-unsigned
+          path: dist/${{ steps.product.outputs.id }}/
           if-no-files-found: error
           retention-days: 14
