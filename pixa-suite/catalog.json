@@ -10,7 +10,7 @@
       "version": "0.1.0",
       "bundle_id": "com.aiwebdesignfirm.pixavector",
       "tagline": "Vector illustration",
-      "color": "#fb9467",
+      "color": "#ff9a45",
       "revision": "25cfa9d3cfdb3510c48f951d57562f0f7b8700cc",
       "package": "vectorcraft",
       "distribution": "unpublished",
@@ -18,7 +18,9 @@
       "updates": "pending-integration",
       "rust_toolchain": "1.95.0",
       "recovery": "native-adapter-offline-tested",
-      "tool_tour": "starter-orientation-only"
+      "tool_tour": "starter-orientation-only",
+      "icon_mark": "V",
+      "icon_background": "#2b170b"
     },
     {
       "upstream": "storytold/filmcraft",
@@ -29,7 +31,7 @@
       "version": "0.1.0",
       "bundle_id": "com.aiwebdesignfirm.pixafilm",
       "tagline": "Video editing",
-      "color": "#9985ff",
+      "color": "#a99aff",
       "revision": "f4090d7b34a467a1bcabc91652d166a94f68dfbe",
       "package": "filmcraft",
       "distribution": "unpublished",
@@ -37,7 +39,9 @@
       "updates": "pending-integration",
       "rust_toolchain": "1.95.0",
       "recovery": "native-adapter-offline-tested",
-      "tool_tour": "starter-orientation-only"
+      "tool_tour": "starter-orientation-only",
+      "icon_mark": "F",
+      "icon_background": "#1c1538"
     },
     {
       "upstream": "storytold/lightcraft",
@@ -48,7 +52,7 @@
       "version": "0.1.0",
       "bundle_id": "com.aiwebdesignfirm.pixalight",
       "tagline": "Photo library and RAW development",
-      "color": "#ffc267",
+      "color": "#65c8ff",
       "revision": "e9c29e2c5c5dd1f86cc98677b5dc389f6612fcac",
       "package": "lightcraft",
       "distribution": "unpublished",
@@ -56,7 +60,9 @@
       "updates": "pending-integration",
       "rust_toolchain": "1.95.0",
       "recovery": "native-adapter-offline-tested",
-      "tool_tour": "starter-orientation-only"
+      "tool_tour": "starter-orientation-only",
+      "icon_mark": "L",
+      "icon_background": "#101f36"
     },
     {
       "upstream": "storytold/pdfcraft",
@@ -67,7 +73,7 @@
       "version": "0.1.0",
       "bundle_id": "com.aiwebdesignfirm.pixapdf",
       "tagline": "PDF editing and organization",
-      "color": "#fb737c",
+      "color": "#ff666c",
       "revision": "efd7c9fc245d1660388208a37df3d3b5036584ba",
       "package": "pdfcraft",
       "distribution": "unpublished",
@@ -75,7 +81,9 @@
       "updates": "pending-integration",
       "rust_toolchain": "1.95.0",
       "recovery": "native-adapter-offline-tested",
-      "tool_tour": "starter-orientation-only"
+      "tool_tour": "starter-orientation-only",
+      "icon_mark": "PDF",
+      "icon_background": "#301317"
     },
     {
       "upstream": "storytold/designcraft",
@@ -86,7 +94,7 @@
       "version": "0.1.0",
       "bundle_id": "com.aiwebdesignfirm.pixadesign",
       "tagline": "Page layout and publishing",
-      "color": "#e788d1",
+      "color": "#ff80ba",
       "revision": "32a1dbc7345fe14e010a36c691f1095562c387a9",
       "package": "designcraft",
       "distribution": "unpublished",
@@ -94,7 +102,9 @@
       "updates": "pending-integration",
       "rust_toolchain": "1.95.0",
       "recovery": "native-adapter-offline-tested",
-      "tool_tour": "37-toolbar-tools-ui-unverified"
+      "tool_tour": "37-toolbar-tools-ui-unverified",
+      "icon_mark": "D",
+      "icon_background": "#301125"
     },
     {
       "upstream": "storytold/figcraft",
@@ -105,7 +115,7 @@
       "version": "0.1.0",
       "bundle_id": "com.aiwebdesignfirm.pixainterface",
       "tagline": "Interface design and prototyping",
-      "color": "#6fdfba",
+      "color": "#ef7ade",
       "revision": "a2e87433d8bda2b0c909587da08cb27c51e3b17e",
       "package": "figcraft",
       "distribution": "unpublished",
@@ -113,7 +123,9 @@
       "updates": "pending-integration",
       "rust_toolchain": "1.95.0",
       "recovery": "native-adapter-offline-tested",
-      "tool_tour": "starter-orientation-only"
+      "tool_tour": "starter-orientation-only",
+      "icon_mark": "I",
+      "icon_background": "#2a1230"
     },
     {
       "upstream": "storytold/texturecraft",
@@ -124,7 +136,7 @@
       "version": "0.1.0",
       "bundle_id": "com.aiwebdesignfirm.pixatexture",
       "tagline": "3D texture painting",
-      "color": "#d99b68",
+      "color": "#a9dc69",
       "revision": "f5e41e759f63f68993eafa855f1fd585de9ec289",
       "package": "texturecraft",
       "distribution": "unpublished",
@@ -132,7 +144,9 @@
       "updates": "pending-integration",
       "rust_toolchain": "1.95.0",
       "recovery": "native-adapter-offline-tested",
-      "tool_tour": "starter-orientation-only"
+      "tool_tour": "starter-orientation-only",
+      "icon_mark": "T",
+      "icon_background": "#1a2916"
     },
     {
       "upstream": "storytold/materialcraft",
@@ -143,7 +157,7 @@
       "version": "0.1.0",
       "bundle_id": "com.aiwebdesignfirm.pixamaterial",
       "tagline": "Procedural material design",
-      "color": "#69ced1",
+      "color": "#b9e77a",
       "revision": "29857f653d894d7c177d56eca5e3305a0709808b",
       "package": "materialcraft",
       "distribution": "unpublished",
@@ -151,7 +165,9 @@
       "updates": "pending-integration",
       "rust_toolchain": "1.95.0",
       "recovery": "native-adapter-offline-tested",
-      "tool_tour": "starter-orientation-only"
+      "tool_tour": "starter-orientation-only",
+      "icon_mark": "M",
+      "icon_background": "#202b13"
     },
     {
       "upstream": "storytold/wordcraft",
@@ -162,7 +178,7 @@
       "version": "0.1.0",
       "bundle_id": "com.aiwebdesignfirm.pixaword",
       "tagline": "Word processing",
-      "color": "#81a9ff",
+      "color": "#7daaff",
       "revision": "d40d1b27181b61990c84c75f77d5fd23ef81d452",
       "package": "wordcraft",
       "distribution": "unpublished",
@@ -170,7 +186,9 @@
       "updates": "pending-integration",
       "rust_toolchain": "1.95.0",
       "recovery": "native-adapter-offline-tested",
-      "tool_tour": "starter-orientation-only"
+      "tool_tour": "starter-orientation-only",
+      "icon_mark": "W",
+      "icon_background": "#14223d"
     },
     {
       "upstream": "storytold/soundcraft",
@@ -181,7 +199,7 @@
       "version": "0.1.0",
       "bundle_id": "com.aiwebdesignfirm.pixasound",
       "tagline": "Audio recording and mixing",
-      "color": "#69d6ed",
+      "color": "#78e3ad",
       "revision": "ef58a90f4a418a282a15fc71d2e03c3d8e8f40fa",
       "package": "soundcraft",
       "distribution": "unpublished",
@@ -189,7 +207,9 @@
       "updates": "pending-integration",
       "rust_toolchain": "1.95.0",
       "recovery": "native-adapter-offline-tested",
-      "tool_tour": "starter-orientation-only"
+      "tool_tour": "starter-orientation-only",
+      "icon_mark": "S",
+      "icon_background": "#102c22"
     },
     {
       "upstream": "storytold/deckcraft",
@@ -200,7 +220,7 @@
       "version": "0.1.0",
       "bundle_id": "com.aiwebdesignfirm.pixadeck",
       "tagline": "Presentations",
-      "color": "#ffae76",
+      "color": "#ffa16d",
       "revision": "0623b430324cf4c3d1962e6ae7885cf30c011c5e",
       "package": "deckcraft",
       "distribution": "unpublished",
@@ -208,7 +228,9 @@
       "updates": "pending-integration",
       "rust_toolchain": "1.95.0",
       "recovery": "native-adapter-offline-tested",
-      "tool_tour": "starter-orientation-only"
+      "tool_tour": "starter-orientation-only",
+      "icon_mark": "D",
+      "icon_background": "#321d15"
     },
     {
       "upstream": "storytold/cadcraft",
@@ -219,7 +241,7 @@
       "version": "0.1.0",
       "bundle_id": "com.aiwebdesignfirm.pixacad",
       "tagline": "CAD and drafting",
-      "color": "#76bfff",
+      "color": "#6bd5ed",
       "revision": "a3d9348f63c2ad35391cc93980dc7ee7366f2ad6",
       "package": "cadcraft",
       "distribution": "unpublished",
@@ -227,7 +249,9 @@
       "updates": "pending-integration",
       "rust_toolchain": "1.95.0",
       "recovery": "native-adapter-offline-tested",
-      "tool_tour": "starter-orientation-only"
+      "tool_tour": "starter-orientation-only",
+      "icon_mark": "CAD",
+      "icon_background": "#102832"
     },
     {
       "upstream": "storytold/gridcraft",
@@ -238,7 +262,7 @@
       "version": "0.1.0",
       "bundle_id": "com.aiwebdesignfirm.pixagrid",
       "tagline": "Spreadsheets",
-      "color": "#83d49d",
+      "color": "#7bd797",
       "revision": "e9addf52fe68847e6c1310fcfa5d42b7aa8b9650",
       "package": "gridcraft",
       "distribution": "unpublished",
@@ -246,7 +270,9 @@
       "updates": "pending-integration",
       "rust_toolchain": "1.95.0",
       "recovery": "native-adapter-offline-tested",
-      "tool_tour": "starter-orientation-only"
+      "tool_tour": "starter-orientation-only",
+      "icon_mark": "G",
+      "icon_background": "#152c20"
     },
     {
       "upstream": "storytold/craft-anything",
@@ -257,7 +283,7 @@
       "version": "0.1.0",
       "bundle_id": "com.aiwebdesignfirm.pixaanything",
       "tagline": "Software exploration and creation",
-      "color": "#c0a3fa",
+      "color": "#c4a1ff",
       "revision": "2e7f27631be78d499ca61d29f5cdee701e71b54f",
       "package": "craft-anything",
       "distribution": "unpublished",
@@ -265,7 +291,9 @@
       "updates": "pending-integration",
       "rust_toolchain": "1.97.0",
       "recovery": "native-adapter-offline-tested",
-      "tool_tour": "starter-orientation-only"
+      "tool_tour": "starter-orientation-only",
+      "icon_mark": "A",
+      "icon_background": "#251738"
     }
   ],
   "separate_products": [

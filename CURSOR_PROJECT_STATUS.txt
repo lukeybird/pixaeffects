@@ -1,3 +1,11 @@
+PIXA ICON REVISION — PRODUCT INITIALS
+
+All sixteen icon generators now use product initials: S, E, V, F, L, PDF, D, I, T, M, W, S, D, CAD, G, A. Original pixel letterforms, consistent rounded tiles, matching raster/SVG geometry and revised category palettes replace the shared P and binary index bars. PDF and CAD are the only multi-letter marks. PixaDesign's inline About mark changes to D. New artwork applies during source preparation; regenerate previously prepared sources from clean pins. Existing released installers, live downloads, website and billing are unchanged.
+
+Art verification: four focused icon tests and the existing deterministic/distinct icon test pass. Tests exercise all suite marks/sizes/SVG, asset sidecars and actual standalone Shop/Effects PNG/SVG/ICO/ICNS generation. Preview visually inspected. Full native builds were not rerun locally; the previous Cargo toolchain is absent. Earlier 42-platform results apply to the preceding source, not a fresh verification of this artwork revision. Account/billing/editor runtime is unchanged; publication remains deferred.
+
+PREVIOUS CHECKPOINT (historical):
+
 PIXA SUITE — DEVELOPMENT IMPLEMENTATION AND BUILD/RECOVERY VERIFICATION COMPLETE
 
 Read PIXA_SUITE_VERIFICATION.json first. All fourteen additional editors have experimental restricted-preview recovery integrations. All 42 hosted platform jobs passed: fourteen products across Linux, Windows and Intel Mac, each checking development/subscription compilation and native recovery fixtures. Verified run: https://github.com/lukeybird/pixaeffects/actions/runs/42758533188, completed successfully at 2026-11-10T06:32:40Z, source d8e807a79d3783d33434f1b3593c35bf2afbee83. No jobs failed, skipped or canceled.

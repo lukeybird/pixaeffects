@@ -52,15 +52,8 @@ def insert_shell_module(s):
     return s[:insertion]+'mod pixa_shell;\n'+s[insertion:]
 
 def icon(app,size):
-    im=Image.new('RGBA',(size,size),(18,24,35,255));d=ImageDraw.Draw(im)
-    # Original Pixa family pixel-P, with a distinct product accent and a small index marker.
-    cells=[(0,0),(1,0),(2,0),(0,1),(2,1),(0,2),(1,2),(2,2),(0,3),(0,4)]
-    u=size/8
-    for x,y in cells:d.rounded_rectangle((int((x+2)*u),int((y+1.5)*u),int((x+2.86)*u),int((y+2.36)*u)),radius=max(1,int(u*.12)),fill=app['color'])
-    index=CATALOG.index(app)+1
-    for b in range(4):
-        if index & (1<<b):d.rectangle((int((b+2)*u),int(7*u),int((b+2.55)*u),int(7.25*u)),fill=app['color'])
-    return im
+    from icon_art import render
+    return render(app['icon_mark'],app['color'],app['icon_background'],size)
 
 def brand_assets(root,app):
     changed=[]
@@ -68,10 +61,8 @@ def brand_assets(root,app):
         for p in (root/folder).rglob('*'):
             if not p.is_file() or p.suffix.lower() not in {'.png','.ico','.icns','.svg'}:continue
             if p.suffix.lower()=='.svg':
-                im=icon(app,128)
-                # SVG matches original pixel geometry; no inherited trademark artwork.
-                cells=[(0,0),(1,0),(2,0),(0,1),(2,1),(0,2),(1,2),(2,2),(0,3),(0,4)]
-                p.write_text('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80"><rect width="80" height="80" rx="16" fill="#121823"/>'+''.join(f'<rect x="{(x+2)*10}" y="{(y+1.5)*10}" width="8.6" height="8.6" rx="1.2" fill="{app["color"]}"/>' for x,y in cells)+'</svg>\n', encoding="utf-8")
+                from icon_art import svg
+                p.write_text(svg(app['icon_mark'],app['color'],app['icon_background']),encoding='utf-8')
             else:
                 try:
                     with Image.open(p) as old:size=old.width
@@ -81,7 +72,7 @@ def brand_assets(root,app):
                 elif p.suffix.lower()=='.ico':icon(app,256).save(p,format='ICO')
                 else:im.save(p,format='PNG')
             rel=p.relative_to(root).as_posix();changed.append(rel)
-            Path(str(p)+'.attribution').write_text(f'asset: {p.name}\ntitle: {app["name"]} original pixel mark\nauthor: AIWebDesignFirm\nsource: original work\nlicense: MIT OR Apache-2.0\nlicense-file: LICENSE-MIT\nadded: 2026-11-09 by AIWebDesignFirm\nnotes: Procedural Pixa family mark, not upstream trademark artwork.\n', encoding="utf-8")
+            Path(str(p)+'.attribution').write_text(f'asset: {p.name}\ntitle: {app["name"]} original pixel letter mark\nauthor: AIWebDesignFirm\nsource: original work\nlicense: MIT OR Apache-2.0\nlicense-file: LICENSE-MIT\nadded: 2026-11-09 by AIWebDesignFirm\nnotes: Procedural Pixa product-initial mark, not upstream trademark artwork.\n', encoding="utf-8")
     return changed
 
 def prepare(app, sources):
@@ -178,3 +169,4 @@ def main():
     args.sources.mkdir(parents=True,exist_ok=True)
     for app in selected:prepare(app,args.sources)
 if __name__=='__main__':main()
+

@@ -26,8 +26,8 @@ def install(root,app):
  # This editor draws its publisher mark as an inline SVG path rather than an image asset.
  if app['id']=='pixadesign':
   file=root/'crates/ui-egui/src/about.rs';text=file.read_text(encoding='utf-8')
-  cells=[(0,0),(1,0),(2,0),(0,1),(2,1),(0,2),(1,2),(2,2),(0,3),(0,4)]
-  path=''.join(f'M{25+x*20},{-5+y*20}h17v17h-17Z' for x,y in cells)
+  from icon_art import inline_path
+  path=inline_path(app['icon_mark'])
   text=re.sub(r'const MARK_PATH: &str = "[^"]*";',f'const MARK_PATH: &str = "{path}";',text)
   rgb=tuple(bytes.fromhex(app['color'].lstrip('#')))
   text=re.sub(r'pub const BRAND: Color32 = Color32::from_rgb\([^;]+;',f'pub const BRAND: Color32 = Color32::from_rgb({rgb[0]}, {rgb[1]}, {rgb[2]});',text)
@@ -43,3 +43,4 @@ def install(root,app):
   # Audited literal replacements: do not run a multiline string regex over Rust comments.
   text=text.replace('"photocraft"','"pixashop"').replace('photocraft.exe','PixaShop.exe').replace('photocraft-','pixashop-').replace('/opt/photocraft/','/opt/pixashop/').replace('/bin/photocraft','/bin/pixashop')
   file.write_text(text,encoding='utf-8')
+
