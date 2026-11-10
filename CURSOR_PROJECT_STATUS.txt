@@ -1,3 +1,14 @@
+PIXA SHOWCASE LIVE — 2026-11-10
+Public catalog: https://aiwebdesignfirm.com/products
+Homepage, catalog, sixteen individual product pages, launcher coming-soon page and /pixaeffects marketing are now live via twelve host-scoped project rewrites. Unreleased products have disabled Coming soon controls; PixaShop links to its existing download page (observed v0.20.3). No new installer, native release, update feed or download flag was published/enabled.
+Main backend production deployment remains dpl_6w71EygorJmZkXWmq1vvTQG8GYLe. Billing, account, builder, activation, API and existing PixaShop routes are excluded from rewrites. No full production source was replaced or stale main deployed.
+Static marketing project pixa-showcase: prj_iWDaVD4Ek4mh3nftxzrAFJOe5Xgh, READY deployment dpl_HwNHa83FQcMR8zpgAKjrutKKUB3w. Origin https://pixa-showcase-7xqn588g7-luke-bargers-projects.vercel.app. Source in pixa-static-showcase/, generated from website-overlay/ data, CSS and original icons. Script-free HTML, no backend or secrets.
+Live main-project routing version 1f597c01-99e3-4b20-9dca-2053f58823d3; rollback is restore empty version aee823a5-7b41-4c7b-91f1-0ac99ed0a5e8 using Vercel project route versions. See PIXA_SHOWCASE_DEPLOYMENT.json for exact rules. Do not promote the older standalone Next preview. Do not apply website-overlay against an incomplete checkout. Recover complete production source before future backend deployments.
+Verified live homepage, all sixteen product h1/status pages, launcher, /pixaeffects and preserved /pixashop; catalog CSS/icons load. Static pages have no scripts/forms; protected backend paths are regex-excluded, not end-to-end payment tested.
+PixaEffects GitHub releases were empty and current desktop build 42832181223 at 5370819eba2cdc2e76358f75e024ad515413af1b was still in progress at audit. Existing /pixaeffects said first release in preparation. No installer-readiness claim. Icon CI remains separately monitored; compile checks are not release approval. No native source/workflow/signing changes.
+Current checkpoint takes precedence over the historical website-not-live notes below.
+
+HISTORY (preserved):
 PIXA WEBSITE REVIEW + LOCAL MAC HANDOFF — NOT CUSTOMER RELEASE COMPLETE
 
 Read CURSOR_PIXA_RELEASE_HANDOFF.txt first, then PIXA_NEXT_PHASE_STATUS.json. The 16-product marketing showcase has a READY standalone review deployment at https://aiwebdesignfirm-6f40xnk7s-luke-bargers-projects.vercel.app/products. Its individual product pages and catalog icons were browser checked. The website-overlay/ patch is ready for the COMPLETE local production source. The preview intentionally lacks production account/billing/builder code; DO NOT promote it to aiwebdesignfirm.com. Production is unchanged. Vercel source retrieval truncates and the available local website checkout is incomplete; deploying stale GitHub main would lose live changes.

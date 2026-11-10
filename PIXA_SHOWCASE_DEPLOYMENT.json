@@ -1,0 +1,272 @@
+{
+  "date": "2026-11-10",
+  "liveUrl": "https://aiwebdesignfirm.com/products",
+  "mainBackendDeployment": "dpl_6w71EygorJmZkXWmq1vvTQG8GYLe",
+  "staticDeployment": "dpl_HwNHa83FQcMR8zpgAKjrutKKUB3w",
+  "staticProject": "prj_iWDaVD4Ek4mh3nftxzrAFJOe5Xgh",
+  "routingVersion": "1f597c01-99e3-4b20-9dca-2053f58823d3",
+  "rollbackRoutingVersion": "aee823a5-7b41-4c7b-91f1-0ac99ed0a5e8",
+  "routes": [
+    {
+      "id": "pixa-showcase-home-0",
+      "name": "Pixa showcase home",
+      "description": "Static marketing only; preserve existing account, billing, builder and download APIs.",
+      "enabled": true,
+      "route": {
+        "src": "^/$",
+        "dest": "https://pixa-showcase-7xqn588g7-luke-bargers-projects.vercel.app/",
+        "has": [
+          {
+            "type": "host",
+            "value": "aiwebdesignfirm.com"
+          }
+        ],
+        "headers": {
+          "x-robots-tag": "index, follow",
+          "x-pixa-showcase": "v1"
+        },
+        "respectOriginCacheControl": true
+      }
+    },
+    {
+      "id": "pixa-showcase-catalog-0",
+      "name": "Pixa showcase catalog",
+      "description": "Static marketing only; preserve existing account, billing, builder and download APIs.",
+      "enabled": true,
+      "route": {
+        "src": "^/products$",
+        "dest": "https://pixa-showcase-7xqn588g7-luke-bargers-projects.vercel.app/products",
+        "has": [
+          {
+            "type": "host",
+            "value": "aiwebdesignfirm.com"
+          }
+        ],
+        "headers": {
+          "x-robots-tag": "index, follow",
+          "x-pixa-showcase": "v1"
+        },
+        "respectOriginCacheControl": true
+      }
+    },
+    {
+      "id": "pixa-showcase-product-0",
+      "name": "Pixa showcase product",
+      "description": "Static marketing only; preserve existing account, billing, builder and download APIs.",
+      "enabled": true,
+      "route": {
+        "src": "^/products/([^/]+)$",
+        "dest": "https://pixa-showcase-7xqn588g7-luke-bargers-projects.vercel.app/products/$1",
+        "has": [
+          {
+            "type": "host",
+            "value": "aiwebdesignfirm.com"
+          }
+        ],
+        "headers": {
+          "x-robots-tag": "index, follow",
+          "x-pixa-showcase": "v1"
+        },
+        "respectOriginCacheControl": true
+      }
+    },
+    {
+      "id": "pixa-showcase-launcher-0",
+      "name": "Pixa showcase launcher",
+      "description": "Static marketing only; preserve existing account, billing, builder and download APIs.",
+      "enabled": true,
+      "route": {
+        "src": "^/launcher$",
+        "dest": "https://pixa-showcase-7xqn588g7-luke-bargers-projects.vercel.app/launcher",
+        "has": [
+          {
+            "type": "host",
+            "value": "aiwebdesignfirm.com"
+          }
+        ],
+        "headers": {
+          "x-robots-tag": "index, follow",
+          "x-pixa-showcase": "v1"
+        },
+        "respectOriginCacheControl": true
+      }
+    },
+    {
+      "id": "pixa-showcase-assets-0",
+      "name": "Pixa showcase assets",
+      "description": "Static marketing only; preserve existing account, billing, builder and download APIs.",
+      "enabled": true,
+      "route": {
+        "src": "^/pixa-showcase/(.*)$",
+        "dest": "https://pixa-showcase-7xqn588g7-luke-bargers-projects.vercel.app/pixa-showcase/$1",
+        "has": [
+          {
+            "type": "host",
+            "value": "aiwebdesignfirm.com"
+          }
+        ],
+        "headers": {
+          "x-robots-tag": "index, follow",
+          "x-pixa-showcase": "v1"
+        },
+        "respectOriginCacheControl": true
+      }
+    },
+    {
+      "id": "pixa-showcase-effects-0",
+      "name": "Pixa showcase effects",
+      "description": "Static marketing only; preserve existing account, billing, builder and download APIs.",
+      "enabled": true,
+      "route": {
+        "src": "^/pixaeffects$",
+        "dest": "https://pixa-showcase-7xqn588g7-luke-bargers-projects.vercel.app/products/pixaeffects",
+        "has": [
+          {
+            "type": "host",
+            "value": "aiwebdesignfirm.com"
+          }
+        ],
+        "headers": {
+          "x-robots-tag": "index, follow",
+          "x-pixa-showcase": "v1"
+        },
+        "respectOriginCacheControl": true
+      }
+    },
+    {
+      "id": "pixa-showcase-home-1",
+      "name": "Pixa showcase home www",
+      "description": "Static marketing only; preserve existing account, billing, builder and download APIs.",
+      "enabled": true,
+      "route": {
+        "src": "^/$",
+        "dest": "https://pixa-showcase-7xqn588g7-luke-bargers-projects.vercel.app/",
+        "has": [
+          {
+            "type": "host",
+            "value": "www.aiwebdesignfirm.com"
+          }
+        ],
+        "headers": {
+          "x-robots-tag": "index, follow",
+          "x-pixa-showcase": "v1"
+        },
+        "respectOriginCacheControl": true
+      }
+    },
+    {
+      "id": "pixa-showcase-catalog-1",
+      "name": "Pixa showcase catalog www",
+      "description": "Static marketing only; preserve existing account, billing, builder and download APIs.",
+      "enabled": true,
+      "route": {
+        "src": "^/products$",
+        "dest": "https://pixa-showcase-7xqn588g7-luke-bargers-projects.vercel.app/products",
+        "has": [
+          {
+            "type": "host",
+            "value": "www.aiwebdesignfirm.com"
+          }
+        ],
+        "headers": {
+          "x-robots-tag": "index, follow",
+          "x-pixa-showcase": "v1"
+        },
+        "respectOriginCacheControl": true
+      }
+    },
+    {
+      "id": "pixa-showcase-product-1",
+      "name": "Pixa showcase product www",
+      "description": "Static marketing only; preserve existing account, billing, builder and download APIs.",
+      "enabled": true,
+      "route": {
+        "src": "^/products/([^/]+)$",
+        "dest": "https://pixa-showcase-7xqn588g7-luke-bargers-projects.vercel.app/products/$1",
+        "has": [
+          {
+            "type": "host",
+            "value": "www.aiwebdesignfirm.com"
+          }
+        ],
+        "headers": {
+          "x-robots-tag": "index, follow",
+          "x-pixa-showcase": "v1"
+        },
+        "respectOriginCacheControl": true
+      }
+    },
+    {
+      "id": "pixa-showcase-launcher-1",
+      "name": "Pixa showcase launcher www",
+      "description": "Static marketing only; preserve existing account, billing, builder and download APIs.",
+      "enabled": true,
+      "route": {
+        "src": "^/launcher$",
+        "dest": "https://pixa-showcase-7xqn588g7-luke-bargers-projects.vercel.app/launcher",
+        "has": [
+          {
+            "type": "host",
+            "value": "www.aiwebdesignfirm.com"
+          }
+        ],
+        "headers": {
+          "x-robots-tag": "index, follow",
+          "x-pixa-showcase": "v1"
+        },
+        "respectOriginCacheControl": true
+      }
+    },
+    {
+      "id": "pixa-showcase-assets-1",
+      "name": "Pixa showcase assets www",
+      "description": "Static marketing only; preserve existing account, billing, builder and download APIs.",
+      "enabled": true,
+      "route": {
+        "src": "^/pixa-showcase/(.*)$",
+        "dest": "https://pixa-showcase-7xqn588g7-luke-bargers-projects.vercel.app/pixa-showcase/$1",
+        "has": [
+          {
+            "type": "host",
+            "value": "www.aiwebdesignfirm.com"
+          }
+        ],
+        "headers": {
+          "x-robots-tag": "index, follow",
+          "x-pixa-showcase": "v1"
+        },
+        "respectOriginCacheControl": true
+      }
+    },
+    {
+      "id": "pixa-showcase-effects-1",
+      "name": "Pixa showcase effects www",
+      "description": "Static marketing only; preserve existing account, billing, builder and download APIs.",
+      "enabled": true,
+      "route": {
+        "src": "^/pixaeffects$",
+        "dest": "https://pixa-showcase-7xqn588g7-luke-bargers-projects.vercel.app/products/pixaeffects",
+        "has": [
+          {
+            "type": "host",
+            "value": "www.aiwebdesignfirm.com"
+          }
+        ],
+        "headers": {
+          "x-robots-tag": "index, follow",
+          "x-pixa-showcase": "v1"
+        },
+        "respectOriginCacheControl": true
+      }
+    }
+  ],
+  "verification": {
+    "liveProductPages": 16,
+    "unreleasedDisabledButtons": 15,
+    "launcherDisabled": true,
+    "shopLegacyPreserved": true,
+    "noBillingMutation": true,
+    "fullBackendQA": false
+  },
+  "newInstallerPublished": false
+}

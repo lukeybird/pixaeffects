@@ -1,0 +1,19 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "headers": [
+    {
+      "source": "/pixa-showcase/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600"
+        }
+      ]
+    }
+  ],
+  "framework": null,
+  "buildCommand": "echo Static showcase assets ready",
+  "installCommand": "echo No dependencies required",
+  "outputDirectory": "public"
+}
