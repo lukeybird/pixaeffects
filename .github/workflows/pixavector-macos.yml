@@ -1,0 +1,112 @@
+name: PixaVector Mac candidate
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  build:
+    runs-on: macos-15-intel
+    timeout-minutes: 180
+    env:
+      PYTHONUTF8: "1"
+      CARGO_BUILD_JOBS: "2"
+      CARGO_INCREMENTAL: "0"
+      MACOSX_DEPLOYMENT_TARGET: "11.0"
+      PIXA_ACCESS_MODE: subscription
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install packaging dependency
+        run: python -m pip install -r pixa-suite/requirements.txt
+      - name: Install Rust
+        shell: bash
+        run: |
+          rustup toolchain install 1.95.0 --profile minimal
+          rustup default 1.95.0
+          rustup target add aarch64-apple-darwin x86_64-apple-darwin
+      - name: Prepare PixaVector
+        run: python pixa-suite/prepare.py pixavector
+      - name: Build both Mac slices
+        shell: bash
+        run: |
+          set -euo pipefail
+          export CARGO_TARGET_DIR="$GITHUB_WORKSPACE/pixa-suite/target"
+          cd pixa-suite/sources/vectorcraft
+          cargo +1.95.0 build --release -p vectorcraft --target aarch64-apple-darwin
+          cargo +1.95.0 build --release -p vectorcraft --target x86_64-apple-darwin
+          mkdir -p "$CARGO_TARGET_DIR/release"
+          lipo -create \
+            "$CARGO_TARGET_DIR/aarch64-apple-darwin/release/vectorcraft" \
+            "$CARGO_TARGET_DIR/x86_64-apple-darwin/release/vectorcraft" \
+            -output "$CARGO_TARGET_DIR/release/vectorcraft"
+          lipo -info "$CARGO_TARGET_DIR/release/vectorcraft"
+      - name: Assemble unsigned app
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - << 'PY'
+          from pathlib import Path
+          import hashlib, json, plistlib, shutil
+          root = Path("pixa-suite")
+          app = json.loads((root/"catalog.json").read_text())["apps"]
+          product = next(item for item in app if item["id"] == "pixavector")
+          binary = root/"target/release/vectorcraft"
+          source = root/"sources"/product["source"]
+          icons = list((source/"assets/app-icon").rglob("*.icns"))
+          if not binary.is_file() or not icons:
+              raise SystemExit("release binary or icon is missing")
+          out = Path("dist/pixavector-candidate")
+          if out.exists():
+              shutil.rmtree(out)
+          contents = out/"PixaVector.app/Contents"
+          (contents/"MacOS").mkdir(parents=True)
+          (contents/"Resources").mkdir()
+          executable = contents/"MacOS"/product["id"]
+          shutil.copy2(binary, executable)
+          executable.chmod(0o755)
+          shutil.copy2(icons[0], contents/"Resources/app.icns")
+          info = {
+              "CFBundleName": product["name"],
+              "CFBundleDisplayName": product["name"],
+              "CFBundleIdentifier": product["bundle_id"],
+              "CFBundleExecutable": product["id"],
+              "CFBundleShortVersionString": product["version"],
+              "CFBundleVersion": product["version"],
+              "CFBundlePackageType": "APPL",
+              "CFBundleIconFile": "app.icns",
+              "LSMinimumSystemVersion": "11.0",
+              "NSHighResolutionCapable": True,
+          }
+          (contents/"Info.plist").write_bytes(plistlib.dumps(info))
+          notices = out/"Licenses"
+          notices.mkdir()
+          copied = []
+          for path in source.glob("*"):
+              if path.is_file() and (path.name.startswith(("LICENSE", "NOTICE")) or path.name == "ATTRIBUTION.md"):
+                  shutil.copy2(path, notices/path.name)
+                  copied.append(path.name)
+          if not any(name.startswith("LICENSE") for name in copied):
+              raise SystemExit("license notices were not found")
+          digest = hashlib.sha256(executable.read_bytes()).hexdigest()
+          (out/"candidate.json").write_text(json.dumps({
+              "product": product["id"],
+              "version": product["version"],
+              "bundle_id": product["bundle_id"],
+              "revision": product["revision"],
+              "access_mode": "subscription",
+              "architectures": ["arm64", "x86_64"],
+              "sha256": digest,
+              "signed": False,
+              "notarized": False,
+              "published": False,
+          }, indent=2) + "\n")
+          print(digest)
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: PixaVector-macos-universal-unsigned
+          path: dist/pixavector-candidate/
+          if-no-files-found: error
+          retention-days: 14
