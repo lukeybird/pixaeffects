@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "verified_at": "2026-11-11T02:28:49.489Z",
+  "verified_at": "2026-11-11T02:42:03.228Z",
   "legend": "Green = verified passed. Red = pending, incomplete or not yet verified. Progress is evidence-based, not a release guarantee.",
   "steps": [
     "Source setup",
@@ -427,24 +427,32 @@
       },
       {
         "label": "Complete Pixa branding",
-        "passed": false,
-        "note": "Source branding cleanup passed all 11 checks for 0.20.4. Rebuilt installer branding verification is still pending.",
+        "passed": true,
+        "note": "PixaShop branding completed and confirmed.",
         "evidence": {
           "repository": "lukeybird/pixashop",
           "commit": "5b4551b95c632910dbb546df2797245380aa6942",
           "report": "PIXA_SHOP_BRANDING_AUDIT.json",
-          "build_run": 42946140053
+          "build_run": 42946140053,
+          "confirmation": "Product owner confirmed completion in this conversation",
+          "confirmed_at": "2026-11-11T02:42:03.228Z",
+          "verification_type": "owner-confirmed; not a new automated acceptance test"
         }
       },
       {
         "label": "Manual, tutorials, activation & updater",
-        "passed": false,
-        "note": "Complete help, activation and own-feed updater verification remains pending."
+        "passed": true,
+        "note": "Manual, tutorials, activation and PixaShop update channel completed and confirmed.",
+        "evidence": {
+          "confirmation": "Product owner confirmed completion in this conversation",
+          "confirmed_at": "2026-11-11T02:42:03.228Z",
+          "verification_type": "owner-confirmed; not a new automated acceptance test"
+        }
       },
       {
         "label": "Compile & package installers",
         "passed": true,
-        "note": "Published platform packages exist."
+        "note": "Published v0.20.3 packages exist. The v0.20.4 build is still running; its installers are not ready."
       },
       {
         "label": "Application & update testing",
