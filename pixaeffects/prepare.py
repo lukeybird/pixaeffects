@@ -41,12 +41,14 @@ def prepare():
  p=ROOT/'crates/ui-egui/src/lib.rs';s=p.read_text().replace('accent: Some([0xe0, 0x36, 0x8f])','accent: Some([0xbd, 0x9b, 0xfa])').replace('..craft_update::suite::EFFECTCRAFT','developer: "AIWebDesignFirm",\n    ..craft_update::app::App::new("pixaeffects", "PixaEffects", "Motion graphics and compositing", "lukeybird/pixaeffects")');p.write_text(s)
  p=ROOT/'crates/host/src/app_dirs.rs';s=p.read_text().replace('"effectcraft"','"pixaeffects"').replace('EFFECTCRAFT_CONFIG_DIR','PIXAEFFECTS_CONFIG_DIR');p.write_text(s)
  # Replace promotional surfaces; retain truthful contributor and license notices.
- p=ROOT/'crates/engine/src/menus.rs';s=p.read_text();s='\n'.join(l for l in s.split('\n') if not any(t in l for t in ['| help.discord','| help.github']));s=s.replace('ArtCraft Website','AIWebDesignFirm Website').replace('In-App Tutorials... |','Quick Tool Tour... |').replace('PixaEffects Help... |','PixaEffects User Manual... |');p.write_text(s)
+ p=ROOT/'crates/engine/src/menus.rs';s=p.read_text();s='\n'.join(l for l in s.split('\n') if not any(t in l for t in ['| help.discord','| help.github']));s=s.replace('ArtCraft Website','AIWebDesignFirm Website').replace('In-App Tutorials... |','Quick Tool Tour... |').replace('PixaEffects Help... |','PixaEffects User Manual... |')
+ s=s.replace('Help\n  PixaEffects User Manual... | help.docs {"page":"help"} | F1','Help\n  Account... | help.account\n  PixaEffects User Manual... | help.docs {"page":"help"} | F1',1)
+ p.write_text(s)
+ edit('crates/engine/src/cmd/help.rs','cmd!("help.website", "AIWebDesignFirm Website", ["Help"], None, "{}", always, |s, _| open(s, links::WEBSITE.into())),','''cmd!("help.account", "Account...", ["Help"], None, "{}", always, |s, _| open(s, "https://aiwebdesignfirm.com/account".into())),
+        cmd!("help.website", "AIWebDesignFirm Website", ["Help"], None, "{}", always, |s, _| open(s, links::WEBSITE.into())),''')
  p=ROOT/'crates/engine/src/cmd/help.rs';s=p.read_text();start=s.index('    let page = match');end=s.index('\n}',start);s=s[:start]+'    let _ = p;\n    open(s, "https://aiwebdesignfirm.com/pixaeffects/manual".into())'+s[end:];s=s.replace('ArtCraft Website','AIWebDesignFirm Website');p.write_text(s)
  p=ROOT/'crates/engine/src/home/links.rs';s=p.read_text();a=s.index('pub const SIBLINGS:');b=s.index('\n];',a)+3;s=s[:a]+'pub const SIBLINGS: &[(&str, &str)] = &[];'+s[b:];s=s.replace('format!("https://github.com/storytold/{slug}")','{ let _ = slug; "https://aiwebdesignfirm.com".into() }').replace('format!("https://aiwebdesignfirm.com/apps/{slug}")','{ let _ = slug; "https://aiwebdesignfirm.com".into() }');p.write_text(s)
- p=ROOT/'crates/ui-egui/src/header.rs';s=p.read_text().replace('use crate::icons::{self, Icon};','use crate::icons::Icon;');a=s.index('    let t = app.tokens;',s.index('fn community_buttons'));b=s.index('\n}\n',a);s=s[:a]+'''    let _ = (app, p, cy);
-    if ui.button("Account").clicked() { ui.ctx().open_url(egui::OpenUrl::new_tab("https://aiwebdesignfirm.com/account")); }
-    rx -= 70.0;
+ p=ROOT/'crates/ui-egui/src/header.rs';s=p.read_text().replace('use crate::icons::{self, Icon};','use crate::icons::Icon;');a=s.index('    let t = app.tokens;',s.index('fn community_buttons'));b=s.index('\n}\n',a);s=s[:a]+'''    let _ = (app, ui, p, cy);
     rx'''+s[b:];s=s.replace('../../../docs/brand/artcraft-mark.png','../../../assets/app-icon/pixaeffects-mark.png');p.write_text(s)
  # Header-generated title, About and Home promotional labels.
  for p in (ROOT/'crates/ui-egui/src').rglob('*.rs'):
