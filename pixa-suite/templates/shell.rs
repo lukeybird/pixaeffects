@@ -38,8 +38,7 @@ impl PixaShell {
                 } else if !self.guard.adapter_ready() {
                     ui.label("This editor's restricted preview is not configured yet.");
                 } else {
-                    ui.label("Connect an account with active access to use the editor.");
-                    if ui.button("Your account").clicked() { self.account.open=true; }
+                    self.account.show_easy(ui);
                 }
                 if self.guard.needs_close_review(self.account.allowed()) {
                     ui.label("Your project remains in memory. Reconnect to continue, or save a recovery copy before closing.");
@@ -55,7 +54,6 @@ impl PixaShell {
                     if ui.button(if self.guard.recovery_saved(){"Review recovery copy and close…"}else{"Close without a recovery copy…"}).clicked() { self.discard_prompt=true; }
                 }
                 if !self.recovery_message.is_empty() { ui.label(&self.recovery_message); }
-                ui.small("Restricted development preview. Do not distribute before save, recovery and activation testing is complete.");
             });
         });
     }
