@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "verified_at": "2026-11-11T02:54:37.804Z",
+  "verified_at": "2026-11-11T04:11:47Z",
   "legend": "Green = verified passed. Red = pending, incomplete or not yet verified. Progress is evidence-based, not a release guarantee.",
   "steps": [
     "Source setup",
@@ -452,28 +452,43 @@
       {
         "label": "Compile & package installers",
         "passed": true,
-        "note": "Published v0.20.3 packages exist. The v0.20.4 build is still running; its installers are not ready."
+        "note": "v0.20.4 Mac, Windows, and Linux packages are published. The Mac package is the signed installer.",
+        "evidence": {
+          "release": "https://github.com/lukeybird/pixashop/releases/tag/v0.20.4",
+          "commit": "5b4551b95c632910dbb546df2797245380aa6942",
+          "build_run": 42946140053
+        }
       },
       {
         "label": "Application & update testing",
         "passed": true,
-        "note": "Editor, access and install/restart update testing completed and confirmed.",
+        "note": "The product owner tested the PixaShop 0.20.4 Mac app and confirmed it is good.",
         "evidence": {
-          "confirmation": "Owner confirmed this step works in the conversation",
-          "verification_type": "owner-confirmed, not a new automated test",
-          "confirmed_at": "2026-11-11T02:54:37.804Z",
-          "scope": "Existing app tested by owner; does not establish 0.20.4 build or release completion"
+          "confirmation": "Product owner tested the 0.20.4 Mac app and confirmed it is good",
+          "confirmed_at": "2026-11-11T04:08:00Z",
+          "verification_type": "owner-confirmed",
+          "scope": "Mac app. This does not record a separate 0.20.3-to-0.20.4 updater install-and-restart run."
         }
       },
       {
         "label": "Apple signing & notarization",
         "passed": true,
-        "note": "Mac signed/notarized release recorded."
+        "note": "PixaShop 0.20.4 Mac DMG is signed, notarized, stapled, and accepted by Gatekeeper.",
+        "evidence": {
+          "sha256": "bdb0b5a4d0cd9830023bdf1e4c6908dea69c694b0bbf21f21fb5922e88ef3245",
+          "notarization_submission": "e95c55a5-3d88-46a8-a777-ba7d5c91677c",
+          "gatekeeper": "accepted"
+        }
       },
       {
         "label": "Verified website download",
         "passed": true,
-        "note": "Existing PixaShop download is published."
+        "note": "The live site still serves the existing PixaShop download. v0.20.4 is published on GitHub, and the website pin was not changed.",
+        "evidence": {
+          "github_release": "v0.20.4",
+          "website_pin": "unchanged",
+          "reason": "Saved Vercel login is invalid. Do not deploy stale website main."
+        }
       }
     ],
     "pixasound": [
