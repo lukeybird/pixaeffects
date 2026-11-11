@@ -1,0 +1,608 @@
+{
+  "schema_version": 1,
+  "verified_at": "2026-11-11T02:14:51.439Z",
+  "legend": "Green = verified passed. Red = pending, incomplete or not yet verified. Progress is evidence-based, not a release guarantee.",
+  "steps": [
+    "Source setup",
+    "Complete Pixa branding",
+    "Manual, tutorials, activation & updater",
+    "Compile & package installers",
+    "Application & update testing",
+    "Apple signing & notarization",
+    "Verified website download"
+  ],
+  "apps": {
+    "pixaanything": [
+      {
+        "label": "Source setup",
+        "passed": true,
+        "note": "Pinned product source is prepared."
+      },
+      {
+        "label": "Complete Pixa branding",
+        "passed": false,
+        "note": "Full branding audit is not yet verified."
+      },
+      {
+        "label": "Manual, tutorials, activation & updater",
+        "passed": false,
+        "note": "Complete help, activation and own-feed updater verification remains pending."
+      },
+      {
+        "label": "Compile & package installers",
+        "passed": false,
+        "note": "Compile/recovery checks passed; customer installer packaging remains pending."
+      },
+      {
+        "label": "Application & update testing",
+        "passed": false,
+        "note": "Full editor, access and install/restart update acceptance is not yet verified."
+      },
+      {
+        "label": "Apple signing & notarization",
+        "passed": false,
+        "note": "Verified signed/notarized Mac release remains pending."
+      },
+      {
+        "label": "Verified website download",
+        "passed": false,
+        "note": "Customer download remains Coming soon."
+      }
+    ],
+    "pixacad": [
+      {
+        "label": "Source setup",
+        "passed": true,
+        "note": "Pinned product source is prepared."
+      },
+      {
+        "label": "Complete Pixa branding",
+        "passed": false,
+        "note": "Full branding audit is not yet verified."
+      },
+      {
+        "label": "Manual, tutorials, activation & updater",
+        "passed": false,
+        "note": "Complete help, activation and own-feed updater verification remains pending."
+      },
+      {
+        "label": "Compile & package installers",
+        "passed": false,
+        "note": "Compile/recovery checks passed; customer installer packaging remains pending."
+      },
+      {
+        "label": "Application & update testing",
+        "passed": false,
+        "note": "Full editor, access and install/restart update acceptance is not yet verified."
+      },
+      {
+        "label": "Apple signing & notarization",
+        "passed": false,
+        "note": "Verified signed/notarized Mac release remains pending."
+      },
+      {
+        "label": "Verified website download",
+        "passed": false,
+        "note": "Customer download remains Coming soon."
+      }
+    ],
+    "pixadeck": [
+      {
+        "label": "Source setup",
+        "passed": true,
+        "note": "Pinned product source is prepared."
+      },
+      {
+        "label": "Complete Pixa branding",
+        "passed": false,
+        "note": "Full branding audit is not yet verified."
+      },
+      {
+        "label": "Manual, tutorials, activation & updater",
+        "passed": false,
+        "note": "Complete help, activation and own-feed updater verification remains pending."
+      },
+      {
+        "label": "Compile & package installers",
+        "passed": false,
+        "note": "Compile/recovery checks passed; customer installer packaging remains pending."
+      },
+      {
+        "label": "Application & update testing",
+        "passed": false,
+        "note": "Full editor, access and install/restart update acceptance is not yet verified."
+      },
+      {
+        "label": "Apple signing & notarization",
+        "passed": false,
+        "note": "Verified signed/notarized Mac release remains pending."
+      },
+      {
+        "label": "Verified website download",
+        "passed": false,
+        "note": "Customer download remains Coming soon."
+      }
+    ],
+    "pixadesign": [
+      {
+        "label": "Source setup",
+        "passed": true,
+        "note": "Pinned product source is prepared."
+      },
+      {
+        "label": "Complete Pixa branding",
+        "passed": false,
+        "note": "Full branding audit is not yet verified."
+      },
+      {
+        "label": "Manual, tutorials, activation & updater",
+        "passed": false,
+        "note": "Complete help, activation and own-feed updater verification remains pending."
+      },
+      {
+        "label": "Compile & package installers",
+        "passed": false,
+        "note": "Compile/recovery checks passed; customer installer packaging remains pending."
+      },
+      {
+        "label": "Application & update testing",
+        "passed": false,
+        "note": "Full editor, access and install/restart update acceptance is not yet verified."
+      },
+      {
+        "label": "Apple signing & notarization",
+        "passed": false,
+        "note": "Verified signed/notarized Mac release remains pending."
+      },
+      {
+        "label": "Verified website download",
+        "passed": false,
+        "note": "Customer download remains Coming soon."
+      }
+    ],
+    "pixaeffects": [
+      {
+        "label": "Source setup",
+        "passed": true,
+        "note": "Pinned product source is prepared."
+      },
+      {
+        "label": "Complete Pixa branding",
+        "passed": false,
+        "note": "Full branding audit is not yet verified."
+      },
+      {
+        "label": "Manual, tutorials, activation & updater",
+        "passed": false,
+        "note": "Complete help, activation and own-feed updater verification remains pending."
+      },
+      {
+        "label": "Compile & package installers",
+        "passed": false,
+        "note": "Desktop CI passed; verified release packaging remains pending."
+      },
+      {
+        "label": "Application & update testing",
+        "passed": false,
+        "note": "Full editor, access and install/restart update acceptance is not yet verified."
+      },
+      {
+        "label": "Apple signing & notarization",
+        "passed": false,
+        "note": "Verified signed/notarized Mac release remains pending."
+      },
+      {
+        "label": "Verified website download",
+        "passed": false,
+        "note": "Customer download remains Coming soon."
+      }
+    ],
+    "pixafilm": [
+      {
+        "label": "Source setup",
+        "passed": true,
+        "note": "Pinned product source is prepared."
+      },
+      {
+        "label": "Complete Pixa branding",
+        "passed": false,
+        "note": "Full branding audit is not yet verified."
+      },
+      {
+        "label": "Manual, tutorials, activation & updater",
+        "passed": false,
+        "note": "Complete help, activation and own-feed updater verification remains pending."
+      },
+      {
+        "label": "Compile & package installers",
+        "passed": false,
+        "note": "Compile/recovery checks passed; customer installer packaging remains pending."
+      },
+      {
+        "label": "Application & update testing",
+        "passed": false,
+        "note": "Full editor, access and install/restart update acceptance is not yet verified."
+      },
+      {
+        "label": "Apple signing & notarization",
+        "passed": false,
+        "note": "Verified signed/notarized Mac release remains pending."
+      },
+      {
+        "label": "Verified website download",
+        "passed": false,
+        "note": "Customer download remains Coming soon."
+      }
+    ],
+    "pixagrid": [
+      {
+        "label": "Source setup",
+        "passed": true,
+        "note": "Pinned product source is prepared."
+      },
+      {
+        "label": "Complete Pixa branding",
+        "passed": false,
+        "note": "Full branding audit is not yet verified."
+      },
+      {
+        "label": "Manual, tutorials, activation & updater",
+        "passed": false,
+        "note": "Complete help, activation and own-feed updater verification remains pending."
+      },
+      {
+        "label": "Compile & package installers",
+        "passed": false,
+        "note": "Compile/recovery checks passed; customer installer packaging remains pending."
+      },
+      {
+        "label": "Application & update testing",
+        "passed": false,
+        "note": "Full editor, access and install/restart update acceptance is not yet verified."
+      },
+      {
+        "label": "Apple signing & notarization",
+        "passed": false,
+        "note": "Verified signed/notarized Mac release remains pending."
+      },
+      {
+        "label": "Verified website download",
+        "passed": false,
+        "note": "Customer download remains Coming soon."
+      }
+    ],
+    "pixainterface": [
+      {
+        "label": "Source setup",
+        "passed": true,
+        "note": "Pinned product source is prepared."
+      },
+      {
+        "label": "Complete Pixa branding",
+        "passed": false,
+        "note": "Full branding audit is not yet verified."
+      },
+      {
+        "label": "Manual, tutorials, activation & updater",
+        "passed": false,
+        "note": "Complete help, activation and own-feed updater verification remains pending."
+      },
+      {
+        "label": "Compile & package installers",
+        "passed": false,
+        "note": "Compile/recovery checks passed; customer installer packaging remains pending."
+      },
+      {
+        "label": "Application & update testing",
+        "passed": false,
+        "note": "Full editor, access and install/restart update acceptance is not yet verified."
+      },
+      {
+        "label": "Apple signing & notarization",
+        "passed": false,
+        "note": "Verified signed/notarized Mac release remains pending."
+      },
+      {
+        "label": "Verified website download",
+        "passed": false,
+        "note": "Customer download remains Coming soon."
+      }
+    ],
+    "pixalight": [
+      {
+        "label": "Source setup",
+        "passed": true,
+        "note": "Pinned product source is prepared."
+      },
+      {
+        "label": "Complete Pixa branding",
+        "passed": false,
+        "note": "Full branding audit is not yet verified."
+      },
+      {
+        "label": "Manual, tutorials, activation & updater",
+        "passed": false,
+        "note": "Complete help, activation and own-feed updater verification remains pending."
+      },
+      {
+        "label": "Compile & package installers",
+        "passed": false,
+        "note": "Compile/recovery checks passed; customer installer packaging remains pending."
+      },
+      {
+        "label": "Application & update testing",
+        "passed": false,
+        "note": "Full editor, access and install/restart update acceptance is not yet verified."
+      },
+      {
+        "label": "Apple signing & notarization",
+        "passed": false,
+        "note": "Verified signed/notarized Mac release remains pending."
+      },
+      {
+        "label": "Verified website download",
+        "passed": false,
+        "note": "Customer download remains Coming soon."
+      }
+    ],
+    "pixamaterial": [
+      {
+        "label": "Source setup",
+        "passed": true,
+        "note": "Pinned product source is prepared."
+      },
+      {
+        "label": "Complete Pixa branding",
+        "passed": false,
+        "note": "Full branding audit is not yet verified."
+      },
+      {
+        "label": "Manual, tutorials, activation & updater",
+        "passed": false,
+        "note": "Complete help, activation and own-feed updater verification remains pending."
+      },
+      {
+        "label": "Compile & package installers",
+        "passed": false,
+        "note": "Compile/recovery checks passed; customer installer packaging remains pending."
+      },
+      {
+        "label": "Application & update testing",
+        "passed": false,
+        "note": "Full editor, access and install/restart update acceptance is not yet verified."
+      },
+      {
+        "label": "Apple signing & notarization",
+        "passed": false,
+        "note": "Verified signed/notarized Mac release remains pending."
+      },
+      {
+        "label": "Verified website download",
+        "passed": false,
+        "note": "Customer download remains Coming soon."
+      }
+    ],
+    "pixapdf": [
+      {
+        "label": "Source setup",
+        "passed": true,
+        "note": "Pinned product source is prepared."
+      },
+      {
+        "label": "Complete Pixa branding",
+        "passed": false,
+        "note": "Full branding audit is not yet verified."
+      },
+      {
+        "label": "Manual, tutorials, activation & updater",
+        "passed": false,
+        "note": "Complete help, activation and own-feed updater verification remains pending."
+      },
+      {
+        "label": "Compile & package installers",
+        "passed": false,
+        "note": "Compile/recovery checks passed; customer installer packaging remains pending."
+      },
+      {
+        "label": "Application & update testing",
+        "passed": false,
+        "note": "Full editor, access and install/restart update acceptance is not yet verified."
+      },
+      {
+        "label": "Apple signing & notarization",
+        "passed": false,
+        "note": "Verified signed/notarized Mac release remains pending."
+      },
+      {
+        "label": "Verified website download",
+        "passed": false,
+        "note": "Customer download remains Coming soon."
+      }
+    ],
+    "pixashop": [
+      {
+        "label": "Source setup",
+        "passed": true,
+        "note": "Pinned product source is prepared."
+      },
+      {
+        "label": "Complete Pixa branding",
+        "passed": false,
+        "note": "Full branding audit is not yet verified."
+      },
+      {
+        "label": "Manual, tutorials, activation & updater",
+        "passed": false,
+        "note": "Complete help, activation and own-feed updater verification remains pending."
+      },
+      {
+        "label": "Compile & package installers",
+        "passed": true,
+        "note": "Published platform packages exist."
+      },
+      {
+        "label": "Application & update testing",
+        "passed": false,
+        "note": "Full editor, access and install/restart update acceptance is not yet verified."
+      },
+      {
+        "label": "Apple signing & notarization",
+        "passed": true,
+        "note": "Mac signed/notarized release recorded."
+      },
+      {
+        "label": "Verified website download",
+        "passed": true,
+        "note": "Existing PixaShop download is published."
+      }
+    ],
+    "pixasound": [
+      {
+        "label": "Source setup",
+        "passed": true,
+        "note": "Pinned product source is prepared."
+      },
+      {
+        "label": "Complete Pixa branding",
+        "passed": false,
+        "note": "Full branding audit is not yet verified."
+      },
+      {
+        "label": "Manual, tutorials, activation & updater",
+        "passed": false,
+        "note": "Complete help, activation and own-feed updater verification remains pending."
+      },
+      {
+        "label": "Compile & package installers",
+        "passed": false,
+        "note": "Compile/recovery checks passed; customer installer packaging remains pending."
+      },
+      {
+        "label": "Application & update testing",
+        "passed": false,
+        "note": "Full editor, access and install/restart update acceptance is not yet verified."
+      },
+      {
+        "label": "Apple signing & notarization",
+        "passed": false,
+        "note": "Verified signed/notarized Mac release remains pending."
+      },
+      {
+        "label": "Verified website download",
+        "passed": false,
+        "note": "Customer download remains Coming soon."
+      }
+    ],
+    "pixatexture": [
+      {
+        "label": "Source setup",
+        "passed": true,
+        "note": "Pinned product source is prepared."
+      },
+      {
+        "label": "Complete Pixa branding",
+        "passed": false,
+        "note": "Full branding audit is not yet verified."
+      },
+      {
+        "label": "Manual, tutorials, activation & updater",
+        "passed": false,
+        "note": "Complete help, activation and own-feed updater verification remains pending."
+      },
+      {
+        "label": "Compile & package installers",
+        "passed": false,
+        "note": "Compile/recovery checks passed; customer installer packaging remains pending."
+      },
+      {
+        "label": "Application & update testing",
+        "passed": false,
+        "note": "Full editor, access and install/restart update acceptance is not yet verified."
+      },
+      {
+        "label": "Apple signing & notarization",
+        "passed": false,
+        "note": "Verified signed/notarized Mac release remains pending."
+      },
+      {
+        "label": "Verified website download",
+        "passed": false,
+        "note": "Customer download remains Coming soon."
+      }
+    ],
+    "pixavector": [
+      {
+        "label": "Source setup",
+        "passed": true,
+        "note": "Pinned product source is prepared."
+      },
+      {
+        "label": "Complete Pixa branding",
+        "passed": false,
+        "note": "Full branding audit is not yet verified."
+      },
+      {
+        "label": "Manual, tutorials, activation & updater",
+        "passed": false,
+        "note": "Complete help, activation and own-feed updater verification remains pending."
+      },
+      {
+        "label": "Compile & package installers",
+        "passed": false,
+        "note": "Compile/recovery checks passed; customer installer packaging remains pending."
+      },
+      {
+        "label": "Application & update testing",
+        "passed": false,
+        "note": "Full editor, access and install/restart update acceptance is not yet verified."
+      },
+      {
+        "label": "Apple signing & notarization",
+        "passed": false,
+        "note": "Verified signed/notarized Mac release remains pending."
+      },
+      {
+        "label": "Verified website download",
+        "passed": false,
+        "note": "Customer download remains Coming soon."
+      }
+    ],
+    "pixaword": [
+      {
+        "label": "Source setup",
+        "passed": true,
+        "note": "Pinned product source is prepared."
+      },
+      {
+        "label": "Complete Pixa branding",
+        "passed": false,
+        "note": "Full branding audit is not yet verified."
+      },
+      {
+        "label": "Manual, tutorials, activation & updater",
+        "passed": false,
+        "note": "Complete help, activation and own-feed updater verification remains pending."
+      },
+      {
+        "label": "Compile & package installers",
+        "passed": false,
+        "note": "Compile/recovery checks passed; customer installer packaging remains pending."
+      },
+      {
+        "label": "Application & update testing",
+        "passed": false,
+        "note": "Full editor, access and install/restart update acceptance is not yet verified."
+      },
+      {
+        "label": "Apple signing & notarization",
+        "passed": false,
+        "note": "Verified signed/notarized Mac release remains pending."
+      },
+      {
+        "label": "Verified website download",
+        "passed": false,
+        "note": "Customer download remains Coming soon."
+      }
+    ]
+  }
+}
