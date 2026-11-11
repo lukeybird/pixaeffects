@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "verified_at": "2026-11-11T02:42:03.228Z",
+  "verified_at": "2026-11-11T02:54:37.804Z",
   "legend": "Green = verified passed. Red = pending, incomplete or not yet verified. Progress is evidence-based, not a release guarantee.",
   "steps": [
     "Source setup",
@@ -456,8 +456,14 @@
       },
       {
         "label": "Application & update testing",
-        "passed": false,
-        "note": "Full editor, access and install/restart update acceptance is not yet verified."
+        "passed": true,
+        "note": "Editor, access and install/restart update testing completed and confirmed.",
+        "evidence": {
+          "confirmation": "Owner confirmed this step works in the conversation",
+          "verification_type": "owner-confirmed, not a new automated test",
+          "confirmed_at": "2026-11-11T02:54:37.804Z",
+          "scope": "Existing app tested by owner; does not establish 0.20.4 build or release completion"
+        }
       },
       {
         "label": "Apple signing & notarization",

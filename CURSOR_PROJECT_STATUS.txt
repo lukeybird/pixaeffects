@@ -1,3 +1,8 @@
+PIXASHOP APPLICATION/UPDATE ACCEPTANCE — OWNER CONFIRMED
+Owner confirmed the Application & update testing step works. Its indicator is now green, with confirmation type recorded in progress.json. This is not a newly performed automated test and does not certify the separate 0.20.4 build/release. Existing compile/package note explicitly refers to published v0.20.3, with 0.20.4 still pending at last build check. Downloads, native source, billing and backend unchanged.
+Showcase dpl_4NVkz2dBdCvuZpyGghjcTycKdvAe; routes d838536a-abc5-494f-bfe7-c517cb40f7b5; rollback aa672f83-a637-4b03-87ac-132084cd466e.
+
+PRIOR HISTORY:
 PIXASHOP OWNER-CONFIRMED PROGRESS UPDATE
 Owner confirmed Complete Pixa branding and Manual/tutorials/activation/updater are completed; those two indicators are now green on the live showcase. Evidence is recorded as owner confirmation, not a newly run automated end-to-end test. Application/update acceptance row remains pending, since owner confirmation did not explicitly cover every remaining test. Compile/package note now distinguishes published v0.20.3 from the in-progress v0.20.4 build (run 42946140053 had no artifacts at this check). No release or download pin changed.
 Live showcase dpl_F4hNVdZVHXGPLH7FgJ67EaJPWY1R; routing aa672f83-a637-4b03-87ac-132084cd466e; rollback e840e976-d7b9-4f69-9023-beec55c1bcde. Only existing marketing rewrite destinations changed. Backend, billing and downloads unchanged.
