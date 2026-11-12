@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "verified_at": "2026-11-12T07:29:05.176397+00:00",
+  "verified_at": "2026-11-12T07:51:44.438617+00:00",
   "legend": "Green = verified passed. Red = pending, incomplete or not yet verified. Progress is evidence-based, not a release guarantee.",
   "steps": [
     "Source setup",
@@ -75,7 +75,7 @@
       {
         "label": "Compile & package installers",
         "passed": false,
-        "note": "Compile/recovery checks passed; customer installer packaging remains pending.",
+        "note": "Current Linux compilation passed. Fresh cross-platform checks are queued/running; customer packages and release acceptance remain pending.",
         "checks": [
           {
             "label": "Historical three-platform compile/recovery checks",
@@ -86,6 +86,11 @@
             "label": "Customer installer",
             "passed": false,
             "note": "Compile checks do not create release installers. No verified customer installer recorded."
+          },
+          {
+            "label": "Current Linux native compile",
+            "passed": true,
+            "note": "Current updater/manual source a1b5294 passes Cargo check. This is not a packaged application or graphical acceptance."
           }
         ]
       },
@@ -168,7 +173,7 @@
       {
         "label": "Compile & package installers",
         "passed": false,
-        "note": "Compile/recovery checks passed; customer installer packaging remains pending.",
+        "note": "Current Linux compilation passed. Fresh cross-platform checks are queued/running; customer packages and release acceptance remain pending.",
         "checks": [
           {
             "label": "Historical three-platform compile/recovery checks",
@@ -179,6 +184,11 @@
             "label": "Customer installer",
             "passed": false,
             "note": "Compile checks do not create release installers. No verified customer installer recorded."
+          },
+          {
+            "label": "Current Linux native compile",
+            "passed": true,
+            "note": "Current updater/manual source a1b5294 passes Cargo check. This is not a packaged application or graphical acceptance."
           }
         ]
       },
@@ -261,7 +271,7 @@
       {
         "label": "Compile & package installers",
         "passed": false,
-        "note": "Compile/recovery checks passed; customer installer packaging remains pending.",
+        "note": "Current Linux compilation passed. Fresh cross-platform checks are queued/running; customer packages and release acceptance remain pending.",
         "checks": [
           {
             "label": "Historical three-platform compile/recovery checks",
@@ -272,6 +282,11 @@
             "label": "Customer installer",
             "passed": false,
             "note": "Compile checks do not create release installers. No verified customer installer recorded."
+          },
+          {
+            "label": "Current Linux native compile",
+            "passed": true,
+            "note": "Current updater/manual source a1b5294 passes Cargo check. This is not a packaged application or graphical acceptance."
           }
         ]
       },
@@ -354,7 +369,7 @@
       {
         "label": "Compile & package installers",
         "passed": false,
-        "note": "Compile/recovery checks passed; customer installer packaging remains pending.",
+        "note": "Current Linux compilation passed. Fresh cross-platform checks are queued/running; customer packages and release acceptance remain pending.",
         "checks": [
           {
             "label": "Historical three-platform compile/recovery checks",
@@ -365,6 +380,11 @@
             "label": "Customer installer",
             "passed": false,
             "note": "Compile checks do not create release installers. No verified customer installer recorded."
+          },
+          {
+            "label": "Current Linux native compile",
+            "passed": true,
+            "note": "Current updater/manual source a1b5294 passes Cargo check. This is not a packaged application or graphical acceptance."
           }
         ]
       },
@@ -442,7 +462,7 @@
       {
         "label": "Compile & package installers",
         "passed": true,
-        "note": "0.1.1 testing installers built successfully for Mac (arm64 + Intel), Windows and Linux. These are unsigned test artifacts, not approved public releases.",
+        "note": "0.1.1 testing installers built successfully for Mac (arm64 + Intel), Windows and Linux. These are unsigned test artifacts, not approved public releases. A separate 0.1.2 candidate updates obsolete paid-trial wording to free-account access; packaging run 43177931931 is queued. Existing published downloads are unchanged.",
         "checks": [
           {
             "label": "Three platform jobs",
@@ -540,7 +560,7 @@
       {
         "label": "Compile & package installers",
         "passed": false,
-        "note": "Compile/recovery checks passed; customer installer packaging remains pending.",
+        "note": "Current Linux compilation passed. Fresh cross-platform checks are queued/running; customer packages and release acceptance remain pending.",
         "checks": [
           {
             "label": "Historical three-platform compile/recovery checks",
@@ -551,6 +571,11 @@
             "label": "Customer installer",
             "passed": false,
             "note": "Compile checks do not create release installers. No verified customer installer recorded."
+          },
+          {
+            "label": "Current Linux native compile",
+            "passed": true,
+            "note": "Current updater/manual source a1b5294 passes Cargo check. This is not a packaged application or graphical acceptance."
           }
         ]
       },
@@ -633,7 +658,7 @@
       {
         "label": "Compile & package installers",
         "passed": false,
-        "note": "Compile/recovery checks passed; customer installer packaging remains pending.",
+        "note": "Current Linux compilation passed. Fresh cross-platform checks are queued/running; customer packages and release acceptance remain pending.",
         "checks": [
           {
             "label": "Historical three-platform compile/recovery checks",
@@ -644,6 +669,11 @@
             "label": "Customer installer",
             "passed": false,
             "note": "Compile checks do not create release installers. No verified customer installer recorded."
+          },
+          {
+            "label": "Current Linux native compile",
+            "passed": true,
+            "note": "Current updater/manual source a1b5294 passes Cargo check. This is not a packaged application or graphical acceptance."
           }
         ]
       },
@@ -726,7 +756,7 @@
       {
         "label": "Compile & package installers",
         "passed": false,
-        "note": "Compile/recovery checks passed; customer installer packaging remains pending.",
+        "note": "Current Linux compilation passed. Fresh cross-platform checks are queued/running; customer packages and release acceptance remain pending.",
         "checks": [
           {
             "label": "Historical three-platform compile/recovery checks",
@@ -737,6 +767,11 @@
             "label": "Customer installer",
             "passed": false,
             "note": "Compile checks do not create release installers. No verified customer installer recorded."
+          },
+          {
+            "label": "Current Linux native compile",
+            "passed": true,
+            "note": "Current updater/manual source a1b5294 passes Cargo check. This is not a packaged application or graphical acceptance."
           }
         ]
       },
@@ -819,7 +854,7 @@
       {
         "label": "Compile & package installers",
         "passed": false,
-        "note": "Compile/recovery checks passed; customer installer packaging remains pending.",
+        "note": "Current Linux compilation passed. Fresh cross-platform checks are queued/running; customer packages and release acceptance remain pending.",
         "checks": [
           {
             "label": "Historical three-platform compile/recovery checks",
@@ -830,6 +865,11 @@
             "label": "Customer installer",
             "passed": false,
             "note": "Compile checks do not create release installers. No verified customer installer recorded."
+          },
+          {
+            "label": "Current Linux native compile",
+            "passed": true,
+            "note": "Current updater/manual source a1b5294 passes Cargo check. This is not a packaged application or graphical acceptance."
           }
         ]
       },
@@ -912,7 +952,7 @@
       {
         "label": "Compile & package installers",
         "passed": false,
-        "note": "Compile/recovery checks passed; customer installer packaging remains pending.",
+        "note": "Current Linux compilation passed. Fresh cross-platform checks are queued/running; customer packages and release acceptance remain pending.",
         "checks": [
           {
             "label": "Historical three-platform compile/recovery checks",
@@ -923,6 +963,11 @@
             "label": "Customer installer",
             "passed": false,
             "note": "Compile checks do not create release installers. No verified customer installer recorded."
+          },
+          {
+            "label": "Current Linux native compile",
+            "passed": true,
+            "note": "Current updater/manual source a1b5294 passes Cargo check. This is not a packaged application or graphical acceptance."
           }
         ]
       },
@@ -1005,7 +1050,7 @@
       {
         "label": "Compile & package installers",
         "passed": false,
-        "note": "Compile/recovery checks passed; customer installer packaging remains pending.",
+        "note": "Current Linux compilation passed. Fresh cross-platform checks are queued/running; customer packages and release acceptance remain pending.",
         "checks": [
           {
             "label": "Historical three-platform compile/recovery checks",
@@ -1016,6 +1061,11 @@
             "label": "Customer installer",
             "passed": false,
             "note": "Compile checks do not create release installers. No verified customer installer recorded."
+          },
+          {
+            "label": "Current Linux native compile",
+            "passed": true,
+            "note": "Current updater/manual source a1b5294 passes Cargo check. This is not a packaged application or graphical acceptance."
           }
         ]
       },
@@ -1068,7 +1118,7 @@
       {
         "label": "Compile & package installers",
         "passed": true,
-        "note": "0.20.4 Mac, Windows and Linux packages are published; the Mac asset matches the recorded signed-release digest.",
+        "note": "0.20.4 Mac, Windows and Linux packages are published; the Mac asset matches the recorded signed-release digest. A separate 0.20.5 candidate updates obsolete paid-trial wording to free-account access; packaging run 43177940756 is queued. Existing published downloads are unchanged.",
         "evidence": {
           "release": "https://github.com/lukeybird/pixashop/releases/tag/v0.20.4",
           "commit": "5b4551b95c632910dbb546df2797245380aa6942",
@@ -1170,7 +1220,7 @@
       {
         "label": "Compile & package installers",
         "passed": false,
-        "note": "Compile/recovery checks passed; customer installer packaging remains pending.",
+        "note": "Current Linux compilation passed. Fresh cross-platform checks are queued/running; customer packages and release acceptance remain pending.",
         "checks": [
           {
             "label": "Historical three-platform compile/recovery checks",
@@ -1181,6 +1231,11 @@
             "label": "Customer installer",
             "passed": false,
             "note": "Compile checks do not create release installers. No verified customer installer recorded."
+          },
+          {
+            "label": "Current Linux native compile",
+            "passed": true,
+            "note": "Current updater/manual source a1b5294 passes Cargo check. This is not a packaged application or graphical acceptance."
           }
         ]
       },
@@ -1263,7 +1318,7 @@
       {
         "label": "Compile & package installers",
         "passed": false,
-        "note": "Compile/recovery checks passed; customer installer packaging remains pending.",
+        "note": "Current Linux compilation passed. Fresh cross-platform checks are queued/running; customer packages and release acceptance remain pending.",
         "checks": [
           {
             "label": "Historical three-platform compile/recovery checks",
@@ -1274,6 +1329,11 @@
             "label": "Customer installer",
             "passed": false,
             "note": "Compile checks do not create release installers. No verified customer installer recorded."
+          },
+          {
+            "label": "Current Linux native compile",
+            "passed": true,
+            "note": "Current updater/manual source a1b5294 passes Cargo check. This is not a packaged application or graphical acceptance."
           }
         ]
       },
@@ -1356,7 +1416,7 @@
       {
         "label": "Compile & package installers",
         "passed": false,
-        "note": "An unsigned arm64 + Intel Mac .app was built and uploaded; it is not yet a signed customer installer.",
+        "note": "Current Linux compilation passed. A fresh unsigned universal Mac candidate is building in run 43177274325; no new signed installer is available yet.",
         "checks": [
           {
             "label": "Historical three-platform compile/recovery checks",
@@ -1372,6 +1432,11 @@
             "label": "Customer installer",
             "passed": false,
             "note": "Unsigned universal Mac candidate exists; Windows/Linux release installers and acceptance remain pending."
+          },
+          {
+            "label": "Current Linux native compile",
+            "passed": true,
+            "note": "Current updater/manual source a1b5294 passes Cargo check. This is not a packaged application or graphical acceptance."
           }
         ]
       },
@@ -1454,7 +1519,7 @@
       {
         "label": "Compile & package installers",
         "passed": false,
-        "note": "Compile/recovery checks passed; customer installer packaging remains pending.",
+        "note": "Current Linux compilation passed. Fresh cross-platform checks are queued/running; customer packages and release acceptance remain pending.",
         "checks": [
           {
             "label": "Historical three-platform compile/recovery checks",
@@ -1465,6 +1530,11 @@
             "label": "Customer installer",
             "passed": false,
             "note": "Compile checks do not create release installers. No verified customer installer recorded."
+          },
+          {
+            "label": "Current Linux native compile",
+            "passed": true,
+            "note": "Current updater/manual source a1b5294 passes Cargo check. This is not a packaged application or graphical acceptance."
           }
         ]
       },

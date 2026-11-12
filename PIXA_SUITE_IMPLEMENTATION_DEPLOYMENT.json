@@ -1,9 +1,9 @@
 {
-  "deployment": "dpl_FuiB46hVt2cH3Y51BWHdETkJMz3x",
-  "origin": "https://pixa-showcase-q0q5g209j-luke-bargers-projects.vercel.app",
-  "route_version": "bafab3e1-b766-4d50-ad74-d781799ca3c8",
-  "routing_rollback": "1b6189a2-b30f-4306-818d-495e32554536",
+  "deployment": "dpl_BcNCSTSyHTpLRBsSa1biwcvgTE7P",
+  "origin": "https://pixa-showcase-41b5irb4c-luke-bargers-projects.vercel.app",
+  "route_version": "af021e09-0ef2-40e6-aad5-b9daaa2ba02d",
+  "routing_rollback": "bafab3e1-b766-4d50-ad74-d781799ca3c8",
   "backend_unchanged": "dpl_DSsgnFjuJGtsa2N8wmkjjtMKGajG",
   "scope": "14 suite manuals and accurate source implementation progress; customer downloads, billing and release settings unchanged",
-  "browser_acceptance": "Public product page expanded progress and linked PixaVector manual verified; screenshot captured."
+  "browser_acceptance": "Public product progress expanded; Current Linux native compile is visible as passed. Product-to-manual route was verified in the preceding deployment; guide content unchanged."
 }
