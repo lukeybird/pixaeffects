@@ -44,4 +44,33 @@ class CompletionTests(unittest.TestCase):
    with self.assertRaisesRegex(RuntimeError,'account-gated'):m.package('pixafixture',True)
    receipt.write_text(json.dumps({'platform':'different-host','access_mode':'subscription'}))
    with self.assertRaisesRegex(RuntimeError,'platform'):m.package('pixafixture',True)
+
+ def test_candidate_keeps_asset_license_texts_and_attributions(self):
+  import hashlib,tarfile,zipfile
+  from unittest.mock import patch
+  spec=importlib.util.spec_from_file_location('license_package',ROOT/'package.py');module=importlib.util.module_from_spec(spec);spec.loader.exec_module(module)
+  with tempfile.TemporaryDirectory() as temporary:
+   root=Path(temporary);module.ROOT=root
+   app={'id':'pixavector','name':'PixaVector','source':'vectorcraft','package':'vectorcraft','version':'0.1.1','revision':'a'*40}
+   (root/'catalog.json').write_text(json.dumps({'apps':[app]}))
+   source=root/'sources/vectorcraft';(source/'assets/fonts').mkdir(parents=True)
+   (source/'assets/app-icon').mkdir(parents=True)
+   (source/'LICENSE-MIT').write_text('Synthetic retained license')
+   (source/'ASSETS.md').write_text('Synthetic asset index')
+   (source/'assets/fonts/OFL-Fixture.txt').write_text('Synthetic font license')
+   (source/'assets/app-icon/fixture.png.attribution').write_text('Original synthetic icon')
+   binary=root/'target/release'/('vectorcraft.exe' if sys.platform=='win32' else 'vectorcraft');binary.parent.mkdir(parents=True);binary.write_bytes(b'fixture')
+   receipt=root/'build-logs/pixavector-release.json';receipt.parent.mkdir()
+   receipt.write_text(json.dumps({'platform':sys.platform,'access_mode':'subscription','revision':app['revision'],'source_digest':'fixture','sha256':hashlib.sha256(binary.read_bytes()).hexdigest()}))
+   if sys.platform=='darwin':self.skipTest('Synthetic fixture has no real Mac icon')
+   with patch.object(module,'source_digest',return_value='fixture'):
+    module.package('pixavector',True)
+   archive=next((root/'dist/pixavector/candidate').glob('*.tar.gz' if sys.platform=='linux' else '*.zip'))
+   if sys.platform=='linux':
+    with tarfile.open(archive) as bundle:names=bundle.getnames()
+   else:
+    with zipfile.ZipFile(archive) as bundle:names=bundle.namelist()
+   for ending in ['Licenses/ASSETS.md','Licenses/assets/fonts/OFL-Fixture.txt','Licenses/assets/app-icon/fixture.png.attribution']:
+    self.assertTrue(any(name.endswith(ending) for name in names),ending)
+
 if __name__=='__main__':unittest.main()

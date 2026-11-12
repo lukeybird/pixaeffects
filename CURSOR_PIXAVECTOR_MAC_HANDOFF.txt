@@ -1,0 +1,27 @@
+PIXAVECTOR — MAC PORTION HANDOFF
+Read CURSOR_PROJECT_STATUS.txt and PIXA_VECTOR_NON_MAC_AUDIT.json first.
+
+The current candidate is PixaVector 0.1.1, bundle com.aiwebdesignfirm.pixavector, on lukeybird/pixaeffects branch pixa-suite-product. The 0.1.0 unsigned universal Mac artifact is older source. It does not contain the audited Help routes, 92-tool highlights, startup update prompt or packaging notice fix. Build the new source; do not relabel the old file.
+
+WHAT TO PICK UP
+- Refresh the branch normally, preserve local changes, record the exact source SHA being built, and confirm the audited pixa-suite code is present. Never reset, clean or force-push.
+- Produce both arm64 and x86_64 release slices and a PixaVector.app with version 0.1.1. The existing Pixa Mac candidate workflow accepts product=pixavector. No workflow modification is needed. The non-Mac audit did not trigger the candidate workflow or change pixa-suite/mac-release.txt.
+- The existing Mac assembly workflow copies root license files only. Supplement its matching Licenses folder with ASSETS.md and recursive font/icon licenses and attribution sidecars from the exact prepared source (use the fixed pixa-suite/package.py notice-copy logic as the reference) before signing. Do not omit these notices.
+- Verify the bundle ID/version and lipo architectures. Keep the matching Licenses folder, including ASSETS.md, font licenses and icon attribution. A host-only app is not universal.
+- On a Mac, inspect the orange V icon, Home/About/menus/translations. Help -> PixaVector User Manual opens offline. Help -> Quick Tool Tour explains all 92 registered tools, highlights visible groups and supports Next/Back/Finish/Escape without changing the selected tool or document. Help -> Check for Updates uses the Pixa updater. There should be no Discord or project-repository promotion; required contributor/legal credits remain.
+- With the real account, approve only the code displayed by this device. Verify OS credential persistence, refresh/revocation/disconnect and recovery/save behavior. The cloud audit's offline protocol tests do not prove live account approval.
+- Run a real editor smoke test: draw/edit, undo/redo, import SVG, save/reopen native documents, export SVG/PDF/PNG and inspect outputs. Retain original files.
+- Only after the Mac app passes acceptance, sign/notarize using the publisher's existing local Developer ID and Keychain profile. The reviewed helper is release-tools/macos_candidate.py; read its --help and source first. It requires an existing .app and matching notices. It does not build the app or publish it.
+
+EXAMPLE SIGNING COMMAND ON THE PUBLISHER MAC (replace real paths first):
+python3 release-tools/macos_candidate.py pixavector "/actual/path/PixaVector.app" --identity "Developer ID Application: Luke Barger (945M5X4DY3)" --profile "PixaShop-Notary" --architecture universal --output "$HOME/Documents/PixaVector-Release-0.1.1" --notices "/actual/path/Licenses"
+
+Keep credentials in Keychain. Do not export a .p12 or put an Apple password in shell arguments. Check free disk without deleting user data. Record Apple submission IDs, final signed DMG checksum and Gatekeeper/stapler results. Then test the actual signed own-feed update/install/restart/cancel/rollback flow; a fake platform tool or compile check is not that acceptance.
+
+PUBLICATION
+Mac build/signing/live acceptance and customer download approval remain open. Do not enable download flags, publish an unsigned candidate, turn on an upstream feed or change billing. A signed candidate produced by the helper still needs an explicitly approved release and verified website download. Preserve the live backend and route only the static Pixa marketing pages when updating the showcase. Never deploy stale aiwebdesignfirm main.
+
+OWN-FEED RELEASE CONTRACT (only after explicit publication approval)
+Tag: pixavector-v0.1.1 in lukeybird/pixaeffects.
+Verified Mac asset name: pixavector-0.1.1-macos-universal.dmg.
+The signing helper intentionally outputs a *-candidate.dmg. After acceptance, publish the verified bytes under the exact stable asset name above and record their SHA-256. GitHub's asset digest, version, publisher Team ID and bundle identity must match. A draft/prerelease, another product's tag, missing checksum or candidate filename is intentionally ignored by the updater. Do not change the app's feed or weaken its verification to make a test pass. A controlled signed release can be tested before enabling the website download.

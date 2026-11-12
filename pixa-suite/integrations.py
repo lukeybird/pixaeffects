@@ -159,3 +159,6 @@ def install(root,app):
   example=root/('crates/ui-egui/examples/pixa_recovery_check.rs' if app['id']=='pixaanything' else 'crates/engine/examples/pixa_recovery_check.rs');example.parent.mkdir(parents=True,exist_ok=True)
   source={'pixafilm':'film.rs','pixatexture':'texture.rs','pixadesign':'design.rs','pixadeck':'deck.rs','pixavector':'vector.rs','pixagrid':'grid.rs','pixaword':'word.rs','pixapdf':'pdf.rs','pixamaterial':'material.rs','pixacad':'cad.rs','pixalight':'light.rs','pixasound':'sound.rs','pixainterface':'interface.rs','pixaanything':'anything.rs'}[app['id']]
   example.write_text((ROOT/'recovery-checks'/source).read_text(encoding='utf-8'),encoding='utf-8')
+ if app['id']=='pixavector':
+  from vector_integration import install as install_vector
+  install_vector(root,app)

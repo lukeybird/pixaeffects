@@ -1358,103 +1358,37 @@
       {
         "label": "Source setup",
         "passed": true,
-        "note": "Pinned product source is prepared."
+        "note": "PixaVector 0.1.1 is reproducibly prepared from pinned source 25cfa9d3. This is a release candidate."
       },
       {
-        "label": "Complete Pixa branding",
-        "passed": false,
-        "note": "Source metadata and translations cleaned; installed-app visual audit remains pending.",
-        "checks": [
-          {
-            "label": "Source publication metadata",
-            "passed": true,
-            "note": "Publisher, app IDs and upstream screenshots corrected; original icons and legal notices retained."
-          },
-          {
-            "label": "Installed application branding",
-            "passed": false,
-            "note": "Rebuild and inspect the menus, dialogs and package on each supported platform."
-          }
-        ]
+        "label": "Pixa branding implementation",
+        "passed": true,
+        "note": "Pixa names, orange V icon, product links, menus and CLI version are implemented. Discord and project-repository promotion removed; legal credits retained. Mac visual acceptance is deferred."
       },
       {
-        "label": "Manual, tutorials, activation & updater",
-        "passed": false,
-        "note": "Expanded offline manual, source-backed control tour and own-publisher Mac updater implemented. Packaged application and update acceptance remain unverified.",
-        "checks": [
-          {
-            "label": "Embedded manual and source-backed control tour",
-            "passed": true,
-            "note": "12 workflow chapters and 92 source-backed tool/control explanations generated for this app. Coverage is not every editor command."
-          },
-          {
-            "label": "Complete tool reference",
-            "passed": false,
-            "note": "Source-backed controls are documented; exhaustive command coverage and installed help acceptance remain unverified."
-          },
-          {
-            "label": "Account and recovery source integration",
-            "passed": true,
-            "note": "Shared account UI, OS credential storage and recovery adapters are present; source preflight passed."
-          },
-          {
-            "label": "Activation acceptance",
-            "passed": false,
-            "note": "Real sign-in, expiry and recovery must be exercised in the packaged application."
-          },
-          {
-            "label": "Own-publisher Mac updater source",
-            "passed": true,
-            "note": "Connected to product-scoped Pixa releases with checksum, Developer ID, bundle identity and Gatekeeper checks. No upstream feed or public suite release enabled."
-          },
-          {
-            "label": "Install-and-restart updater",
-            "passed": false,
-            "note": "Own-product release discovery and Mac signature-checked staging/restart/rollback code implemented; real install/restart acceptance pending. Windows/Linux installation remains manual."
-          }
-        ]
+        "label": "Manual, tool tour, account & updater implementation",
+        "passed": true,
+        "note": "12 offline workflow chapters and 92 tool explanations; native Help, tour highlights and startup own-feed update prompt checked. Shared account protocol tests passed. Real account and signed install/restart acceptance remain in the Mac step."
       },
       {
-        "label": "Compile & package installers",
-        "passed": false,
-        "note": "Current Linux compilation passed. A fresh unsigned universal Mac candidate is building in run 43177274325; no new signed installer is available yet.",
-        "checks": [
-          {
-            "label": "Historical three-platform compile/recovery checks",
-            "passed": true,
-            "note": "All 42 unique product/OS jobs passed on source 728fa546; new metadata changes still need CI."
-          },
-          {
-            "label": "Universal Mac candidate",
-            "passed": true,
-            "note": "Run 42928044316: lipo confirmed arm64 and x86_64; unsigned artifact uploaded."
-          },
-          {
-            "label": "Customer installer",
-            "passed": false,
-            "note": "Unsigned universal Mac candidate exists; Windows/Linux release installers and acceptance remain pending."
-          },
-          {
-            "label": "Current Linux native compile",
-            "passed": true,
-            "note": "Current updater/manual source a1b5294 passes Cargo check. This is not a packaged application or graphical acceptance."
-          }
-        ]
+        "label": "Linux candidate build & package",
+        "passed": true,
+        "note": "0.1.1 native Linux candidate built and packaged with source receipt and asset/font/icon license notices. This is unsigned, unpublished and not a Mac or Windows installer."
       },
       {
-        "label": "Application & update testing",
-        "passed": false,
-        "note": "Full editor, access and install/restart update acceptance is not yet verified."
+        "label": "Core workflow & recovery checks",
+        "passed": true,
+        "note": "Linux engine drawing, undo/redo, native save/reopen, SVG import, SVG/PDF/PNG export and recovery passed; headless Help/tour/update UI tests passed. These do not verify every editor feature or a real Mac update."
       },
       {
-        "label": "Apple signing & notarization",
+        "label": "Mac build, signing & acceptance",
         "passed": false,
-        "note": "Verified signed/notarized Mac release remains pending."
+        "note": "Build the new 0.1.1 universal app; inspect installed branding/help, real account access and editor workflows, then Apple signing/notarization and signed own-feed install/restart testing. Assigned to the other computer."
       },
       {
         "label": "Verified website download",
         "passed": false,
-        "note": "Customer download remains Coming soon."
+        "note": "Coming soon until a signed, accepted release is approved and published. No download or billing settings changed."
       }
     ],
     "pixaword": [
@@ -1555,5 +1489,8 @@
         "note": "Customer download remains Coming soon."
       }
     ]
+  },
+  "app_checked_at": {
+    "pixavector": "2026-11-12"
   }
 }

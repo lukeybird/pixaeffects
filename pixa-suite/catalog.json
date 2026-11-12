@@ -7,7 +7,7 @@
       "upstream_name": "VectorCraft",
       "name": "PixaVector",
       "id": "pixavector",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "bundle_id": "com.aiwebdesignfirm.pixavector",
       "tagline": "Vector illustration",
       "color": "#ff9a45",

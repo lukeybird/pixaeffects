@@ -41,7 +41,15 @@ def package(app_id, candidate=False):
  executable.chmod(0o755)
  notices=stage/'Licenses';notices.mkdir()
  for p in source.glob('*'):
-  if p.is_file() and (p.name.startswith(('LICENSE','NOTICE')) or p.name=='ATTRIBUTION.md'):shutil.copy2(p,notices/p.name)
+  if p.is_file() and (p.name.startswith(('LICENSE','NOTICE')) or p.name in {'ATTRIBUTION.md','ASSETS.md'}):shutil.copy2(p,notices/p.name)
+ # Keep the font/icon license texts and attribution sidecars with the binary.
+ for base in ['assets','docs/brand']:
+  for notice_file in (source/base).rglob('*'):
+   if not notice_file.is_file():continue
+   if not any(token in notice_file.name.lower() for token in ['license','ofl-','attribution']):continue
+   destination=notices/notice_file.relative_to(source)
+   destination.parent.mkdir(parents=True,exist_ok=True)
+   shutil.copy2(notice_file,destination)
  from manuals import markdown
  (stage/(app['name']+'-Manual.md')).write_text(markdown(app,source),encoding='utf-8')
  notice='Unsigned account-gated candidate. Apple signing, platform acceptance and release approval remain separate. Not a public installer. Do not distribute to customers.\n' if candidate else 'Unpublished development build. Editing is available without production account enforcement. Not signed or notarized. Do not distribute to customers.\n'

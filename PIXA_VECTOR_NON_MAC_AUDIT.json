@@ -1,0 +1,104 @@
+{
+  "schema_version": 1,
+  "product": "pixavector",
+  "version": "0.1.1",
+  "checked_at": "2026-11-12",
+  "base_branch_head": "71fb090aad09ea6d9b742db2f95025dc513cab86",
+  "upstream_revision": "25cfa9d3cfdb3510c48f951d57562f0f7b8700cc",
+  "scope": "Completed implementation and specifically listed Linux/headless checks. Not all-platform acceptance or release approval.",
+  "build_receipt": {
+    "app": "pixavector",
+    "revision": "25cfa9d3cfdb3510c48f951d57562f0f7b8700cc",
+    "source_digest": "c73e614e5dbbb7ac677a0679afcea7c4a941e523cedfc0ec648e9787be5be576",
+    "sha256": "a292f794312656ce30092d61310d3e27e7c51572a77e921664b3cd1e574aee1f",
+    "platform": "linux",
+    "access_mode": "subscription",
+    "signed": false,
+    "release_ready": false,
+    "archive": "pixavector-0.1.1-linux-x86_64-candidate.tar.gz",
+    "archive_sha256": "79683e6672340d31f6b9c68433fcf606268afb75c512a095b283d514ad4e0265",
+    "architecture": "x86_64",
+    "channel": "candidate"
+  },
+  "profile": {
+    "rust": "1.95.0",
+    "release_opt_level": 1,
+    "lto": false,
+    "codegen_units": 16,
+    "build_jobs": 1,
+    "ui_test_crate_opt_level": 0,
+    "production_performance_verified": false
+  },
+  "checks": {
+    "python_suite": {
+      "run": 25,
+      "passed": 24,
+      "skipped": 1,
+      "skip": "Standalone Shop/Effects icon overlays are on other branches"
+    },
+    "shared_runtime": {
+      "passed": 20,
+      "toolchain": "stable 1.99.1",
+      "live_account": false
+    },
+    "native_app_help_updates": {
+      "passed": 7
+    },
+    "native_ui_help_toolbar": {
+      "passed": 2
+    },
+    "existing_community_routing_regression": {
+      "passed": 1
+    },
+    "engine_workflow": {
+      "passed": true,
+      "coverage": [
+        "draw rectangle",
+        "undo/redo",
+        "save/reopen (save timestamp retained)",
+        "SVG import",
+        "SVG/PDF/PNG export signatures"
+      ]
+    },
+    "native_recovery": {
+      "passed": true
+    },
+    "source_preflight": {
+      "passed": true,
+      "native_check_in_preflight": "not-run; separate release build passed"
+    },
+    "clean_preparation": {
+      "passed": true,
+      "matching_generated_rust_files": 14,
+      "manifest_difference": "Only expected relative path to shared runtime"
+    },
+    "package_notices": {
+      "passed": true,
+      "license_document_count": 60
+    }
+  },
+  "fixes": [
+    "Remove residual Discord promotion and dynamic upstream project-repository URL",
+    "Route native Help/manual/tour and update menu to Pixa UI",
+    "Read-only tour anchors for visible toolbar groups",
+    "Startup own-publisher check and available-update prompt",
+    "Clear stale release offers after failed/disconnected checks",
+    "Pixa CLI identity and accurate Help routing regression",
+    "Retain asset/font/icon license and attribution files in package"
+  ],
+  "deferred": [
+    "New 0.1.1 universal Mac app",
+    "Installed Mac branding/help/editor acceptance",
+    "Real account approval, persistence, refresh/revocation/disconnect",
+    "Apple signing/notarization and Gatekeeper",
+    "Signed own-feed install/restart/cancel/rollback acceptance",
+    "Approved customer release and website download",
+    "Windows 0.1.1 package and acceptance"
+  ],
+  "signed": false,
+  "release_ready": false,
+  "downloads_enabled": false,
+  "workflow_changes": false,
+  "billing_changes": false,
+  "handoff": "CURSOR_PIXAVECTOR_MAC_HANDOFF.txt"
+}

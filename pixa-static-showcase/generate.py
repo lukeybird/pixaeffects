@@ -24,7 +24,10 @@ def progress_panel(pid):
    sub='<ul class="progressChecks">'+''.join(item(c) for c in r['checks'])+'</ul>'
   return '<li><span class="statusLight '+('passed' if r['passed'] else 'pendingLight')+'" aria-hidden="true"></span><div><strong>'+e(r['label'])+'</strong><small>'+('Passed' if r['passed'] else 'Pending / unverified')+' — '+e(r['note'])+'</small>'+sub+'</div></li>'
  items=''.join(item(r) for r in rows)
- return '<details class="buildProgress"><summary>Build progress <span>'+str(sum(r['passed'] for r in rows))+'/7 verified</span></summary><ol>'+items+'</ol><p>Last checked: '+e(progress['verified_at'][:10])+'. Green: passed. Red: pending or unverified. Source checks and compile checks do not approve a release.</p></details>'
+ stamp=progress.get('app_checked_at',{}).get(pid,progress['verified_at'][:10])
+ scope='complete' if pid=='pixavector' else 'verified'
+ explanation='Green: completed implementation or the listed checks. Red: pending. Mac release acceptance and public download approval remain separate.' if pid=='pixavector' else 'Green: passed. Red: pending or unverified. Source checks and compile checks do not approve a release.'
+ return '<details class="buildProgress"><summary>Build progress <span>'+str(sum(r['passed'] for r in rows))+'/7 '+scope+'</span></summary><ol>'+items+'</ol><p>Last checked: '+e(stamp)+'. '+explanation+'</p></details>'
 
 def grid():
  cards=[]
