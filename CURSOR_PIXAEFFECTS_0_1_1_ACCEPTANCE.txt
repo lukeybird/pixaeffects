@@ -1,0 +1,35 @@
+PIXAEFFECTS 0.1.1 — VERIFIED BUILD, NOT YET A VERIFIED RELEASE
+
+Use source 83df9fc5c14493d6f7e909e2eb3bf7ae065fd374 on pixaeffects-product.
+Run 43132981449 passed Mac, Windows and Linux jobs, product integration checks, native manual/tour tests and native access regressions. All three testing installers exist. See PIXA_EFFECTS_RELEASE_STATUS.json for exact digests, jobs and artifacts.
+
+Mac artifact:
+https://github.com/lukeybird/pixaeffects/actions/runs/43132981449/artifacts/13911862550
+The artifact ZIP SHA256 is eb805ac393dc7afd823768aa869c108d457355b3cff51eb11f7f25937ae74e02.
+After extracting, the unsigned pixaeffects-0.1.1-macos-universal.dmg must have SHA256 25d8b03d07ff082f1065367f989b69652165205267d258405622abaaf76775ed.
+Do not substitute the 0.1.0 candidate. Do not publish this unsigned file.
+
+WHAT EXISTS:
+- Original E icon and source branding audit (9 checks).
+- Offline manual: 12 sections; all 31 registered tools have tutorial explanations.
+- Existing entitlement/device activation integration and expiry enforcement.
+- PixaEffects-owned GitHub update checks, digest and Developer ID/bundle/Gatekeeper validation, install/restart helper. No stable releases are published yet.
+- Native testing installers. These are not acceptance-tested customer releases.
+
+REMAINING ACCEPTANCE ON THE OWNER MAC:
+1. Confirm sufficient disk without deleting user data; confirm local signing identity and PixaShop-Notary profile. Never export keys or put a password in shell arguments.
+2. Download/extract the exact candidate above; verify its unsigned DMG digest. Mount it, inspect Contents/Info.plist for com.aiwebdesignfirm.pixaeffects and version 0.1.1. Verify lipo reports both arm64 and x86_64.
+3. Inspect package layout and licenses, menus, Home/About, visible translations and original E icon. Retain required contributor/legal credits. Confirm no repository/Discord promotion.
+4. Validate activation against the existing account in the browser. Approve only the code displayed on this device. Check allowed/expired access and safe recovery without modifying billing or creating another subscription.
+5. Create a short composition; import an image and video; add text/shape layers; animate a property; save, close and reopen the project. Render a short movie; open the exported movie in an independent player. Inspect fonts, audio and timing where relevant. Keep originals.
+6. Open Help -> User Manual and Quick Tool Tour. Search the manual; step through all 31 tools, Next/Back/Escape, and check visible highlighting without modifying the document.
+7. After this acceptance, review and run the pinned existing pixaeffects/sign_update_macos.sh on the candidate using the local Developer ID and PixaShop-Notary. It signs the app, notarizes/staples, rebuilds/signs/notarizes/staples the DMG and checks Gatekeeper. Record submission IDs and the final signed DMG digest. Stop and inspect Apple's log if rejected. Do not bypass Gatekeeper.
+8. Test a fresh quarantined downloaded copy of the signed artifact, including drag-to-Applications and first launch. Apple notarization is not an editor functionality test.
+9. A real update/restart test needs signed own-feed release artifacts. Never enable the upstream feed. Verify rejection of unsigned/wrong publisher assets, dirty-project safeguards, cancel, install/restart and rollback before marking updater acceptance passed. Do not claim this has happened from unit tests.
+10. Publish verified signed assets on the PixaEffects-owned release only after acceptance. Verify download checksums and website gating, then enable the product download. Public source remains public; do not promise source privacy.
+
+WEBSITE:
+Marketing status is maintained from pixa-static-showcase/progress.json on pixa-suite-product, not this branch. It must distinguish implementation, CI/testing packages, real acceptance, Apple signing and customer release. Do not turn a red stage green solely because compilation passed.
+
+CONSTRAINTS:
+No stale website-main deployment. Preserve production billing/account/device APIs. Do not change PixaShop pins or suite downloads. Do not force-push/reset/clean. Preserve old status history. This cloud environment cannot exercise the owner's Mac Keychain, Apple signing or a real Mac GUI.

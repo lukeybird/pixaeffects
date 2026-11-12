@@ -1,0 +1,335 @@
+{
+  "schema_version": 1,
+  "product": "PixaEffects",
+  "version": "0.1.1",
+  "verified_at": "2026-11-12T05:58:34.944Z",
+  "source_sha": "83df9fc5c14493d6f7e909e2eb3bf7ae065fd374",
+  "build_run": 43132981449,
+  "build_conclusion": "success",
+  "jobs": [
+    {
+      "id": 130901396606,
+      "name": "build (windows-latest)",
+      "conclusion": "success",
+      "steps": [
+        {
+          "name": "Set up job",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/setup-python@v5",
+          "conclusion": "success"
+        },
+        {
+          "name": "Install packaging dependency",
+          "conclusion": "success"
+        },
+        {
+          "name": "Install Mac installer layout dependency",
+          "conclusion": "skipped"
+        },
+        {
+          "name": "Install Rust",
+          "conclusion": "success"
+        },
+        {
+          "name": "Linux build libraries",
+          "conclusion": "skipped"
+        },
+        {
+          "name": "Run Swatinem/rust-cache@e9d7b9f1e587218970671bac74e5511ed9506e6a",
+          "conclusion": "success"
+        },
+        {
+          "name": "Prepare PixaEffects",
+          "conclusion": "success"
+        },
+        {
+          "name": "Product integration checks",
+          "conclusion": "success"
+        },
+        {
+          "name": "Check native application",
+          "conclusion": "success"
+        },
+        {
+          "name": "Offline manual and tour tests",
+          "conclusion": "success"
+        },
+        {
+          "name": "Access regression tests",
+          "conclusion": "success"
+        },
+        {
+          "name": "Reclaim test-build disk space",
+          "conclusion": "success"
+        },
+        {
+          "name": "Build desktop",
+          "conclusion": "success"
+        },
+        {
+          "name": "Build universal Mac desktop",
+          "conclusion": "skipped"
+        },
+        {
+          "name": "Package testing build",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/upload-artifact@v4",
+          "conclusion": "success"
+        },
+        {
+          "name": "Post Run Swatinem/rust-cache@e9d7b9f1e587218970671bac74e5511ed9506e6a",
+          "conclusion": "success"
+        },
+        {
+          "name": "Post Run actions/setup-python@v5",
+          "conclusion": "success"
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "conclusion": "success"
+        },
+        {
+          "name": "Complete job",
+          "conclusion": "success"
+        }
+      ]
+    },
+    {
+      "id": 130901397041,
+      "name": "build (ubuntu-24.04)",
+      "conclusion": "success",
+      "steps": [
+        {
+          "name": "Set up job",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/setup-python@v5",
+          "conclusion": "success"
+        },
+        {
+          "name": "Install packaging dependency",
+          "conclusion": "success"
+        },
+        {
+          "name": "Install Mac installer layout dependency",
+          "conclusion": "skipped"
+        },
+        {
+          "name": "Install Rust",
+          "conclusion": "success"
+        },
+        {
+          "name": "Linux build libraries",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run Swatinem/rust-cache@e9d7b9f1e587218970671bac74e5511ed9506e6a",
+          "conclusion": "success"
+        },
+        {
+          "name": "Prepare PixaEffects",
+          "conclusion": "success"
+        },
+        {
+          "name": "Product integration checks",
+          "conclusion": "success"
+        },
+        {
+          "name": "Check native application",
+          "conclusion": "success"
+        },
+        {
+          "name": "Offline manual and tour tests",
+          "conclusion": "success"
+        },
+        {
+          "name": "Access regression tests",
+          "conclusion": "success"
+        },
+        {
+          "name": "Reclaim test-build disk space",
+          "conclusion": "success"
+        },
+        {
+          "name": "Build desktop",
+          "conclusion": "success"
+        },
+        {
+          "name": "Build universal Mac desktop",
+          "conclusion": "skipped"
+        },
+        {
+          "name": "Package testing build",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/upload-artifact@v4",
+          "conclusion": "success"
+        },
+        {
+          "name": "Post Run Swatinem/rust-cache@e9d7b9f1e587218970671bac74e5511ed9506e6a",
+          "conclusion": "success"
+        },
+        {
+          "name": "Post Run actions/setup-python@v5",
+          "conclusion": "success"
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "conclusion": "success"
+        },
+        {
+          "name": "Complete job",
+          "conclusion": "success"
+        }
+      ]
+    },
+    {
+      "id": 130901397055,
+      "name": "build (macos-15-intel)",
+      "conclusion": "success",
+      "steps": [
+        {
+          "name": "Set up job",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/setup-python@v5",
+          "conclusion": "success"
+        },
+        {
+          "name": "Install packaging dependency",
+          "conclusion": "success"
+        },
+        {
+          "name": "Install Mac installer layout dependency",
+          "conclusion": "success"
+        },
+        {
+          "name": "Install Rust",
+          "conclusion": "success"
+        },
+        {
+          "name": "Linux build libraries",
+          "conclusion": "skipped"
+        },
+        {
+          "name": "Run Swatinem/rust-cache@e9d7b9f1e587218970671bac74e5511ed9506e6a",
+          "conclusion": "success"
+        },
+        {
+          "name": "Prepare PixaEffects",
+          "conclusion": "success"
+        },
+        {
+          "name": "Product integration checks",
+          "conclusion": "success"
+        },
+        {
+          "name": "Check native application",
+          "conclusion": "success"
+        },
+        {
+          "name": "Offline manual and tour tests",
+          "conclusion": "success"
+        },
+        {
+          "name": "Access regression tests",
+          "conclusion": "success"
+        },
+        {
+          "name": "Reclaim test-build disk space",
+          "conclusion": "success"
+        },
+        {
+          "name": "Build desktop",
+          "conclusion": "skipped"
+        },
+        {
+          "name": "Build universal Mac desktop",
+          "conclusion": "success"
+        },
+        {
+          "name": "Package testing build",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/upload-artifact@v4",
+          "conclusion": "success"
+        },
+        {
+          "name": "Post Run Swatinem/rust-cache@e9d7b9f1e587218970671bac74e5511ed9506e6a",
+          "conclusion": "success"
+        },
+        {
+          "name": "Post Run actions/setup-python@v5",
+          "conclusion": "success"
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "conclusion": "success"
+        },
+        {
+          "name": "Complete job",
+          "conclusion": "success"
+        }
+      ]
+    }
+  ],
+  "artifacts": [
+    {
+      "id": 13911862550,
+      "name": "PixaEffects-macOS-testing",
+      "digest": "sha256:eb805ac393dc7afd823768aa869c108d457355b3cff51eb11f7f25937ae74e02",
+      "expired": false
+    },
+    {
+      "id": 13909299574,
+      "name": "PixaEffects-Windows-testing",
+      "digest": "sha256:60932fc3eebd29477bc80b8cdfece474182d6958299587952ee253b96e9cdbdd",
+      "expired": false
+    },
+    {
+      "id": 13907582453,
+      "name": "PixaEffects-Linux-testing",
+      "digest": "sha256:ea2d90d4235be2716756e0cba1b0388083e5af293ddc3014df14b857e6373001",
+      "expired": false
+    }
+  ],
+  "installer_sha256": {
+    "macos": "25d8b03d07ff082f1065367f989b69652165205267d258405622abaaf76775ed",
+    "windows": "d9e11fbc57a64ec327eeaf9568e2e1923193b7862d2e5acc3e67e68965016b7c",
+    "linux": "dcc7e3d4d7642fa4a0e71e5959daeb973cd877dd195a918010097ca3170b12f6"
+  },
+  "source_checks": {
+    "passed": 9,
+    "manual_sections": 12,
+    "tools_documented": 31,
+    "native_help_tests_per_platform": 2,
+    "native_access_tests_per_platform": 2
+  },
+  "public_release_exists": false,
+  "installed_visual_acceptance": "not-verified",
+  "editor_export_acceptance": "not-verified",
+  "mac_publisher_signing": "not-done",
+  "notarization": "not-done",
+  "signed_update_restart_acceptance": "not-verified",
+  "complete_release": false
+}
