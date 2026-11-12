@@ -1,0 +1,11 @@
+{
+  "deployment": "dpl_6VZTQ2K5EQJcEtqjR9sEyTuF5hke",
+  "origin": "https://pixa-showcase-3pblndg6h-luke-bargers-projects.vercel.app",
+  "routing_version": "e5ec21f9-fa3f-4ba9-b00d-2d5a3da4452c",
+  "routing_rollback": "af021e09-0ef2-40e6-aad5-b9daaa2ba02d",
+  "scope": "PixaEffects 0.1.2 build/package status on catalog and product page only",
+  "browser_verified_url": "https://aiwebdesignfirm.com/products/pixaeffects",
+  "native_source_changed": false,
+  "billing_changed": false,
+  "downloads_enabled": false
+}
