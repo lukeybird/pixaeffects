@@ -80,5 +80,12 @@
     "release feeds and settings",
     "licenses and contributor credits"
   ],
-  "website_status_must_remain_pending": true
+  "website_status_must_remain_pending": true,
+  "candidate_source_sha": "e817c3490c99735dac7a5aa57896b08f9b1e4060",
+  "platform_build": {
+    "run_id": 43268514325,
+    "status_at_checkpoint": "queued",
+    "url": "https://github.com/lukeybird/pixaeffects/actions/runs/43268514325",
+    "conclusion": null
+  }
 }

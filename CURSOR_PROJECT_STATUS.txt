@@ -1,3 +1,6 @@
+PIXAEFFECTS BUILD CHECKPOINT — 2026-11-12
+Candidate source e817c3490c99735dac7a5aa57896b08f9b1e4060 is pushed. Platform build run 43268514325 was verified queued on that exact source: https://github.com/lukeybird/pixaeffects/actions/runs/43268514325 . No result or new installer is claimed yet. The following audit and all prior history remain preserved.
+
 CURRENT PIXAEFFECTS YELLOW-STAGE AUDIT — 2026-11-12
 Candidate version 0.1.3 on pixaeffects-product. Read PIXA_EFFECTS_YELLOW_AUDIT.json first. Source branding/manual/updater gaps were fixed: obsolete translated website promotion removed; accessible manual search; safe Next tour label; stale release offers cleared; verification errors remain visible; rechecks preserve an in-flight Mac installation. Existing identities, licenses, credits, activation guards and update verification remain intact.
 Verification: 16 Python product/branding/recovery checks pass after clean 0.1.3 preparation. Nine native Rust/UI checks pass (manual search, all 31 tour steps plus Back/Finish/Escape, updater state/error display and release-version bounds). The new checksum-error UI regression fails with the old show() and passes with the fix. Native tests used candidate UI overlays in the baseline prepared 0.1.2 workspace, not a newly packaged 0.1.3 app. No full cargo xtask ci or 0.1.3 platform packaging result is claimed.
