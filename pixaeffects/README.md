@@ -1,6 +1,10 @@
+## Current free-access candidate — 0.1.2
+
+The production Pixa account service now grants free early access without a card or scheduled account expiration. This candidate updates the activation-screen wording and bundled manual to match. Sign-in, explicit device approval, short monotonic security leases and existing access guards remain in place. No billing endpoint, paid-service subscription, published installer or release setting is changed here. Build artifacts remain unsigned testing candidates until separate platform acceptance and signing. Historical release notes below describe earlier candidates and may refer to the former paid trial.
+
 # PixaEffects by AIWebDesignFirm
 
-Motion graphics and compositing, with publisher branding, existing AIWebDesignFirm trial entitlement, a bundled manual, a 31-tool tour, and a publisher-verified Mac updater.
+Motion graphics and compositing, with publisher branding, free Pixa account access, a bundled manual, a 31-tool tour, and a publisher-verified Mac updater.
 
 Source base: EffectCraft 4ed549588ef2ad43a3e445404295bf36003060c0.
 Product branch: pixaeffects-product. Product version: 0.1.0.
@@ -9,7 +13,7 @@ On a CLEAN pinned checkout run `python pixaeffects/prepare.py`, then build Cargo
 
 `python pixaeffects/package.py` produces testing installers. Mac installers include a drag-to-Applications layout. Sign and notarize with `bash pixaeffects/sign_update_macos.sh /actual/path/to/pixaeffects-0.1.0-macos-universal.dmg` on the publisher Mac. That script reuses the existing Developer ID identity and PixaShop-Notary Keychain profile, but validates the PixaEffects bundle identity. No private key belongs in Git or app packages.
 
-The existing trial/subscription entitlement is shared, with separate device token storage. No new prices, subscriptions or billing mutation are introduced. Desktop control-server access is disabled. The unbundled upstream CLI and browser builds are not commercial distribution artifacts.
+Free Pixa account access is shared, with separate device token storage. No new prices, subscriptions or billing mutation are introduced. Desktop control-server access is disabled. The unbundled upstream CLI and browser builds are not commercial distribution artifacts.
 
 Publish only after native build, activation, render/export, signature/notarization and real updater checks. Only Mac supports in-app installation. Windows and Linux use website downloads. CI signing credentials are not configured.
 

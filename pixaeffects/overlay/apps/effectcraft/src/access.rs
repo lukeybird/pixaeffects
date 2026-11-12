@@ -112,7 +112,7 @@ impl AccessApp {
                         self.message = if a.access {
                             "Your PixaEffects access is active.".into()
                         } else if a.message.is_empty() {
-                            "Sign in with an active trial or subscription to continue.".into()
+                            "Sign in with your free Pixa account and approve this device to continue.".into()
                         } else {
                             a.message
                         };
@@ -146,8 +146,8 @@ impl AccessApp {
                         ui.ctx().open_url(egui::OpenUrl::new_tab(ACTIVATE));
                     }
                 }
-                if ui.button("Start your 7-day trial / Manage billing").clicked() {
-                    ui.ctx().open_url(egui::OpenUrl::new_tab("https://aiwebdesignfirm.com/start"));
+                if ui.button("Your free Pixa account").clicked() {
+                    ui.ctx().open_url(egui::OpenUrl::new_tab("https://aiwebdesignfirm.com/account"));
                 }
                 if ui.button("Check again").clicked() {
                     self.start();

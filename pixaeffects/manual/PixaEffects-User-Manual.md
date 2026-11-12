@@ -8,7 +8,7 @@ PixaEffects by AIWebDesignFirm is a motion graphics and compositing editor. Buil
 
 ## Install and activate
 
-On Mac, open the installer and drag PixaEffects into Applications. Launch it, choose Activate this device, sign into your AIWebDesignFirm account and approve the code shown on your own device. Access uses the existing trial or subscription. No additional subscription is created by activation. An internet connection is required for access checks. Project media stays on your computer.
+On Mac, open the installer and drag PixaEffects into Applications. Launch it, choose Activate this device, sign into your AIWebDesignFirm account and approve the code shown on your own device. Pixa early access is free, with no card requirement and no scheduled account expiration. An internet connection is required for access checks. Project media stays on your computer.
 
 ## Create a composition
 
@@ -48,4 +48,4 @@ Save .ecproj frequently and keep source media with your project. A render is a s
 
 ## Account, updates and privacy
 
-Manage your existing trial or subscription at aiwebdesignfirm.com/account. Help → Check for Updates checks PixaEffects releases only. On Mac, Install and restart verifies the checksum, publisher signature and notarization before replacing the app. Save first. Windows and Linux use the website installer flow. Signing private keys stay with the publisher, never inside the download.
+Manage your free Pixa account and approved devices at aiwebdesignfirm.com/account. No card is needed and account access has no scheduled expiration. Help → Check for Updates checks PixaEffects releases only. On Mac, Install and restart verifies the checksum, publisher signature and notarization before replacing the app. Save first. Windows and Linux use the website installer flow. Signing private keys stay with the publisher, never inside the download.

@@ -27,7 +27,7 @@ def prepare():
  for p in (ROOT/'pixaeffects/overlay').rglob('*'):
   if p.is_file():
    target=ROOT/p.relative_to(ROOT/'pixaeffects/overlay');target.parent.mkdir(parents=True,exist_ok=True);shutil.copyfile(p,target)
- edit('Cargo.toml','version = "0.21.0"','version = "0.1.1"')
+ edit('Cargo.toml','version = "0.21.0"','version = "0.1.2"')
  edit('apps/effectcraft/src/main.rs','struct Desktop {','mod access;\nstruct Desktop {')
  edit('apps/effectcraft/src/main.rs','Ok(Box::new(Desktop {','Ok(Box::new(access::AccessApp::new(Desktop {')
  edit('apps/effectcraft/src/main.rs','reporter: desktop_reporter,\n            }))','reporter: desktop_reporter,\n            })))')
