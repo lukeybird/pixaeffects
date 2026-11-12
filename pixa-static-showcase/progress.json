@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "verified_at": "2026-11-11T04:11:47Z",
+  "verified_at": "2026-11-12T01:32:49.397622+00:00",
   "legend": "Green = verified passed. Red = pending, incomplete or not yet verified. Progress is evidence-based, not a release guarantee.",
   "steps": [
     "Source setup",
@@ -21,17 +21,68 @@
       {
         "label": "Complete Pixa branding",
         "passed": false,
-        "note": "Full branding audit is not yet verified."
+        "note": "Source metadata and translations cleaned; installed-app visual audit remains pending.",
+        "checks": [
+          {
+            "label": "Source publication metadata",
+            "passed": true,
+            "note": "Publisher, app IDs and upstream screenshots corrected; original icons and legal notices retained."
+          },
+          {
+            "label": "Installed application branding",
+            "passed": false,
+            "note": "Rebuild and inspect the menus, dialogs and package on each supported platform."
+          }
+        ]
       },
       {
         "label": "Manual, tutorials, activation & updater",
         "passed": false,
-        "note": "Complete help, activation and own-feed updater verification remains pending."
+        "note": "Complete help, activation and own-feed updater verification remains pending.",
+        "checks": [
+          {
+            "label": "Embedded starter manual and quick tour",
+            "passed": true,
+            "note": "Six workflow chapters and four orientation steps are generated for this app."
+          },
+          {
+            "label": "Complete tool reference",
+            "passed": false,
+            "note": "Every-tool explanations and complete help coverage remain unfinished."
+          },
+          {
+            "label": "Account and recovery source integration",
+            "passed": true,
+            "note": "Shared account UI, OS credential storage and recovery adapters are present; source preflight passed."
+          },
+          {
+            "label": "Activation acceptance",
+            "passed": false,
+            "note": "Real sign-in, expiry and recovery must be exercised in the packaged application."
+          },
+          {
+            "label": "Install-and-restart updater",
+            "passed": false,
+            "note": "Signed manifest validation exists. Publisher feed, native install, restart and rollback are not configured for suite apps."
+          }
+        ]
       },
       {
         "label": "Compile & package installers",
         "passed": false,
-        "note": "Compile/recovery checks passed; customer installer packaging remains pending."
+        "note": "Compile/recovery checks passed; customer installer packaging remains pending.",
+        "checks": [
+          {
+            "label": "Historical three-platform compile/recovery checks",
+            "passed": true,
+            "note": "All 42 unique product/OS jobs passed on source 728fa546; new metadata changes still need CI."
+          },
+          {
+            "label": "Customer installer",
+            "passed": false,
+            "note": "Compile checks do not create release installers. No verified customer installer recorded."
+          }
+        ]
       },
       {
         "label": "Application & update testing",
@@ -58,17 +109,68 @@
       {
         "label": "Complete Pixa branding",
         "passed": false,
-        "note": "Full branding audit is not yet verified."
+        "note": "Source metadata and translations cleaned; installed-app visual audit remains pending.",
+        "checks": [
+          {
+            "label": "Source publication metadata",
+            "passed": true,
+            "note": "Publisher, app IDs and upstream screenshots corrected; original icons and legal notices retained."
+          },
+          {
+            "label": "Installed application branding",
+            "passed": false,
+            "note": "Rebuild and inspect the menus, dialogs and package on each supported platform."
+          }
+        ]
       },
       {
         "label": "Manual, tutorials, activation & updater",
         "passed": false,
-        "note": "Complete help, activation and own-feed updater verification remains pending."
+        "note": "Complete help, activation and own-feed updater verification remains pending.",
+        "checks": [
+          {
+            "label": "Embedded starter manual and quick tour",
+            "passed": true,
+            "note": "Six workflow chapters and four orientation steps are generated for this app."
+          },
+          {
+            "label": "Complete tool reference",
+            "passed": false,
+            "note": "Every-tool explanations and complete help coverage remain unfinished."
+          },
+          {
+            "label": "Account and recovery source integration",
+            "passed": true,
+            "note": "Shared account UI, OS credential storage and recovery adapters are present; source preflight passed."
+          },
+          {
+            "label": "Activation acceptance",
+            "passed": false,
+            "note": "Real sign-in, expiry and recovery must be exercised in the packaged application."
+          },
+          {
+            "label": "Install-and-restart updater",
+            "passed": false,
+            "note": "Signed manifest validation exists. Publisher feed, native install, restart and rollback are not configured for suite apps."
+          }
+        ]
       },
       {
         "label": "Compile & package installers",
         "passed": false,
-        "note": "Compile/recovery checks passed; customer installer packaging remains pending."
+        "note": "Compile/recovery checks passed; customer installer packaging remains pending.",
+        "checks": [
+          {
+            "label": "Historical three-platform compile/recovery checks",
+            "passed": true,
+            "note": "All 42 unique product/OS jobs passed on source 728fa546; new metadata changes still need CI."
+          },
+          {
+            "label": "Customer installer",
+            "passed": false,
+            "note": "Compile checks do not create release installers. No verified customer installer recorded."
+          }
+        ]
       },
       {
         "label": "Application & update testing",
@@ -95,17 +197,68 @@
       {
         "label": "Complete Pixa branding",
         "passed": false,
-        "note": "Full branding audit is not yet verified."
+        "note": "Source metadata and translations cleaned; installed-app visual audit remains pending.",
+        "checks": [
+          {
+            "label": "Source publication metadata",
+            "passed": true,
+            "note": "Publisher, app IDs and upstream screenshots corrected; original icons and legal notices retained."
+          },
+          {
+            "label": "Installed application branding",
+            "passed": false,
+            "note": "Rebuild and inspect the menus, dialogs and package on each supported platform."
+          }
+        ]
       },
       {
         "label": "Manual, tutorials, activation & updater",
         "passed": false,
-        "note": "Complete help, activation and own-feed updater verification remains pending."
+        "note": "Complete help, activation and own-feed updater verification remains pending.",
+        "checks": [
+          {
+            "label": "Embedded starter manual and quick tour",
+            "passed": true,
+            "note": "Six workflow chapters and four orientation steps are generated for this app."
+          },
+          {
+            "label": "Complete tool reference",
+            "passed": false,
+            "note": "Every-tool explanations and complete help coverage remain unfinished."
+          },
+          {
+            "label": "Account and recovery source integration",
+            "passed": true,
+            "note": "Shared account UI, OS credential storage and recovery adapters are present; source preflight passed."
+          },
+          {
+            "label": "Activation acceptance",
+            "passed": false,
+            "note": "Real sign-in, expiry and recovery must be exercised in the packaged application."
+          },
+          {
+            "label": "Install-and-restart updater",
+            "passed": false,
+            "note": "Signed manifest validation exists. Publisher feed, native install, restart and rollback are not configured for suite apps."
+          }
+        ]
       },
       {
         "label": "Compile & package installers",
         "passed": false,
-        "note": "Compile/recovery checks passed; customer installer packaging remains pending."
+        "note": "Compile/recovery checks passed; customer installer packaging remains pending.",
+        "checks": [
+          {
+            "label": "Historical three-platform compile/recovery checks",
+            "passed": true,
+            "note": "All 42 unique product/OS jobs passed on source 728fa546; new metadata changes still need CI."
+          },
+          {
+            "label": "Customer installer",
+            "passed": false,
+            "note": "Compile checks do not create release installers. No verified customer installer recorded."
+          }
+        ]
       },
       {
         "label": "Application & update testing",
@@ -132,17 +285,68 @@
       {
         "label": "Complete Pixa branding",
         "passed": false,
-        "note": "Full branding audit is not yet verified."
+        "note": "Source metadata and translations cleaned; installed-app visual audit remains pending.",
+        "checks": [
+          {
+            "label": "Source publication metadata",
+            "passed": true,
+            "note": "Publisher, app IDs and upstream screenshots corrected; original icons and legal notices retained."
+          },
+          {
+            "label": "Installed application branding",
+            "passed": false,
+            "note": "Rebuild and inspect the menus, dialogs and package on each supported platform."
+          }
+        ]
       },
       {
         "label": "Manual, tutorials, activation & updater",
         "passed": false,
-        "note": "Complete help, activation and own-feed updater verification remains pending."
+        "note": "Complete help, activation and own-feed updater verification remains pending.",
+        "checks": [
+          {
+            "label": "Embedded starter manual and quick tour",
+            "passed": true,
+            "note": "Six workflow chapters and four orientation steps are generated for this app."
+          },
+          {
+            "label": "Complete tool reference",
+            "passed": false,
+            "note": "37 tool explanations exist for PixaDesign; comprehensive editor-by-editor acceptance remains pending."
+          },
+          {
+            "label": "Account and recovery source integration",
+            "passed": true,
+            "note": "Shared account UI, OS credential storage and recovery adapters are present; source preflight passed."
+          },
+          {
+            "label": "Activation acceptance",
+            "passed": false,
+            "note": "Real sign-in, expiry and recovery must be exercised in the packaged application."
+          },
+          {
+            "label": "Install-and-restart updater",
+            "passed": false,
+            "note": "Signed manifest validation exists. Publisher feed, native install, restart and rollback are not configured for suite apps."
+          }
+        ]
       },
       {
         "label": "Compile & package installers",
         "passed": false,
-        "note": "Compile/recovery checks passed; customer installer packaging remains pending."
+        "note": "Compile/recovery checks passed; customer installer packaging remains pending.",
+        "checks": [
+          {
+            "label": "Historical three-platform compile/recovery checks",
+            "passed": true,
+            "note": "All 42 unique product/OS jobs passed on source 728fa546; new metadata changes still need CI."
+          },
+          {
+            "label": "Customer installer",
+            "passed": false,
+            "note": "Compile checks do not create release installers. No verified customer installer recorded."
+          }
+        ]
       },
       {
         "label": "Application & update testing",
@@ -169,17 +373,41 @@
       {
         "label": "Complete Pixa branding",
         "passed": false,
-        "note": "Full branding audit is not yet verified."
+        "note": "Nine source branding checks passed for 0.1.1. Rebuilt installed-app branding remains unverified.",
+        "checks": [
+          {
+            "label": "Source branding cleanup",
+            "passed": true,
+            "note": "Dormant community/repository commands, translations and publisher metadata corrected."
+          },
+          {
+            "label": "Installed application audit",
+            "passed": false,
+            "note": "New build is still running; verify its UI and installer after it finishes."
+          }
+        ]
       },
       {
         "label": "Manual, tutorials, activation & updater",
         "passed": false,
-        "note": "Complete help, activation and own-feed updater verification remains pending."
+        "note": "Complete help, activation and own-feed updater verification remains pending.",
+        "checks": [
+          {
+            "label": "Offline help and tour source",
+            "passed": true,
+            "note": "Product help and tutorial implementation exists; native tests are running."
+          },
+          {
+            "label": "Help, activation and own-feed acceptance",
+            "passed": false,
+            "note": "Complete packaged-app testing and updater install/restart are not yet verified."
+          }
+        ]
       },
       {
         "label": "Compile & package installers",
         "passed": false,
-        "note": "Desktop CI passed; verified release packaging remains pending."
+        "note": "0.1.1 is building on Mac, Windows and Linux. Previous 0.1.0 artifacts do not verify this branding revision."
       },
       {
         "label": "Application & update testing",
@@ -206,17 +434,68 @@
       {
         "label": "Complete Pixa branding",
         "passed": false,
-        "note": "Full branding audit is not yet verified."
+        "note": "Source metadata and translations cleaned; installed-app visual audit remains pending.",
+        "checks": [
+          {
+            "label": "Source publication metadata",
+            "passed": true,
+            "note": "Publisher, app IDs and upstream screenshots corrected; original icons and legal notices retained."
+          },
+          {
+            "label": "Installed application branding",
+            "passed": false,
+            "note": "Rebuild and inspect the menus, dialogs and package on each supported platform."
+          }
+        ]
       },
       {
         "label": "Manual, tutorials, activation & updater",
         "passed": false,
-        "note": "Complete help, activation and own-feed updater verification remains pending."
+        "note": "Complete help, activation and own-feed updater verification remains pending.",
+        "checks": [
+          {
+            "label": "Embedded starter manual and quick tour",
+            "passed": true,
+            "note": "Six workflow chapters and four orientation steps are generated for this app."
+          },
+          {
+            "label": "Complete tool reference",
+            "passed": false,
+            "note": "Every-tool explanations and complete help coverage remain unfinished."
+          },
+          {
+            "label": "Account and recovery source integration",
+            "passed": true,
+            "note": "Shared account UI, OS credential storage and recovery adapters are present; source preflight passed."
+          },
+          {
+            "label": "Activation acceptance",
+            "passed": false,
+            "note": "Real sign-in, expiry and recovery must be exercised in the packaged application."
+          },
+          {
+            "label": "Install-and-restart updater",
+            "passed": false,
+            "note": "Signed manifest validation exists. Publisher feed, native install, restart and rollback are not configured for suite apps."
+          }
+        ]
       },
       {
         "label": "Compile & package installers",
         "passed": false,
-        "note": "Compile/recovery checks passed; customer installer packaging remains pending."
+        "note": "Compile/recovery checks passed; customer installer packaging remains pending.",
+        "checks": [
+          {
+            "label": "Historical three-platform compile/recovery checks",
+            "passed": true,
+            "note": "All 42 unique product/OS jobs passed on source 728fa546; new metadata changes still need CI."
+          },
+          {
+            "label": "Customer installer",
+            "passed": false,
+            "note": "Compile checks do not create release installers. No verified customer installer recorded."
+          }
+        ]
       },
       {
         "label": "Application & update testing",
@@ -243,17 +522,68 @@
       {
         "label": "Complete Pixa branding",
         "passed": false,
-        "note": "Full branding audit is not yet verified."
+        "note": "Source metadata and translations cleaned; installed-app visual audit remains pending.",
+        "checks": [
+          {
+            "label": "Source publication metadata",
+            "passed": true,
+            "note": "Publisher, app IDs and upstream screenshots corrected; original icons and legal notices retained."
+          },
+          {
+            "label": "Installed application branding",
+            "passed": false,
+            "note": "Rebuild and inspect the menus, dialogs and package on each supported platform."
+          }
+        ]
       },
       {
         "label": "Manual, tutorials, activation & updater",
         "passed": false,
-        "note": "Complete help, activation and own-feed updater verification remains pending."
+        "note": "Complete help, activation and own-feed updater verification remains pending.",
+        "checks": [
+          {
+            "label": "Embedded starter manual and quick tour",
+            "passed": true,
+            "note": "Six workflow chapters and four orientation steps are generated for this app."
+          },
+          {
+            "label": "Complete tool reference",
+            "passed": false,
+            "note": "Every-tool explanations and complete help coverage remain unfinished."
+          },
+          {
+            "label": "Account and recovery source integration",
+            "passed": true,
+            "note": "Shared account UI, OS credential storage and recovery adapters are present; source preflight passed."
+          },
+          {
+            "label": "Activation acceptance",
+            "passed": false,
+            "note": "Real sign-in, expiry and recovery must be exercised in the packaged application."
+          },
+          {
+            "label": "Install-and-restart updater",
+            "passed": false,
+            "note": "Signed manifest validation exists. Publisher feed, native install, restart and rollback are not configured for suite apps."
+          }
+        ]
       },
       {
         "label": "Compile & package installers",
         "passed": false,
-        "note": "Compile/recovery checks passed; customer installer packaging remains pending."
+        "note": "Compile/recovery checks passed; customer installer packaging remains pending.",
+        "checks": [
+          {
+            "label": "Historical three-platform compile/recovery checks",
+            "passed": true,
+            "note": "All 42 unique product/OS jobs passed on source 728fa546; new metadata changes still need CI."
+          },
+          {
+            "label": "Customer installer",
+            "passed": false,
+            "note": "Compile checks do not create release installers. No verified customer installer recorded."
+          }
+        ]
       },
       {
         "label": "Application & update testing",
@@ -280,17 +610,68 @@
       {
         "label": "Complete Pixa branding",
         "passed": false,
-        "note": "Full branding audit is not yet verified."
+        "note": "Source metadata and translations cleaned; installed-app visual audit remains pending.",
+        "checks": [
+          {
+            "label": "Source publication metadata",
+            "passed": true,
+            "note": "Publisher, app IDs and upstream screenshots corrected; original icons and legal notices retained."
+          },
+          {
+            "label": "Installed application branding",
+            "passed": false,
+            "note": "Rebuild and inspect the menus, dialogs and package on each supported platform."
+          }
+        ]
       },
       {
         "label": "Manual, tutorials, activation & updater",
         "passed": false,
-        "note": "Complete help, activation and own-feed updater verification remains pending."
+        "note": "Complete help, activation and own-feed updater verification remains pending.",
+        "checks": [
+          {
+            "label": "Embedded starter manual and quick tour",
+            "passed": true,
+            "note": "Six workflow chapters and four orientation steps are generated for this app."
+          },
+          {
+            "label": "Complete tool reference",
+            "passed": false,
+            "note": "Every-tool explanations and complete help coverage remain unfinished."
+          },
+          {
+            "label": "Account and recovery source integration",
+            "passed": true,
+            "note": "Shared account UI, OS credential storage and recovery adapters are present; source preflight passed."
+          },
+          {
+            "label": "Activation acceptance",
+            "passed": false,
+            "note": "Real sign-in, expiry and recovery must be exercised in the packaged application."
+          },
+          {
+            "label": "Install-and-restart updater",
+            "passed": false,
+            "note": "Signed manifest validation exists. Publisher feed, native install, restart and rollback are not configured for suite apps."
+          }
+        ]
       },
       {
         "label": "Compile & package installers",
         "passed": false,
-        "note": "Compile/recovery checks passed; customer installer packaging remains pending."
+        "note": "Compile/recovery checks passed; customer installer packaging remains pending.",
+        "checks": [
+          {
+            "label": "Historical three-platform compile/recovery checks",
+            "passed": true,
+            "note": "All 42 unique product/OS jobs passed on source 728fa546; new metadata changes still need CI."
+          },
+          {
+            "label": "Customer installer",
+            "passed": false,
+            "note": "Compile checks do not create release installers. No verified customer installer recorded."
+          }
+        ]
       },
       {
         "label": "Application & update testing",
@@ -317,17 +698,68 @@
       {
         "label": "Complete Pixa branding",
         "passed": false,
-        "note": "Full branding audit is not yet verified."
+        "note": "Source metadata and translations cleaned; installed-app visual audit remains pending.",
+        "checks": [
+          {
+            "label": "Source publication metadata",
+            "passed": true,
+            "note": "Publisher, app IDs and upstream screenshots corrected; original icons and legal notices retained."
+          },
+          {
+            "label": "Installed application branding",
+            "passed": false,
+            "note": "Rebuild and inspect the menus, dialogs and package on each supported platform."
+          }
+        ]
       },
       {
         "label": "Manual, tutorials, activation & updater",
         "passed": false,
-        "note": "Complete help, activation and own-feed updater verification remains pending."
+        "note": "Complete help, activation and own-feed updater verification remains pending.",
+        "checks": [
+          {
+            "label": "Embedded starter manual and quick tour",
+            "passed": true,
+            "note": "Six workflow chapters and four orientation steps are generated for this app."
+          },
+          {
+            "label": "Complete tool reference",
+            "passed": false,
+            "note": "Every-tool explanations and complete help coverage remain unfinished."
+          },
+          {
+            "label": "Account and recovery source integration",
+            "passed": true,
+            "note": "Shared account UI, OS credential storage and recovery adapters are present; source preflight passed."
+          },
+          {
+            "label": "Activation acceptance",
+            "passed": false,
+            "note": "Real sign-in, expiry and recovery must be exercised in the packaged application."
+          },
+          {
+            "label": "Install-and-restart updater",
+            "passed": false,
+            "note": "Signed manifest validation exists. Publisher feed, native install, restart and rollback are not configured for suite apps."
+          }
+        ]
       },
       {
         "label": "Compile & package installers",
         "passed": false,
-        "note": "Compile/recovery checks passed; customer installer packaging remains pending."
+        "note": "Compile/recovery checks passed; customer installer packaging remains pending.",
+        "checks": [
+          {
+            "label": "Historical three-platform compile/recovery checks",
+            "passed": true,
+            "note": "All 42 unique product/OS jobs passed on source 728fa546; new metadata changes still need CI."
+          },
+          {
+            "label": "Customer installer",
+            "passed": false,
+            "note": "Compile checks do not create release installers. No verified customer installer recorded."
+          }
+        ]
       },
       {
         "label": "Application & update testing",
@@ -354,17 +786,68 @@
       {
         "label": "Complete Pixa branding",
         "passed": false,
-        "note": "Full branding audit is not yet verified."
+        "note": "Source metadata and translations cleaned; installed-app visual audit remains pending.",
+        "checks": [
+          {
+            "label": "Source publication metadata",
+            "passed": true,
+            "note": "Publisher, app IDs and upstream screenshots corrected; original icons and legal notices retained."
+          },
+          {
+            "label": "Installed application branding",
+            "passed": false,
+            "note": "Rebuild and inspect the menus, dialogs and package on each supported platform."
+          }
+        ]
       },
       {
         "label": "Manual, tutorials, activation & updater",
         "passed": false,
-        "note": "Complete help, activation and own-feed updater verification remains pending."
+        "note": "Complete help, activation and own-feed updater verification remains pending.",
+        "checks": [
+          {
+            "label": "Embedded starter manual and quick tour",
+            "passed": true,
+            "note": "Six workflow chapters and four orientation steps are generated for this app."
+          },
+          {
+            "label": "Complete tool reference",
+            "passed": false,
+            "note": "Every-tool explanations and complete help coverage remain unfinished."
+          },
+          {
+            "label": "Account and recovery source integration",
+            "passed": true,
+            "note": "Shared account UI, OS credential storage and recovery adapters are present; source preflight passed."
+          },
+          {
+            "label": "Activation acceptance",
+            "passed": false,
+            "note": "Real sign-in, expiry and recovery must be exercised in the packaged application."
+          },
+          {
+            "label": "Install-and-restart updater",
+            "passed": false,
+            "note": "Signed manifest validation exists. Publisher feed, native install, restart and rollback are not configured for suite apps."
+          }
+        ]
       },
       {
         "label": "Compile & package installers",
         "passed": false,
-        "note": "Compile/recovery checks passed; customer installer packaging remains pending."
+        "note": "Compile/recovery checks passed; customer installer packaging remains pending.",
+        "checks": [
+          {
+            "label": "Historical three-platform compile/recovery checks",
+            "passed": true,
+            "note": "All 42 unique product/OS jobs passed on source 728fa546; new metadata changes still need CI."
+          },
+          {
+            "label": "Customer installer",
+            "passed": false,
+            "note": "Compile checks do not create release installers. No verified customer installer recorded."
+          }
+        ]
       },
       {
         "label": "Application & update testing",
@@ -391,17 +874,68 @@
       {
         "label": "Complete Pixa branding",
         "passed": false,
-        "note": "Full branding audit is not yet verified."
+        "note": "Source metadata and translations cleaned; installed-app visual audit remains pending.",
+        "checks": [
+          {
+            "label": "Source publication metadata",
+            "passed": true,
+            "note": "Publisher, app IDs and upstream screenshots corrected; original icons and legal notices retained."
+          },
+          {
+            "label": "Installed application branding",
+            "passed": false,
+            "note": "Rebuild and inspect the menus, dialogs and package on each supported platform."
+          }
+        ]
       },
       {
         "label": "Manual, tutorials, activation & updater",
         "passed": false,
-        "note": "Complete help, activation and own-feed updater verification remains pending."
+        "note": "Complete help, activation and own-feed updater verification remains pending.",
+        "checks": [
+          {
+            "label": "Embedded starter manual and quick tour",
+            "passed": true,
+            "note": "Six workflow chapters and four orientation steps are generated for this app."
+          },
+          {
+            "label": "Complete tool reference",
+            "passed": false,
+            "note": "Every-tool explanations and complete help coverage remain unfinished."
+          },
+          {
+            "label": "Account and recovery source integration",
+            "passed": true,
+            "note": "Shared account UI, OS credential storage and recovery adapters are present; source preflight passed."
+          },
+          {
+            "label": "Activation acceptance",
+            "passed": false,
+            "note": "Real sign-in, expiry and recovery must be exercised in the packaged application."
+          },
+          {
+            "label": "Install-and-restart updater",
+            "passed": false,
+            "note": "Signed manifest validation exists. Publisher feed, native install, restart and rollback are not configured for suite apps."
+          }
+        ]
       },
       {
         "label": "Compile & package installers",
         "passed": false,
-        "note": "Compile/recovery checks passed; customer installer packaging remains pending."
+        "note": "Compile/recovery checks passed; customer installer packaging remains pending.",
+        "checks": [
+          {
+            "label": "Historical three-platform compile/recovery checks",
+            "passed": true,
+            "note": "All 42 unique product/OS jobs passed on source 728fa546; new metadata changes still need CI."
+          },
+          {
+            "label": "Customer installer",
+            "passed": false,
+            "note": "Compile checks do not create release installers. No verified customer installer recorded."
+          }
+        ]
       },
       {
         "label": "Application & update testing",
@@ -452,7 +986,7 @@
       {
         "label": "Compile & package installers",
         "passed": true,
-        "note": "v0.20.4 Mac, Windows, and Linux packages are published. The Mac package is the signed installer.",
+        "note": "0.20.4 Mac, Windows and Linux packages are published; the Mac asset matches the recorded signed-release digest.",
         "evidence": {
           "release": "https://github.com/lukeybird/pixashop/releases/tag/v0.20.4",
           "commit": "5b4551b95c632910dbb546df2797245380aa6942",
@@ -462,7 +996,7 @@
       {
         "label": "Application & update testing",
         "passed": true,
-        "note": "The product owner tested the PixaShop 0.20.4 Mac app and confirmed it is good.",
+        "note": "Owner confirmed the 0.20.4 Mac app. A separate old-to-new updater install/restart run is not recorded.",
         "evidence": {
           "confirmation": "Product owner tested the 0.20.4 Mac app and confirmed it is good",
           "confirmed_at": "2026-11-11T04:08:00Z",
@@ -500,17 +1034,68 @@
       {
         "label": "Complete Pixa branding",
         "passed": false,
-        "note": "Full branding audit is not yet verified."
+        "note": "Source metadata and translations cleaned; installed-app visual audit remains pending.",
+        "checks": [
+          {
+            "label": "Source publication metadata",
+            "passed": true,
+            "note": "Publisher, app IDs and upstream screenshots corrected; original icons and legal notices retained."
+          },
+          {
+            "label": "Installed application branding",
+            "passed": false,
+            "note": "Rebuild and inspect the menus, dialogs and package on each supported platform."
+          }
+        ]
       },
       {
         "label": "Manual, tutorials, activation & updater",
         "passed": false,
-        "note": "Complete help, activation and own-feed updater verification remains pending."
+        "note": "Complete help, activation and own-feed updater verification remains pending.",
+        "checks": [
+          {
+            "label": "Embedded starter manual and quick tour",
+            "passed": true,
+            "note": "Six workflow chapters and four orientation steps are generated for this app."
+          },
+          {
+            "label": "Complete tool reference",
+            "passed": false,
+            "note": "Every-tool explanations and complete help coverage remain unfinished."
+          },
+          {
+            "label": "Account and recovery source integration",
+            "passed": true,
+            "note": "Shared account UI, OS credential storage and recovery adapters are present; source preflight passed."
+          },
+          {
+            "label": "Activation acceptance",
+            "passed": false,
+            "note": "Real sign-in, expiry and recovery must be exercised in the packaged application."
+          },
+          {
+            "label": "Install-and-restart updater",
+            "passed": false,
+            "note": "Signed manifest validation exists. Publisher feed, native install, restart and rollback are not configured for suite apps."
+          }
+        ]
       },
       {
         "label": "Compile & package installers",
         "passed": false,
-        "note": "Compile/recovery checks passed; customer installer packaging remains pending."
+        "note": "Compile/recovery checks passed; customer installer packaging remains pending.",
+        "checks": [
+          {
+            "label": "Historical three-platform compile/recovery checks",
+            "passed": true,
+            "note": "All 42 unique product/OS jobs passed on source 728fa546; new metadata changes still need CI."
+          },
+          {
+            "label": "Customer installer",
+            "passed": false,
+            "note": "Compile checks do not create release installers. No verified customer installer recorded."
+          }
+        ]
       },
       {
         "label": "Application & update testing",
@@ -537,17 +1122,68 @@
       {
         "label": "Complete Pixa branding",
         "passed": false,
-        "note": "Full branding audit is not yet verified."
+        "note": "Source metadata and translations cleaned; installed-app visual audit remains pending.",
+        "checks": [
+          {
+            "label": "Source publication metadata",
+            "passed": true,
+            "note": "Publisher, app IDs and upstream screenshots corrected; original icons and legal notices retained."
+          },
+          {
+            "label": "Installed application branding",
+            "passed": false,
+            "note": "Rebuild and inspect the menus, dialogs and package on each supported platform."
+          }
+        ]
       },
       {
         "label": "Manual, tutorials, activation & updater",
         "passed": false,
-        "note": "Complete help, activation and own-feed updater verification remains pending."
+        "note": "Complete help, activation and own-feed updater verification remains pending.",
+        "checks": [
+          {
+            "label": "Embedded starter manual and quick tour",
+            "passed": true,
+            "note": "Six workflow chapters and four orientation steps are generated for this app."
+          },
+          {
+            "label": "Complete tool reference",
+            "passed": false,
+            "note": "Every-tool explanations and complete help coverage remain unfinished."
+          },
+          {
+            "label": "Account and recovery source integration",
+            "passed": true,
+            "note": "Shared account UI, OS credential storage and recovery adapters are present; source preflight passed."
+          },
+          {
+            "label": "Activation acceptance",
+            "passed": false,
+            "note": "Real sign-in, expiry and recovery must be exercised in the packaged application."
+          },
+          {
+            "label": "Install-and-restart updater",
+            "passed": false,
+            "note": "Signed manifest validation exists. Publisher feed, native install, restart and rollback are not configured for suite apps."
+          }
+        ]
       },
       {
         "label": "Compile & package installers",
         "passed": false,
-        "note": "Compile/recovery checks passed; customer installer packaging remains pending."
+        "note": "Compile/recovery checks passed; customer installer packaging remains pending.",
+        "checks": [
+          {
+            "label": "Historical three-platform compile/recovery checks",
+            "passed": true,
+            "note": "All 42 unique product/OS jobs passed on source 728fa546; new metadata changes still need CI."
+          },
+          {
+            "label": "Customer installer",
+            "passed": false,
+            "note": "Compile checks do not create release installers. No verified customer installer recorded."
+          }
+        ]
       },
       {
         "label": "Application & update testing",
@@ -574,17 +1210,73 @@
       {
         "label": "Complete Pixa branding",
         "passed": false,
-        "note": "Full branding audit is not yet verified."
+        "note": "Source metadata and translations cleaned; installed-app visual audit remains pending.",
+        "checks": [
+          {
+            "label": "Source publication metadata",
+            "passed": true,
+            "note": "Publisher, app IDs and upstream screenshots corrected; original icons and legal notices retained."
+          },
+          {
+            "label": "Installed application branding",
+            "passed": false,
+            "note": "Rebuild and inspect the menus, dialogs and package on each supported platform."
+          }
+        ]
       },
       {
         "label": "Manual, tutorials, activation & updater",
         "passed": false,
-        "note": "Complete help, activation and own-feed updater verification remains pending."
+        "note": "Complete help, activation and own-feed updater verification remains pending.",
+        "checks": [
+          {
+            "label": "Embedded starter manual and quick tour",
+            "passed": true,
+            "note": "Six workflow chapters and four orientation steps are generated for this app."
+          },
+          {
+            "label": "Complete tool reference",
+            "passed": false,
+            "note": "Every-tool explanations and complete help coverage remain unfinished."
+          },
+          {
+            "label": "Account and recovery source integration",
+            "passed": true,
+            "note": "Shared account UI, OS credential storage and recovery adapters are present; source preflight passed."
+          },
+          {
+            "label": "Activation acceptance",
+            "passed": false,
+            "note": "Real sign-in, expiry and recovery must be exercised in the packaged application."
+          },
+          {
+            "label": "Install-and-restart updater",
+            "passed": false,
+            "note": "Signed manifest validation exists. Publisher feed, native install, restart and rollback are not configured for suite apps."
+          }
+        ]
       },
       {
         "label": "Compile & package installers",
         "passed": false,
-        "note": "Compile/recovery checks passed; customer installer packaging remains pending."
+        "note": "An unsigned arm64 + Intel Mac .app was built and uploaded; it is not yet a signed customer installer.",
+        "checks": [
+          {
+            "label": "Historical three-platform compile/recovery checks",
+            "passed": true,
+            "note": "All 42 unique product/OS jobs passed on source 728fa546; new metadata changes still need CI."
+          },
+          {
+            "label": "Universal Mac candidate",
+            "passed": true,
+            "note": "Run 42928044316: lipo confirmed arm64 and x86_64; unsigned artifact uploaded."
+          },
+          {
+            "label": "Customer installer",
+            "passed": false,
+            "note": "Unsigned universal Mac candidate exists; Windows/Linux release installers and acceptance remain pending."
+          }
+        ]
       },
       {
         "label": "Application & update testing",
@@ -611,17 +1303,68 @@
       {
         "label": "Complete Pixa branding",
         "passed": false,
-        "note": "Full branding audit is not yet verified."
+        "note": "Source metadata and translations cleaned; installed-app visual audit remains pending.",
+        "checks": [
+          {
+            "label": "Source publication metadata",
+            "passed": true,
+            "note": "Publisher, app IDs and upstream screenshots corrected; original icons and legal notices retained."
+          },
+          {
+            "label": "Installed application branding",
+            "passed": false,
+            "note": "Rebuild and inspect the menus, dialogs and package on each supported platform."
+          }
+        ]
       },
       {
         "label": "Manual, tutorials, activation & updater",
         "passed": false,
-        "note": "Complete help, activation and own-feed updater verification remains pending."
+        "note": "Complete help, activation and own-feed updater verification remains pending.",
+        "checks": [
+          {
+            "label": "Embedded starter manual and quick tour",
+            "passed": true,
+            "note": "Six workflow chapters and four orientation steps are generated for this app."
+          },
+          {
+            "label": "Complete tool reference",
+            "passed": false,
+            "note": "Every-tool explanations and complete help coverage remain unfinished."
+          },
+          {
+            "label": "Account and recovery source integration",
+            "passed": true,
+            "note": "Shared account UI, OS credential storage and recovery adapters are present; source preflight passed."
+          },
+          {
+            "label": "Activation acceptance",
+            "passed": false,
+            "note": "Real sign-in, expiry and recovery must be exercised in the packaged application."
+          },
+          {
+            "label": "Install-and-restart updater",
+            "passed": false,
+            "note": "Signed manifest validation exists. Publisher feed, native install, restart and rollback are not configured for suite apps."
+          }
+        ]
       },
       {
         "label": "Compile & package installers",
         "passed": false,
-        "note": "Compile/recovery checks passed; customer installer packaging remains pending."
+        "note": "Compile/recovery checks passed; customer installer packaging remains pending.",
+        "checks": [
+          {
+            "label": "Historical three-platform compile/recovery checks",
+            "passed": true,
+            "note": "All 42 unique product/OS jobs passed on source 728fa546; new metadata changes still need CI."
+          },
+          {
+            "label": "Customer installer",
+            "passed": false,
+            "note": "Compile checks do not create release installers. No verified customer installer recorded."
+          }
+        ]
       },
       {
         "label": "Application & update testing",

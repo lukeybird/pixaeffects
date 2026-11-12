@@ -1,0 +1,219 @@
+{
+  "run_id": 42928044792,
+  "source_sha": "728fa5464f618351c6ac7ea4de01b0f126e19f24",
+  "expected_unique_jobs": 42,
+  "all_42_passed": true,
+  "scope": "Historical compile/recovery checks only; does not verify new source metadata changes or release installers.",
+  "jobs": [
+    {
+      "name": "pixafilm / gate (ubuntu-24.04)",
+      "conclusion": "success",
+      "id": 130219433856
+    },
+    {
+      "name": "pixavector / gate (ubuntu-24.04)",
+      "conclusion": "success",
+      "id": 130219433926
+    },
+    {
+      "name": "pixalight / gate (windows-latest)",
+      "conclusion": "success",
+      "id": 130219433964
+    },
+    {
+      "name": "pixapdf / gate (macos-15-intel)",
+      "conclusion": "success",
+      "id": 130219434007
+    },
+    {
+      "name": "pixalight / gate (ubuntu-24.04)",
+      "conclusion": "success",
+      "id": 130219434012
+    },
+    {
+      "name": "pixavector / gate (macos-15-intel)",
+      "conclusion": "success",
+      "id": 130219434036
+    },
+    {
+      "name": "pixavector / gate (windows-latest)",
+      "conclusion": "success",
+      "id": 130219434063
+    },
+    {
+      "name": "pixafilm / gate (macos-15-intel)",
+      "conclusion": "success",
+      "id": 130219434075
+    },
+    {
+      "name": "pixapdf / gate (windows-latest)",
+      "conclusion": "success",
+      "id": 130219434080
+    },
+    {
+      "name": "pixafilm / gate (windows-latest)",
+      "conclusion": "success",
+      "id": 130219434119
+    },
+    {
+      "name": "pixalight / gate (macos-15-intel)",
+      "conclusion": "success",
+      "id": 130219434183
+    },
+    {
+      "name": "pixapdf / gate (ubuntu-24.04)",
+      "conclusion": "success",
+      "id": 130219436120
+    },
+    {
+      "name": "pixadesign / gate (macos-15-intel)",
+      "conclusion": "success",
+      "id": 130229938974
+    },
+    {
+      "name": "pixadesign / gate (windows-latest)",
+      "conclusion": "success",
+      "id": 130229938987
+    },
+    {
+      "name": "pixadesign / gate (ubuntu-24.04)",
+      "conclusion": "success",
+      "id": 130229939003
+    },
+    {
+      "name": "pixainterface / gate (macos-15-intel)",
+      "conclusion": "success",
+      "id": 130231388723
+    },
+    {
+      "name": "pixainterface / gate (ubuntu-24.04)",
+      "conclusion": "success",
+      "id": 130231388771
+    },
+    {
+      "name": "pixainterface / gate (windows-latest)",
+      "conclusion": "success",
+      "id": 130231389108
+    },
+    {
+      "name": "pixatexture / gate (ubuntu-24.04)",
+      "conclusion": "success",
+      "id": 130233482757
+    },
+    {
+      "name": "pixatexture / gate (windows-latest)",
+      "conclusion": "success",
+      "id": 130233482759
+    },
+    {
+      "name": "pixatexture / gate (macos-15-intel)",
+      "conclusion": "success",
+      "id": 130233482854
+    },
+    {
+      "name": "pixamaterial / gate (macos-15-intel)",
+      "conclusion": "success",
+      "id": 130235482069
+    },
+    {
+      "name": "pixamaterial / gate (ubuntu-24.04)",
+      "conclusion": "success",
+      "id": 130235482077
+    },
+    {
+      "name": "pixamaterial / gate (windows-latest)",
+      "conclusion": "success",
+      "id": 130235482083
+    },
+    {
+      "name": "pixaword / gate (windows-latest)",
+      "conclusion": "success",
+      "id": 130240614292
+    },
+    {
+      "name": "pixaword / gate (ubuntu-24.04)",
+      "conclusion": "success",
+      "id": 130240614360
+    },
+    {
+      "name": "pixaword / gate (macos-15-intel)",
+      "conclusion": "success",
+      "id": 130240614393
+    },
+    {
+      "name": "pixasound / gate (ubuntu-24.04)",
+      "conclusion": "success",
+      "id": 130240695957
+    },
+    {
+      "name": "pixasound / gate (windows-latest)",
+      "conclusion": "success",
+      "id": 130240695982
+    },
+    {
+      "name": "pixasound / gate (macos-15-intel)",
+      "conclusion": "success",
+      "id": 130240696039
+    },
+    {
+      "name": "pixadeck / gate (ubuntu-24.04)",
+      "conclusion": "success",
+      "id": 130244930891
+    },
+    {
+      "name": "pixadeck / gate (macos-15-intel)",
+      "conclusion": "success",
+      "id": 130244930917
+    },
+    {
+      "name": "pixadeck / gate (windows-latest)",
+      "conclusion": "success",
+      "id": 130244930933
+    },
+    {
+      "name": "pixacad / gate (macos-15-intel)",
+      "conclusion": "success",
+      "id": 130247752460
+    },
+    {
+      "name": "pixacad / gate (windows-latest)",
+      "conclusion": "success",
+      "id": 130247752507
+    },
+    {
+      "name": "pixacad / gate (ubuntu-24.04)",
+      "conclusion": "success",
+      "id": 130247752511
+    },
+    {
+      "name": "pixagrid / gate (windows-latest)",
+      "conclusion": "success",
+      "id": 130250654072
+    },
+    {
+      "name": "pixagrid / gate (macos-15-intel)",
+      "conclusion": "success",
+      "id": 130250654131
+    },
+    {
+      "name": "pixagrid / gate (ubuntu-24.04)",
+      "conclusion": "success",
+      "id": 130250654132
+    },
+    {
+      "name": "pixaanything / gate (ubuntu-24.04)",
+      "conclusion": "success",
+      "id": 130252240757
+    },
+    {
+      "name": "pixaanything / gate (macos-15-intel)",
+      "conclusion": "success",
+      "id": 130252240787
+    },
+    {
+      "name": "pixaanything / gate (windows-latest)",
+      "conclusion": "success",
+      "id": 130252240851
+    }
+  ]
+}

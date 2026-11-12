@@ -1,0 +1,245 @@
+{
+  "schema_version": 1,
+  "scope": "Source preflight only. Historical CI is recorded separately; it does not verify these new changes.",
+  "apps": [
+    {
+      "product": "pixavector",
+      "upstream_revision": "25cfa9d3cfdb3510c48f951d57562f0f7b8700cc",
+      "checks_passed": true,
+      "failures": [],
+      "licenses_retained": [
+        "LICENSE-MIT",
+        "LICENSE-APACHE"
+      ],
+      "embedded_starter_chapters": 6,
+      "embedded_tour_steps": 4,
+      "tool_reference_chapters": 0,
+      "exhaustive_manual_verified": false,
+      "graphical_acceptance": "not-run",
+      "signed_updater_install_restart": "not-configured",
+      "ready_for_signing": false
+    },
+    {
+      "product": "pixafilm",
+      "upstream_revision": "f4090d7b34a467a1bcabc91652d166a94f68dfbe",
+      "checks_passed": true,
+      "failures": [],
+      "licenses_retained": [
+        "LICENSE-MIT",
+        "LICENSE-APACHE"
+      ],
+      "embedded_starter_chapters": 6,
+      "embedded_tour_steps": 4,
+      "tool_reference_chapters": 0,
+      "exhaustive_manual_verified": false,
+      "graphical_acceptance": "not-run",
+      "signed_updater_install_restart": "not-configured",
+      "ready_for_signing": false
+    },
+    {
+      "product": "pixalight",
+      "upstream_revision": "e9c29e2c5c5dd1f86cc98677b5dc389f6612fcac",
+      "checks_passed": true,
+      "failures": [],
+      "licenses_retained": [
+        "LICENSE-MIT",
+        "LICENSE-APACHE"
+      ],
+      "embedded_starter_chapters": 6,
+      "embedded_tour_steps": 4,
+      "tool_reference_chapters": 0,
+      "exhaustive_manual_verified": false,
+      "graphical_acceptance": "not-run",
+      "signed_updater_install_restart": "not-configured",
+      "ready_for_signing": false
+    },
+    {
+      "product": "pixapdf",
+      "upstream_revision": "efd7c9fc245d1660388208a37df3d3b5036584ba",
+      "checks_passed": true,
+      "failures": [],
+      "licenses_retained": [
+        "LICENSES.toml",
+        "LICENSE-MIT",
+        "LICENSE-APACHE"
+      ],
+      "embedded_starter_chapters": 6,
+      "embedded_tour_steps": 4,
+      "tool_reference_chapters": 0,
+      "exhaustive_manual_verified": false,
+      "graphical_acceptance": "not-run",
+      "signed_updater_install_restart": "not-configured",
+      "ready_for_signing": false
+    },
+    {
+      "product": "pixadesign",
+      "upstream_revision": "32a1dbc7345fe14e010a36c691f1095562c387a9",
+      "checks_passed": true,
+      "failures": [],
+      "licenses_retained": [
+        "LICENSE-MIT",
+        "LICENSE-APACHE"
+      ],
+      "embedded_starter_chapters": 6,
+      "embedded_tour_steps": 4,
+      "tool_reference_chapters": 37,
+      "exhaustive_manual_verified": false,
+      "graphical_acceptance": "not-run",
+      "signed_updater_install_restart": "not-configured",
+      "ready_for_signing": false
+    },
+    {
+      "product": "pixainterface",
+      "upstream_revision": "a2e87433d8bda2b0c909587da08cb27c51e3b17e",
+      "checks_passed": true,
+      "failures": [],
+      "licenses_retained": [
+        "LICENSE-MIT",
+        "LICENSE-APACHE"
+      ],
+      "embedded_starter_chapters": 6,
+      "embedded_tour_steps": 4,
+      "tool_reference_chapters": 0,
+      "exhaustive_manual_verified": false,
+      "graphical_acceptance": "not-run",
+      "signed_updater_install_restart": "not-configured",
+      "ready_for_signing": false
+    },
+    {
+      "product": "pixatexture",
+      "upstream_revision": "f5e41e759f63f68993eafa855f1fd585de9ec289",
+      "checks_passed": true,
+      "failures": [],
+      "licenses_retained": [
+        "LICENSE-MIT",
+        "LICENSE-APACHE"
+      ],
+      "embedded_starter_chapters": 6,
+      "embedded_tour_steps": 4,
+      "tool_reference_chapters": 0,
+      "exhaustive_manual_verified": false,
+      "graphical_acceptance": "not-run",
+      "signed_updater_install_restart": "not-configured",
+      "ready_for_signing": false
+    },
+    {
+      "product": "pixamaterial",
+      "upstream_revision": "29857f653d894d7c177d56eca5e3305a0709808b",
+      "checks_passed": true,
+      "failures": [],
+      "licenses_retained": [
+        "LICENSE-MIT",
+        "LICENSE-APACHE"
+      ],
+      "embedded_starter_chapters": 6,
+      "embedded_tour_steps": 4,
+      "tool_reference_chapters": 0,
+      "exhaustive_manual_verified": false,
+      "graphical_acceptance": "not-run",
+      "signed_updater_install_restart": "not-configured",
+      "ready_for_signing": false
+    },
+    {
+      "product": "pixaword",
+      "upstream_revision": "d40d1b27181b61990c84c75f77d5fd23ef81d452",
+      "checks_passed": true,
+      "failures": [],
+      "licenses_retained": [
+        "LICENSE-MIT",
+        "LICENSE-APACHE"
+      ],
+      "embedded_starter_chapters": 6,
+      "embedded_tour_steps": 4,
+      "tool_reference_chapters": 0,
+      "exhaustive_manual_verified": false,
+      "graphical_acceptance": "not-run",
+      "signed_updater_install_restart": "not-configured",
+      "ready_for_signing": false
+    },
+    {
+      "product": "pixasound",
+      "upstream_revision": "ef58a90f4a418a282a15fc71d2e03c3d8e8f40fa",
+      "checks_passed": true,
+      "failures": [],
+      "licenses_retained": [
+        "LICENSE-MIT",
+        "LICENSE-APACHE"
+      ],
+      "embedded_starter_chapters": 6,
+      "embedded_tour_steps": 4,
+      "tool_reference_chapters": 0,
+      "exhaustive_manual_verified": false,
+      "graphical_acceptance": "not-run",
+      "signed_updater_install_restart": "not-configured",
+      "ready_for_signing": false
+    },
+    {
+      "product": "pixadeck",
+      "upstream_revision": "0623b430324cf4c3d1962e6ae7885cf30c011c5e",
+      "checks_passed": true,
+      "failures": [],
+      "licenses_retained": [
+        "LICENSE-MIT",
+        "LICENSE-APACHE"
+      ],
+      "embedded_starter_chapters": 6,
+      "embedded_tour_steps": 4,
+      "tool_reference_chapters": 0,
+      "exhaustive_manual_verified": false,
+      "graphical_acceptance": "not-run",
+      "signed_updater_install_restart": "not-configured",
+      "ready_for_signing": false
+    },
+    {
+      "product": "pixacad",
+      "upstream_revision": "a3d9348f63c2ad35391cc93980dc7ee7366f2ad6",
+      "checks_passed": true,
+      "failures": [],
+      "licenses_retained": [
+        "LICENSE-MIT",
+        "LICENSE-APACHE"
+      ],
+      "embedded_starter_chapters": 6,
+      "embedded_tour_steps": 4,
+      "tool_reference_chapters": 0,
+      "exhaustive_manual_verified": false,
+      "graphical_acceptance": "not-run",
+      "signed_updater_install_restart": "not-configured",
+      "ready_for_signing": false
+    },
+    {
+      "product": "pixagrid",
+      "upstream_revision": "e9addf52fe68847e6c1310fcfa5d42b7aa8b9650",
+      "checks_passed": true,
+      "failures": [],
+      "licenses_retained": [
+        "LICENSE-MIT",
+        "LICENSE-APACHE"
+      ],
+      "embedded_starter_chapters": 6,
+      "embedded_tour_steps": 4,
+      "tool_reference_chapters": 0,
+      "exhaustive_manual_verified": false,
+      "graphical_acceptance": "not-run",
+      "signed_updater_install_restart": "not-configured",
+      "ready_for_signing": false
+    },
+    {
+      "product": "pixaanything",
+      "upstream_revision": "2e7f27631be78d499ca61d29f5cdee701e71b54f",
+      "checks_passed": true,
+      "failures": [],
+      "licenses_retained": [
+        "LICENSE-MIT",
+        "LICENSE-APACHE"
+      ],
+      "embedded_starter_chapters": 6,
+      "embedded_tour_steps": 4,
+      "tool_reference_chapters": 0,
+      "exhaustive_manual_verified": false,
+      "graphical_acceptance": "not-run",
+      "signed_updater_install_restart": "not-configured",
+      "ready_for_signing": false
+    }
+  ]
+}

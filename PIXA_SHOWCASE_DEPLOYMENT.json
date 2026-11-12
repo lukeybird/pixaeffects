@@ -1,11 +1,11 @@
 {
-  "date": "2026-11-10",
+  "date": "2026-11-12",
   "liveUrl": "https://aiwebdesignfirm.com/products",
   "mainBackendDeployment": "dpl_6w71EygorJmZkXWmq1vvTQG8GYLe",
-  "staticDeployment": "dpl_4NVkz2dBdCvuZpyGghjcTycKdvAe",
+  "staticDeployment": "dpl_3naow8boEzGV4v8UfhZYKr9CDbN3",
   "staticProject": "prj_iWDaVD4Ek4mh3nftxzrAFJOe5Xgh",
-  "routingVersion": "d838536a-abc5-494f-bfe7-c517cb40f7b5",
-  "rollbackRoutingVersion": "aa672f83-a637-4b03-87ac-132084cd466e",
+  "routingVersion": "511192be-bc97-4c3f-9ae5-bf36e78a8f43",
+  "rollbackRoutingVersion": "d838536a-abc5-494f-bfe7-c517cb40f7b5",
   "routes": [
     {
       "id": "pixa-showcase-home-0",
@@ -14,7 +14,7 @@
       "enabled": true,
       "route": {
         "src": "^/$",
-        "dest": "https://pixa-showcase-8vt1662cr-luke-bargers-projects.vercel.app/",
+        "dest": "https://pixa-showcase-nh9t35exi-luke-bargers-projects.vercel.app/",
         "headers": {
           "x-robots-tag": "index, follow",
           "x-pixa-showcase": "v1"
@@ -35,7 +35,7 @@
       "enabled": true,
       "route": {
         "src": "^/products$",
-        "dest": "https://pixa-showcase-8vt1662cr-luke-bargers-projects.vercel.app/products",
+        "dest": "https://pixa-showcase-nh9t35exi-luke-bargers-projects.vercel.app/products",
         "headers": {
           "x-robots-tag": "index, follow",
           "x-pixa-showcase": "v1"
@@ -56,7 +56,7 @@
       "enabled": true,
       "route": {
         "src": "^/products/([^/]+)$",
-        "dest": "https://pixa-showcase-8vt1662cr-luke-bargers-projects.vercel.app/products/$1",
+        "dest": "https://pixa-showcase-nh9t35exi-luke-bargers-projects.vercel.app/products/$1",
         "headers": {
           "x-robots-tag": "index, follow",
           "x-pixa-showcase": "v1"
@@ -77,7 +77,7 @@
       "enabled": true,
       "route": {
         "src": "^/launcher$",
-        "dest": "https://pixa-showcase-8vt1662cr-luke-bargers-projects.vercel.app/launcher",
+        "dest": "https://pixa-showcase-nh9t35exi-luke-bargers-projects.vercel.app/launcher",
         "headers": {
           "x-robots-tag": "index, follow",
           "x-pixa-showcase": "v1"
@@ -98,7 +98,7 @@
       "enabled": true,
       "route": {
         "src": "^/pixa-showcase/(.*)$",
-        "dest": "https://pixa-showcase-8vt1662cr-luke-bargers-projects.vercel.app/pixa-showcase/$1",
+        "dest": "https://pixa-showcase-nh9t35exi-luke-bargers-projects.vercel.app/pixa-showcase/$1",
         "headers": {
           "x-robots-tag": "index, follow",
           "x-pixa-showcase": "v1"
@@ -119,7 +119,7 @@
       "enabled": true,
       "route": {
         "src": "^/pixaeffects$",
-        "dest": "https://pixa-showcase-8vt1662cr-luke-bargers-projects.vercel.app/products/pixaeffects",
+        "dest": "https://pixa-showcase-nh9t35exi-luke-bargers-projects.vercel.app/products/pixaeffects",
         "headers": {
           "x-robots-tag": "index, follow",
           "x-pixa-showcase": "v1"
@@ -140,7 +140,7 @@
       "enabled": true,
       "route": {
         "src": "^/$",
-        "dest": "https://pixa-showcase-8vt1662cr-luke-bargers-projects.vercel.app/",
+        "dest": "https://pixa-showcase-nh9t35exi-luke-bargers-projects.vercel.app/",
         "headers": {
           "x-robots-tag": "index, follow",
           "x-pixa-showcase": "v1"
@@ -161,7 +161,7 @@
       "enabled": true,
       "route": {
         "src": "^/products$",
-        "dest": "https://pixa-showcase-8vt1662cr-luke-bargers-projects.vercel.app/products",
+        "dest": "https://pixa-showcase-nh9t35exi-luke-bargers-projects.vercel.app/products",
         "headers": {
           "x-robots-tag": "index, follow",
           "x-pixa-showcase": "v1"
@@ -182,7 +182,7 @@
       "enabled": true,
       "route": {
         "src": "^/products/([^/]+)$",
-        "dest": "https://pixa-showcase-8vt1662cr-luke-bargers-projects.vercel.app/products/$1",
+        "dest": "https://pixa-showcase-nh9t35exi-luke-bargers-projects.vercel.app/products/$1",
         "headers": {
           "x-robots-tag": "index, follow",
           "x-pixa-showcase": "v1"
@@ -203,7 +203,7 @@
       "enabled": true,
       "route": {
         "src": "^/launcher$",
-        "dest": "https://pixa-showcase-8vt1662cr-luke-bargers-projects.vercel.app/launcher",
+        "dest": "https://pixa-showcase-nh9t35exi-luke-bargers-projects.vercel.app/launcher",
         "headers": {
           "x-robots-tag": "index, follow",
           "x-pixa-showcase": "v1"
@@ -224,7 +224,7 @@
       "enabled": true,
       "route": {
         "src": "^/pixa-showcase/(.*)$",
-        "dest": "https://pixa-showcase-8vt1662cr-luke-bargers-projects.vercel.app/pixa-showcase/$1",
+        "dest": "https://pixa-showcase-nh9t35exi-luke-bargers-projects.vercel.app/pixa-showcase/$1",
         "headers": {
           "x-robots-tag": "index, follow",
           "x-pixa-showcase": "v1"
@@ -245,7 +245,7 @@
       "enabled": true,
       "route": {
         "src": "^/pixaeffects$",
-        "dest": "https://pixa-showcase-8vt1662cr-luke-bargers-projects.vercel.app/products/pixaeffects",
+        "dest": "https://pixa-showcase-nh9t35exi-luke-bargers-projects.vercel.app/products/pixaeffects",
         "headers": {
           "x-robots-tag": "index, follow",
           "x-pixa-showcase": "v1"
@@ -266,7 +266,11 @@
     "launcherDisabled": true,
     "shopLegacyPreserved": true,
     "noBillingMutation": true,
-    "fullBackendQA": false
+    "fullBackendQA": false,
+    "productProgressPanels": 16,
+    "catalogProgressPanels": 16,
+    "liveVectorProgressExpanded": true,
+    "sourcePreflightsPassed": 14
   },
   "newInstallerPublished": false
 }

@@ -1,3 +1,16 @@
+CURRENT CHECKPOINT — 2026-11-12 — SOURCE PREFLIGHT AND LIVE PROGRESS
+
+Prepared all 14 pinned suite sources. Fixed missed Linux Flatpak app IDs, upstream version-cache permission, publisher metadata/screenshots, translated display branding and Material community label. Legal notices and internal document/command IDs retained.
+PIXA_SUITE_PRE_SIGN_AUDIT.json: 14/14 source metadata preflights passed; not full branding or GUI acceptance. Python suite: 19 selected tests, 18 passed and 1 skipped. Rust metadata test excluded because this environment has no Cargo. Native compilation of this new patch remains pending CI.
+Historical run 42928044792 at 728fa5464f618351c6ac7ea4de01b0f126e19f24 verified exactly 42 unique product/OS jobs, all success; receipt PIXA_SUITE_COMPILE_CHECKPOINT.json. These are compile/recovery checks, not customer installers.
+PixaVector run 42928044316 succeeded on the same source. lipo log confirms x86_64 + arm64. Unsigned artifact 13819092397, binary SHA256 35b77de687abcfb85624e5d5227266b9ec04ed7747920daa2ba65f1565d98727; artifact ZIP SHA256 843adf34aef013889b1f11db5d21dc24701b0e1aef1041e4d72b16ec9cf8b074. No GUI acceptance or signing approval. Request a fresh Vector candidate by whitespace-only mac-release.txt change for the new metadata patch.
+PixaEffects 0.1.1 run 43132981449 at 83df9fc5c14493d6f7e909e2eb3bf7ae065fd374 is still running; all three native checks passed and manual/tour tests were active. Do not restart/cancel. Nine source branding checks passed previously; installed branding remains pending.
+PixaShop 0.20.4 run 42946140053 succeeded and published release assets exist, including Mac digest bdb0b5a4d0cd9830023bdf1e4c6908dea69c694b0bbf21f21fb5922e88ef3245. Preserve owner-confirmed signing/testing history; website pin unchanged. Do not regress to the older v0.20.3 status.
+Live showcase: dpl_3naow8boEzGV4v8UfhZYKr9CDbN3, routing 511192be-bc97-4c3f-9ae5-bf36e78a8f43; rollback d838536a-abc5-494f-bfe7-c517cb40f7b5. 16 catalog and 16 product-page dropdowns now show granular passed/pending checks. Browser verified expanded progress on https://aiwebdesignfirm.com/products/pixavector.
+Remaining blockers before suite signing approval: complete tool manuals (only Design currently has tool-by-tool coverage), native updater publisher/feed/install/restart/rollback integration, packaged editor/activation/recovery/import/export/save testing, refreshed package visual audit. No suite signing or public downloads enabled. Billing/backend untouched, main backend remains dpl_6w71EygorJmZkXWmq1vvTQG8GYLe. Never deploy stale main or export signing keys.
+
+PRIOR HISTORY (PRESERVED)
+
 PIXASHOP APPLICATION/UPDATE ACCEPTANCE — OWNER CONFIRMED
 Owner confirmed the Application & update testing step works. Its indicator is now green, with confirmation type recorded in progress.json. This is not a newly performed automated test and does not certify the separate 0.20.4 build/release. Existing compile/package note explicitly refers to published v0.20.3, with 0.20.4 still pending at last build check. Downloads, native source, billing and backend unchanged.
 Showcase dpl_4NVkz2dBdCvuZpyGghjcTycKdvAe; routes d838536a-abc5-494f-bfe7-c517cb40f7b5; rollback aa672f83-a637-4b03-87ac-132084cd466e.

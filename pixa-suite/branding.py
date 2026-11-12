@@ -16,6 +16,7 @@ def install(root,app):
  catalog=json.loads((ROOT/'catalog.json').read_text(encoding='utf-8'))
  names={a['upstream_name']:a['name'] for a in catalog['apps']}
  names.update({'PhotoCraft':'PixaShop','EffectCraft':'PixaEffects'})
+ publication_metadata(root,app,names)
  for base in ['apps','crates']:
   for file in (root/base).rglob('*.rs'):
    if any(x in {'credits','contributors'} for x in file.parts) or any(x in file.name.lower() for x in ['license','notice','attribution','contributors','credits']):continue
@@ -44,3 +45,39 @@ def install(root,app):
   text=text.replace('"photocraft"','"pixashop"').replace('photocraft.exe','PixaShop.exe').replace('photocraft-','pixashop-').replace('/opt/photocraft/','/opt/pixashop/').replace('/bin/photocraft','/bin/pixashop')
   file.write_text(text,encoding='utf-8')
 
+
+def publication_metadata(root,app,names):
+ """Rebrand distribution metadata and translated display strings, never legal notices."""
+ for file in (root/'packaging').rglob('*'):
+  if not file.is_file():continue
+  text=file.read_text(encoding='utf-8') if file.suffix in {'.yml','.yaml','.in'} else None
+  if text is None:continue
+  if file.suffix in {'.yml','.yaml'}:
+   text=text.replace('ai.storyteller.'+app['source'],app['bundle_id'])
+   # The Pixa updater must never read the upstream version cache.
+   text=''.join(line for line in text.splitlines(keepends=True) if '--filesystem=xdg-data/ArtCraft/versions:ro' not in line)
+  if file.name.endswith('.metainfo.xml.in'):
+   text=re.sub(r'<developer id="ai.storyteller">[\s\S]*?</developer>','<developer id="com.aiwebdesignfirm"><name>AIWebDesignFirm</name></developer>',text)
+   # Upstream screenshots are not evidence of the Pixa release UI.
+   text=re.sub(r'\s*<screenshots>[\s\S]*?</screenshots>','',text)
+   text=re.sub(r'<url type="(?:homepage|bugtracker|help)">[^<]*</url>',lambda m:'<url type="'+re.search(r'type="([^"]+)"',m[0])[1]+'">https://aiwebdesignfirm.com/products/'+app['id']+'</url>',text)
+  file.write_text(text,encoding='utf-8')
+ for file in (root/'crates').rglob('locales/*.json'):
+  values=json.loads(file.read_text(encoding='utf-8'))
+  if not isinstance(values,dict):continue
+  updated={}
+  def display(value):
+   for old,new in names.items():value=value.replace(old,new)
+   return value.replace('ArtCraft','AIWebDesignFirm')
+  for key,value in values.items():
+   if not isinstance(value,str):updated[key]=value;continue
+   # Retire promotional entries; an untranslated account/help label is preferable to a false community link.
+   if 'Discord' in key or 'GitHub' in key:continue
+   if 'copyright' in key.lower():updated[key]=value;continue
+   updated[display(key)]=display(value)
+  file.write_text(json.dumps(updated,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+ # Internal command IDs remain stable; only this previously missed visible label changes.
+ file=root/'crates/ui-egui/src/menus.rs'
+ if file.is_file():
+  text=file.read_text(encoding='utf-8').replace('"Join the community (Discord)..."','"Your account…"')
+  file.write_text(text,encoding='utf-8')

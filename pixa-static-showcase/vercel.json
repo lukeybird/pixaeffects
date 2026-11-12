@@ -1,6 +1,10 @@
 {
   "cleanUrls": true,
   "trailingSlash": false,
+  "framework": null,
+  "buildCommand": "echo Static showcase assets ready",
+  "installCommand": "echo No dependencies required",
+  "outputDirectory": "public",
   "headers": [
     {
       "source": "/pixa-showcase/(.*)",
@@ -11,9 +15,5 @@
         }
       ]
     }
-  ],
-  "framework": null,
-  "buildCommand": "echo Static showcase assets ready",
-  "installCommand": "echo No dependencies required",
-  "outputDirectory": "public"
+  ]
 }
