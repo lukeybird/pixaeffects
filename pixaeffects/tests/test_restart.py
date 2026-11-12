@@ -1,6 +1,7 @@
 """Exercise replacement/rollback with fake platform tools; not Apple acceptance."""
 from pathlib import Path
 import os
+import sys
 import subprocess
 import tempfile
 import unittest
@@ -26,6 +27,7 @@ elif cmd=='open':
 elif cmd=='rm': shutil.rmtree(args[-1])
 '''
 
+@unittest.skipIf(sys.platform == 'win32', 'Mac POSIX restart helper requires /bin/sh and executable Unix fixtures; not Windows updater acceptance')
 class RestartTests(unittest.TestCase):
  def run_case(self, fail):
   with tempfile.TemporaryDirectory() as temporary:
