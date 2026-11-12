@@ -36,6 +36,9 @@ def package(app_id, candidate=False):
   if app['id']=='pixafilm':
    info['NSMicrophoneUsageDescription']='PixaFilm uses the microphone to record voice-over onto the timeline.'
    info['LSApplicationCategoryType']='public.app-category.video'
+  if app['id']=='pixasound':
+   info['NSMicrophoneUsageDescription']='PixaSound uses the microphone to record audio.'
+   info['LSApplicationCategoryType']='public.app-category.music'
   (contents/'Info.plist').write_bytes(plistlib.dumps(info))
   icons=list((source/'assets/app-icon').rglob('*.icns'))
   if not icons:raise RuntimeError('No prepared Mac app icon')

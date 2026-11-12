@@ -8,7 +8,7 @@ class BundleValidation(unittest.TestCase):
   data={'CFBundleIdentifier':'com.aiwebdesignfirm.pixavector','CFBundleShortVersionString':'0.1.0','CFBundleExecutable':'pixavector'};data.update(changes)
   (contents/'Info.plist').write_bytes(plistlib.dumps(data));(contents/'MacOS/pixavector').write_bytes(b'candidate')
   return app
- def product(self):return {'bundle_id':'com.aiwebdesignfirm.pixavector','version':'0.1.0'}
+ def product(self):return {'id':'pixavector','bundle_id':'com.aiwebdesignfirm.pixavector','version':'0.1.0'}
  def test_correct_identity(self):
   with tempfile.TemporaryDirectory() as td:
    app=self.bundle(Path(td));self.assertEqual(validate_bundle(app,self.product()),app/'Contents/MacOS/pixavector')

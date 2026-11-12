@@ -3,14 +3,15 @@
 from pathlib import Path
 import argparse, hashlib, json, plistlib, shutil, subprocess, sys, tempfile
 ROOT=Path(__file__).resolve().parent.parent/'pixa-suite'
+AUDIO_PRODUCTS={'pixafilm','pixasound'}
 
 def validate_bundle(app,product):
  if app.suffix!='.app' or not app.is_dir():raise ValueError('Select an existing .app bundle')
  with (app/'Contents/Info.plist').open('rb') as f:info=plistlib.load(f)
  for field,expected in [('CFBundleIdentifier',product['bundle_id']),('CFBundleShortVersionString',product['version'])]:
   if info.get(field)!=expected:raise ValueError('Bundle identity/version does not match the product catalog: '+field)
- if product['id']=='pixafilm' and (not isinstance(info.get('NSMicrophoneUsageDescription'),str) or not info['NSMicrophoneUsageDescription'].strip()):
-  raise ValueError('PixaFilm needs NSMicrophoneUsageDescription before recording acceptance or signing; copy the purpose text from its prepared macOS Info.plist.in')
+ if product['id'] in AUDIO_PRODUCTS and (not isinstance(info.get('NSMicrophoneUsageDescription'),str) or not info['NSMicrophoneUsageDescription'].strip()):
+  raise ValueError(product.get('name',product['id'])+' needs NSMicrophoneUsageDescription before recording acceptance or signing; copy the purpose text from its prepared macOS Info.plist.in')
  executable=info.get('CFBundleExecutable')
  if not isinstance(executable,str) or Path(executable).name!=executable or executable in {'.','..',''}:raise ValueError('Invalid bundle executable')
  binary=app/'Contents/MacOS'/executable
@@ -31,11 +32,24 @@ def signing_command(identity,target,product,app,temporary):
  command=['/usr/bin/codesign','--force','--options','runtime','--timestamp','--sign',identity]
  # Voice-over needs audio input under the hardened runtime. Grant only that app
  # permission; do not disable library validation, signature checks or notarization.
- if product['id']=='pixafilm' and target==app:
-  entitlements=temporary/'pixafilm-audio.entitlements'
+ if product['id'] in AUDIO_PRODUCTS and target==app:
+  entitlements=temporary/(product['id']+'-audio.entitlements')
   entitlements.write_bytes(plistlib.dumps({'com.apple.security.device.audio-input':True}))
   command+=['--entitlements',entitlements]
  return command+[target]
+
+def preserve_before_notarization(app, archive, notices, output, name, product, archs):
+ # Persist the signed app and submission ZIP before the temporary directory is
+ # removed. No Apple service or notarization command may run in this mode.
+ destination=output/(name+'-signed-unnotarized')
+ if destination.exists():raise ValueError('Pre-notarization output already exists')
+ destination.mkdir()
+ run(['/usr/bin/ditto',app,destination/app.name])
+ shutil.copy2(archive,destination/'notarize.zip')
+ shutil.copytree(notices,destination/'Licenses')
+ report={'product':product['id'],'version':product['version'],'bundle_id':product['bundle_id'],'architectures':sorted(archs),'signed':True,'notarized':False,'published':False,'release_ready':False,'archive':'notarize.zip','archive_sha256':hashlib.sha256((destination/'notarize.zip').read_bytes()).hexdigest(),'note':'Stopped before Apple submission. Native acceptance, notarization, final DMG and release approval remain separate.'}
+ (destination/'pre-notarization.json').write_text(json.dumps(report,indent=2)+'\n')
+ return destination
 
 def main():
  p=argparse.ArgumentParser(description=__doc__)
@@ -45,6 +59,7 @@ def main():
  p.add_argument('--architecture',choices=['universal','arm64','x86_64'],default='universal')
  p.add_argument('--output',type=Path,required=True)
  p.add_argument('--notices',type=Path,help='Licenses folder from the matching package.py stage')
+ p.add_argument('--stop-before-notarization',action='store_true',help='Sign and verify locally, preserve the app and submission ZIP, then stop without contacting Apple notary service')
  args=p.parse_args()
  if sys.platform!='darwin':p.error('Signing must run on the Mac holding the private signing identity')
  products=json.loads((ROOT/'catalog.json').read_text())['apps']
@@ -73,6 +88,11 @@ def main():
   run(['/usr/bin/codesign','--verify','--deep','--strict','--verbose=2',app])
   archive=temporary/'notarize.zip'
   run(['/usr/bin/ditto','-c','-k','--keepParent',app,archive])
+  if args.stop_before_notarization:
+   destination=preserve_before_notarization(app,archive,notices,output,name,product,archs)
+   print('Signed but NOT notarized: '+str(destination))
+   print('Stopped before Apple submission; no public release or website change.')
+   return
   result=run(['/usr/bin/xcrun','notarytool','submit',archive,'--keychain-profile',args.profile,'--wait','--output-format','json'],capture=True)
   submission=json.loads(result.stdout)
   if submission.get('status')!='Accepted':raise RuntimeError('Apple did not accept this submission; inspect its notary log before continuing')
