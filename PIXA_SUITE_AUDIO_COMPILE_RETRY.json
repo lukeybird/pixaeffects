@@ -1,0 +1,38 @@
+{
+  "scope": "Linux Cargo checks with private scratch development headers; no interactive audio test",
+  "results": [
+    {
+      "platform": "linux",
+      "verification": "cargo-check",
+      "app": "PixaFilm",
+      "source_revision": "f4090d7b34a467a1bcabc91652d166a94f68dfbe",
+      "source_checks": "passed",
+      "errors": [],
+      "native_check": "passed",
+      "release_ready": false,
+      "log": "build-logs/pixafilm.log"
+    },
+    {
+      "platform": "linux",
+      "verification": "cargo-check",
+      "app": "PixaSound",
+      "source_revision": "ef58a90f4a418a282a15fc71d2e03c3d8e8f40fa",
+      "source_checks": "passed",
+      "errors": [],
+      "native_check": "passed",
+      "release_ready": false,
+      "log": "build-logs/pixasound.log"
+    },
+    {
+      "platform": "linux",
+      "verification": "cargo-check",
+      "app": "PixaDeck",
+      "source_revision": "0623b430324cf4c3d1962e6ae7885cf30c011c5e",
+      "source_checks": "passed",
+      "errors": [],
+      "native_check": "passed",
+      "release_ready": false,
+      "log": "build-logs/pixadeck.log"
+    }
+  ]
+}

@@ -6,7 +6,7 @@
     "runtime": "20 passed",
     "runtime_clippy": "passed -D warnings",
     "mac_updater_code": "compiled in pinned egui 0.37 harness; no macOS commands executed",
-    "linux_native_checks": "in progress; environment dependency failure in Film is not an application acceptance result"
+    "linux_native_checks": "14/14 passed; Film/Sound/Deck retried successfully with local ALSA/libudev/dbus development metadata"
   },
   "apps": [
     {
@@ -21,7 +21,8 @@
       "windows_linux_installation": "manual",
       "unsigned_candidate_packaging": "implemented-not-built-for-all-products",
       "apple_signing": "excluded-by-owner",
-      "complete": false
+      "complete": false,
+      "linux_cargo_check": "passed"
     },
     {
       "product": "pixafilm",
@@ -35,7 +36,8 @@
       "windows_linux_installation": "manual",
       "unsigned_candidate_packaging": "implemented-not-built-for-all-products",
       "apple_signing": "excluded-by-owner",
-      "complete": false
+      "complete": false,
+      "linux_cargo_check": "passed"
     },
     {
       "product": "pixalight",
@@ -49,7 +51,8 @@
       "windows_linux_installation": "manual",
       "unsigned_candidate_packaging": "implemented-not-built-for-all-products",
       "apple_signing": "excluded-by-owner",
-      "complete": false
+      "complete": false,
+      "linux_cargo_check": "passed"
     },
     {
       "product": "pixapdf",
@@ -63,7 +66,8 @@
       "windows_linux_installation": "manual",
       "unsigned_candidate_packaging": "implemented-not-built-for-all-products",
       "apple_signing": "excluded-by-owner",
-      "complete": false
+      "complete": false,
+      "linux_cargo_check": "passed"
     },
     {
       "product": "pixadesign",
@@ -77,7 +81,8 @@
       "windows_linux_installation": "manual",
       "unsigned_candidate_packaging": "implemented-not-built-for-all-products",
       "apple_signing": "excluded-by-owner",
-      "complete": false
+      "complete": false,
+      "linux_cargo_check": "passed"
     },
     {
       "product": "pixainterface",
@@ -91,7 +96,8 @@
       "windows_linux_installation": "manual",
       "unsigned_candidate_packaging": "implemented-not-built-for-all-products",
       "apple_signing": "excluded-by-owner",
-      "complete": false
+      "complete": false,
+      "linux_cargo_check": "passed"
     },
     {
       "product": "pixatexture",
@@ -105,7 +111,8 @@
       "windows_linux_installation": "manual",
       "unsigned_candidate_packaging": "implemented-not-built-for-all-products",
       "apple_signing": "excluded-by-owner",
-      "complete": false
+      "complete": false,
+      "linux_cargo_check": "passed"
     },
     {
       "product": "pixamaterial",
@@ -119,7 +126,8 @@
       "windows_linux_installation": "manual",
       "unsigned_candidate_packaging": "implemented-not-built-for-all-products",
       "apple_signing": "excluded-by-owner",
-      "complete": false
+      "complete": false,
+      "linux_cargo_check": "passed"
     },
     {
       "product": "pixaword",
@@ -133,7 +141,8 @@
       "windows_linux_installation": "manual",
       "unsigned_candidate_packaging": "implemented-not-built-for-all-products",
       "apple_signing": "excluded-by-owner",
-      "complete": false
+      "complete": false,
+      "linux_cargo_check": "passed"
     },
     {
       "product": "pixasound",
@@ -147,7 +156,8 @@
       "windows_linux_installation": "manual",
       "unsigned_candidate_packaging": "implemented-not-built-for-all-products",
       "apple_signing": "excluded-by-owner",
-      "complete": false
+      "complete": false,
+      "linux_cargo_check": "passed"
     },
     {
       "product": "pixadeck",
@@ -161,7 +171,8 @@
       "windows_linux_installation": "manual",
       "unsigned_candidate_packaging": "implemented-not-built-for-all-products",
       "apple_signing": "excluded-by-owner",
-      "complete": false
+      "complete": false,
+      "linux_cargo_check": "passed"
     },
     {
       "product": "pixacad",
@@ -175,7 +186,8 @@
       "windows_linux_installation": "manual",
       "unsigned_candidate_packaging": "implemented-not-built-for-all-products",
       "apple_signing": "excluded-by-owner",
-      "complete": false
+      "complete": false,
+      "linux_cargo_check": "passed"
     },
     {
       "product": "pixagrid",
@@ -189,7 +201,8 @@
       "windows_linux_installation": "manual",
       "unsigned_candidate_packaging": "implemented-not-built-for-all-products",
       "apple_signing": "excluded-by-owner",
-      "complete": false
+      "complete": false,
+      "linux_cargo_check": "passed"
     },
     {
       "product": "pixaanything",
@@ -203,7 +216,8 @@
       "windows_linux_installation": "manual",
       "unsigned_candidate_packaging": "implemented-not-built-for-all-products",
       "apple_signing": "excluded-by-owner",
-      "complete": false
+      "complete": false,
+      "linux_cargo_check": "passed"
     }
   ],
   "remaining": [
@@ -213,5 +227,33 @@
     "Implement remaining upstream feature gaps before claiming professional product completeness; PixaPDF explicitly marks multiple tool families planned.",
     "Windows/Linux automatic install/restart is not implemented.",
     "Owner excluded Apple and interactive verification; no suite public download enabled."
+  ],
+  "source_commit": "a1b529436c9707078803acfa7d1d01c0353e268b",
+  "mac_candidate_source": "c4c399c028ff68aa1d388e3c4ab57de9142bfb89",
+  "build_runs": {
+    "suite_checks": 43177274901,
+    "pixavector_unsigned_mac": 43177274325,
+    "pixashop_0_20_5": 43177940756,
+    "pixaeffects_0_1_2": 43177931931
+  },
+  "standalone_candidates": [
+    {
+      "product": "pixashop",
+      "version": "0.20.5",
+      "source": "ddadb03d3b7dd944e527acc3d4c44f925a2860c4",
+      "change": "Free-account activation wording and bundled manual; access guards unchanged",
+      "source_tests": "11 passed",
+      "installer_build": "queued",
+      "published": false
+    },
+    {
+      "product": "pixaeffects",
+      "version": "0.1.2",
+      "source": "3a708281c8e674ff2dad0af0624c5cf9ff77f840",
+      "change": "Free-account activation wording and bundled manual; access guards unchanged",
+      "source_tests": "9 passed",
+      "installer_build": "queued",
+      "published": false
+    }
   ]
 }

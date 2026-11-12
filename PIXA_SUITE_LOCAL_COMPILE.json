@@ -1,0 +1,161 @@
+{
+  "apps": [
+    {
+      "platform": "linux",
+      "verification": "cargo-check",
+      "app": "PixaVector",
+      "source_revision": "25cfa9d3cfdb3510c48f951d57562f0f7b8700cc",
+      "source_checks": "passed",
+      "errors": [],
+      "native_check": "passed",
+      "release_ready": false,
+      "log": "build-logs/pixavector.log"
+    },
+    {
+      "platform": "linux",
+      "verification": "cargo-check",
+      "app": "PixaFilm",
+      "source_revision": "f4090d7b34a467a1bcabc91652d166a94f68dfbe",
+      "source_checks": "passed",
+      "errors": [],
+      "native_check": "passed",
+      "release_ready": false,
+      "log": "build-logs/pixafilm.log"
+    },
+    {
+      "platform": "linux",
+      "verification": "cargo-check",
+      "app": "PixaLight",
+      "source_revision": "e9c29e2c5c5dd1f86cc98677b5dc389f6612fcac",
+      "source_checks": "passed",
+      "errors": [],
+      "native_check": "passed",
+      "release_ready": false,
+      "log": "build-logs/pixalight.log"
+    },
+    {
+      "platform": "linux",
+      "verification": "cargo-check",
+      "app": "PixaPDF",
+      "source_revision": "efd7c9fc245d1660388208a37df3d3b5036584ba",
+      "source_checks": "passed",
+      "errors": [],
+      "native_check": "passed",
+      "release_ready": false,
+      "log": "build-logs/pixapdf.log"
+    },
+    {
+      "platform": "linux",
+      "verification": "cargo-check",
+      "app": "PixaDesign",
+      "source_revision": "32a1dbc7345fe14e010a36c691f1095562c387a9",
+      "source_checks": "passed",
+      "errors": [],
+      "native_check": "passed",
+      "release_ready": false,
+      "log": "build-logs/pixadesign.log"
+    },
+    {
+      "platform": "linux",
+      "verification": "cargo-check",
+      "app": "PixaInterface",
+      "source_revision": "a2e87433d8bda2b0c909587da08cb27c51e3b17e",
+      "source_checks": "passed",
+      "errors": [],
+      "native_check": "passed",
+      "release_ready": false,
+      "log": "build-logs/pixainterface.log"
+    },
+    {
+      "platform": "linux",
+      "verification": "cargo-check",
+      "app": "PixaTexture",
+      "source_revision": "f5e41e759f63f68993eafa855f1fd585de9ec289",
+      "source_checks": "passed",
+      "errors": [],
+      "native_check": "passed",
+      "release_ready": false,
+      "log": "build-logs/pixatexture.log"
+    },
+    {
+      "platform": "linux",
+      "verification": "cargo-check",
+      "app": "PixaMaterial",
+      "source_revision": "29857f653d894d7c177d56eca5e3305a0709808b",
+      "source_checks": "passed",
+      "errors": [],
+      "native_check": "passed",
+      "release_ready": false,
+      "log": "build-logs/pixamaterial.log"
+    },
+    {
+      "platform": "linux",
+      "verification": "cargo-check",
+      "app": "PixaWord",
+      "source_revision": "d40d1b27181b61990c84c75f77d5fd23ef81d452",
+      "source_checks": "passed",
+      "errors": [],
+      "native_check": "passed",
+      "release_ready": false,
+      "log": "build-logs/pixaword.log"
+    },
+    {
+      "platform": "linux",
+      "verification": "cargo-check",
+      "app": "PixaSound",
+      "source_revision": "ef58a90f4a418a282a15fc71d2e03c3d8e8f40fa",
+      "source_checks": "passed",
+      "errors": [],
+      "native_check": "passed",
+      "release_ready": false,
+      "log": "build-logs/pixasound.log"
+    },
+    {
+      "platform": "linux",
+      "verification": "cargo-check",
+      "app": "PixaDeck",
+      "source_revision": "0623b430324cf4c3d1962e6ae7885cf30c011c5e",
+      "source_checks": "passed",
+      "errors": [],
+      "native_check": "passed",
+      "release_ready": false,
+      "log": "build-logs/pixadeck.log"
+    },
+    {
+      "platform": "linux",
+      "verification": "cargo-check",
+      "app": "PixaCAD",
+      "source_revision": "a3d9348f63c2ad35391cc93980dc7ee7366f2ad6",
+      "source_checks": "passed",
+      "errors": [],
+      "native_check": "passed",
+      "release_ready": false,
+      "log": "build-logs/pixacad.log"
+    },
+    {
+      "platform": "linux",
+      "verification": "cargo-check",
+      "app": "PixaGrid",
+      "source_revision": "e9addf52fe68847e6c1310fcfa5d42b7aa8b9650",
+      "source_checks": "passed",
+      "errors": [],
+      "native_check": "passed",
+      "release_ready": false,
+      "log": "build-logs/pixagrid.log"
+    },
+    {
+      "platform": "linux",
+      "verification": "cargo-check",
+      "app": "PixaAnything",
+      "source_revision": "2e7f27631be78d499ca61d29f5cdee701e71b54f",
+      "source_checks": "passed",
+      "errors": [],
+      "native_check": "passed",
+      "release_ready": false,
+      "log": "build-logs/pixaanything.log"
+    }
+  ],
+  "complete": true,
+  "scope": "Linux Cargo checks only, current source implementation a1b529436c9707078803acfa7d1d01c0353e268b. Audio apps retried with private scratch ALSA/libudev/dbus development metadata. No GUI acceptance or installers implied.",
+  "source_commit": "a1b529436c9707078803acfa7d1d01c0353e268b"
+}
