@@ -5,6 +5,24 @@ ROOT=Path(__file__).resolve().parent
 sys.path.insert(0,str(ROOT))
 import manuals
 class CompletionTests(unittest.TestCase):
+ def test_source_changed_during_build_cannot_get_success_receipt(self):
+  import os,shutil
+  with tempfile.TemporaryDirectory() as td:
+   root=Path(td);shutil.copy2(ROOT/'build.py',root/'build.py')
+   source=root/'sources/fixture';source.mkdir(parents=True)
+   subprocess.run(['git','init',str(source)],capture_output=True,check=True)
+   (source/'.pixa-prepared.json').write_text('{}')
+   code=source/'main.rs';code.write_text('before')
+   (root/'catalog.json').write_text(json.dumps({'apps':[{'id':'pixafixture','source':'fixture','package':'fixture','revision':'a'*40,'rust_toolchain':'1.95.0','name':'Fixture'}]}))
+   fake=root/'bin';fake.mkdir();cargo=fake/'cargo'
+   binary=root/'target/release'/('fixture.exe' if sys.platform=='win32' else 'fixture')
+   if sys.platform=='win32':self.skipTest('Synthetic executable fixture uses a Unix shebang')
+   cargo.write_text('#!'+sys.executable+'\nfrom pathlib import Path\np=Path('+repr(str(binary))+');p.parent.mkdir(parents=True);p.write_bytes(b"binary")\nPath('+repr(str(code))+').write_text("changed during compilation")\n')
+   cargo.chmod(0o755);env=os.environ.copy();env['PATH']=str(fake)+os.pathsep+env.get('PATH','')
+   result=subprocess.run([sys.executable,str(root/'build.py'),'pixafixture','--release'],env=env,capture_output=True,text=True)
+   self.assertNotEqual(result.returncode,0)
+   self.assertIn('Source changed while building',result.stderr)
+   self.assertFalse((root/'build-logs/pixafixture-release.json').exists())
  def test_control_guides_fail_when_control_disappears(self):
   app={'id':'pixalight','source':'lightcraft'}
   with tempfile.TemporaryDirectory() as td:

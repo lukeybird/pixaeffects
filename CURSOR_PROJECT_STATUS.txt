@@ -1,3 +1,9 @@
+SOURCE SAFETY FOLLOW-UP — 2026-11-12
+Fixed a contradictory updater result message: a newer release now says it is available; an empty feed says no newer release. Two headless updater-template tests passed with the pinned egui 0.37 (including the Mac code path compiled without executing Mac commands). Candidate build tooling now captures source digest before compilation and refuses a success receipt if it changes while compiling; a regression test proves this refusal. Python suite now 23 passed/1 skipped. These source changes need their own current CI result; prior 14/14 Linux checks remain evidence for a1b5294, not blanket approval of later source.
+The PixaVector low-memory Linux environment killed the first normal optimized engine compilation with SIGKILL; no installer was produced. A lower-memory retry is being prepared. Existing source, customer files, downloads and release settings were not deleted or changed. The existing Mac selector receives a whitespace-only trigger for the corrected source; older Mac run 43177274325 remains a candidate for its own c4c399c source, not this newer patch. Do not call an old/partial/canceled matrix current or all-green. Apple signing and interactive verification remain excluded.
+
+PRIOR HISTORY (PRESERVED)
+
 LIVE COMPILE CHECKPOINT — 2026-11-12
 The website now records current Linux compilation passed for all 14 suite apps, with customer packaging and verification still pending. Marketing deployment dpl_BcNCSTSyHTpLRBsSa1biwcvgTE7P; routing af021e09-0ef2-40e6-aad5-b9daaa2ba02d; routing rollback bafab3e1-b766-4d50-ad74-d781799ca3c8. Public Vector progress was expanded and the passed Linux subcheck verified visible. Manuals and their links remain live. Main backend dpl_DSsgnFjuJGtsa2N8wmkjjtMKGajG, billing and download settings are unchanged. New Shop 0.20.5 / Effects 0.1.2 free-wording candidate builds are distinguished from existing published downloads.
 

@@ -2,10 +2,10 @@
   "updated_at": "2026-11-12T07:34:31.190926+00:00",
   "scope": "Source implementation checkpoint, not installer or professional-product feature-completeness approval.",
   "tests": {
-    "python": "22 passed, 1 skipped",
+    "python": "23 passed, 1 skipped",
     "runtime": "20 passed",
     "runtime_clippy": "passed -D warnings",
-    "mac_updater_code": "compiled in pinned egui 0.37 harness; no macOS commands executed",
+    "mac_updater_code": "Compiled with pinned egui 0.37; 2 headless template tests passed; no native macOS commands executed",
     "linux_native_checks": "14/14 passed; Film/Sound/Deck retried successfully with local ALSA/libudev/dbus development metadata"
   },
   "apps": [
@@ -255,5 +255,10 @@
       "installer_build": "queued",
       "published": false
     }
-  ]
+  ],
+  "followup_patch": {
+    "updater_message": "Available-release and empty-feed responses now have distinct tested messages",
+    "build_receipt": "Source digest captured before build and compared afterward; concurrent source changes cannot receive a success receipt",
+    "linux_release": "First normal-optimization PixaVector attempt was SIGKILLed; no installer produced. Lower-memory retry pending."
+  }
 }

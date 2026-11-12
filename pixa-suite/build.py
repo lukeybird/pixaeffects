@@ -28,11 +28,13 @@ if __name__=='__main__':
  receipt=logs/(app['id']+'-release.json')
  if receipt.exists():receipt.unlink()
  env=os.environ.copy();env['CARGO_TARGET_DIR']=str(ROOT/'target');env['PIXA_ACCESS_MODE']=args.access_mode
+ initial_digest=source_digest(source)
  command=['cargo','+'+app['rust_toolchain'],'build','-p',app['package']]+(['--release'] if args.release else [])
  with (logs/(app['id']+'-build.log')).open('w') as log:
   result=subprocess.run(command,cwd=source,env=env,stdout=log,stderr=subprocess.STDOUT)
  if result.returncode:raise SystemExit(result.returncode)
+ if source_digest(source)!=initial_digest:raise RuntimeError('Source changed while building; no successful receipt was written. Rebuild from the current prepared source.')
  if args.release:
   binary=ROOT/'target/release'/(app['package']+('.exe' if sys.platform=='win32' else ''))
-  receipt.write_text(json.dumps({'app':app['id'],'revision':app['revision'],'source_digest':source_digest(source),'sha256':hashlib.sha256(binary.read_bytes()).hexdigest(),'platform':sys.platform,'access_mode':args.access_mode,'signed':False,'release_ready':False},indent=2)+'\n', encoding="utf-8")
+  receipt.write_text(json.dumps({'app':app['id'],'revision':app['revision'],'source_digest':initial_digest,'sha256':hashlib.sha256(binary.read_bytes()).hexdigest(),'platform':sys.platform,'access_mode':args.access_mode,'signed':False,'release_ready':False},indent=2)+'\n', encoding="utf-8")
  print('Built '+app['name']+'; platform QA and release gates still apply.')

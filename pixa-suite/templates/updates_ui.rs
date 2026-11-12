@@ -25,7 +25,7 @@ impl Updates {
  }
  pub fn tick(&mut self,ctx:&egui::Context){
   if let Some(rx)=&self.checking{
-   match rx.try_recv(){Ok(result)=>{self.checking=None;match result{Ok(r)=>{self.version=r.map(|r|r.version);self.message="No newer published Pixa update is available.".into();},Err(e)=>self.message=e}},Err(std::sync::mpsc::TryRecvError::Disconnected)=>{self.checking=None;self.message="Update check stopped.".into();},Err(_)=>ctx.request_repaint_after(std::time::Duration::from_millis(250))}
+   match rx.try_recv(){Ok(result)=>{self.checking=None;match result{Ok(r)=>{self.version=r.map(|r|r.version);self.message=if self.version.is_some(){"A newer Pixa release is available."}else{"No newer published Pixa update is available."}.into();},Err(e)=>self.message=e}},Err(std::sync::mpsc::TryRecvError::Disconnected)=>{self.checking=None;self.message="Update check stopped.".into();},Err(_)=>ctx.request_repaint_after(std::time::Duration::from_millis(250))}
   }
   #[cfg(target_os="macos")] {
    if let Some(rx)=&self.downloading{
@@ -56,5 +56,22 @@ impl Updates {
  }
  pub fn on_exit(&mut self){
   #[cfg(target_os="macos")] if self.restart_requested{if let Some(ready)=self.ready.take(){if let Err(error)=installer::restart(ready){eprintln!("@NAME@ update was not installed: {error}");}}}
+ }
+}
+#[cfg(test)]
+mod tests {
+ use super::*;
+ #[test]
+ fn available_release_and_empty_feed_have_distinct_messages() {
+  let mut updates=Updates::default();
+  let(tx,rx)=std::sync::mpsc::channel();updates.checking=Some(rx);
+  assert!(tx.send(Ok(Some(pixa_runtime::release_feed::Release{version:"0.2.0".into()}))).is_ok());
+  updates.tick(&egui::Context::default());
+  assert_eq!(updates.version.as_deref(),Some("0.2.0"));
+  assert_eq!(updates.message,"A newer Pixa release is available.");
+  let(tx,rx)=std::sync::mpsc::channel();updates.checking=Some(rx);
+  assert!(tx.send(Ok(None)).is_ok());updates.tick(&egui::Context::default());
+  assert!(updates.version.is_none());
+  assert_eq!(updates.message,"No newer published Pixa update is available.");
  }
 }
