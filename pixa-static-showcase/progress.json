@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "verified_at": "2026-11-12T01:32:49.397622+00:00",
+  "verified_at": "2026-11-12T05:58:14.341680+00:00",
   "legend": "Green = verified passed. Red = pending, incomplete or not yet verified. Progress is evidence-based, not a release guarantee.",
   "steps": [
     "Source setup",
@@ -373,56 +373,88 @@
       {
         "label": "Complete Pixa branding",
         "passed": false,
-        "note": "Nine source branding checks passed for 0.1.1. Rebuilt installed-app branding remains unverified.",
+        "note": "Source branding checks passed and 0.1.1 rebuilt on all three platforms. Installed UI inspection remains pending.",
         "checks": [
           {
-            "label": "Source branding cleanup",
+            "label": "Source branding audit",
             "passed": true,
-            "note": "Dormant community/repository commands, translations and publisher metadata corrected."
+            "note": "Nine product/branding checks passed; legal credits and original E icon retained."
           },
           {
-            "label": "Installed application audit",
+            "label": "Rebuilt product source",
+            "passed": true,
+            "note": "Mac, Windows and Linux builds passed on the audited 0.1.1 source."
+          },
+          {
+            "label": "Installed application branding",
             "passed": false,
-            "note": "New build is still running; verify its UI and installer after it finishes."
+            "note": "Inspect the packaged menus, dialogs, translated UI and installer before release approval."
           }
         ]
       },
       {
         "label": "Manual, tutorials, activation & updater",
         "passed": false,
-        "note": "Complete help, activation and own-feed updater verification remains pending.",
+        "note": "Manual, all 31 tool explanations, activation and Mac updater code are implemented. End-to-end acceptance is still required.",
         "checks": [
           {
-            "label": "Offline help and tour source",
+            "label": "Manual and every-tool tutorial",
             "passed": true,
-            "note": "Product help and tutorial implementation exists; native tests are running."
+            "note": "12 manual sections and descriptions for all 31 registered tools; native help/tour tests passed on three platforms."
           },
           {
-            "label": "Help, activation and own-feed acceptance",
+            "label": "Activation and access regression tests",
+            "passed": true,
+            "note": "Native access tests passed on Mac, Windows and Linux. The live activation page is reachable."
+          },
+          {
+            "label": "PixaEffects-owned Mac updater implementation",
+            "passed": true,
+            "note": "Own GitHub feed, checksum, publisher/bundle/Gatekeeper verification and replacement/restart helper exist."
+          },
+          {
+            "label": "Real activation, recovery and update/restart acceptance",
             "passed": false,
-            "note": "Complete packaged-app testing and updater install/restart are not yet verified."
+            "note": "Packaged-app sign-in, editing and actual signed-release installation have not been verified. No stable PixaEffects release is published yet."
           }
         ]
       },
       {
         "label": "Compile & package installers",
-        "passed": false,
-        "note": "0.1.1 is building on Mac, Windows and Linux. Previous 0.1.0 artifacts do not verify this branding revision."
+        "passed": true,
+        "note": "0.1.1 testing installers built successfully for Mac (arm64 + Intel), Windows and Linux. These are unsigned test artifacts, not approved public releases.",
+        "checks": [
+          {
+            "label": "Three platform jobs",
+            "passed": true,
+            "note": "Run 43132981449 completed successfully on source 83df9fc5."
+          },
+          {
+            "label": "Testing packages uploaded",
+            "passed": true,
+            "note": "Universal Mac DMG, Windows portable ZIP and Linux archive are present and unexpired."
+          }
+        ],
+        "evidence": {
+          "build_run": 43132981449,
+          "source_sha": "83df9fc5c14493d6f7e909e2eb3bf7ae065fd374",
+          "kind": "unsigned-testing-only"
+        }
       },
       {
         "label": "Application & update testing",
         "passed": false,
-        "note": "Full editor, access and install/restart update acceptance is not yet verified."
+        "note": "Packaged editor launch, activation, import, animation, save/reopen, render/export, and signed update/restart still require hands-on acceptance."
       },
       {
         "label": "Apple signing & notarization",
         "passed": false,
-        "note": "Verified signed/notarized Mac release remains pending."
+        "note": "0.1.1 Mac candidate awaits Developer ID signing, Apple notarization, stapling and Gatekeeper verification."
       },
       {
         "label": "Verified website download",
         "passed": false,
-        "note": "Customer download remains Coming soon."
+        "note": "Coming soon until the signed release and customer download have been verified."
       }
     ],
     "pixafilm": [

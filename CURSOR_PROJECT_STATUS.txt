@@ -1,3 +1,9 @@
+PIXAEFFECTS LIVE STATUS — 2026-11-12
+0.1.1 source 83df9fc5 passed all three platform jobs in run 43132981449. Mac universal DMG, Windows portable ZIP and Linux archive are uploaded testing artifacts, not signed public releases. Manual coverage is 12 sections + all 31 tools, with native manual/tour and access tests passed. Source product/branding checks: 9 passed. Own-feed Mac updater is implemented; real signed update/restart acceptance remains unverified. Public activation page responds 200, device GET 405; end-to-end account activation remains unverified. No GitHub releases exist.
+Live /products and /products/pixaeffects now show 2/7 full stages verified and granular source/native-test checkpoints, with testing/Apple signing/publication still pending. Download remains Coming soon. See pixaeffects-product root PIXA_EFFECTS_RELEASE_STATUS.json and CURSOR_PIXAEFFECTS_0_1_1_ACCEPTANCE.txt for exact installer hashes and Mac test/signing handoff. Billing and Shop downloads unchanged.
+
+PRIOR HISTORY (PRESERVED)
+
 BUILD CHECKPOINT — 2026-11-12
 Source patch pushed: 2806ab21584fb7a68b0b45dd280be7159adbbe59.
 Fresh native checks run 43135602859 is queued; fresh PixaVector universal Mac candidate run 43135602290 is in progress. No result claimed yet. The existing Mac workflow strips whitespace in mac-release.txt; selected product remains PixaVector. Do not rerun/cancel jobs.
