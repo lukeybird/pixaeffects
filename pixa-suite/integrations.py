@@ -1,6 +1,6 @@
 """Install shared desktop modules; only verified native copy commands become recovery pilots."""
 from pathlib import Path
-import json, os
+import json, os, re
 from manuals import guide
 ROOT=Path(__file__).resolve().parent
 PILOTS={'pixafilm','pixatexture','pixadesign','pixadeck','pixavector','pixagrid','pixaword','pixapdf','pixamaterial','pixacad','pixalight','pixasound','pixainterface','pixaanything'}
@@ -14,14 +14,14 @@ def install(root,app):
  brand(root,app)
  main=root/'apps'/app['source']/'src/main.rs'
  editor={'pixafilm':'filmcraft_ui_egui::FilmcraftApp','pixatexture':'crate::Shell','pixadesign':'crate::App','pixadeck':'crate::App','pixavector':'crate::App','pixagrid':'crate::App','pixaword':'crate::App','pixapdf':'pdfcraft_ui_egui::PixaPDFApp','pixamaterial':'materialcraft_ui_egui::PixaMaterialApp','pixacad':'crate::App','pixalight':'crate::App','pixasound':'crate::App','pixainterface':'crate::App','pixaanything':'craft_anything_ui_egui::CraftApp'}.get(app['id'],'dyn eframe::App')
- on_exit='fn on_exit(&mut self){eframe::App::on_exit(self.inner.as_mut());}'
- if app['source'] in {'lightcraft','pdfcraft'}:on_exit='fn on_exit(&mut self,gl:Option<&eframe::glow::Context>){eframe::App::on_exit(self.inner.as_mut(),gl);}'
+ on_exit='fn on_exit(&mut self){self.updates.on_exit();eframe::App::on_exit(self.inner.as_mut());}'
+ if app['source'] in {'lightcraft','pdfcraft'}:on_exit='fn on_exit(&mut self,gl:Option<&eframe::glow::Context>){self.updates.on_exit();eframe::App::on_exit(self.inner.as_mut(),gl);}'
  text=(ROOT/'templates/shell.rs').read_text(encoding='utf-8')
  for key,value in {'NAME':app['name'],'ID':app['id'],'EDITOR_TYPE':editor,'ON_EXIT':on_exit}.items():text=text.replace('@'+key+'@',value)
  if app['id']=='pixaanything':text=text.replace('egui::Id::unique(','egui::Id::new(')
  (main.parent/'pixa_shell.rs').write_text(text,encoding='utf-8')
- for template,destination in [('account_ui.rs','pixa_account.rs'),('help_ui.rs','pixa_help.rs')]:
-  text=(ROOT/'templates'/template).read_text(encoding='utf-8').replace('@NAME@',app['name']).replace('@ID@',app['id'])
+ for template,destination in [('account_ui.rs','pixa_account.rs'),('help_ui.rs','pixa_help.rs'),('updater.rs','pixa_updater.rs'),('updates_ui.rs','pixa_updates.rs'),('restart.sh','pixa_restart.sh')]:
+  text=(ROOT/'templates'/template).read_text(encoding='utf-8').replace('@NAME@',app['name']).replace('@ID@',app['id']).replace('@BUNDLE@',app['bundle_id']).replace('@VERSION@',app['version'])
   if app['id']=='pixaanything':text=text.replace('egui::Id::unique(','egui::Id::new(')
   (main.parent/destination).write_text(text,encoding='utf-8')
  (main.parent/'pixa-guide.json').write_text(json.dumps(guide(app,root),indent=2)+'\n',encoding='utf-8')
@@ -62,6 +62,7 @@ def install(root,app):
  runtime_path=dependency_path(ROOT/'runtime',manifest.parent)
  if 'pixa-runtime =' not in text:text=text.replace('[dependencies]','[dependencies]\npixa-runtime = { path = '+json.dumps(runtime_path)+' }',1)
  if app['id']=='pixapdf' and 'rfd =' not in text:text=text.replace('[dependencies]','[dependencies]\nrfd = { workspace = true }',1)
+ if not re.search(r'(?m)^serde_json(?:\.workspace)?\s*=',text):text=text.replace('[dependencies]','[dependencies]\nserde_json = { workspace = true }',1)
  manifest.write_text(text,encoding='utf-8')
  text=main.read_text(encoding='utf-8')
  if app['id']=='pixafilm' and 'if pixa_shell::subscription_build()' not in text:
@@ -105,7 +106,6 @@ def install(root,app):
    handler='            if url=="pixa:manual" || url=="pixa:tool-tour" { ctx.data_mut(|d|d.insert_temp(egui::Id::unique("pixa-help-request"),url));continue; }\n'
    app_file.write_text(text.replace(marker,handler+marker,1),encoding='utf-8')
   commands=root/'crates/ui-egui/src/menus/ui_commands.rs';text=commands.read_text(encoding='utf-8')
-  import re
   text=re.sub(r'\("help.github", "[^"]+", None, "[^"]+"\)', '("help.github", "PixaDesign Manual…", None, "{} — opens the offline manual")',text)
   text=re.sub(r'\("help.appPage", "[^"]+", None, "[^"]+"\)', '("help.appPage", "Tool tutorial…", None, "{} — explains every toolbar tool without changing the document")',text)
   commands.write_text(text,encoding='utf-8')

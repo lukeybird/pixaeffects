@@ -1,0 +1,101 @@
+{
+  "schema_version": 1,
+  "product": "pixadeck",
+  "name": "PixaDeck",
+  "title": "PixaDeck User Manual",
+  "scope": "Product workflows, account access, recovery and updates. Source-backed tool tours are included where a registered tool catalog is connected; this is not a complete reference for every editor command.",
+  "chapters": [
+    {
+      "title": "Start a first project",
+      "body": "Create a short presentation with a title slide and one content slide."
+    },
+    {
+      "title": "Make a first edit",
+      "body": "Add text and images with a clear reading order. Keep each slide focused on one main point."
+    },
+    {
+      "title": "Keep your work organized",
+      "body": "Review slide order and maintain consistent typography and spacing. Check any media you add on the machine that will present it."
+    },
+    {
+      "title": "Save and export",
+      "body": "Save the editable presentation and test its presentation view. Review any exported PDF or images before distributing them. If the device access refresh fails, keep the app open and use Save recovery copy to choose a destination. Reconnect before closing if you have unfinished text fields or background operations. Open the recovered native files in the editor after reconnecting; retain the original files."
+    },
+    {
+      "title": "Your account",
+      "body": "Use Your account in the Pixa footer to connect this device. Pixa is free early access with no card requirement and no scheduled account expiration. Only approve the code displayed on your own device. Device access refreshes online; a disconnected, revoked or signed-out device must reconnect. Your files remain local."
+    },
+    {
+      "title": "Updates",
+      "body": "Use Updates in the Pixa footer to check the Pixa publisher feed. On Mac, download the candidate, save your work and choose Install and restart. The app checks the installer digest, Apple publisher signature, bundle identity and Gatekeeper before replacement. A canceled editor-close prompt cancels the pending restart. Windows and Linux open the Pixa download page. No update is offered until a matching publisher release exists."
+    },
+    {
+      "title": "Find your way around",
+      "body": "The menu bar and editor panels contain the main controls. Use the existing workspace controls to show a hidden panel. Manual and Quick tour in the Pixa footer reopen this help without changing the project."
+    },
+    {
+      "title": "Undo and safe experiments",
+      "body": "Use Undo to reverse a normal document edit, and Redo to restore it. Keep an original project or duplicate before destructive operations. Undo does not reverse an external file deletion, a published upload or every background operation."
+    },
+    {
+      "title": "Linked files and portability",
+      "body": "An editable project may refer to media, fonts, textures or other external files. Keep those resources alongside your project in a stable folder. Copy the complete folder when moving computers and reopen it before removing the original."
+    },
+    {
+      "title": "Working with another application",
+      "body": "Save a native editable copy before exporting an interchange format. Features such as effects, fonts and linked resources may differ in another application. Reopen exported files in the destination application before relying on them."
+    },
+    {
+      "title": "Recovery and backups",
+      "body": "Save regularly and keep a separate backup of important projects and original media. Recovery copies contain committed project state; unfinished text fields, external files and background tasks may need separate attention. Restore into a new project or folder rather than overwriting the original."
+    },
+    {
+      "title": "Troubleshooting",
+      "body": "For missing content, check the active document, selected object, visible panels, layers and linked-file paths. For account problems, reconnect in Your account. For failed updates, keep the existing application and use the verified Pixa download page; do not disable operating-system security checks."
+    }
+  ],
+  "tour": [
+    {
+      "title": "Start a first project",
+      "body": "Create a short presentation with a title slide and one content slide."
+    },
+    {
+      "title": "Make a first edit",
+      "body": "Add text and images with a clear reading order. Keep each slide focused on one main point."
+    },
+    {
+      "title": "Keep your work organized",
+      "body": "Review slide order and maintain consistent typography and spacing. Check any media you add on the machine that will present it."
+    },
+    {
+      "title": "Save and export",
+      "body": "Save the editable presentation and test its presentation view. Review any exported PDF or images before distributing them. If the device access refresh fails, keep the app open and use Save recovery copy to choose a destination. Reconnect before closing if you have unfinished text fields or background operations. Open the recovered native files in the editor after reconnecting; retain the original files."
+    }
+  ],
+  "tools": [
+    {
+      "title": "Select and transform",
+      "body": "Use Select to choose objects on a slide. Drag a selected object to move it; use its handles to resize or rotate. Check which object is selected before deleting or formatting."
+    },
+    {
+      "title": "Preset shapes",
+      "body": "Choose a shape preset and draw it on the slide. Adjust size, fill and outline after insertion. Use text boxes for independent text rather than drawing individual letters."
+    },
+    {
+      "title": "Text boxes",
+      "body": "Create a text box to add editable slide text. Enter text, then leave text editing to move or resize the whole box. A text caret and an object selection act on different things."
+    },
+    {
+      "title": "Pen, highlighter and eraser",
+      "body": "Use Ink pen or highlighter to draw strokes; use the ink eraser to remove strokes. These are slide objects, so inspect the result in slideshow view before presenting."
+    },
+    {
+      "title": "Edit points",
+      "body": "Use Edit Points on a suitable shape to adjust vertices and curve handles. Keep a copy before extensive path edits, and undo if the outline stops matching your intent."
+    },
+    {
+      "title": "Tables",
+      "body": "Drag table column or row boundaries to change their size. Edit cell text separately; resizing a table is different from scaling a screenshot of it."
+    }
+  ]
+}

@@ -1,0 +1,537 @@
+{
+  "schema_version": 1,
+  "product": "pixavector",
+  "name": "PixaVector",
+  "title": "PixaVector User Manual",
+  "scope": "Product workflows, account access, recovery and updates. Source-backed tool tours are included where a registered tool catalog is connected; this is not a complete reference for every editor command.",
+  "chapters": [
+    {
+      "title": "Start a first project",
+      "body": "Start with a simple shape or a copy of an existing vector document."
+    },
+    {
+      "title": "Make a first edit",
+      "body": "Use selection to choose an object, then adjust its position, shape, fill and stroke. Keep separate objects for elements you may want to change later."
+    },
+    {
+      "title": "Keep your work organized",
+      "body": "Use layers and groups to keep related artwork together. Check object order when one shape hides another."
+    },
+    {
+      "title": "Save and export",
+      "body": "Keep an editable project copy. Export a separate copy in the format needed by the person or service receiving your artwork. If the device access refresh fails, keep the app open and use Save recovery copy to choose a destination. Reconnect before closing if you have unfinished text fields or background operations. Open the recovered native files in the editor after reconnecting; retain the original files."
+    },
+    {
+      "title": "Your account",
+      "body": "Use Your account in the Pixa footer to connect this device. Pixa is free early access with no card requirement and no scheduled account expiration. Only approve the code displayed on your own device. Device access refreshes online; a disconnected, revoked or signed-out device must reconnect. Your files remain local."
+    },
+    {
+      "title": "Updates",
+      "body": "Use Updates in the Pixa footer to check the Pixa publisher feed. On Mac, download the candidate, save your work and choose Install and restart. The app checks the installer digest, Apple publisher signature, bundle identity and Gatekeeper before replacement. A canceled editor-close prompt cancels the pending restart. Windows and Linux open the Pixa download page. No update is offered until a matching publisher release exists."
+    },
+    {
+      "title": "Find your way around",
+      "body": "The menu bar and editor panels contain the main controls. Use the existing workspace controls to show a hidden panel. Manual and Quick tour in the Pixa footer reopen this help without changing the project."
+    },
+    {
+      "title": "Undo and safe experiments",
+      "body": "Use Undo to reverse a normal document edit, and Redo to restore it. Keep an original project or duplicate before destructive operations. Undo does not reverse an external file deletion, a published upload or every background operation."
+    },
+    {
+      "title": "Linked files and portability",
+      "body": "An editable project may refer to media, fonts, textures or other external files. Keep those resources alongside your project in a stable folder. Copy the complete folder when moving computers and reopen it before removing the original."
+    },
+    {
+      "title": "Working with another application",
+      "body": "Save a native editable copy before exporting an interchange format. Features such as effects, fonts and linked resources may differ in another application. Reopen exported files in the destination application before relying on them."
+    },
+    {
+      "title": "Recovery and backups",
+      "body": "Save regularly and keep a separate backup of important projects and original media. Recovery copies contain committed project state; unfinished text fields, external files and background tasks may need separate attention. Restore into a new project or folder rather than overwriting the original."
+    },
+    {
+      "title": "Troubleshooting",
+      "body": "For missing content, check the active document, selected object, visible panels, layers and linked-file paths. For account problems, reconnect in Your account. For failed updates, keep the existing application and use the verified Pixa download page; do not disable operating-system security checks."
+    }
+  ],
+  "tour": [
+    {
+      "title": "Start a first project",
+      "body": "Start with a simple shape or a copy of an existing vector document."
+    },
+    {
+      "title": "Make a first edit",
+      "body": "Use selection to choose an object, then adjust its position, shape, fill and stroke. Keep separate objects for elements you may want to change later."
+    },
+    {
+      "title": "Keep your work organized",
+      "body": "Use layers and groups to keep related artwork together. Check object order when one shape hides another."
+    },
+    {
+      "title": "Save and export",
+      "body": "Keep an editable project copy. Export a separate copy in the format needed by the person or service receiving your artwork. If the device access refresh fails, keep the app open and use Save recovery copy to choose a destination. Reconnect before closing if you have unfinished text fields or background operations. Open the recovered native files in the editor after reconnecting; retain the original files."
+    }
+  ],
+  "tools": [
+    {
+      "title": "Selection Tool",
+      "body": "Select and transform whole objects. Drag a selection boundary or use the properties panel for exact values. Default shortcut: V. Custom keymaps may differ.",
+      "tool_id": "selection"
+    },
+    {
+      "title": "Direct Selection Tool",
+      "body": "Select individual anchor points or path segments for precise shape edits. Default shortcut: A. Custom keymaps may differ.",
+      "tool_id": "directSelection"
+    },
+    {
+      "title": "Group Selection Tool",
+      "body": "Select an object within a group without ungrouping the artwork.",
+      "tool_id": "groupSelection"
+    },
+    {
+      "title": "Magic Wand Tool",
+      "body": "Select objects with matching visual attributes, using the tool's tolerance settings. Default shortcut: Y. Custom keymaps may differ.",
+      "tool_id": "magicWand"
+    },
+    {
+      "title": "Lasso Tool",
+      "body": "Draw around anchor points or objects to select them. Default shortcut: Q. Custom keymaps may differ.",
+      "tool_id": "lasso"
+    },
+    {
+      "title": "Pen Tool",
+      "body": "Place anchor points and drag direction handles to draw an editable path. Default shortcut: P. Custom keymaps may differ.",
+      "tool_id": "pen"
+    },
+    {
+      "title": "Add Anchor Point Tool",
+      "body": "Add an anchor to an existing path segment for finer control. Default shortcut: +. Custom keymaps may differ.",
+      "tool_id": "addAnchor"
+    },
+    {
+      "title": "Delete Anchor Point Tool",
+      "body": "Remove an anchor from a path. Inspect the curve after the change. Default shortcut: -. Custom keymaps may differ.",
+      "tool_id": "deleteAnchor"
+    },
+    {
+      "title": "Anchor Point Tool",
+      "body": "Convert a point between a corner and a smooth curve, or edit its handles. Default shortcut: Shift+C. Custom keymaps may differ.",
+      "tool_id": "anchorPoint"
+    },
+    {
+      "title": "Curvature Tool",
+      "body": "Draw and reshape curved paths by placing curve points. Default shortcut: Shift+~. Custom keymaps may differ.",
+      "tool_id": "curvature"
+    },
+    {
+      "title": "Type Tool",
+      "body": "Create and edit point text. Default shortcut: T. Custom keymaps may differ.",
+      "tool_id": "type"
+    },
+    {
+      "title": "Area Type Tool",
+      "body": "Put text inside a closed area so it wraps within the shape.",
+      "tool_id": "areaType"
+    },
+    {
+      "title": "Type on a Path Tool",
+      "body": "Place text along a path and adjust its position on that path.",
+      "tool_id": "typeOnPath"
+    },
+    {
+      "title": "Vertical Type Tool",
+      "body": "Create point text with a vertical writing direction.",
+      "tool_id": "verticalType"
+    },
+    {
+      "title": "Vertical Area Type Tool",
+      "body": "Flow vertical text inside a closed area.",
+      "tool_id": "verticalAreaType"
+    },
+    {
+      "title": "Vertical Type on a Path Tool",
+      "body": "Place vertically oriented text along a path.",
+      "tool_id": "verticalTypeOnPath"
+    },
+    {
+      "title": "Touch Type Tool",
+      "body": "Adjust individual characters' position, rotation or scale within text. Default shortcut: Shift+T. Custom keymaps may differ.",
+      "tool_id": "touchType"
+    },
+    {
+      "title": "Line Segment Tool",
+      "body": "Draw a straight line segment. Default shortcut: \\. Custom keymaps may differ.",
+      "tool_id": "lineSegment"
+    },
+    {
+      "title": "Arc Tool",
+      "body": "Draw an editable arc.",
+      "tool_id": "arc"
+    },
+    {
+      "title": "Spiral Tool",
+      "body": "Draw a spiral and adjust its geometry.",
+      "tool_id": "spiral"
+    },
+    {
+      "title": "Rectangular Grid Tool",
+      "body": "Draw a rectangular arrangement of grid lines.",
+      "tool_id": "rectangularGrid"
+    },
+    {
+      "title": "Polar Grid Tool",
+      "body": "Draw a circular grid with radial and concentric divisions.",
+      "tool_id": "polarGrid"
+    },
+    {
+      "title": "Rectangle Tool",
+      "body": "Draw a rectangle and adjust its dimensions. Default shortcut: M. Custom keymaps may differ.",
+      "tool_id": "rectangle"
+    },
+    {
+      "title": "Rounded Rectangle Tool",
+      "body": "Draw a rectangle with rounded corners.",
+      "tool_id": "roundedRectangle"
+    },
+    {
+      "title": "Ellipse Tool",
+      "body": "Draw an ellipse or circle. Default shortcut: L. Custom keymaps may differ.",
+      "tool_id": "ellipse"
+    },
+    {
+      "title": "Polygon Tool",
+      "body": "Draw a regular polygon.",
+      "tool_id": "polygon"
+    },
+    {
+      "title": "Star Tool",
+      "body": "Draw a star with adjustable point geometry.",
+      "tool_id": "star"
+    },
+    {
+      "title": "Flare Tool",
+      "body": "Create a flare-style vector object and adjust its appearance.",
+      "tool_id": "flare"
+    },
+    {
+      "title": "Paintbrush Tool",
+      "body": "Draw a path using the selected brush appearance. Default shortcut: B. Custom keymaps may differ.",
+      "tool_id": "paintbrush"
+    },
+    {
+      "title": "Blob Brush Tool",
+      "body": "Paint filled vector shapes that can combine with compatible nearby regions. Default shortcut: Shift+B. Custom keymaps may differ.",
+      "tool_id": "blobBrush"
+    },
+    {
+      "title": "Shaper Tool",
+      "body": "Sketch gestures to form or combine vector shapes. Default shortcut: Shift+N. Custom keymaps may differ.",
+      "tool_id": "shaper"
+    },
+    {
+      "title": "Pencil Tool",
+      "body": "Draw a freehand path that remains editable as vector geometry. Default shortcut: N. Custom keymaps may differ.",
+      "tool_id": "pencil"
+    },
+    {
+      "title": "Smooth Tool",
+      "body": "Reduce abrupt bends along an existing path.",
+      "tool_id": "smooth"
+    },
+    {
+      "title": "Path Eraser Tool",
+      "body": "Erase part of a selected path rather than erasing raster pixels.",
+      "tool_id": "pathEraser"
+    },
+    {
+      "title": "Join Tool",
+      "body": "Connect compatible path ends. Select the intended open ends first.",
+      "tool_id": "join"
+    },
+    {
+      "title": "Eraser Tool",
+      "body": "Remove regions from selected vector artwork. Default shortcut: Shift+E. Custom keymaps may differ.",
+      "tool_id": "eraser"
+    },
+    {
+      "title": "Scissors Tool",
+      "body": "Split a path at a chosen point. Default shortcut: C. Custom keymaps may differ.",
+      "tool_id": "scissors"
+    },
+    {
+      "title": "Knife",
+      "body": "Cut vector shapes along a drawn cutting stroke.",
+      "tool_id": "knife"
+    },
+    {
+      "title": "Mirror & Cut Tool",
+      "body": "Cut artwork using a mirrored cutting operation.",
+      "tool_id": "mirrorCut"
+    },
+    {
+      "title": "Line Cut Tool",
+      "body": "Cut artwork along a straight line.",
+      "tool_id": "lineCut"
+    },
+    {
+      "title": "Rectangle Cut Tool",
+      "body": "Cut artwork using a rectangular region.",
+      "tool_id": "rectCut"
+    },
+    {
+      "title": "Rotate Tool",
+      "body": "Rotate selected artwork around a reference point. Default shortcut: R. Custom keymaps may differ.",
+      "tool_id": "rotate"
+    },
+    {
+      "title": "Reflect Tool",
+      "body": "Mirror selected artwork about an axis. Default shortcut: O. Custom keymaps may differ.",
+      "tool_id": "reflect"
+    },
+    {
+      "title": "Scale Tool",
+      "body": "Change selected artwork's size. Check aspect-ratio constraints before dragging. Default shortcut: S. Custom keymaps may differ.",
+      "tool_id": "scale"
+    },
+    {
+      "title": "Shear Tool",
+      "body": "Slant selected artwork while preserving straight edges.",
+      "tool_id": "shear"
+    },
+    {
+      "title": "Reshape Tool",
+      "body": "Adjust the shape of a selected path by moving a region of its geometry.",
+      "tool_id": "reshape"
+    },
+    {
+      "title": "Width Tool",
+      "body": "Vary stroke width along a path. Default shortcut: Shift+W. Custom keymaps may differ.",
+      "tool_id": "width"
+    },
+    {
+      "title": "Warp Tool",
+      "body": "Push or pull the outline of vector artwork with a distortion brush. Default shortcut: Shift+R. Custom keymaps may differ.",
+      "tool_id": "warp"
+    },
+    {
+      "title": "Twirl Tool",
+      "body": "Twist nearby vector geometry around the pointer.",
+      "tool_id": "twirl"
+    },
+    {
+      "title": "Pucker Tool",
+      "body": "Pull nearby vector geometry inward.",
+      "tool_id": "pucker"
+    },
+    {
+      "title": "Bloat Tool",
+      "body": "Push nearby vector geometry outward.",
+      "tool_id": "bloat"
+    },
+    {
+      "title": "Scallop Tool",
+      "body": "Add repeated rounded distortions along an outline.",
+      "tool_id": "scallop"
+    },
+    {
+      "title": "Crystallize Tool",
+      "body": "Create pointed distortions along an outline.",
+      "tool_id": "crystallize"
+    },
+    {
+      "title": "Wrinkle Tool",
+      "body": "Create irregular ripples in an outline.",
+      "tool_id": "wrinkle"
+    },
+    {
+      "title": "Free Transform Tool",
+      "body": "Move, scale, rotate or distort a selected object with transform handles. Default shortcut: E. Custom keymaps may differ.",
+      "tool_id": "freeTransform"
+    },
+    {
+      "title": "Puppet Warp Tool",
+      "body": "Place and move pins to deform artwork locally.",
+      "tool_id": "puppetWarp"
+    },
+    {
+      "title": "Shape Builder Tool",
+      "body": "Combine or remove overlapping regions of selected shapes. Default shortcut: Shift+M. Custom keymaps may differ.",
+      "tool_id": "shapeBuilder"
+    },
+    {
+      "title": "Live Paint Bucket",
+      "body": "Fill regions in a live-paint arrangement with the chosen color or appearance. Default shortcut: K. Custom keymaps may differ.",
+      "tool_id": "livePaintBucket"
+    },
+    {
+      "title": "Live Paint Selection Tool",
+      "body": "Select individual live-paint regions or edges. Default shortcut: Shift+L. Custom keymaps may differ.",
+      "tool_id": "livePaintSelection"
+    },
+    {
+      "title": "Perspective Grid Tool",
+      "body": "Set up a perspective grid to guide artwork placement. Default shortcut: Shift+P. Custom keymaps may differ.",
+      "tool_id": "perspectiveGrid"
+    },
+    {
+      "title": "Perspective Selection Tool",
+      "body": "Move or scale artwork in relation to the perspective grid. Default shortcut: Shift+V. Custom keymaps may differ.",
+      "tool_id": "perspectiveSelection"
+    },
+    {
+      "title": "Mesh Tool",
+      "body": "Create or edit mesh points that control smooth color transitions. Default shortcut: U. Custom keymaps may differ.",
+      "tool_id": "mesh"
+    },
+    {
+      "title": "Gradient Tool",
+      "body": "Create or adjust a gradient's direction, stops and spread. Default shortcut: G. Custom keymaps may differ.",
+      "tool_id": "gradient"
+    },
+    {
+      "title": "Eyedropper Tool",
+      "body": "Sample supported appearance attributes from another object. Default shortcut: I. Custom keymaps may differ.",
+      "tool_id": "eyedropper"
+    },
+    {
+      "title": "Measure Tool",
+      "body": "Measure the distance and angle between points.",
+      "tool_id": "measure"
+    },
+    {
+      "title": "Blend Tool",
+      "body": "Create intermediate artwork between selected objects. Default shortcut: W. Custom keymaps may differ.",
+      "tool_id": "blend"
+    },
+    {
+      "title": "Objects on Path Tool",
+      "body": "Arrange repeated objects along a path.",
+      "tool_id": "objectsOnPath"
+    },
+    {
+      "title": "Dimension Tool",
+      "body": "Place dimension annotations on measured geometry.",
+      "tool_id": "dimension"
+    },
+    {
+      "title": "Symbol Sprayer Tool",
+      "body": "Place multiple instances of a symbol. Default shortcut: Shift+S. Custom keymaps may differ.",
+      "tool_id": "symbolSprayer"
+    },
+    {
+      "title": "Symbol Shifter Tool",
+      "body": "Move symbol instances within a symbol set.",
+      "tool_id": "symbolShifter"
+    },
+    {
+      "title": "Symbol Scruncher Tool",
+      "body": "Move symbol instances closer together or farther apart.",
+      "tool_id": "symbolScruncher"
+    },
+    {
+      "title": "Symbol Sizer Tool",
+      "body": "Change the size of symbol instances.",
+      "tool_id": "symbolSizer"
+    },
+    {
+      "title": "Symbol Spinner Tool",
+      "body": "Change symbol instances' rotation.",
+      "tool_id": "symbolSpinner"
+    },
+    {
+      "title": "Symbol Stainer Tool",
+      "body": "Tint symbol instances with the selected color.",
+      "tool_id": "symbolStainer"
+    },
+    {
+      "title": "Symbol Screener Tool",
+      "body": "Adjust symbol instances' opacity.",
+      "tool_id": "symbolScreener"
+    },
+    {
+      "title": "Symbol Styler Tool",
+      "body": "Apply appearance styles to symbol instances.",
+      "tool_id": "symbolStyler"
+    },
+    {
+      "title": "Column Graph Tool",
+      "body": "Create a graph with vertical columns from entered data. Default shortcut: J. Custom keymaps may differ.",
+      "tool_id": "columnGraph"
+    },
+    {
+      "title": "Stacked Column Graph Tool",
+      "body": "Create vertical columns divided into stacked data series.",
+      "tool_id": "stackedColumnGraph"
+    },
+    {
+      "title": "Bar Graph Tool",
+      "body": "Create a graph with horizontal bars.",
+      "tool_id": "barGraph"
+    },
+    {
+      "title": "Stacked Bar Graph Tool",
+      "body": "Create horizontal bars divided into stacked data series.",
+      "tool_id": "stackedBarGraph"
+    },
+    {
+      "title": "Line Graph Tool",
+      "body": "Plot data series as connected lines.",
+      "tool_id": "lineGraph"
+    },
+    {
+      "title": "Area Graph Tool",
+      "body": "Plot data series as filled areas.",
+      "tool_id": "areaGraph"
+    },
+    {
+      "title": "Scatter Graph Tool",
+      "body": "Plot pairs of numeric values as points.",
+      "tool_id": "scatterGraph"
+    },
+    {
+      "title": "Pie Graph Tool",
+      "body": "Display data proportions as pie segments.",
+      "tool_id": "pieGraph"
+    },
+    {
+      "title": "Radar Graph Tool",
+      "body": "Compare values along axes radiating from a common center.",
+      "tool_id": "radarGraph"
+    },
+    {
+      "title": "Artboard Tool",
+      "body": "Create and resize artboards that define separate output areas. Default shortcut: Shift+O. Custom keymaps may differ.",
+      "tool_id": "artboard"
+    },
+    {
+      "title": "Slice Tool",
+      "body": "Mark an output slice within the artwork. Default shortcut: Shift+K. Custom keymaps may differ.",
+      "tool_id": "slice"
+    },
+    {
+      "title": "Slice Selection Tool",
+      "body": "Select and adjust existing output slices.",
+      "tool_id": "sliceSelection"
+    },
+    {
+      "title": "Hand Tool",
+      "body": "Pan the canvas without moving artwork. Default shortcut: H. Custom keymaps may differ.",
+      "tool_id": "hand"
+    },
+    {
+      "title": "Rotate View Tool",
+      "body": "Rotate the canvas view without rotating the artwork. Default shortcut: Shift+H. Custom keymaps may differ.",
+      "tool_id": "rotateView"
+    },
+    {
+      "title": "Print Tiling Tool",
+      "body": "Adjust how the artwork is divided across printed pages.",
+      "tool_id": "printTiling"
+    },
+    {
+      "title": "Zoom Tool",
+      "body": "Change view magnification without changing document resolution or geometry. Default shortcut: Z. Custom keymaps may differ.",
+      "tool_id": "zoom"
+    }
+  ]
+}

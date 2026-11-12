@@ -24,7 +24,7 @@ class PreparationTests(unittest.TestCase):
   spec=importlib.util.spec_from_file_location('manuals',p.ROOT/'manuals.py');m=importlib.util.module_from_spec(spec);spec.loader.exec_module(m)
   for app in p.CATALOG:
    data=m.guide(app)
-   self.assertEqual(data['product'],app['id']);self.assertEqual(len(data['chapters']),6);self.assertEqual(len(data['tour']),4)
+   self.assertEqual(data['product'],app['id']);self.assertEqual(len(data['chapters']),12);self.assertEqual(len(data['tour']),4)
    self.assertIn('not a complete reference',data['scope'])
  def test_runtime_changes_invalidate_source_receipt(self):
   spec=importlib.util.spec_from_file_location('build',p.ROOT/'build.py');b=importlib.util.module_from_spec(spec);spec.loader.exec_module(b)

@@ -81,8 +81,8 @@ impl AccountUi {
         ui.label("Your creative workspace, connected to your account.");
         if !self.message.is_empty(){ui.label(&self.message);}
         self.activation_controls(ui);
-        if ui.button("Start your 7-day trial / Manage billing").clicked(){
-            if !open_browser("https://aiwebdesignfirm.com/start"){self.message="Could not open the account page. Go to aiwebdesignfirm.com/start.".into();}
+        if ui.button("Your free Pixa account").clicked(){
+            if !open_browser("https://aiwebdesignfirm.com/account"){self.message="Could not open the account page. Go to aiwebdesignfirm.com/start.".into();}
         }
     }
     fn activation_controls(&mut self, ui:&mut egui::Ui){

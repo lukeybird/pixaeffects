@@ -58,7 +58,7 @@ impl HelpUi {
                                     if ui.button("Next").clicked() { self.step = self.step.saturating_add(1); }
                                 } else if ui.button("Finish").clicked() { self.tour_open = false; }
                             });
-                            if self.tools_mode {ui.small(if highlight.is_some(){"The outline marks the tool group. Open its flyout for grouped tools."}else{"Open the Tools panel to find this tool. Grouped tools share a flyout."});ui.small("No tools are selected automatically.");}
+                            if self.tools_mode {ui.small(if highlight.is_some(){"The outline marks the tool group. Open its flyout for grouped tools."}else{"Find this control in the editor toolbar or tool panel. Grouped tools may share a flyout."});ui.small("No tools are selected automatically.");}
                             ui.small("Read-only tour. Your document is not changed.");
                         }
                     }

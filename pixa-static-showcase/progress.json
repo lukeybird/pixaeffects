@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "verified_at": "2026-11-12T05:58:14.341680+00:00",
+  "verified_at": "2026-11-12T07:29:05.176397+00:00",
   "legend": "Green = verified passed. Red = pending, incomplete or not yet verified. Progress is evidence-based, not a release guarantee.",
   "steps": [
     "Source setup",
@@ -38,17 +38,17 @@
       {
         "label": "Manual, tutorials, activation & updater",
         "passed": false,
-        "note": "Complete help, activation and own-feed updater verification remains pending.",
+        "note": "Expanded offline manual, source-backed control tour and own-publisher Mac updater implemented. Packaged application and update acceptance remain unverified.",
         "checks": [
           {
-            "label": "Embedded starter manual and quick tour",
+            "label": "Embedded manual and source-backed control tour",
             "passed": true,
-            "note": "Six workflow chapters and four orientation steps are generated for this app."
+            "note": "12 workflow chapters and 81 source-backed tool/control explanations generated for this app. Coverage is not every editor command."
           },
           {
             "label": "Complete tool reference",
             "passed": false,
-            "note": "Every-tool explanations and complete help coverage remain unfinished."
+            "note": "Source-backed controls are documented; exhaustive command coverage and installed help acceptance remain unverified."
           },
           {
             "label": "Account and recovery source integration",
@@ -61,9 +61,14 @@
             "note": "Real sign-in, expiry and recovery must be exercised in the packaged application."
           },
           {
+            "label": "Own-publisher Mac updater source",
+            "passed": true,
+            "note": "Connected to product-scoped Pixa releases with checksum, Developer ID, bundle identity and Gatekeeper checks. No upstream feed or public suite release enabled."
+          },
+          {
             "label": "Install-and-restart updater",
             "passed": false,
-            "note": "Signed manifest validation exists. Publisher feed, native install, restart and rollback are not configured for suite apps."
+            "note": "Own-product release discovery and Mac signature-checked staging/restart/rollback code implemented; real install/restart acceptance pending. Windows/Linux installation remains manual."
           }
         ]
       },
@@ -126,17 +131,17 @@
       {
         "label": "Manual, tutorials, activation & updater",
         "passed": false,
-        "note": "Complete help, activation and own-feed updater verification remains pending.",
+        "note": "Expanded offline manual, source-backed control tour and own-publisher Mac updater implemented. Packaged application and update acceptance remain unverified.",
         "checks": [
           {
-            "label": "Embedded starter manual and quick tour",
+            "label": "Embedded manual and source-backed control tour",
             "passed": true,
-            "note": "Six workflow chapters and four orientation steps are generated for this app."
+            "note": "12 workflow chapters and 7 source-backed tool/control explanations generated for this app. Coverage is not every editor command."
           },
           {
             "label": "Complete tool reference",
             "passed": false,
-            "note": "Every-tool explanations and complete help coverage remain unfinished."
+            "note": "Source-backed controls are documented; exhaustive command coverage and installed help acceptance remain unverified."
           },
           {
             "label": "Account and recovery source integration",
@@ -149,9 +154,14 @@
             "note": "Real sign-in, expiry and recovery must be exercised in the packaged application."
           },
           {
+            "label": "Own-publisher Mac updater source",
+            "passed": true,
+            "note": "Connected to product-scoped Pixa releases with checksum, Developer ID, bundle identity and Gatekeeper checks. No upstream feed or public suite release enabled."
+          },
+          {
             "label": "Install-and-restart updater",
             "passed": false,
-            "note": "Signed manifest validation exists. Publisher feed, native install, restart and rollback are not configured for suite apps."
+            "note": "Own-product release discovery and Mac signature-checked staging/restart/rollback code implemented; real install/restart acceptance pending. Windows/Linux installation remains manual."
           }
         ]
       },
@@ -214,17 +224,17 @@
       {
         "label": "Manual, tutorials, activation & updater",
         "passed": false,
-        "note": "Complete help, activation and own-feed updater verification remains pending.",
+        "note": "Expanded offline manual, source-backed control tour and own-publisher Mac updater implemented. Packaged application and update acceptance remain unverified.",
         "checks": [
           {
-            "label": "Embedded starter manual and quick tour",
+            "label": "Embedded manual and source-backed control tour",
             "passed": true,
-            "note": "Six workflow chapters and four orientation steps are generated for this app."
+            "note": "12 workflow chapters and 6 source-backed tool/control explanations generated for this app. Coverage is not every editor command."
           },
           {
             "label": "Complete tool reference",
             "passed": false,
-            "note": "Every-tool explanations and complete help coverage remain unfinished."
+            "note": "Source-backed controls are documented; exhaustive command coverage and installed help acceptance remain unverified."
           },
           {
             "label": "Account and recovery source integration",
@@ -237,9 +247,14 @@
             "note": "Real sign-in, expiry and recovery must be exercised in the packaged application."
           },
           {
+            "label": "Own-publisher Mac updater source",
+            "passed": true,
+            "note": "Connected to product-scoped Pixa releases with checksum, Developer ID, bundle identity and Gatekeeper checks. No upstream feed or public suite release enabled."
+          },
+          {
             "label": "Install-and-restart updater",
             "passed": false,
-            "note": "Signed manifest validation exists. Publisher feed, native install, restart and rollback are not configured for suite apps."
+            "note": "Own-product release discovery and Mac signature-checked staging/restart/rollback code implemented; real install/restart acceptance pending. Windows/Linux installation remains manual."
           }
         ]
       },
@@ -302,17 +317,17 @@
       {
         "label": "Manual, tutorials, activation & updater",
         "passed": false,
-        "note": "Complete help, activation and own-feed updater verification remains pending.",
+        "note": "Expanded offline manual, source-backed control tour and own-publisher Mac updater implemented. Packaged application and update acceptance remain unverified.",
         "checks": [
           {
-            "label": "Embedded starter manual and quick tour",
+            "label": "Embedded manual and source-backed control tour",
             "passed": true,
-            "note": "Six workflow chapters and four orientation steps are generated for this app."
+            "note": "12 workflow chapters and 37 source-backed tool/control explanations generated for this app. Coverage is not every editor command."
           },
           {
             "label": "Complete tool reference",
             "passed": false,
-            "note": "37 tool explanations exist for PixaDesign; comprehensive editor-by-editor acceptance remains pending."
+            "note": "Source-backed controls are documented; exhaustive command coverage and installed help acceptance remain unverified."
           },
           {
             "label": "Account and recovery source integration",
@@ -325,9 +340,14 @@
             "note": "Real sign-in, expiry and recovery must be exercised in the packaged application."
           },
           {
+            "label": "Own-publisher Mac updater source",
+            "passed": true,
+            "note": "Connected to product-scoped Pixa releases with checksum, Developer ID, bundle identity and Gatekeeper checks. No upstream feed or public suite release enabled."
+          },
+          {
             "label": "Install-and-restart updater",
             "passed": false,
-            "note": "Signed manifest validation exists. Publisher feed, native install, restart and rollback are not configured for suite apps."
+            "note": "Own-product release discovery and Mac signature-checked staging/restart/rollback code implemented; real install/restart acceptance pending. Windows/Linux installation remains manual."
           }
         ]
       },
@@ -483,17 +503,17 @@
       {
         "label": "Manual, tutorials, activation & updater",
         "passed": false,
-        "note": "Complete help, activation and own-feed updater verification remains pending.",
+        "note": "Expanded offline manual, source-backed control tour and own-publisher Mac updater implemented. Packaged application and update acceptance remain unverified.",
         "checks": [
           {
-            "label": "Embedded starter manual and quick tour",
+            "label": "Embedded manual and source-backed control tour",
             "passed": true,
-            "note": "Six workflow chapters and four orientation steps are generated for this app."
+            "note": "12 workflow chapters and 17 source-backed tool/control explanations generated for this app. Coverage is not every editor command."
           },
           {
             "label": "Complete tool reference",
             "passed": false,
-            "note": "Every-tool explanations and complete help coverage remain unfinished."
+            "note": "Source-backed controls are documented; exhaustive command coverage and installed help acceptance remain unverified."
           },
           {
             "label": "Account and recovery source integration",
@@ -506,9 +526,14 @@
             "note": "Real sign-in, expiry and recovery must be exercised in the packaged application."
           },
           {
+            "label": "Own-publisher Mac updater source",
+            "passed": true,
+            "note": "Connected to product-scoped Pixa releases with checksum, Developer ID, bundle identity and Gatekeeper checks. No upstream feed or public suite release enabled."
+          },
+          {
             "label": "Install-and-restart updater",
             "passed": false,
-            "note": "Signed manifest validation exists. Publisher feed, native install, restart and rollback are not configured for suite apps."
+            "note": "Own-product release discovery and Mac signature-checked staging/restart/rollback code implemented; real install/restart acceptance pending. Windows/Linux installation remains manual."
           }
         ]
       },
@@ -571,17 +596,17 @@
       {
         "label": "Manual, tutorials, activation & updater",
         "passed": false,
-        "note": "Complete help, activation and own-feed updater verification remains pending.",
+        "note": "Expanded offline manual, source-backed control tour and own-publisher Mac updater implemented. Packaged application and update acceptance remain unverified.",
         "checks": [
           {
-            "label": "Embedded starter manual and quick tour",
+            "label": "Embedded manual and source-backed control tour",
             "passed": true,
-            "note": "Six workflow chapters and four orientation steps are generated for this app."
+            "note": "12 workflow chapters and 9 source-backed tool/control explanations generated for this app. Coverage is not every editor command."
           },
           {
             "label": "Complete tool reference",
             "passed": false,
-            "note": "Every-tool explanations and complete help coverage remain unfinished."
+            "note": "Source-backed controls are documented; exhaustive command coverage and installed help acceptance remain unverified."
           },
           {
             "label": "Account and recovery source integration",
@@ -594,9 +619,14 @@
             "note": "Real sign-in, expiry and recovery must be exercised in the packaged application."
           },
           {
+            "label": "Own-publisher Mac updater source",
+            "passed": true,
+            "note": "Connected to product-scoped Pixa releases with checksum, Developer ID, bundle identity and Gatekeeper checks. No upstream feed or public suite release enabled."
+          },
+          {
             "label": "Install-and-restart updater",
             "passed": false,
-            "note": "Signed manifest validation exists. Publisher feed, native install, restart and rollback are not configured for suite apps."
+            "note": "Own-product release discovery and Mac signature-checked staging/restart/rollback code implemented; real install/restart acceptance pending. Windows/Linux installation remains manual."
           }
         ]
       },
@@ -659,17 +689,17 @@
       {
         "label": "Manual, tutorials, activation & updater",
         "passed": false,
-        "note": "Complete help, activation and own-feed updater verification remains pending.",
+        "note": "Expanded offline manual, source-backed control tour and own-publisher Mac updater implemented. Packaged application and update acceptance remain unverified.",
         "checks": [
           {
-            "label": "Embedded starter manual and quick tour",
+            "label": "Embedded manual and source-backed control tour",
             "passed": true,
-            "note": "Six workflow chapters and four orientation steps are generated for this app."
+            "note": "12 workflow chapters and 26 source-backed tool/control explanations generated for this app. Coverage is not every editor command."
           },
           {
             "label": "Complete tool reference",
             "passed": false,
-            "note": "Every-tool explanations and complete help coverage remain unfinished."
+            "note": "Source-backed controls are documented; exhaustive command coverage and installed help acceptance remain unverified."
           },
           {
             "label": "Account and recovery source integration",
@@ -682,9 +712,14 @@
             "note": "Real sign-in, expiry and recovery must be exercised in the packaged application."
           },
           {
+            "label": "Own-publisher Mac updater source",
+            "passed": true,
+            "note": "Connected to product-scoped Pixa releases with checksum, Developer ID, bundle identity and Gatekeeper checks. No upstream feed or public suite release enabled."
+          },
+          {
             "label": "Install-and-restart updater",
             "passed": false,
-            "note": "Signed manifest validation exists. Publisher feed, native install, restart and rollback are not configured for suite apps."
+            "note": "Own-product release discovery and Mac signature-checked staging/restart/rollback code implemented; real install/restart acceptance pending. Windows/Linux installation remains manual."
           }
         ]
       },
@@ -747,17 +782,17 @@
       {
         "label": "Manual, tutorials, activation & updater",
         "passed": false,
-        "note": "Complete help, activation and own-feed updater verification remains pending.",
+        "note": "Expanded offline manual, source-backed control tour and own-publisher Mac updater implemented. Packaged application and update acceptance remain unverified.",
         "checks": [
           {
-            "label": "Embedded starter manual and quick tour",
+            "label": "Embedded manual and source-backed control tour",
             "passed": true,
-            "note": "Six workflow chapters and four orientation steps are generated for this app."
+            "note": "12 workflow chapters and 9 source-backed tool/control explanations generated for this app. Coverage is not every editor command."
           },
           {
             "label": "Complete tool reference",
             "passed": false,
-            "note": "Every-tool explanations and complete help coverage remain unfinished."
+            "note": "Source-backed controls are documented; exhaustive command coverage and installed help acceptance remain unverified."
           },
           {
             "label": "Account and recovery source integration",
@@ -770,9 +805,14 @@
             "note": "Real sign-in, expiry and recovery must be exercised in the packaged application."
           },
           {
+            "label": "Own-publisher Mac updater source",
+            "passed": true,
+            "note": "Connected to product-scoped Pixa releases with checksum, Developer ID, bundle identity and Gatekeeper checks. No upstream feed or public suite release enabled."
+          },
+          {
             "label": "Install-and-restart updater",
             "passed": false,
-            "note": "Signed manifest validation exists. Publisher feed, native install, restart and rollback are not configured for suite apps."
+            "note": "Own-product release discovery and Mac signature-checked staging/restart/rollback code implemented; real install/restart acceptance pending. Windows/Linux installation remains manual."
           }
         ]
       },
@@ -835,17 +875,17 @@
       {
         "label": "Manual, tutorials, activation & updater",
         "passed": false,
-        "note": "Complete help, activation and own-feed updater verification remains pending.",
+        "note": "Expanded offline manual, source-backed control tour and own-publisher Mac updater implemented. Packaged application and update acceptance remain unverified.",
         "checks": [
           {
-            "label": "Embedded starter manual and quick tour",
+            "label": "Embedded manual and source-backed control tour",
             "passed": true,
-            "note": "Six workflow chapters and four orientation steps are generated for this app."
+            "note": "12 workflow chapters and 6 source-backed tool/control explanations generated for this app. Coverage is not every editor command."
           },
           {
             "label": "Complete tool reference",
             "passed": false,
-            "note": "Every-tool explanations and complete help coverage remain unfinished."
+            "note": "Source-backed controls are documented; exhaustive command coverage and installed help acceptance remain unverified."
           },
           {
             "label": "Account and recovery source integration",
@@ -858,9 +898,14 @@
             "note": "Real sign-in, expiry and recovery must be exercised in the packaged application."
           },
           {
+            "label": "Own-publisher Mac updater source",
+            "passed": true,
+            "note": "Connected to product-scoped Pixa releases with checksum, Developer ID, bundle identity and Gatekeeper checks. No upstream feed or public suite release enabled."
+          },
+          {
             "label": "Install-and-restart updater",
             "passed": false,
-            "note": "Signed manifest validation exists. Publisher feed, native install, restart and rollback are not configured for suite apps."
+            "note": "Own-product release discovery and Mac signature-checked staging/restart/rollback code implemented; real install/restart acceptance pending. Windows/Linux installation remains manual."
           }
         ]
       },
@@ -923,17 +968,17 @@
       {
         "label": "Manual, tutorials, activation & updater",
         "passed": false,
-        "note": "Complete help, activation and own-feed updater verification remains pending.",
+        "note": "Expanded offline manual, source-backed control tour and own-publisher Mac updater implemented. Packaged application and update acceptance remain unverified. The source still marks full PDF editing, protection and other tool families as planned.",
         "checks": [
           {
-            "label": "Embedded starter manual and quick tour",
+            "label": "Embedded manual and source-backed control tour",
             "passed": true,
-            "note": "Six workflow chapters and four orientation steps are generated for this app."
+            "note": "12 workflow chapters and 23 source-backed tool/control explanations generated for this app. Coverage is not every editor command."
           },
           {
             "label": "Complete tool reference",
             "passed": false,
-            "note": "Every-tool explanations and complete help coverage remain unfinished."
+            "note": "Source-backed controls are documented; exhaustive command coverage and installed help acceptance remain unverified."
           },
           {
             "label": "Account and recovery source integration",
@@ -946,9 +991,14 @@
             "note": "Real sign-in, expiry and recovery must be exercised in the packaged application."
           },
           {
+            "label": "Own-publisher Mac updater source",
+            "passed": true,
+            "note": "Connected to product-scoped Pixa releases with checksum, Developer ID, bundle identity and Gatekeeper checks. No upstream feed or public suite release enabled."
+          },
+          {
             "label": "Install-and-restart updater",
             "passed": false,
-            "note": "Signed manifest validation exists. Publisher feed, native install, restart and rollback are not configured for suite apps."
+            "note": "Own-product release discovery and Mac signature-checked staging/restart/rollback code implemented; real install/restart acceptance pending. Windows/Linux installation remains manual."
           }
         ]
       },
@@ -1083,17 +1133,17 @@
       {
         "label": "Manual, tutorials, activation & updater",
         "passed": false,
-        "note": "Complete help, activation and own-feed updater verification remains pending.",
+        "note": "Expanded offline manual, source-backed control tour and own-publisher Mac updater implemented. Packaged application and update acceptance remain unverified.",
         "checks": [
           {
-            "label": "Embedded starter manual and quick tour",
+            "label": "Embedded manual and source-backed control tour",
             "passed": true,
-            "note": "Six workflow chapters and four orientation steps are generated for this app."
+            "note": "12 workflow chapters and 7 source-backed tool/control explanations generated for this app. Coverage is not every editor command."
           },
           {
             "label": "Complete tool reference",
             "passed": false,
-            "note": "Every-tool explanations and complete help coverage remain unfinished."
+            "note": "Source-backed controls are documented; exhaustive command coverage and installed help acceptance remain unverified."
           },
           {
             "label": "Account and recovery source integration",
@@ -1106,9 +1156,14 @@
             "note": "Real sign-in, expiry and recovery must be exercised in the packaged application."
           },
           {
+            "label": "Own-publisher Mac updater source",
+            "passed": true,
+            "note": "Connected to product-scoped Pixa releases with checksum, Developer ID, bundle identity and Gatekeeper checks. No upstream feed or public suite release enabled."
+          },
+          {
             "label": "Install-and-restart updater",
             "passed": false,
-            "note": "Signed manifest validation exists. Publisher feed, native install, restart and rollback are not configured for suite apps."
+            "note": "Own-product release discovery and Mac signature-checked staging/restart/rollback code implemented; real install/restart acceptance pending. Windows/Linux installation remains manual."
           }
         ]
       },
@@ -1171,17 +1226,17 @@
       {
         "label": "Manual, tutorials, activation & updater",
         "passed": false,
-        "note": "Complete help, activation and own-feed updater verification remains pending.",
+        "note": "Expanded offline manual, source-backed control tour and own-publisher Mac updater implemented. Packaged application and update acceptance remain unverified.",
         "checks": [
           {
-            "label": "Embedded starter manual and quick tour",
+            "label": "Embedded manual and source-backed control tour",
             "passed": true,
-            "note": "Six workflow chapters and four orientation steps are generated for this app."
+            "note": "12 workflow chapters and 9 source-backed tool/control explanations generated for this app. Coverage is not every editor command."
           },
           {
             "label": "Complete tool reference",
             "passed": false,
-            "note": "Every-tool explanations and complete help coverage remain unfinished."
+            "note": "Source-backed controls are documented; exhaustive command coverage and installed help acceptance remain unverified."
           },
           {
             "label": "Account and recovery source integration",
@@ -1194,9 +1249,14 @@
             "note": "Real sign-in, expiry and recovery must be exercised in the packaged application."
           },
           {
+            "label": "Own-publisher Mac updater source",
+            "passed": true,
+            "note": "Connected to product-scoped Pixa releases with checksum, Developer ID, bundle identity and Gatekeeper checks. No upstream feed or public suite release enabled."
+          },
+          {
             "label": "Install-and-restart updater",
             "passed": false,
-            "note": "Signed manifest validation exists. Publisher feed, native install, restart and rollback are not configured for suite apps."
+            "note": "Own-product release discovery and Mac signature-checked staging/restart/rollback code implemented; real install/restart acceptance pending. Windows/Linux installation remains manual."
           }
         ]
       },
@@ -1259,17 +1319,17 @@
       {
         "label": "Manual, tutorials, activation & updater",
         "passed": false,
-        "note": "Complete help, activation and own-feed updater verification remains pending.",
+        "note": "Expanded offline manual, source-backed control tour and own-publisher Mac updater implemented. Packaged application and update acceptance remain unverified.",
         "checks": [
           {
-            "label": "Embedded starter manual and quick tour",
+            "label": "Embedded manual and source-backed control tour",
             "passed": true,
-            "note": "Six workflow chapters and four orientation steps are generated for this app."
+            "note": "12 workflow chapters and 92 source-backed tool/control explanations generated for this app. Coverage is not every editor command."
           },
           {
             "label": "Complete tool reference",
             "passed": false,
-            "note": "Every-tool explanations and complete help coverage remain unfinished."
+            "note": "Source-backed controls are documented; exhaustive command coverage and installed help acceptance remain unverified."
           },
           {
             "label": "Account and recovery source integration",
@@ -1282,9 +1342,14 @@
             "note": "Real sign-in, expiry and recovery must be exercised in the packaged application."
           },
           {
+            "label": "Own-publisher Mac updater source",
+            "passed": true,
+            "note": "Connected to product-scoped Pixa releases with checksum, Developer ID, bundle identity and Gatekeeper checks. No upstream feed or public suite release enabled."
+          },
+          {
             "label": "Install-and-restart updater",
             "passed": false,
-            "note": "Signed manifest validation exists. Publisher feed, native install, restart and rollback are not configured for suite apps."
+            "note": "Own-product release discovery and Mac signature-checked staging/restart/rollback code implemented; real install/restart acceptance pending. Windows/Linux installation remains manual."
           }
         ]
       },
@@ -1352,17 +1417,17 @@
       {
         "label": "Manual, tutorials, activation & updater",
         "passed": false,
-        "note": "Complete help, activation and own-feed updater verification remains pending.",
+        "note": "Expanded offline manual, source-backed control tour and own-publisher Mac updater implemented. Packaged application and update acceptance remain unverified.",
         "checks": [
           {
-            "label": "Embedded starter manual and quick tour",
+            "label": "Embedded manual and source-backed control tour",
             "passed": true,
-            "note": "Six workflow chapters and four orientation steps are generated for this app."
+            "note": "12 workflow chapters and 10 source-backed tool/control explanations generated for this app. Coverage is not every editor command."
           },
           {
             "label": "Complete tool reference",
             "passed": false,
-            "note": "Every-tool explanations and complete help coverage remain unfinished."
+            "note": "Source-backed controls are documented; exhaustive command coverage and installed help acceptance remain unverified."
           },
           {
             "label": "Account and recovery source integration",
@@ -1375,9 +1440,14 @@
             "note": "Real sign-in, expiry and recovery must be exercised in the packaged application."
           },
           {
+            "label": "Own-publisher Mac updater source",
+            "passed": true,
+            "note": "Connected to product-scoped Pixa releases with checksum, Developer ID, bundle identity and Gatekeeper checks. No upstream feed or public suite release enabled."
+          },
+          {
             "label": "Install-and-restart updater",
             "passed": false,
-            "note": "Signed manifest validation exists. Publisher feed, native install, restart and rollback are not configured for suite apps."
+            "note": "Own-product release discovery and Mac signature-checked staging/restart/rollback code implemented; real install/restart acceptance pending. Windows/Linux installation remains manual."
           }
         ]
       },

@@ -16,3 +16,5 @@ pub mod updates;
 
 pub mod account_worker;
 pub mod credentials;
+
+pub mod release_feed;

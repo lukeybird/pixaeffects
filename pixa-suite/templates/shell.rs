@@ -4,13 +4,14 @@ use pixa_runtime::guard::{BuildMode, Guard};
 #[path = "pixa_account.rs"] mod account_ui;
 #[path = "pixa_help.rs"] mod help_ui;
 #[path = "pixa_recovery.rs"] mod recovery;
+#[path = "pixa_updates.rs"] mod updates;
 type Editor = @EDITOR_TYPE@;
 struct PixaShell {
     inner: Box<Editor>,
     help: help_ui::HelpUi,
     account: account_ui::AccountUi,
     guard: Guard,
-    updates_open: bool,
+    updates: updates::Updates,
     recovery_message: String,
     discard_prompt: bool,
     discard_confirmed: bool,
@@ -20,7 +21,7 @@ struct PixaShell {
 pub fn subscription_build() -> bool { BuildMode::parse(option_env!("PIXA_ACCESS_MODE")) != BuildMode::Development }
 pub fn wrap(inner: Box<Editor>) -> Box<dyn eframe::App> {
     Box::new(PixaShell { inner, help: help_ui::HelpUi::default(), account: account_ui::AccountUi::default(),
-        guard: Guard::new(BuildMode::parse(option_env!("PIXA_ACCESS_MODE")), recovery::ready()), updates_open: false,
+        guard: Guard::new(BuildMode::parse(option_env!("PIXA_ACCESS_MODE")), recovery::ready()), updates: updates::Updates::default(),
         recovery_message: String::new(), discard_prompt: false, discard_confirmed: false, last_editable: false, restore_message: String::new() })
 }
 impl PixaShell {
@@ -60,7 +61,7 @@ impl PixaShell {
 }
 impl eframe::App for PixaShell {
     fn logic(&mut self, ctx: &egui::Context, frame: &mut eframe::Frame) {
-        self.account.tick();self.publish_permit(ctx);
+        self.account.tick();self.updates.tick(ctx);self.publish_permit(ctx);
         let editable=self.can_edit();
         if self.last_editable && !editable {self.recovery_message=recovery::pause(self.inner.as_mut()).unwrap_or_default();}
         self.last_editable=editable;
@@ -84,8 +85,8 @@ impl eframe::App for PixaShell {
                 }
                 if ui.small_button("Quick tour").clicked(){self.help.start_tour();}
                 if ui.small_button("Your account").clicked(){self.account.open=true;}
-                if ui.small_button("Updates").clicked(){self.updates_open=true;}
-                ui.small(if subscription_build(){"Restricted preview"}else{"Development preview"});
+                if ui.small_button("Updates").clicked(){self.updates.open=true;self.updates.check();}
+                ui.small(if subscription_build(){"Free early access"}else{"Development preview"});
             });
         });
         if self.can_edit(){eframe::App::ui(self.inner.as_mut(),ui,frame);}else{self.locked(ui);}
@@ -103,10 +104,7 @@ impl eframe::App for PixaShell {
                 if ui.button("Discard and close").clicked(){self.discard_confirmed=true;ui.ctx().send_viewport_cmd(egui::ViewportCommand::Close);}
             });
         }
-        egui::Window::new("@NAME@ — Updates").open(&mut self.updates_open).show(ui.ctx(),|ui|{
-            ui.label("Pixa updates are not published for this development build.");
-            ui.label("The publisher must configure a signed Pixa release feed before installation can be enabled.");
-        });
+        self.updates.show(ui.ctx());
     }
     fn raw_input_hook(&mut self,ctx:&egui::Context,raw:&mut egui::RawInput){
         if self.can_edit(){eframe::App::raw_input_hook(self.inner.as_mut(),ctx,raw);}else{raw.dropped_files.clear();raw.hovered_files.clear();}

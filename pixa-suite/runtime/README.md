@@ -19,7 +19,11 @@ One bounded worker serializes network and credential operations. Restored creden
 
 `updates::verify` validates an Ed25519 signature over the exact payload bytes before parsing a manifest. It checks product, platform, architecture, bundle ID, expiry, stable version precedence and publisher asset location. `verify_download` streams a bounded installer and checks its exact size and SHA-256.
 
-This is the validation layer, not an installer. No release feed or publisher verification key is configured. Native installer signature/notarization checks, save-safe restart/rollback and real install tests still have to be connected before enabling update delivery. Never fall back to an unsigned feed.
+The desktop wrappers now use `release_feed::latest` to discover stable, product-scoped releases in `lukeybird/pixaeffects`: `<product>-v<version>`, with an exact own-publisher URL, platform filename and SHA-256 asset digest. A different product, draft, prerelease or missing digest is rejected. No upstream feed is enabled. No matching suite releases are published yet.
+
+On Mac, the native installer template independently verifies the digest, Developer ID team, bundle ID, hardened runtime, version and Gatekeeper before preparing a replacement. Install requires save acknowledgement and normal editor exit; canceling close disarms it. The helper restores the prior app if replacement or the immediate launch command fails. Windows and Linux open the product download page for manual installation; automatic install/restart is not implemented there.
+
+The separate Ed25519 manifest validator remains available for a future signed-manifest publisher. It is not the feed used by this GitHub/Apple-signature path, and no publisher Ed25519 key has been configured. Interactive installation, canceled-close handling and update acceptance remain unverified. Source implementation does not authorize publishing.
 
 ## Tests
 

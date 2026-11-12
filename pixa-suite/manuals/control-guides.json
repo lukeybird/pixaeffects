@@ -1,0 +1,387 @@
+{
+  "pixalight": {
+    "source_path": "crates/ui-egui/src/state/view.rs",
+    "sections": [
+      {
+        "title": "Edit",
+        "anchor": "Edit",
+        "body": "Adjust tone and color on the selected photo using Edit. These settings develop a rendered result while the original photo stays in its own file; export a new image when ready."
+      },
+      {
+        "title": "Crop",
+        "anchor": "Crop",
+        "body": "Change the image boundary and straightening in Crop. Check the full image before committing a tight crop; the original remains available."
+      },
+      {
+        "title": "Remove",
+        "anchor": "Remove",
+        "body": "Use Remove for local distractions. Inspect the repaired area at a useful zoom and undo an unwanted result rather than repeatedly painting over it."
+      },
+      {
+        "title": "Masking",
+        "anchor": "Masking",
+        "body": "Limit adjustments to a local region with Masking. Use the mask overlay to inspect the affected region before changing tone or color."
+      },
+      {
+        "title": "Red Eye",
+        "anchor": "RedEye",
+        "body": "Use Red Eye for the red reflection in eyes. Work closely enough to position the correction over the pupil and inspect both eyes afterward."
+      },
+      {
+        "title": "Versions",
+        "anchor": "Versions",
+        "body": "Use Versions to compare saved edit alternatives for a photo. Keep your library backup and original media; versions do not replace those backups."
+      },
+      {
+        "title": "Keywords and Info",
+        "anchor": "Keywords",
+        "body": "Use Keywords to organize search terms, and Info to inspect photo metadata. Library labels organize photos without renaming your original image files."
+      },
+      {
+        "title": "Compare, Survey and Reference",
+        "anchor": "Reference",
+        "body": "Compare places two photos together, Survey tiles the selection, and Reference keeps one photo beside the active edit. These are viewing aids; they do not export a composite image."
+      },
+      {
+        "title": "Before and after",
+        "anchor": "BeforeAfter",
+        "body": "Compare the original and edited render in a before/after view. Return to the normal edit view before judging the final exported framing."
+      }
+    ]
+  },
+  "pixadeck": {
+    "source_path": "crates/engine/src/tools.rs",
+    "sections": [
+      {
+        "title": "Select and transform",
+        "anchor": "Select",
+        "body": "Use Select to choose objects on a slide. Drag a selected object to move it; use its handles to resize or rotate. Check which object is selected before deleting or formatting."
+      },
+      {
+        "title": "Preset shapes",
+        "anchor": "Shape",
+        "body": "Choose a shape preset and draw it on the slide. Adjust size, fill and outline after insertion. Use text boxes for independent text rather than drawing individual letters."
+      },
+      {
+        "title": "Text boxes",
+        "anchor": "TextBox",
+        "body": "Create a text box to add editable slide text. Enter text, then leave text editing to move or resize the whole box. A text caret and an object selection act on different things."
+      },
+      {
+        "title": "Pen, highlighter and eraser",
+        "anchor": "Ink",
+        "body": "Use Ink pen or highlighter to draw strokes; use the ink eraser to remove strokes. These are slide objects, so inspect the result in slideshow view before presenting."
+      },
+      {
+        "title": "Edit points",
+        "anchor": "Vertex",
+        "body": "Use Edit Points on a suitable shape to adjust vertices and curve handles. Keep a copy before extensive path edits, and undo if the outline stops matching your intent."
+      },
+      {
+        "title": "Tables",
+        "anchor": "TableColumn",
+        "body": "Drag table column or row boundaries to change their size. Edit cell text separately; resizing a table is different from scaling a screenshot of it."
+      }
+    ]
+  },
+  "pixaword": {
+    "source_path": "crates/engine/src/ribbon.rs",
+    "sections": [
+      {
+        "title": "Home",
+        "anchor": "Home",
+        "body": "Use Home for text and paragraph formatting. Select existing text before applying a change; with only a caret, some formatting affects new text instead."
+      },
+      {
+        "title": "Insert",
+        "anchor": "Insert",
+        "body": "Use Insert to add document objects such as tables, pictures and other supported content. Select the inserted object to reveal its contextual formatting controls."
+      },
+      {
+        "title": "Draw",
+        "anchor": "Draw",
+        "body": "Use Draw for ink marks rather than ordinary typed paragraphs. Keep important text as editable text when it needs search, copying or later revision."
+      },
+      {
+        "title": "Design and Layout",
+        "anchor": "Layout",
+        "body": "Design controls document styling; Layout controls page geometry such as margins, orientation and columns. Check all affected pages before exporting."
+      },
+      {
+        "title": "References",
+        "anchor": "References",
+        "body": "Use References for supported document references and navigation structures. Update generated content after editing headings or source information."
+      },
+      {
+        "title": "Mailings",
+        "anchor": "Mailings",
+        "body": "Use Mailings for supported merge workflows. Check the source data and preview records before producing final copies; keep a separate editable master."
+      },
+      {
+        "title": "Review",
+        "anchor": "Review",
+        "body": "Use Review to inspect proofing, comments and revisions. Review proposed changes individually when meaning matters; spell checking does not establish factual correctness."
+      },
+      {
+        "title": "View",
+        "anchor": "View",
+        "body": "Change the document view and visible navigation controls in View. Reading settings change how you view the document; page layout still determines its printed result."
+      },
+      {
+        "title": "Developer and Zotero",
+        "anchor": "Zotero",
+        "body": "Developer and Zotero expose specialist controls and integrations. External integrations may need their own installation or setup; an inactive control does not indicate that its dependency is bundled."
+      },
+      {
+        "title": "Contextual formatting",
+        "anchor": "CONTEXTUAL_TABS",
+        "body": "Selecting a table, picture, shape, equation, chart or SmartArt object exposes its relevant contextual tab. Return to the text caret for ordinary text editing."
+      }
+    ]
+  },
+  "pixagrid": {
+    "source_path": "crates/ui-egui/src/ribbon.rs",
+    "sections": [
+      {
+        "title": "Home",
+        "anchor": "Home",
+        "body": "Use Home to format selected cells and manage routine editing. Confirm the active range before pasting, clearing or changing number formats."
+      },
+      {
+        "title": "Insert",
+        "anchor": "Insert",
+        "body": "Use Insert for supported tables, charts and objects. Select the source cells first where a chart or table needs data; inspect labels and series afterward."
+      },
+      {
+        "title": "Draw",
+        "anchor": "Draw",
+        "body": "Use Draw for ink or drawn annotations. Drawing over cells does not change the values or formulas stored in those cells."
+      },
+      {
+        "title": "Page Layout",
+        "anchor": "Page Layout",
+        "body": "Set printed page arrangement in Page Layout. Check scaling, margins and print area before producing a PDF or printed copy."
+      },
+      {
+        "title": "Formulas",
+        "anchor": "Formulas",
+        "body": "Enter formulas in cells and use Formulas for function-related controls. Check references and error values; formatting a number changes its appearance, not its stored calculation."
+      },
+      {
+        "title": "Data",
+        "anchor": "Data",
+        "body": "Use Data for supported sorting, filtering and data operations. Select the whole related table before sorting so columns stay aligned. Keep an original before destructive transformations."
+      },
+      {
+        "title": "Review",
+        "anchor": "Review",
+        "body": "Use Review for document review controls. Check comments and protected ranges before sharing an editable workbook."
+      },
+      {
+        "title": "View",
+        "anchor": "View",
+        "body": "Use View to change workbook presentation and navigation. A hidden row, column or sheet may still contain data used by formulas."
+      },
+      {
+        "title": "Automate",
+        "anchor": "Automate",
+        "body": "Use Automate for supported automation controls. Inspect an automation before running it, and preserve a workbook copy because automated actions may affect many cells."
+      }
+    ]
+  },
+  "pixacad": {
+    "source_path": "crates/ui-egui/src/menus.rs",
+    "sections": [
+      {
+        "title": "Draw",
+        "anchor": "\"Draw\"",
+        "body": "Use Draw to create geometric entities. Establish drawing units and precision before detailed work, and confirm coordinates or object snaps instead of estimating critical geometry."
+      },
+      {
+        "title": "Modify",
+        "anchor": "\"Modify\"",
+        "body": "Use Modify to change existing geometry. Select only the intended entities before moving, trimming, extending or transforming them; inspect the result at intersections."
+      },
+      {
+        "title": "Dimension",
+        "anchor": "\"Dimension\"",
+        "body": "Use Dimension to annotate measured geometry. Check drawing units, dimension style and scale; displayed precision should match the intended design tolerance."
+      },
+      {
+        "title": "Format",
+        "anchor": "\"Format\"",
+        "body": "Use Format for drawing presentation such as layers and styles. Organize related geometry on appropriate layers so visibility and plotting can be controlled together."
+      },
+      {
+        "title": "Insert",
+        "anchor": "\"Insert\"",
+        "body": "Use Insert for supported drawing content and references. Confirm the incoming scale and insertion point before combining drawings from different sources."
+      },
+      {
+        "title": "View and Window",
+        "anchor": "\"Window\"",
+        "body": "Use View for navigation and display controls, and Window for open drawing organization. Save drawing files separately; changing a viewport does not create a new saved drawing."
+      },
+      {
+        "title": "Tools",
+        "anchor": "\"Tools\"",
+        "body": "Tools contains specialist drawing and configuration commands. Read the command prompt and confirm options rather than assuming a command has completed after the first click."
+      }
+    ]
+  },
+  "pixamaterial": {
+    "source_path": "crates/ui-egui/src/toolbar.rs",
+    "sections": [
+      {
+        "title": "New graph",
+        "anchor": "ui.newGraph",
+        "body": "Create a graph for a procedural material. Nodes compute outputs from their inputs; connect compatible sockets to build a result rather than expecting an unconnected node to affect the preview."
+      },
+      {
+        "title": "Open package",
+        "anchor": "file.open",
+        "body": "Open a saved material package to continue editing. Keep linked resources with the package and inspect missing inputs before exporting outputs."
+      },
+      {
+        "title": "Save",
+        "anchor": "file.save",
+        "body": "Save the editable package with its graph structure. Saving a package is separate from exporting rendered material maps."
+      },
+      {
+        "title": "Undo and Redo",
+        "anchor": "edit.undo",
+        "body": "Undo the latest reversible graph edit, or Redo an undone edit. Keep a saved package copy before a major graph restructuring."
+      },
+      {
+        "title": "Export outputs",
+        "anchor": "ui.export",
+        "body": "Export the graph outputs as material maps for another application. Check map names, output dimensions and the expected color space in the receiving application."
+      },
+      {
+        "title": "Compute status and preview size",
+        "anchor": "preview_size",
+        "body": "The status bar reports computation and preview size. A reduced preview helps iteration but is not proof of final output quality; inspect the exported maps at their intended resolution."
+      }
+    ]
+  },
+  "pixapdf": {
+    "source_path": "crates/engine/src/catalog.rs",
+    "sections": [
+      {
+        "title": "Export a PDF",
+        "anchor": "id: \"export\"",
+        "body": "Export a PDF to a supported editable, image or text format. Choose the output appropriate to the receiving app; conversion may change layout, fonts or interactive content. Some export formats are still planned."
+      },
+      {
+        "title": "Fill & Sign",
+        "anchor": "id: \"fill_sign\"",
+        "body": "Add text, marks, dates, initials or a signature appearance to a form. A drawn signature appearance is separate from cryptographically signing with a certificate."
+      },
+      {
+        "title": "Edit a PDF",
+        "anchor": "id: \"edit\"",
+        "body": "This tool family is still marked planned in the source. Do not rely on general PDF content editing being complete. Use the original authoring document for unsupported changes."
+      },
+      {
+        "title": "Create a PDF",
+        "anchor": "id: \"create\"",
+        "body": "Create a new PDF from supported input. Check page dimensions, orientation and font appearance in the resulting PDF before sharing it."
+      },
+      {
+        "title": "Combine files",
+        "anchor": "id: \"combine\"",
+        "body": "Combine supported files into one PDF. Review their order and page orientation, then save to a new destination rather than overwriting the input files."
+      },
+      {
+        "title": "Organize pages",
+        "anchor": "id: \"organize\"",
+        "body": "Use the page overview to arrange, rotate, insert, extract or remove supported pages. Review the resulting page order and keep an original before deleting pages."
+      },
+      {
+        "title": "Add comments",
+        "anchor": "id: \"comment\"",
+        "body": "Add review comments and annotations. These communicate proposed changes; they do not necessarily modify the underlying page content."
+      },
+      {
+        "title": "Scan & OCR",
+        "anchor": "id: \"scan\"",
+        "body": "Use the available scan and OCR controls to bring image content into a searchable workflow. OCR can misread text; inspect names, numbers and exported text."
+      },
+      {
+        "title": "Protect a PDF",
+        "anchor": "id: \"protect\"",
+        "body": "This tool family is still marked planned in the source. Do not assume a document has encryption or access restrictions merely because this panel is visible."
+      },
+      {
+        "title": "Redact a PDF",
+        "anchor": "id: \"redact\"",
+        "body": "Use the dedicated redaction workflow for sensitive content. A black drawing or annotation is not a substitute for applied redaction. Retain a private original and inspect the sanitized copy before sharing."
+      },
+      {
+        "title": "Compress a PDF",
+        "anchor": "id: \"compress\"",
+        "body": "Create a smaller PDF using supported compression options. Inspect small text and images afterward, especially when preparing a print document."
+      },
+      {
+        "title": "Prepare a form",
+        "anchor": "id: \"form\"",
+        "body": "Create and arrange supported form fields, then test their values and tab order. Save the editable form separately from a completed or flattened copy."
+      },
+      {
+        "title": "Add a stamp",
+        "anchor": "id: \"stamp\"",
+        "body": "Add a stamp annotation to the document. Stamps are visual marks; they do not by themselves prove authorship or certificate validity."
+      },
+      {
+        "title": "Use a certificate",
+        "anchor": "id: \"certificate\"",
+        "body": "Use the supported certificate controls for digital-signature workflows. Manage certificate credentials privately; signature trust and the validity of document content are separate questions."
+      },
+      {
+        "title": "Use print production",
+        "anchor": "id: \"print_production\"",
+        "body": "This tool family is still marked planned in the source. Do not treat the available UI as evidence of complete professional prepress validation."
+      },
+      {
+        "title": "Measure objects",
+        "anchor": "id: \"measure\"",
+        "body": "Measure supported objects on a PDF page. Set and confirm the scale first; measuring a scan without a known scale does not establish real-world dimensions."
+      },
+      {
+        "title": "Compare files",
+        "anchor": "id: \"compare\"",
+        "body": "Compare two PDF versions to inspect differences. Review the actual changed pages; a comparison result does not establish that every semantic difference was detected."
+      },
+      {
+        "title": "Use guided actions",
+        "anchor": "id: \"actions\"",
+        "body": "Use guided actions for supported multi-step processing. Check input and output locations and keep originals before running a batch."
+      },
+      {
+        "title": "Prepare for accessibility",
+        "anchor": "id: \"accessibility\"",
+        "body": "Inspect and prepare supported accessibility structures. Machine checks alone do not establish accessible reading order or usable alternative text; review the document with its intended reading workflow."
+      },
+      {
+        "title": "Apply PDF standards",
+        "anchor": "id: \"standards\"",
+        "body": "Use supported PDF standards checks or conversion controls. Confirm the requested profile and read reported limitations before describing the output as conforming."
+      },
+      {
+        "title": "Add search index",
+        "anchor": "id: \"search_index\"",
+        "body": "This tool family is still marked planned in the source. Basic document search and a generated multi-document search index are different capabilities."
+      },
+      {
+        "title": "Use JavaScript",
+        "anchor": "id: \"javascript\"",
+        "body": "This tool family is still marked planned in the source. Do not assume PDF scripts or scripted form behavior will run as they do in another PDF application."
+      },
+      {
+        "title": "AI assistant",
+        "anchor": "id: \"ai\"",
+        "body": "The AI assistant requires an optional provider. This is not a bundled unlimited AI service; provider availability and setup determine which actions can run."
+      }
+    ]
+  }
+}

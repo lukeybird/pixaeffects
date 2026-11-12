@@ -21,7 +21,7 @@ def audit(app,source):
  data=json.loads(main[0].read_text()) if len(main)==1 else {}
  expected=guide(app,source)
  if data!=expected:failures.append('embedded manual differs from current generator')
- return {'product':app['id'],'upstream_revision':app['revision'],'checks_passed':not failures,'failures':failures,'licenses_retained':licenses,'embedded_starter_chapters':len(data.get('chapters',[])),'embedded_tour_steps':len(data.get('tour',[])),'tool_reference_chapters':len(data.get('tools',[])),'exhaustive_manual_verified':False,'graphical_acceptance':'not-run','signed_updater_install_restart':'not-configured','ready_for_signing':False}
+ return {'product':app['id'],'upstream_revision':app['revision'],'checks_passed':not failures,'failures':failures,'licenses_retained':licenses,'embedded_starter_chapters':len(data.get('chapters',[])),'embedded_tour_steps':len(data.get('tour',[])),'tool_reference_chapters':len(data.get('tools',[])),'exhaustive_manual_verified':False,'graphical_acceptance':'not-run','signed_updater_install_restart':'implemented-macos-unverified','ready_for_signing':False}
 if __name__=='__main__':
  p=argparse.ArgumentParser();p.add_argument('--sources',type=Path,required=True);p.add_argument('--output',type=Path,required=True);a=p.parse_args()
  apps=json.loads((ROOT/'catalog.json').read_text())['apps'];results=[audit(x,a.sources/x['source']) for x in apps]

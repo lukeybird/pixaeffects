@@ -54,7 +54,7 @@ Use `python prepare.py pixavector` for one product. Preparation refuses dirty, a
 
 ## What is NOT finished
 
-These are development preparations, not 14 verified shipping applications. All fourteen have experimental restricted-preview gates and native recovery adapters with offline native roundtrip checks. Real account/expiry and OS vault UI tests, comprehensive manuals/tool tours, complete promotional-brand audits, linked per-platform builds and editor/import/export/save QA remain outstanding. PixaDesign has a 37-tool guide; the other thirteen have starter orientations. Signed-update validation exists, but the publisher key/feed, native installation, restart and rollback are not configured. Upstream alpha features are not promised as professional-product parity.
+These are prepared source overlays, not fourteen verified shipping applications. All fourteen have account/device-access gates and native recovery adapters. The shared searchable manual has twelve workflow chapters per product, with source-bound control guides and tool references. Tool coverage varies and does not imply every command is documented or every upstream feature is implemented. Own-product release discovery and a Mac Developer ID/Gatekeeper-checked installer/restart helper are connected; Windows/Linux installation remains manual. Product release feeds contain no matching published suite packages yet. Live account, OS vault, editor/import/export/save and update acceptance remain separate. Upstream alpha features are not promised as professional-product parity.
 
 Development packaging deliberately says it is unsigned and unnotarized. No secrets are needed or stored. Do not upload these packages to customer downloads, enable a release flag, publish GitHub releases, or claim completion until the gates pass. Mac signing and notarization happen later using the publisher's secure Keychain or an explicitly configured secure signing service.
 
@@ -84,3 +84,7 @@ Every restricted preview preserves the live editor in memory when access expires
 Interface detached windows check the same monotonic access deadline even if the main window is hidden. Locked close still requires an explicit decision after recovery; unfinished text fields or external/background operations may require reconnecting first.
 
 The final local verification checkpoint records 28 passed Linux compilation checks (all fourteen apps in development and subscription modes), 14 passed native recovery roundtrips, 15 Python regressions and 17 runtime tests. See FINAL_CHECKS.json and RECOVERY_STATUS.json. These results do not approve customer releases.
+
+## Unsigned candidate packaging
+
+After preparing sources, `python pixa-suite/build.py <product> --release --access-mode subscription` builds an account-gated native binary. `python pixa-suite/package.py <product> --candidate` checks the exact binary/source/platform receipt and assembles an unsigned host-architecture archive with the manual and source notices. It does not claim a universal Mac build, signing, native installer acceptance or public release. Development packages remain a separate channel and cannot be labeled candidates. These commands are local build tooling; the existing suite CI still performs compile/recovery checks, not release packaging.
