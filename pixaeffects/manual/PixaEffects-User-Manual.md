@@ -4,7 +4,7 @@ by AIWebDesignFirm
 
 ## Welcome to PixaEffects
 
-PixaEffects by AIWebDesignFirm is a motion graphics and compositing editor. Build a composition from layers, animate properties, apply effects and render a video. It is an early-access product; keep backup copies. Projects use .ecproj; a project file is not an exported movie.
+PixaEffects by AIWebDesignFirm is a motion graphics and compositing editor. Build a composition from layers, animate properties, apply effects and render a video. It is an early-access product; keep backup copies. Projects use .ecproj; a project file is not an exported movie. Open Help → PixaEffects User Manual (F1) for this searchable offline guide. Choose Help → Quick Tool Tour for a short explanation of all 31 toolbar tools. Use Next and Back, Finish on the last tool, or Escape to close the tour. The tour does not change your project or active tool.
 
 ## Install and activate
 
@@ -48,4 +48,4 @@ Save .ecproj frequently and keep source media with your project. A render is a s
 
 ## Account, updates and privacy
 
-Manage your free Pixa account and approved devices at aiwebdesignfirm.com/account. No card is needed and account access has no scheduled expiration. Help → Check for Updates checks PixaEffects releases only. On Mac, Install and restart verifies the checksum, publisher signature and notarization before replacing the app. Save first. Windows and Linux use the website installer flow. Signing private keys stay with the publisher, never inside the download.
+Manage your free Pixa account and approved devices at aiwebdesignfirm.com/account. No card is needed and account access has no scheduled expiration. Help → Check for Updates checks PixaEffects releases only. On Mac, Install and restart verifies the checksum, publisher signature and notarization before replacing the app. Save first. Windows and Linux use the website installer flow. Signing private keys stay with the publisher, never inside the download. If no stable release is published, the updater reports that it cannot check a published release; this is not confirmation that your app is current. Failed downloads or verification leave the installed app unchanged. A failed replacement or immediate launch restores the previous app. A successful launch does not guarantee the app will never crash; keep project backups.

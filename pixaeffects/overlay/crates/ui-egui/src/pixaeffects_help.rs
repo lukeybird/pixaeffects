@@ -32,7 +32,8 @@ pub(crate) fn show(ctx: &egui::Context) {
     if state.manual {
         egui::Window::new("PixaEffects User Manual").open(&mut state.manual).default_width(650.0).default_height(550.0).show(ctx, |ui| {
             ui.label("by AIWebDesignFirm");
-            ui.text_edit_singleline(&mut state.search);
+            let search_label = ui.label("Search the manual");
+            ui.text_edit_singleline(&mut state.search).labelled_by(search_label.id);
             let query = state.search.to_lowercase();
             egui::ScrollArea::vertical().show(ui, |ui| {
                 if let Ok(chapters) = serde_json::from_str::<Vec<(String, String)>>(include_str!("../../../pixaeffects/manual/guide.json")) {
@@ -96,7 +97,7 @@ pub(crate) fn show(ctx: &egui::Context) {
                         state.index = state.index.saturating_sub(1);
                     }
                     if state.index + 1 < Tool::ALL.len() {
-                        if ui.button("Next →").clicked() {
+                        if ui.button("Next").clicked() {
                             state.index += 1;
                         }
                     } else if ui.button("Finish").clicked() {
@@ -125,5 +126,70 @@ mod tests {
     fn manual_has_chapters() {
         let chapters: Vec<(String, String)> = serde_json::from_str(include_str!("../../../pixaeffects/manual/guide.json")).unwrap();
         assert_eq!(chapters.len(), 12);
+    }
+    #[test]
+    fn tour_walks_every_tool_and_finishes() {
+        use egui_kittest::{Harness, kittest::Queryable};
+        let mut harness = Harness::builder().with_size(egui::vec2(900.0, 700.0)).build_ui_state(
+            |ui, started: &mut bool| {
+                if !*started {
+                    open_tour(ui.ctx());
+                    *started = true;
+                }
+                show(ui.ctx());
+            },
+            false,
+        );
+        harness.run_steps(3);
+        for index in 0..Tool::ALL.len() {
+            harness.get_by_label(&format!("Tool {} of {}", index + 1, Tool::ALL.len()));
+            if index == 1 {
+                harness.get_by_label("Back").click();
+                harness.run_steps(3);
+                harness.get_by_label(&format!("Tool 1 of {}", Tool::ALL.len()));
+                harness.get_by_label("Next").click();
+                harness.run_steps(3);
+            }
+            if index + 1 < Tool::ALL.len() {
+                harness.get_by_label("Next").click();
+                harness.run_steps(3);
+            }
+        }
+        harness.get_by_label("Finish").click();
+        harness.run_steps(3);
+        assert!(harness.query_by_label("Finish").is_none());
+    }
+
+    #[test]
+    fn bundled_manual_search_displays_matching_chapter() {
+        use egui_kittest::{Harness, kittest::Queryable};
+        let mut harness = Harness::builder().with_size(egui::vec2(900.0, 700.0)).build_ui_state(
+            |ui, started: &mut bool| {
+                if !*started {
+                    open_manual(ui.ctx());
+                    *started = true;
+                }
+                show(ui.ctx());
+            },
+            false,
+        );
+        harness.run_steps(3);
+        harness.get_by_role_and_label(egui::accesskit::Role::TextInput, "Search the manual").click();
+        harness.run_steps(2);
+        harness.input_mut().events.push(egui::Event::Text("scheduled expiration".into()));
+        harness.run_steps(3);
+        harness.get_by_label("Account, updates and privacy");
+        assert!(harness.query_by_label("Create a composition").is_none());
+    }
+    #[test]
+    fn escape_closes_tour() {
+        let ctx = egui::Context::default();
+        open_tour(&ctx);
+        let input = egui::RawInput {
+            events: vec![egui::Event::Key { key: egui::Key::Escape, physical_key: None, pressed: true, repeat: false, modifiers: egui::Modifiers::NONE }],
+            ..Default::default()
+        };
+        ctx.run_ui(input, |ui| show(ui.ctx())).drop_without_applying_deltas();
+        assert!(!ctx.data(|data| data.get_temp::<State>(id()).unwrap()).tour);
     }
 }

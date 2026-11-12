@@ -27,7 +27,7 @@ def finish_branding(root: Path):
         file = root / relative
         lines = []
         for line in file.read_text().splitlines(keepends=True):
-            if re.search(r'^\s*\("(?:Discord|PixaEffects on GitHub|Join[^"\n]*Discord)[" ,]', line):
+            if 'getartcraft.com' in line or re.search(r'^\s*\("(?:Discord|PixaEffects on GitHub|Join[^"\n]*Discord)[" ,]', line):
                 continue
             lines.append(line)
         file.write_text(''.join(lines))

@@ -14,6 +14,26 @@ pub(crate) struct Runtime {
     #[cfg(target_os = "macos")]
     ready: Option<crate::pixaeffects_updater::Prepared>,
 }
+impl Runtime {
+    fn finish_check(&mut self, result: Result<Option<String>, String>) {
+        match result {
+            Ok(Some(version)) => {
+                self.message = format!("PixaEffects {version} is available.");
+                self.version = Some(version);
+                self.open = true;
+            }
+            Ok(None) => {
+                self.version = None;
+                self.message = "You have the latest published PixaEffects version.".into();
+            }
+            Err(error) => {
+                self.version = None;
+                self.message = error;
+            }
+        }
+    }
+}
+
 impl EffectcraftApp {
     #[cfg(not(target_arch = "wasm32"))]
     pub fn set_startup_update_check(&mut self, on: bool) {
@@ -24,6 +44,12 @@ pub(crate) fn check(app: &mut EffectcraftApp) {
     let rt = &mut app.updates_rt;
     rt.open = true;
     rt.checked = true;
+    // Help-menu checks must not hide an installation that already owns a verified candidate.
+    #[cfg(target_os = "macos")]
+    if rt.installing.is_some() || rt.ready.is_some() {
+        return;
+    }
+    rt.version = None;
     #[cfg(not(target_arch = "wasm32"))]
     {
         if rt.checking.is_some() {
@@ -80,16 +106,7 @@ pub(crate) fn tick(app: &mut EffectcraftApp, ctx: &egui::Context) {
             };
             if let Some(result) = result {
                 rt.checking = None;
-                match result {
-                    Ok(v) => {
-                        rt.version = v;
-                        rt.message = "You have the latest published PixaEffects version.".into();
-                        if rt.version.is_some() {
-                            rt.open = true;
-                        }
-                    }
-                    Err(e) => rt.message = e,
-                }
+                rt.finish_check(result);
             }
             ctx.request_repaint_after(std::time::Duration::from_millis(250));
         }
@@ -155,10 +172,14 @@ pub(crate) fn show(app: &mut EffectcraftApp, ctx: &egui::Context) {
             if ui.button("Download update").clicked() {
                 ctx.open_url(egui::OpenUrl::new_tab("https://aiwebdesignfirm.com/pixaeffects"));
             }
-        } else {
-            ui.label(&rt.message);
         }
-        if ui.button("Check again").clicked() {
+        // Verification/download failures must remain visible when an update is available.
+        ui.label(&rt.message);
+        #[cfg(target_os = "macos")]
+        let busy = rt.installing.is_some() || rt.ready.is_some();
+        #[cfg(not(target_os = "macos"))]
+        let busy = false;
+        if ui.add_enabled(!busy, egui::Button::new("Check again")).clicked() {
             again = true;
         }
     });
@@ -176,5 +197,44 @@ pub(crate) fn show(app: &mut EffectcraftApp, ctx: &egui::Context) {
     app.updates_rt.open = open;
     if again {
         check(app);
+    }
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn available_release_does_not_claim_latest() {
+        let mut runtime = Runtime::default();
+        runtime.finish_check(Ok(Some("0.1.3".into())));
+        assert_eq!(runtime.version.as_deref(), Some("0.1.3"));
+        assert!(runtime.open);
+        assert_eq!(runtime.message, "PixaEffects 0.1.3 is available.");
+    }
+
+    #[test]
+    fn failed_or_empty_recheck_clears_stale_offer() {
+        let mut runtime = Runtime::default();
+        runtime.finish_check(Ok(Some("0.1.3".into())));
+        runtime.finish_check(Err("Offline".into()));
+        assert!(runtime.version.is_none());
+        assert_eq!(runtime.message, "Offline");
+        runtime.finish_check(Ok(Some("0.1.3".into())));
+        runtime.finish_check(Ok(None));
+        assert!(runtime.version.is_none());
+        assert!(runtime.message.contains("latest published"));
+    }
+    #[test]
+    fn verification_error_is_visible_beside_update_offer() {
+        use egui_kittest::{Harness, kittest::Queryable};
+        let mut app = EffectcraftApp::new(effectcraft_engine::Session::default());
+        app.updates_rt.open = true;
+        app.updates_rt.version = Some("0.1.3".into());
+        app.updates_rt.message = "The update checksum does not match.".into();
+        let mut harness = Harness::builder().with_size(egui::vec2(900.0, 700.0)).build_ui_state(|ui, app| show(app, ui.ctx()), app);
+        harness.run_steps(3);
+        harness.get_by_label("The update checksum does not match.");
+        harness.get_by_label("Update available — 0.1.3");
     }
 }

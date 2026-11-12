@@ -49,6 +49,11 @@ class BrandingTests(unittest.TestCase):
         for relative in ['LICENSE-MIT', 'LICENSE-APACHE', 'NOTICE', 'ATTRIBUTION.md', 'contributors/contributors.json']:
             self.assertTrue((ROOT / relative).is_file())
 
+    def test_obsolete_translated_website_promotion_is_removed(self):
+        self.require_prepared()
+        for relative in ['crates/ui-egui/src/i18n.rs', 'crates/ui-egui/src/i18n/ui.rs']:
+            self.assertNotIn('getartcraft.com', (ROOT / relative).read_text())
+
     def test_existing_e_icon_and_own_release_feed(self):
         self.assertIn("render('E',", (ROOT / 'pixaeffects/icons.py').read_text())
         for file in (ROOT / 'pixaeffects/overlay').rglob('*.rs'):

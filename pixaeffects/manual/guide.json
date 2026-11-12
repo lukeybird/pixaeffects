@@ -1,7 +1,7 @@
 [
   [
     "Welcome to PixaEffects",
-    "PixaEffects by AIWebDesignFirm is a motion graphics and compositing editor. Build a composition from layers, animate properties, apply effects and render a video. It is an early-access product; keep backup copies. Projects use .ecproj; a project file is not an exported movie."
+    "PixaEffects by AIWebDesignFirm is a motion graphics and compositing editor. Build a composition from layers, animate properties, apply effects and render a video. It is an early-access product; keep backup copies. Projects use .ecproj; a project file is not an exported movie. Open Help → PixaEffects User Manual (F1) for this searchable offline guide. Choose Help → Quick Tool Tour for a short explanation of all 31 toolbar tools. Use Next and Back, Finish on the last tool, or Escape to close the tour. The tour does not change your project or active tool."
   ],
   [
     "Install and activate",
@@ -9,11 +9,11 @@
   ],
   [
     "Create a composition",
-    "Choose Composition \u2192 New Composition. Set the width, height, frame rate and duration. Start with 1920 \u00d7 1080 and a short duration. Add layers using Layer \u2192 New. Save using File \u2192 Save. Change size and duration later under Composition Settings."
+    "Choose Composition → New Composition. Set the width, height, frame rate and duration. Start with 1920 × 1080 and a short duration. Add layers using Layer → New. Save using File → Save. Change size and duration later under Composition Settings."
   ],
   [
     "Import and arrange footage",
-    "Choose File \u2192 Import \u2192 File to add footage or images. Drag an imported item from Project onto the composition or Timeline. Layers are stacked: upper layers cover lower layers. Keep original media accessible; projects may refer to external files. Missing media needs to be relinked."
+    "Choose File → Import → File to add footage or images. Drag an imported item from Project onto the composition or Timeline. Layers are stacked: upper layers cover lower layers. Keep original media accessible; projects may refer to external files. Missing media needs to be relinked."
   ],
   [
     "Animate with keyframes",
@@ -33,11 +33,11 @@
   ],
   [
     "3D layers and cameras",
-    "Enable 3D on a layer to place it in space. Add Camera and Light layers from Layer \u2192 New. Orbit, Pan Camera and Dolly navigate the scene. Rotation changes a selected layer; Pan Behind changes its anchor point. A camera changes the view, not the source footage."
+    "Enable 3D on a layer to place it in space. Add Camera and Light layers from Layer → New. Orbit, Pan Camera and Dolly navigate the scene. Rotation changes a selected layer; Pan Behind changes its anchor point. A camera changes the view, not the source footage."
   ],
   [
     "Render and export",
-    "Choose Composition \u2192 Add to Render Queue. Set Render Settings, Output Module and Output To, then Render. H.264 MP4 is a common delivery format. For transparency choose a supported format, such as ProRes or PNG Sequence, and RGB + Alpha. Render a short sample first to check timing, sound and color."
+    "Choose Composition → Add to Render Queue. Set Render Settings, Output Module and Output To, then Render. H.264 MP4 is a common delivery format. For transparency choose a supported format, such as ProRes or PNG Sequence, and RGB + Alpha. Render a short sample first to check timing, sound and color."
   ],
   [
     "Saving and troubleshooting",
@@ -45,6 +45,6 @@
   ],
   [
     "Account, updates and privacy",
-    "Manage your free Pixa account and approved devices at aiwebdesignfirm.com/account. No card is needed and account access has no scheduled expiration. Help \u2192 Check for Updates checks PixaEffects releases only. On Mac, Install and restart verifies the checksum, publisher signature and notarization before replacing the app. Save first. Windows and Linux use the website installer flow. Signing private keys stay with the publisher, never inside the download."
+    "Manage your free Pixa account and approved devices at aiwebdesignfirm.com/account. No card is needed and account access has no scheduled expiration. Help → Check for Updates checks PixaEffects releases only. On Mac, Install and restart verifies the checksum, publisher signature and notarization before replacing the app. Save first. Windows and Linux use the website installer flow. Signing private keys stay with the publisher, never inside the download. If no stable release is published, the updater reports that it cannot check a published release; this is not confirmation that your app is current. Failed downloads or verification leave the installed app unchanged. A failed replacement or immediate launch restores the previous app. A successful launch does not guarantee the app will never crash; keep project backups."
   ]
 ]

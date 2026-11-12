@@ -27,7 +27,7 @@ def prepare():
  for p in (ROOT/'pixaeffects/overlay').rglob('*'):
   if p.is_file():
    target=ROOT/p.relative_to(ROOT/'pixaeffects/overlay');target.parent.mkdir(parents=True,exist_ok=True);shutil.copyfile(p,target)
- edit('Cargo.toml','version = "0.21.0"','version = "0.1.2"')
+ edit('Cargo.toml','version = "0.21.0"','version = "0.1.3"')
  edit('apps/effectcraft/src/main.rs','struct Desktop {','mod access;\nstruct Desktop {')
  edit('apps/effectcraft/src/main.rs','Ok(Box::new(Desktop {','Ok(Box::new(access::AccessApp::new(Desktop {')
  edit('apps/effectcraft/src/main.rs','reporter: desktop_reporter,\n            }))','reporter: desktop_reporter,\n            })))')
@@ -48,7 +48,7 @@ def prepare():
         cmd!("help.website", "AIWebDesignFirm Website", ["Help"], None, "{}", always, |s, _| open(s, links::WEBSITE.into())),''')
  p=ROOT/'crates/engine/src/cmd/help.rs';s=p.read_text();start=s.index('    let page = match');end=s.index('\n}',start);s=s[:start]+'    let _ = p;\n    open(s, "https://aiwebdesignfirm.com/pixaeffects/manual".into())'+s[end:];s=s.replace('ArtCraft Website','AIWebDesignFirm Website');p.write_text(s)
  p=ROOT/'crates/engine/src/home/links.rs';s=p.read_text();a=s.index('pub const SIBLINGS:');b=s.index('\n];',a)+3;s=s[:a]+'pub const SIBLINGS: &[(&str, &str)] = &[];'+s[b:];s=s.replace('format!("https://github.com/storytold/{slug}")','{ let _ = slug; "https://aiwebdesignfirm.com".into() }').replace('format!("https://aiwebdesignfirm.com/apps/{slug}")','{ let _ = slug; "https://aiwebdesignfirm.com".into() }');p.write_text(s)
- p=ROOT/'crates/ui-egui/src/header.rs';s=p.read_text().replace('use crate::icons::{self, Icon};','use crate::icons::Icon;');a=s.index('    let t = app.tokens;',s.index('fn community_buttons'));b=s.index('\n}\n',a);s=s[:a]+'''    let _ = (app, ui, p, cy);
+ p=ROOT/'crates/ui-egui/src/header.rs';s=p.read_text().replace('use crate::icons::{self, Icon};','use crate::icons::Icon;').replace('p: &egui::Painter, mut rx: f32, cy: f32', 'p: &egui::Painter, rx: f32, cy: f32');a=s.index('    let t = app.tokens;',s.index('fn community_buttons'));b=s.index('\n}\n',a);s=s[:a]+'''    let _ = (app, ui, p, cy);
     rx'''+s[b:];s=s.replace('../../../docs/brand/artcraft-mark.png','../../../assets/app-icon/pixaeffects-mark.png');p.write_text(s)
  # Header-generated title, About and Home promotional labels.
  for p in (ROOT/'crates/ui-egui/src').rglob('*.rs'):
