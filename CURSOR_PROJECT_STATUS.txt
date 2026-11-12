@@ -1,3 +1,7 @@
+BUILD CHECKPOINT — 2026-11-12
+Source patch pushed: 2806ab21584fb7a68b0b45dd280be7159adbbe59.
+Fresh native checks run 43135602859 is queued; fresh PixaVector universal Mac candidate run 43135602290 is in progress. No result claimed yet. The existing Mac workflow strips whitespace in mac-release.txt; selected product remains PixaVector. Do not rerun/cancel jobs.
+
 CURRENT CHECKPOINT — 2026-11-12 — SOURCE PREFLIGHT AND LIVE PROGRESS
 
 Prepared all 14 pinned suite sources. Fixed missed Linux Flatpak app IDs, upstream version-cache permission, publisher metadata/screenshots, translated display branding and Material community label. Legal notices and internal document/command IDs retained.

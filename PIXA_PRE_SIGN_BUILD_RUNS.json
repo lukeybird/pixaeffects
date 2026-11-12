@@ -1,0 +1,20 @@
+{
+  "source_sha": "2806ab21584fb7a68b0b45dd280be7159adbbe59",
+  "runs": [
+    {
+      "id": 43135602859,
+      "name": "Pixa suite native checks",
+      "status": "queued",
+      "sha": "2806ab21584fb7a68b0b45dd280be7159adbbe59"
+    },
+    {
+      "id": 43135602290,
+      "name": "Pixa Mac candidate",
+      "status": "in_progress",
+      "sha": "2806ab21584fb7a68b0b45dd280be7159adbbe59"
+    }
+  ],
+  "signing_approved": false,
+  "installers_published": false,
+  "scope": "Source branding patch verification; statuses are a checkpoint, not a terminal result."
+}
