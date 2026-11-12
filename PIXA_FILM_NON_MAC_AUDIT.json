@@ -147,5 +147,6 @@
   "workflow_changes": false,
   "runtime_changes": false,
   "billing_changes": false,
-  "handoff": "CURSOR_PIXAFILM_MAC_HANDOFF.txt"
+  "handoff": "CURSOR_PIXAFILM_MAC_HANDOFF.txt",
+  "implementation_commit": "d8beb0e74d0ce7ff3adde020dd041b9d8dae7ecd"
 }

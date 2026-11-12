@@ -1,0 +1,26 @@
+{
+  "product": "pixafilm",
+  "date": "2026-11-12",
+  "source_commit": "d8beb0e74d0ce7ff3adde020dd041b9d8dae7ecd",
+  "deployment": "dpl_9ZZ4FNBSLiSQxCvGk4izbDrZEgsx",
+  "origin": "https://pixa-showcase-fl0ntbdec-luke-bargers-projects.vercel.app",
+  "routing": "13ed98a8-648b-4672-a3dc-294efd1a12ad",
+  "rollback_routing": "05c44471-c61d-49c1-9564-8e0852ab6aef",
+  "backend_unchanged": "dpl_DSsgnFjuJGtsa2N8wmkjjtMKGajG",
+  "browser_verified_urls": [
+    "https://aiwebdesignfirm.com/products",
+    "https://aiwebdesignfirm.com/products/pixafilm",
+    "https://aiwebdesignfirm.com/pixa-showcase/manuals/pixafilm"
+  ],
+  "progress": "5/7 implementation/listed-check steps complete",
+  "downloads": "Coming soon on all platforms",
+  "scope": "Existing static marketing rewrite destination origins only; twelve host-scoped rules, no account/billing/builder/device API rewrite",
+  "other_product_progress_unchanged": true,
+  "billing_changed": false,
+  "releases_created": false,
+  "private_keys_exported": false,
+  "mac_installer_build_dispatched": false,
+  "signing_performed": false,
+  "backup": "/workspace/scratch/b3e6d390500f/film-marketing-backup",
+  "handoff": "CURSOR_PIXAFILM_MAC_HANDOFF.txt"
+}
