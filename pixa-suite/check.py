@@ -6,6 +6,8 @@ ROOT=Path(__file__).resolve().parent
 APPS=json.loads((ROOT/'catalog.json').read_text(encoding="utf-8"))['apps']
 def check(app, native=False, release=False):
  root=ROOT/'sources'/app['source']; errors=[]
+ from branding import presentation_violations
+ errors.extend(presentation_violations(root,app))
  def call(args,timeout=120):
   p=subprocess.run(args,cwd=root,capture_output=True,text=True,timeout=timeout, encoding="utf-8")
   if p.returncode:errors.append(p.stderr[-2500:])

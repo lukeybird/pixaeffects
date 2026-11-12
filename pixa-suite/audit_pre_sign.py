@@ -6,6 +6,8 @@ from manuals import guide
 ROOT=Path(__file__).resolve().parent
 def audit(app,source):
  failures=[]
+ from branding import presentation_violations
+ failures.extend(presentation_violations(source,app))
  if not (source/'.pixa-prepared.json').is_file():failures.append('source not prepared')
  for file in (source/'packaging').rglob('*'):
   if file.suffix in {'.yml','.yaml'}:

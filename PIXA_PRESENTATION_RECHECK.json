@@ -1,0 +1,223 @@
+{
+  "scope": "Twelve fresh pinned source preparations with corrected presentation links. Not installed branding acceptance or complete product readiness.",
+  "products": [
+    {
+      "product": "pixalight",
+      "upstream_revision": "e9c29e2c5c5dd1f86cc98677b5dc389f6612fcac",
+      "checks_passed": true,
+      "failures": [],
+      "licenses_retained": [
+        "LICENSE-MIT",
+        "LICENSE-APACHE"
+      ],
+      "embedded_starter_chapters": 12,
+      "embedded_tour_steps": 4,
+      "tool_reference_chapters": 9,
+      "exhaustive_manual_verified": false,
+      "graphical_acceptance": "not-run",
+      "signed_updater_install_restart": "implemented-macos-unverified",
+      "ready_for_signing": false
+    },
+    {
+      "product": "pixapdf",
+      "upstream_revision": "efd7c9fc245d1660388208a37df3d3b5036584ba",
+      "checks_passed": true,
+      "failures": [],
+      "licenses_retained": [
+        "LICENSE-MIT",
+        "LICENSES.toml",
+        "LICENSE-APACHE"
+      ],
+      "embedded_starter_chapters": 12,
+      "embedded_tour_steps": 4,
+      "tool_reference_chapters": 23,
+      "exhaustive_manual_verified": false,
+      "graphical_acceptance": "not-run",
+      "signed_updater_install_restart": "implemented-macos-unverified",
+      "ready_for_signing": false
+    },
+    {
+      "product": "pixadesign",
+      "upstream_revision": "32a1dbc7345fe14e010a36c691f1095562c387a9",
+      "checks_passed": true,
+      "failures": [],
+      "licenses_retained": [
+        "LICENSE-MIT",
+        "LICENSE-APACHE"
+      ],
+      "embedded_starter_chapters": 12,
+      "embedded_tour_steps": 4,
+      "tool_reference_chapters": 37,
+      "exhaustive_manual_verified": false,
+      "graphical_acceptance": "not-run",
+      "signed_updater_install_restart": "implemented-macos-unverified",
+      "ready_for_signing": false
+    },
+    {
+      "product": "pixainterface",
+      "upstream_revision": "a2e87433d8bda2b0c909587da08cb27c51e3b17e",
+      "checks_passed": true,
+      "failures": [],
+      "licenses_retained": [
+        "LICENSE-MIT",
+        "LICENSE-APACHE"
+      ],
+      "embedded_starter_chapters": 12,
+      "embedded_tour_steps": 4,
+      "tool_reference_chapters": 26,
+      "exhaustive_manual_verified": false,
+      "graphical_acceptance": "not-run",
+      "signed_updater_install_restart": "implemented-macos-unverified",
+      "ready_for_signing": false
+    },
+    {
+      "product": "pixatexture",
+      "upstream_revision": "f5e41e759f63f68993eafa855f1fd585de9ec289",
+      "checks_passed": true,
+      "failures": [],
+      "licenses_retained": [
+        "LICENSE-MIT",
+        "LICENSE-APACHE"
+      ],
+      "embedded_starter_chapters": 12,
+      "embedded_tour_steps": 4,
+      "tool_reference_chapters": 9,
+      "exhaustive_manual_verified": false,
+      "graphical_acceptance": "not-run",
+      "signed_updater_install_restart": "implemented-macos-unverified",
+      "ready_for_signing": false
+    },
+    {
+      "product": "pixamaterial",
+      "upstream_revision": "29857f653d894d7c177d56eca5e3305a0709808b",
+      "checks_passed": true,
+      "failures": [],
+      "licenses_retained": [
+        "LICENSE-MIT",
+        "LICENSE-APACHE"
+      ],
+      "embedded_starter_chapters": 12,
+      "embedded_tour_steps": 4,
+      "tool_reference_chapters": 6,
+      "exhaustive_manual_verified": false,
+      "graphical_acceptance": "not-run",
+      "signed_updater_install_restart": "implemented-macos-unverified",
+      "ready_for_signing": false
+    },
+    {
+      "product": "pixaword",
+      "upstream_revision": "d40d1b27181b61990c84c75f77d5fd23ef81d452",
+      "checks_passed": true,
+      "failures": [],
+      "licenses_retained": [
+        "LICENSE-MIT",
+        "LICENSE-APACHE"
+      ],
+      "embedded_starter_chapters": 12,
+      "embedded_tour_steps": 4,
+      "tool_reference_chapters": 10,
+      "exhaustive_manual_verified": false,
+      "graphical_acceptance": "not-run",
+      "signed_updater_install_restart": "implemented-macos-unverified",
+      "ready_for_signing": false
+    },
+    {
+      "product": "pixasound",
+      "upstream_revision": "ef58a90f4a418a282a15fc71d2e03c3d8e8f40fa",
+      "checks_passed": true,
+      "failures": [],
+      "licenses_retained": [
+        "LICENSE-MIT",
+        "LICENSE-APACHE"
+      ],
+      "embedded_starter_chapters": 12,
+      "embedded_tour_steps": 4,
+      "tool_reference_chapters": 7,
+      "exhaustive_manual_verified": false,
+      "graphical_acceptance": "not-run",
+      "signed_updater_install_restart": "implemented-macos-unverified",
+      "ready_for_signing": false
+    },
+    {
+      "product": "pixadeck",
+      "upstream_revision": "0623b430324cf4c3d1962e6ae7885cf30c011c5e",
+      "checks_passed": true,
+      "failures": [],
+      "licenses_retained": [
+        "LICENSE-MIT",
+        "LICENSE-APACHE"
+      ],
+      "embedded_starter_chapters": 12,
+      "embedded_tour_steps": 4,
+      "tool_reference_chapters": 6,
+      "exhaustive_manual_verified": false,
+      "graphical_acceptance": "not-run",
+      "signed_updater_install_restart": "implemented-macos-unverified",
+      "ready_for_signing": false
+    },
+    {
+      "product": "pixacad",
+      "upstream_revision": "a3d9348f63c2ad35391cc93980dc7ee7366f2ad6",
+      "checks_passed": true,
+      "failures": [],
+      "licenses_retained": [
+        "LICENSE-MIT",
+        "LICENSE-APACHE"
+      ],
+      "embedded_starter_chapters": 12,
+      "embedded_tour_steps": 4,
+      "tool_reference_chapters": 7,
+      "exhaustive_manual_verified": false,
+      "graphical_acceptance": "not-run",
+      "signed_updater_install_restart": "implemented-macos-unverified",
+      "ready_for_signing": false
+    },
+    {
+      "product": "pixagrid",
+      "upstream_revision": "e9addf52fe68847e6c1310fcfa5d42b7aa8b9650",
+      "checks_passed": true,
+      "failures": [],
+      "licenses_retained": [
+        "LICENSE-MIT",
+        "LICENSE-APACHE"
+      ],
+      "embedded_starter_chapters": 12,
+      "embedded_tour_steps": 4,
+      "tool_reference_chapters": 9,
+      "exhaustive_manual_verified": false,
+      "graphical_acceptance": "not-run",
+      "signed_updater_install_restart": "implemented-macos-unverified",
+      "ready_for_signing": false
+    },
+    {
+      "product": "pixaanything",
+      "upstream_revision": "2e7f27631be78d499ca61d29f5cdee701e71b54f",
+      "checks_passed": true,
+      "failures": [],
+      "licenses_retained": [
+        "LICENSE-MIT",
+        "LICENSE-APACHE"
+      ],
+      "embedded_starter_chapters": 12,
+      "embedded_tour_steps": 4,
+      "tool_reference_chapters": 81,
+      "exhaustive_manual_verified": false,
+      "graphical_acceptance": "not-run",
+      "signed_updater_install_restart": "implemented-macos-unverified",
+      "ready_for_signing": false
+    }
+  ],
+  "suite_python_tests": {
+    "run": 36,
+    "passed": 35,
+    "skipped": 1
+  },
+  "mac_acceptance": "pending",
+  "ready_for_notarization": false,
+  "changes": [
+    "retired remaining Discord and upstream project promotions on production UI surfaces",
+    "corrected product URLs and manual/help destinations",
+    "retained legal credits, contributor links and stable command IDs",
+    "native compile gate now scans for known presentation leftovers"
+  ]
+}

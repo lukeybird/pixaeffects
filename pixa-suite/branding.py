@@ -3,6 +3,60 @@ from pathlib import Path
 import json,re
 ROOT=Path(__file__).resolve().parent
 
+def product_links(text,app):
+ """Replace exact promotional string literals, not command IDs or legal credits."""
+ replacements={
+  'Join us on Discord':'Manage your Pixa account',
+  'Join our community on Discord':'Manage your Pixa account',
+  'Join us on Discord: aiwebdesignfirm.com/settings':'Manage your Pixa account',
+  'Community (Discord)':'Manage your Pixa account',
+  'https://aiwebdesignfirm.com/settings':'https://aiwebdesignfirm.com/account',
+  'aiwebdesignfirm.com/settings':'aiwebdesignfirm.com/account',
+  'https://aiwebdesignfirm.com/apps/'+app['source']:'https://aiwebdesignfirm.com/products/'+app['id'],
+  'aiwebdesignfirm.com/apps/'+app['source']:'aiwebdesignfirm.com/products/'+app['id'],
+  'Source code: github.com/storytold/'+app['source']:app['name']+' User Manual',
+  'https://aiwebdesignfirm.com#readme':'https://aiwebdesignfirm.com/pixa-showcase/manuals/'+app['id'],
+ }
+ def change(match):
+  value=match.group(0)[1:-1]
+  value=replacements.get(value,value)
+  # Also correct URLs embedded in export provenance and CLI/MCP help strings.
+  value=value.replace('aiwebdesignfirm.com/apps/'+app['source'],'aiwebdesignfirm.com/products/'+app['id'])
+  value=value.replace('aiwebdesignfirm.com/settings','aiwebdesignfirm.com/account')
+  return '"'+value+'"'
+ lines=[]
+ for line in text.splitlines(keepends=True):
+  if 'copyright' in line.lower() or line.lstrip().startswith(('//','/*','*')):lines.append(line);continue
+  # The old source-promotion label must open the manual, not the generic home.
+  if 'ui.hyperlink_to' in line and 'Source code: github.com/storytold/'+app['source'] in line:
+   line=line.replace('"https://aiwebdesignfirm.com"','"https://aiwebdesignfirm.com/pixa-showcase/manuals/'+app['id']+'"')
+  if re.search(r'\bconst GITHUB\s*:',line):
+   line=line.replace('"https://aiwebdesignfirm.com"','"https://aiwebdesignfirm.com/pixa-showcase/manuals/'+app['id']+'"')
+  if re.search(r'\bconst ISSUES\s*:',line):
+   line=line.replace('"https://aiwebdesignfirm.com"','"https://aiwebdesignfirm.com/products/'+app['id']+'"')
+  if re.search(r'\bconst APPS\s*:',line):
+   line=line.replace('"https://aiwebdesignfirm.com/apps"','"https://aiwebdesignfirm.com/products"')
+  lines.append(re.sub(r'"(?:\\.|[^"\\])*"',change,line))
+ return ''.join(lines)
+
+def presentation_violations(root,app):
+ """Find residual known promotions in production Rust, excluding legal text."""
+ forbidden=['Join us on Discord','Join our community on Discord','Community (Discord)',
+            'Source code: github.com/storytold/'+app['source'],
+            'aiwebdesignfirm.com/apps/'+app['source']]
+ failures=[]
+ for base in ['apps','crates']:
+  for file in (root/base).rglob('*.rs'):
+   relative=file.relative_to(root)
+   if any(part in {'tests','credits','contributors','locales','i18n'} for part in relative.parts) or 'i18n' in file.name:continue
+   if any(token in file.name.lower() for token in ['test','credits','contributors','license','attribution']):continue
+   for number,line in enumerate(file.read_text(encoding='utf-8').splitlines(),1):
+    if 'copyright' in line.lower() or line.lstrip().startswith(('//','/*','*')):continue
+    for literal in re.findall(r'"(?:\\.|[^"\\])*"',line):
+     if any(token in literal for token in forbidden):
+      failures.append(str(relative)+':'+str(number)+': remaining product promotion')
+ return failures
+
 def display_strings(text,names):
  if not any(name in text for name in names) and ' on GitHub' not in text and 'discord.gg/artcraft' not in text:return text
  def replace(match):
@@ -23,6 +77,10 @@ def install(root,app):
    text=file.read_text(encoding='utf-8')
    # A line containing a copyright notice is never relabeled.
    updated=''.join(line if 'copyright' in line.lower() else display_strings(line,names) for line in text.splitlines(keepends=True))
+   # Translation catalogs retain their original lookup keys; the changed UI
+   # label falls back to English rather than reusing a false Discord translation.
+   if app['id'] not in {'pixavector','pixafilm'} and 'i18n' not in str(file.relative_to(root)) and 'locales' not in file.parts:
+    updated=product_links(updated,app)
    if updated!=text:file.write_text(updated,encoding='utf-8')
  # This editor draws its publisher mark as an inline SVG path rather than an image asset.
  if app['id']=='pixadesign':
