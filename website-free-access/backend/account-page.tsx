@@ -1,0 +1,9 @@
+import { auth } from '@/auth';
+import { redirect } from 'next/navigation';
+import Brand from '@/components/auth/Brand';
+import BillingPanel from '@/app/account/BillingPanel';
+export const metadata = {title:'Your Pixa apps',robots:{index:false,follow:false}};
+export default async function PixaAccount() {
+ const user=(await auth())?.user;if(!user?.id)redirect('/login?callbackUrl=%2Faccount');
+ return <main className="brand-shell"><div className="mx-auto max-w-4xl px-6 py-12"><Brand/><p className="brand-eyebrow mt-12">YOUR PIXA ACCOUNT</p><h1 className="brand-title mt-4">Your creative toolkit.</h1><p className="mt-4 text-[#9AAAC0]">Signed in as {user.email}.</p><section className="brand-card mt-8 p-8"><h2 className="text-xl font-semibold">Free early access is active</h2><p className="mt-3 text-[#9AAAC0]">No card required. No subscription required. No scheduled expiration. Access applies to released Pixa apps; other apps join when ready.</p><div className="mt-6 flex flex-wrap gap-4"><a className="brand-btn" href="/pixashop">Download PixaShop →</a><a className="brand-btn" href="/products">Explore all apps →</a></div></section><section className="brand-card mt-6 p-8"><h2 className="text-xl font-semibold">Connect your app</h2><p className="mt-3 text-[#9AAAC0]">Open a Pixa app, choose Activate this device, then approve the code shown on your own device.</p><a className="inline-block mt-5 text-cyan-300" href="/pixashop/activate">Activate PixaShop →</a></section><details className="mt-8"><summary className="cursor-pointer text-sm text-[#9AAAC0]">Previous paid services and billing</summary><p className="my-4 text-sm text-[#9AAAC0]">Pixa early access does not require a subscription. Existing paid services remain separate; use the portal below to review them.</p><BillingPanel/></details><p className="mt-10 text-sm"><a href="/">← Pixa home</a> · <a href="/api/auth/signout">Sign out</a></p></div></main>;
+}

@@ -1,0 +1,2152 @@
+{
+  "original_backend": "dpl_6w71EygorJmZkXWmq1vvTQG8GYLe",
+  "source_files": [
+    {
+      "file": ".env.example",
+      "sha": "bc01fc20987ccb4c7afa4c00cd4e0dd3b191dc94"
+    },
+    {
+      "file": "ESP32_FIRMWARE.md",
+      "sha": "abccbc3ee8beb74db94c771fdaad6d0e9ffa9f30"
+    },
+    {
+      "file": "FORM-SETUP.md",
+      "sha": "ce78aee4a18e7376454f5067bac39f7314a68cde"
+    },
+    {
+      "file": "FORM-TROUBLESHOOTING.md",
+      "sha": "1917fb04606b254323894db0b2ba6b90d8bc9f5d"
+    },
+    {
+      "file": "MARINE_APP_PLAN.md",
+      "sha": "d41c0ba1254a8d19543ee74a63cea3687126547c"
+    },
+    {
+      "file": "NEON-SETUP.md",
+      "sha": "fcbd8bec5a8c4f91cb8e534f62eee3792bbfcd65"
+    },
+    {
+      "file": "PUSHER-SETUP.md",
+      "sha": "ed112dd01048496812b236b6ec251ba6d82bc5e4"
+    },
+    {
+      "file": "README-API-SETUP.md",
+      "sha": "bfa22cc0e57db92e6211ac3a00020068ae5859bc"
+    },
+    {
+      "file": "README.md",
+      "sha": "bb4da90664e791914997ae7800c0b8ba88316e39"
+    },
+    {
+      "file": "SETUP-INSTRUCTIONS.md",
+      "sha": "794c3b71763b517706d1d952e7b41d82af51c4a3"
+    },
+    {
+      "file": "SMS-SETUP.md",
+      "sha": "7effceb08da11b2aa65808dd8d3f699e4f4d34cf"
+    },
+    {
+      "file": "TDG-RENDER-SETUP.md",
+      "sha": "af4ccd1d847a81b26dd6c33415b7ac50c532e9ee"
+    },
+    {
+      "file": "Territory Game/index.html",
+      "sha": "cc63703dc69b48b45fd4d037054d0fee1d642cd2"
+    },
+    {
+      "file": "VERCEL-API-KEY-SETUP.md",
+      "sha": "bce5a7e6541160fc538288fe3ded058a43689437"
+    },
+    {
+      "file": "VERCEL-DEPLOYMENT-FIX.md",
+      "sha": "bda7fa762063ef84a5c595cb8d03d899386b669f"
+    },
+    {
+      "file": "VERCEL-ENV-SETUP.md",
+      "sha": "c8152f8d7c12894c164492531f392140db8286ab"
+    },
+    {
+      "file": "VERCEL-PUSHER-SETUP.md",
+      "sha": "165896d3eda27ee8da87ff4912559847608e145e"
+    },
+    {
+      "file": "VERCEL-SETUP.md",
+      "sha": "ed7224b36c2eb8e76ab2f99179c01d2b9c54dab6"
+    },
+    {
+      "file": "WEBSITE_GENERATION_FLOW.md",
+      "sha": "8ff88f820cc6584a1f8de636db7b67afe8c36e6f"
+    },
+    {
+      "file": "add-vercel-env.js",
+      "sha": "5f681b4099f6e4fde460a51714d523fc2a84a5f0"
+    },
+    {
+      "file": "app/account/AccountClient.tsx",
+      "sha": "039feca1ce29dee593247fc0a1797588ed4a7326"
+    },
+    {
+      "file": "app/account/BillingPanel.tsx",
+      "sha": "e2aaa82b004a9b98710e575b42a6c58fd18c7a51"
+    },
+    {
+      "file": "app/account/StudioPanel.tsx",
+      "sha": "39289438bb4b7b43ce6017f761f4d3fd83982f41"
+    },
+    {
+      "file": "app/account/page.tsx",
+      "sha": "129e91ec48df0311db0b69744e0b10889ef1dccf"
+    },
+    {
+      "file": "app/activity/ActivityMonitor.tsx",
+      "sha": "8d4ba2c385916beab444852542672a034ef7d6c8"
+    },
+    {
+      "file": "app/activity/accounts/page.tsx",
+      "sha": "ccd82996743a71ecf58ecdd88251636c28251eaf"
+    },
+    {
+      "file": "app/activity/page.tsx",
+      "sha": "d995797b74ac6801fd50c9eba8695fac23549951"
+    },
+    {
+      "file": "app/api/account/health/route.ts",
+      "sha": "05fab1f1026ca3518ccb7b213f7cc6a153e7e34d"
+    },
+    {
+      "file": "app/api/account/profile/route.ts",
+      "sha": "4acb649f0a94934797b6332bf20f5f10bbd488cc"
+    },
+    {
+      "file": "app/api/account/register/route.ts",
+      "sha": "ae9da3cbe97a9426caf23253f8e01b1bb59ebfbb"
+    },
+    {
+      "file": "app/api/ai-website-consultation/route.ts",
+      "sha": "a67d7813cc0e8b889fde0a413dc9c7c9b9f45ed0"
+    },
+    {
+      "file": "app/api/auth/[...nextauth]/route.ts",
+      "sha": "8b095414e7d7777c8697495b4f38c858d5c9711e"
+    },
+    {
+      "file": "app/api/baby/auth/route.ts",
+      "sha": "17d3321877551e9e92c889d3ae2b2680db71ed16"
+    },
+    {
+      "file": "app/api/baby/route.ts",
+      "sha": "74c4f4b3e63f646afc14e6b1bc1e24b2e0cbf8af"
+    },
+    {
+      "file": "app/api/billing/route.ts",
+      "sha": "e9a73abc46d475464d0c29a981614e2eba4ffbf6"
+    },
+    {
+      "file": "app/api/booking/admin/appointments/[id]/route.ts",
+      "sha": "9025bf9c8c486796a42136b56104cb15f364c222"
+    },
+    {
+      "file": "app/api/booking/admin/appointments/route.ts",
+      "sha": "7b3453e0a2a3ab22369f76320136920a6584d4c3"
+    },
+    {
+      "file": "app/api/booking/admin/availability/route.ts",
+      "sha": "c1e59b39f333b0318eaefc3825e16ac40978bcdc"
+    },
+    {
+      "file": "app/api/booking/admin/bootstrap/route.ts",
+      "sha": "d0654d242af1510c99d9e7d6a90ec21427f336d1"
+    },
+    {
+      "file": "app/api/booking/admin/holds/[id]/route.ts",
+      "sha": "f6028fa6470fb5bfa654b8864aef1eb32b0005f2"
+    },
+    {
+      "file": "app/api/booking/admin/holds/route.ts",
+      "sha": "bd922e6daabb8b8ccd7f12530c474db7758a9b8f"
+    },
+    {
+      "file": "app/api/booking/admin/leads/[id]/route.ts",
+      "sha": "dc3751a4aa84cc4e74c207d583ee923015bec717"
+    },
+    {
+      "file": "app/api/booking/admin/leads/route.ts",
+      "sha": "f61019f86c4e55288d9d4e5da2ae09693cb26b62"
+    },
+    {
+      "file": "app/api/booking/admin/qr/route.ts",
+      "sha": "0865ac1fc53595ab92c1c2e38375682077fe7432"
+    },
+    {
+      "file": "app/api/booking/admin/reminders/tick/route.ts",
+      "sha": "cc5848363ccaba8747e5345f8b6d652e3c127397"
+    },
+    {
+      "file": "app/api/booking/admin/send-call-link/route.ts",
+      "sha": "7087f7f928d9f03d317db73755384ffd825676ad"
+    },
+    {
+      "file": "app/api/booking/admin/slot-overview/route.ts",
+      "sha": "d26cac5afec8399de99b335a2d96e256205b96c7"
+    },
+    {
+      "file": "app/api/booking/confirm/route.ts",
+      "sha": "a3d640a8986d6ffafeef52bdcf6fc4d6d1e0adc9"
+    },
+    {
+      "file": "app/api/booking/friday-availability/route.ts",
+      "sha": "4d86d668c64878350fd4df1aad1837e6abc1080e"
+    },
+    {
+      "file": "app/api/booking/slots/route.ts",
+      "sha": "b6e252a6510d222c8b88e2dbe8efa5049e81419a"
+    },
+    {
+      "file": "app/api/builder/export/route.ts",
+      "sha": "7c209ed09feb0282e2c7457c15201957eb22b4a5"
+    },
+    {
+      "file": "app/api/builder/media/[id]/route.ts",
+      "sha": "baa934601918ef68ba9e9c3e101cf441796ef594"
+    },
+    {
+      "file": "app/api/builder/preview/route.ts",
+      "sha": "9cd400f47b53fb0f1870f2830165d4f7ff7fbab8"
+    },
+    {
+      "file": "app/api/builder/route.ts",
+      "sha": "91d6df452c3a72210822be487391cbb9850b50f8"
+    },
+    {
+      "file": "app/api/business-ideas/[id]/notes/route.ts",
+      "sha": "252ddaa29f71b7ba621f7e8482d12bc994b4e817"
+    },
+    {
+      "file": "app/api/business-ideas/[id]/roadmap/route.ts",
+      "sha": "0d111a5cbaf463b3213e6f71936f464f7ac3371f"
+    },
+    {
+      "file": "app/api/business-ideas/[id]/route.ts",
+      "sha": "888428ee22e594ca0b8925af819b994725ae5974"
+    },
+    {
+      "file": "app/api/business-ideas/route.ts",
+      "sha": "2dcbf9e4bf76ebcdca812fca6de1019ec03398d2"
+    },
+    {
+      "file": "app/api/ceo-coach/route.ts",
+      "sha": "24852d464e158b1dc584188721cb48c0c21ebd6c"
+    },
+    {
+      "file": "app/api/chat/route.ts",
+      "sha": "6c2c4b399802eda0291f09dc04b667975b73bde8"
+    },
+    {
+      "file": "app/api/clients/auth/route.ts",
+      "sha": "cce59ed3aaccad8ccea2ec68ed1591f1235e8b17"
+    },
+    {
+      "file": "app/api/clients/files/route.ts",
+      "sha": "1cbd02d65fdbf614ca6b93753efb218ee27623d4"
+    },
+    {
+      "file": "app/api/clients/route.ts",
+      "sha": "7678861bcb837b66392af3001fc8000e346beac0"
+    },
+    {
+      "file": "app/api/contact/route.ts",
+      "sha": "6414ba8a1704f399d4c80d79fa3fa8c568ee656e"
+    },
+    {
+      "file": "app/api/db/init/route.ts",
+      "sha": "d40fe20c3ead1568ba812d3282de14cad9063f10"
+    },
+    {
+      "file": "app/api/developer/auth/route.ts",
+      "sha": "938fc58858e3247b64918047d3aae8d73a9ea85e"
+    },
+    {
+      "file": "app/api/device-status/route.ts",
+      "sha": "4a30297087c2347eb05a4b33027ffbd532bb2dea"
+    },
+    {
+      "file": "app/api/google-places/route.ts",
+      "sha": "4d1e9b87195789c7f1c806d28c27be2a7105dda4"
+    },
+    {
+      "file": "app/api/icon/[id]/route.ts",
+      "sha": "6646726264c1dc89fb8d52f9f9c49116ff35e251"
+    },
+    {
+      "file": "app/api/icon/collection/[id]/route.ts",
+      "sha": "f7f7dba6f848ef5c96f4036560329ca75b4c5160"
+    },
+    {
+      "file": "app/api/icon/collection/route.ts",
+      "sha": "4798e2e594a24a4b98c29534c7c744c5563cccf8"
+    },
+    {
+      "file": "app/api/icon/collection/zip/route.ts",
+      "sha": "b48be396ec599fea13bccee586547ea70dbcee5c"
+    },
+    {
+      "file": "app/api/icon/generate/route.ts",
+      "sha": "c5d0a57ab05428759d1c7b6e49e7f3fb51ae89fe"
+    },
+    {
+      "file": "app/api/icon/route.ts",
+      "sha": "18b2b627293a5cb6cfa1feaaa266330b7e666d75"
+    },
+    {
+      "file": "app/api/ideas/files/route.ts",
+      "sha": "ca869daa29e62c2b64ec798a8d168fbceceab734"
+    },
+    {
+      "file": "app/api/ideas/project-files/route.ts",
+      "sha": "197f14574aa2ff09d5b345316b24c20c8241fa14"
+    },
+    {
+      "file": "app/api/ideas/project-live-link/route.ts",
+      "sha": "37c865d15fcfa320d8b4c9b23d2d5122181ab5fb"
+    },
+    {
+      "file": "app/api/ideas/project-process-zip-blob/route.ts",
+      "sha": "59cb44502ab7131c4a1aaf1fd1763c873bd79921"
+    },
+    {
+      "file": "app/api/ideas/project-upload-zip/route.ts",
+      "sha": "dee8d1f1e2fd33e2a252b67cff8111e0f8ddfe2f"
+    },
+    {
+      "file": "app/api/ideas/project-upload/route.ts",
+      "sha": "f4c379de8ab2ee3f043ef9a53ea604d458a66c85"
+    },
+    {
+      "file": "app/api/ideas/project-zip-token/route.ts",
+      "sha": "ee52fc2fb0c14b974e7a867045061cf829d74909"
+    },
+    {
+      "file": "app/api/ideas/projects/route.ts",
+      "sha": "1a622fe5891eadf71289f9c6a93c7105e6a1ea03"
+    },
+    {
+      "file": "app/api/ideas/save/route.ts",
+      "sha": "5a17dc2032dce07fb904351ad21bf39778f51c6b"
+    },
+    {
+      "file": "app/api/ideas/upload/route.ts",
+      "sha": "8151b752c2790ddfe3f29049263b9a2174f5263c"
+    },
+    {
+      "file": "app/api/leads/[id]/notes/route.ts",
+      "sha": "7377e43bbbd0144f8020c81e3b14e25022e61fcb"
+    },
+    {
+      "file": "app/api/leads/[id]/route.ts",
+      "sha": "427b4cff878c79b58dd0b58c3e9527776561d4ac"
+    },
+    {
+      "file": "app/api/leads/check-duplicates/route.ts",
+      "sha": "55d26dd783d704f85a728f26de8d6db259bc76bd"
+    },
+    {
+      "file": "app/api/leads/delete-by-phone/route.ts",
+      "sha": "20afb5b6728c16af80e8e255f5d223892c7cedb7"
+    },
+    {
+      "file": "app/api/leads/route.ts",
+      "sha": "fcf6196ef6b8324027ba4ba1fdf102911a872d61"
+    },
+    {
+      "file": "app/api/marine/auth/route.ts",
+      "sha": "46935de04d9966acac550c1bc80e449003f5907c"
+    },
+    {
+      "file": "app/api/marine/devices/route.ts",
+      "sha": "bce9389023d311474f8e885961c06441c0a2d065"
+    },
+    {
+      "file": "app/api/marine/ingest/route.ts",
+      "sha": "90407c931f8fdb50dd3d394028e56755cab43bbc"
+    },
+    {
+      "file": "app/api/marine/signup/route.ts",
+      "sha": "5c163f16bf3497907dbc469b10f5b53dfbc4e6e5"
+    },
+    {
+      "file": "app/api/messages/[clientId]/route.ts",
+      "sha": "a47051ad547f0ba330de147f1ec27e7cb9d9ae9c"
+    },
+    {
+      "file": "app/api/messages/route.ts",
+      "sha": "967dd672fa8ec07256805ee226040619bdb975f4"
+    },
+    {
+      "file": "app/api/paper-profiles/[id]/route.ts",
+      "sha": "9af22851d45b39e81c16382b90353c3d81328b7c"
+    },
+    {
+      "file": "app/api/paper-profiles/route.ts",
+      "sha": "1548ce556dc64abdba1328c8355ac80fc4a7b44e"
+    },
+    {
+      "file": "app/api/pixaeffects/device/route.ts",
+      "sha": "0a93ed9b6df93a9842a429bf6e920ab60a57d172"
+    },
+    {
+      "file": "app/api/pixaeffects/download/route.ts",
+      "sha": "eb14ba5ea07a5048cbbfb3b8b8f6c61de8def6fa"
+    },
+    {
+      "file": "app/api/pixashop/device/route.ts",
+      "sha": "62c579125c2e0db4506ebc329cba21e859d42a43"
+    },
+    {
+      "file": "app/api/pixashop/download/route.ts",
+      "sha": "33e2edc18975694314a92c9330992235c41c09aa"
+    },
+    {
+      "file": "app/api/routing/route/route.ts",
+      "sha": "a94bd837af99e343710587819b609e4aaea9ac9b"
+    },
+    {
+      "file": "app/api/sms/send/route.ts",
+      "sha": "ec96d54843519449a76baeedc376cd6c00bd273e"
+    },
+    {
+      "file": "app/api/studio/route.ts",
+      "sha": "cc2e0fcb5d6a4003d53ea870d2f2d7a2fed69bfe"
+    },
+    {
+      "file": "app/api/tdg-pvp/action/route.ts",
+      "sha": "df4ddb3436f9425075299025fd6b49def37980b3"
+    },
+    {
+      "file": "app/api/tdg-pvp/activity/cancel/route.ts",
+      "sha": "fc6f402a814ef2ff092691fc2b88f6eb74d24c6d"
+    },
+    {
+      "file": "app/api/tdg-pvp/activity/route.ts",
+      "sha": "a610de12e00c7aa3cdee4c667c63841ccfae0753"
+    },
+    {
+      "file": "app/api/tdg-pvp/config/route.ts",
+      "sha": "816b4cd3e495a951c06bbf620c7b870295352df9"
+    },
+    {
+      "file": "app/api/tdg-pvp/forfeit/route.ts",
+      "sha": "c888d023bf68bfd7bf7f14c123f638434a458663"
+    },
+    {
+      "file": "app/api/tdg-pvp/join/route.ts",
+      "sha": "c487451d45903aa3630d03f57c9f98e68f9a9b0e"
+    },
+    {
+      "file": "app/api/tdg-pvp/leaderboard/route.ts",
+      "sha": "e475c063ccc9ed232f0c8c842f5f57d39c75eb0a"
+    },
+    {
+      "file": "app/api/tdg-pvp/leave/route.ts",
+      "sha": "fef08ab269199a3c40913b22e0ba836158d922d9"
+    },
+    {
+      "file": "app/api/tdg-pvp/lobby-start/route.ts",
+      "sha": "b6a5d6a9dd23a52d255dd7a47567639d00a8cb28"
+    },
+    {
+      "file": "app/api/tdg-pvp/match-complete/route.ts",
+      "sha": "ef45842335a5d498888f9cc37ecb35b5748017bf"
+    },
+    {
+      "file": "app/api/tdg-pvp/ping/route.ts",
+      "sha": "96827511551519971ffda5b99eb2d589f1269b57"
+    },
+    {
+      "file": "app/api/tdg-pvp/presence-log/route.ts",
+      "sha": "df8d4f951456b548dd57aa941ea799377611f6e0"
+    },
+    {
+      "file": "app/api/tdg-pvp/presence/route.ts",
+      "sha": "571d563dcfbfc60f9705dabfc5fcef47f44ef357"
+    },
+    {
+      "file": "app/api/tdg-pvp/rejoin/route.ts",
+      "sha": "68450f6f0c9ed34efc6a691cfa06cb3323974782"
+    },
+    {
+      "file": "app/api/tdg-pvp/sync/route.ts",
+      "sha": "3ebb85486cb3372d59e49f97fe928e4d9d073a78"
+    },
+    {
+      "file": "app/api/test-email/route.ts",
+      "sha": "fc57cd4de491cb61aac379e46527248cb76139d0"
+    },
+    {
+      "file": "app/api/tts/route.ts",
+      "sha": "9c48e4c8aa7b660555c5f6c60f2a4ae39302e306"
+    },
+    {
+      "file": "app/api/websites/[clientId]/route.ts",
+      "sha": "c79e0af6cb921074a10890b909a565a06c7dcae4"
+    },
+    {
+      "file": "app/api/websites/generate/route.ts",
+      "sha": "50d23aa0dd47c324256714cff1f87cbff29c74b8"
+    },
+    {
+      "file": "app/apple-icon.png",
+      "sha": "a5d8608020e8231c1f6b8c51f86e5a8bb3bb29a7"
+    },
+    {
+      "file": "app/favicon.png",
+      "sha": "a5d8608020e8231c1f6b8c51f86e5a8bb3bb29a7"
+    },
+    {
+      "file": "app/baby/BabyMonitorClient.tsx",
+      "sha": "650a67576d45e10eacca22d3bf09636af48748c8"
+    },
+    {
+      "file": "app/baby/baby.css",
+      "sha": "51070090b5a139e55fcb945bad89de4b57832065"
+    },
+    {
+      "file": "app/baby/page.tsx",
+      "sha": "b5dcc47fa2e83f9cf9e31af9d1d9fd1c6b3b38cc"
+    },
+    {
+      "file": "app/book/admin/page.tsx",
+      "sha": "e742b853652e74fd88d200cf77368ffbba9843d6"
+    },
+    {
+      "file": "app/book/page.tsx",
+      "sha": "e404c6f5d2e63f1ef7265e41f4f17afae1a1f9e1"
+    },
+    {
+      "file": "app/builder/Builder.tsx",
+      "sha": "0619f6122e2148bb11b265597ca95e81dc1ec9e3"
+    },
+    {
+      "file": "app/builder/page.tsx",
+      "sha": "da0ade9b7e4285a1b5d0d71b95202c7e3ebf1710"
+    },
+    {
+      "file": "app/businesses/BusinessesWorkspace.tsx",
+      "sha": "4c3939816ec3c3ae8270b598828590637c9bc62f"
+    },
+    {
+      "file": "app/businesses/page.tsx",
+      "sha": "5536db05448e170c9d13dbf60eb28c4b2db6bdad"
+    },
+    {
+      "file": "app/ceo-advisor/page.tsx",
+      "sha": "065225cc51a08afe8a915d5e113eee7f198a0585"
+    },
+    {
+      "file": "app/client/dashboard/page.tsx",
+      "sha": "2f55f0830f4f6499d979fd038b1b68375cdd848d"
+    },
+    {
+      "file": "app/creative-home.module.css",
+      "sha": "27e5455d3a08419493c14478807d954d62f06df0"
+    },
+    {
+      "file": "app/developer/analytics/page.tsx",
+      "sha": "3d45a80affa23caff21f29e93dfc9f487e412110"
+    },
+    {
+      "file": "app/developer/clients/page.tsx",
+      "sha": "8b7f50f61a1ff0e0bc7bf52d5e46a832de02bcb8"
+    },
+    {
+      "file": "app/developer/dashboard/page.tsx",
+      "sha": "34c855f2d2e10fed2861f4cba70758d697e6ed31"
+    },
+    {
+      "file": "app/developer/leads/[id]/page.tsx",
+      "sha": "7062204d8f7cfeb730a49e4afae8579780d7093a"
+    },
+    {
+      "file": "app/developer/leads/page.tsx",
+      "sha": "4f2135b9ab85726e94a1b6b0f808ac23f6a5cf28"
+    },
+    {
+      "file": "app/developer/support/page.tsx",
+      "sha": "3bf50fe95d71bef9697b9cb601ff7d07c2670f0b"
+    },
+    {
+      "file": "app/developer/test/page.tsx",
+      "sha": "d553eed61ec76d8933babae1e930911998873361"
+    },
+    {
+      "file": "app/developer/websites/[clientId]/page.tsx",
+      "sha": "c7a0440f54c278ef76c96d01dd6666b960a2bee4"
+    },
+    {
+      "file": "app/examples/crm-demo/CrmDemoApp.tsx",
+      "sha": "57599c080e5fa112e8807dcfe078dd448002ce57"
+    },
+    {
+      "file": "app/examples/crm-demo/page.tsx",
+      "sha": "fd666dc0c349de131769c6878f96100fe2ed1ab6"
+    },
+    {
+      "file": "app/globals.css",
+      "sha": "41fe322a359164544a4c1ced993fa2fae2199b8a"
+    },
+    {
+      "file": "app/home-original/layout.tsx",
+      "sha": "b977c2b3519ff0ccbc99ad8a64364f3fcdb35e8e"
+    },
+    {
+      "file": "app/home-original/page.tsx",
+      "sha": "a3b0862f22883d6a35e598763a59690379fa9c81"
+    },
+    {
+      "file": "app/home.module.css",
+      "sha": "1923493ae37e85c353f246cfe7d745cfd06791ba"
+    },
+    {
+      "file": "app/icon/IconMaker.tsx",
+      "sha": "59dd2307e52314593995aaf3684e1f85ab658f57"
+    },
+    {
+      "file": "app/icon/icon.css",
+      "sha": "4b6be40ec849682896246e640aff5f5e6d224a31"
+    },
+    {
+      "file": "app/icon/page.tsx",
+      "sha": "84568bee35cf101423b910bbd40f7176b3e3c59d"
+    },
+    {
+      "file": "app/ideas/[segment]/[...path]/route.ts",
+      "sha": "352d550cea94e0196e6158935de0ff3b79154ca2"
+    },
+    {
+      "file": "app/ideas/[segment]/page.tsx",
+      "sha": "f27c9390b7ab901608f9ce89a90caf0b5d15e24b"
+    },
+    {
+      "file": "app/ideas/new/page.tsx",
+      "sha": "5c0fe69dbe84fb632bd4e5aff42b5f0ebde868f9"
+    },
+    {
+      "file": "app/ideas/page.tsx",
+      "sha": "3199728df1182e0950f2047f07d8b9a97c260606"
+    },
+    {
+      "file": "app/layout.tsx",
+      "sha": "1412766098022188cfefb858807f6293e7416fd7"
+    },
+    {
+      "file": "app/leaderboard/LeaderboardClient.tsx",
+      "sha": "79f1e4424356c072bf2d42c71160fc347456babd"
+    },
+    {
+      "file": "app/leaderboard/page.tsx",
+      "sha": "9f17f5a99010cf6c68ed1553d6f712c225698e74"
+    },
+    {
+      "file": "app/login/client/page.tsx",
+      "sha": "d759f9c50f1993efc3b7580052158a092547eb42"
+    },
+    {
+      "file": "app/login/developer/page.tsx",
+      "sha": "694dbf6cbfcecdc98b28567d896ed756183b7d01"
+    },
+    {
+      "file": "app/login/page.tsx",
+      "sha": "4fe6059b677f1d5257a5bba738b2534dbc6d4bd9"
+    },
+    {
+      "file": "app/marineApp/dashboard/page.tsx",
+      "sha": "f1a44ef11162a1acc1db5812dad9ebd60320f2f6"
+    },
+    {
+      "file": "app/marineApp/layout.tsx",
+      "sha": "1a6ef9e40261ab648b6ef8499dca9819bb3321a9"
+    },
+    {
+      "file": "app/marineApp/login/page.tsx",
+      "sha": "1d85359f7ce926dcbf686749872122d731575b45"
+    },
+    {
+      "file": "app/marineApp/page.tsx",
+      "sha": "fe4a6892103bffe3bd2365527b35df6f8890d1d3"
+    },
+    {
+      "file": "app/marineApp/setup/page.tsx",
+      "sha": "e5784c468cacbb1c714cc8eaa3963433723bd1df"
+    },
+    {
+      "file": "app/mogenergy/page.tsx",
+      "sha": "b09657e5147e396e4cbd115c60912a703fd80584"
+    },
+    {
+      "file": "app/mystyleboi/UConnectStyled.tsx",
+      "sha": "5f2c481fe011a38e78365ca64574f4d437eb6093"
+    },
+    {
+      "file": "app/mystyleboi/page.tsx",
+      "sha": "eecadf34894e58c6d5a318747dad4b2cc3a40bbd"
+    },
+    {
+      "file": "app/page.tsx",
+      "sha": "64bf6806d549e90417d80e52576c99e7db082e11"
+    },
+    {
+      "file": "app/papers/PapersGenerator.tsx",
+      "sha": "ac8ee37e69353748bca5a03f339a668ff0bd6bb8"
+    },
+    {
+      "file": "app/papers/page.tsx",
+      "sha": "064dd3708700ce469a3d7abe563a7eddf0f654d6"
+    },
+    {
+      "file": "app/pixaeffects/activate/Activate.tsx",
+      "sha": "18995db8319cd308daf43e97102a22fe66f73ffe"
+    },
+    {
+      "file": "app/pixaeffects/activate/page.tsx",
+      "sha": "2e567478273e939806ce8931e12d8d52ce46780f"
+    },
+    {
+      "file": "app/pixaeffects/manual/content.ts",
+      "sha": "72e1b7d640a4941fb8b3ee20a51ff7abf11c2b26"
+    },
+    {
+      "file": "app/pixaeffects/manual/page.tsx",
+      "sha": "3579c722a895715a47e277e13862e4bd92ede1c2"
+    },
+    {
+      "file": "app/pixaeffects/page.tsx",
+      "sha": "8f8dcef54c063c7d1c3eb6e4a0b4dbea0fecf003"
+    },
+    {
+      "file": "app/pixaeffects/pixaeffects.css",
+      "sha": "b0a2bfb5863f5f023ef18dee06da0510b58b1a83"
+    },
+    {
+      "file": "app/pixashop/activate/Activate.tsx",
+      "sha": "ac24c2e0cd9e448eae83bde19dfde563cf77f1f5"
+    },
+    {
+      "file": "app/pixashop/activate/page.tsx",
+      "sha": "564877c5becc877936ccd4f19c480f597ff5f6c0"
+    },
+    {
+      "file": "app/pixashop/manual/content.ts",
+      "sha": "3b4b1b6887250194440bb8a077b0f739b836e858"
+    },
+    {
+      "file": "app/pixashop/manual/manual.module.css",
+      "sha": "1845401c0b86bc1e2cc75f93ba5ddec1868b17a2"
+    },
+    {
+      "file": "app/pixashop/manual/page.tsx",
+      "sha": "b146cac5eac72ea10488134adcdd0edfc15be90a"
+    },
+    {
+      "file": "app/pixashop/page.tsx",
+      "sha": "5b1f5ab923774ac61296d882bdb3332b81f8fbf3"
+    },
+    {
+      "file": "app/pixashop/pixashop.css",
+      "sha": "b83556752d6dbc69a1a3dcb22c452171bf29ed36"
+    },
+    {
+      "file": "app/product/page.tsx",
+      "sha": "60fd55e006a650d498af657da7a4b1084cecdd01"
+    },
+    {
+      "file": "app/project/[...custom]/page.tsx",
+      "sha": "c2593f5d4555e38a63f2f99ee9a6f19c08bfb4bf"
+    },
+    {
+      "file": "app/routing/RoutingPlanner.tsx",
+      "sha": "9f72d702858b4e742cf37da56887e881eb6c6163"
+    },
+    {
+      "file": "app/routing/page.tsx",
+      "sha": "5d24fbc1b496dd3af44d3f79f4580762088526ad"
+    },
+    {
+      "file": "app/s/[slug]/route.ts",
+      "sha": "a6d6db565710f1aeabb653e4f187b7e0f032e20a"
+    },
+    {
+      "file": "app/settings/page.tsx",
+      "sha": "959ce03ce6e3e1970c9bc39fd6ac754fbdf795a9"
+    },
+    {
+      "file": "app/sites/[clientId]/route.ts",
+      "sha": "dff5c40871bfe603f143c6dd02caf332001e087e"
+    },
+    {
+      "file": "app/start/CheckoutRedirect.tsx",
+      "sha": "5c091ef5d89370726f1ffbb7d8047796b22ebc32"
+    },
+    {
+      "file": "app/start/page.tsx",
+      "sha": "adc00d99d5e9bd6476da1d67d329f4b86e1a3057"
+    },
+    {
+      "file": "app/talk-to-ai/page.tsx",
+      "sha": "2a3abd8084273ec0b85e031f283e6183815842a7"
+    },
+    {
+      "file": "app/templates/barbershop/page.tsx",
+      "sha": "5eb8e15bf56cc15dff47b2153c3b2069356061b5"
+    },
+    {
+      "file": "app/test/page.tsx",
+      "sha": "6ff9a02e105f183a11f8652cd72c3858cdbbfcdf"
+    },
+    {
+      "file": "blueBall.png",
+      "sha": "a5d8608020e8231c1f6b8c51f86e5a8bb3bb29a7"
+    },
+    {
+      "file": "public/blueBall.png",
+      "sha": "a5d8608020e8231c1f6b8c51f86e5a8bb3bb29a7"
+    },
+    {
+      "file": "public/icon.png",
+      "sha": "a5d8608020e8231c1f6b8c51f86e5a8bb3bb29a7"
+    },
+    {
+      "file": "public/Barbershop/barber_cut_closeshot.png",
+      "sha": "6ad4dfc56cf73d0146a3edd410d47bd1cb0c45c0"
+    },
+    {
+      "file": "public/Barbershop/barber_interior_chairs_farshot.png",
+      "sha": "6453e67e02e389a377a82aaf078495dc3e6f617f"
+    },
+    {
+      "file": "public/Barbershop/barber_midshot.png",
+      "sha": "7a7fb7e1beddf0d55105c0964998853c43312b73"
+    },
+    {
+      "file": "public/Barbershop/barber_pole.png",
+      "sha": "7c32dfe155b2210a303d97848daee58f91aa1fdc"
+    },
+    {
+      "file": "public/Barbershop/barber_shop_logo.png",
+      "sha": "2dca5769233c5f1c9c863be0199670a44af43b39"
+    },
+    {
+      "file": "public/Barbershop/barber_supercloseshot.png",
+      "sha": "af937771cff87f9ab282a0fb5154846f41b73dfc"
+    },
+    {
+      "file": "public/Barbershop/cut_midshot.jpg",
+      "sha": "aa4b185dc46aad28f47ef6f2f647c376aae1fb43"
+    },
+    {
+      "file": "public/Barbershop/far_shot_interior.png",
+      "sha": "a8bf6a04ac3fab2c067690292020e0100032ce66"
+    },
+    {
+      "file": "public/Barbershop/index.html",
+      "sha": "febac1aa8f27644188ef3d041e46c465520c743f"
+    },
+    {
+      "file": "public/Barbershop/scissors.png",
+      "sha": "3cd97898d566dce79ece7f93360f5fb93abbbdf0"
+    },
+    {
+      "file": "public/Barbershop/script.js",
+      "sha": "c1876b29e5df56cfe876babeec892d8126a7665d"
+    },
+    {
+      "file": "public/Barbershop/styles.css",
+      "sha": "d8dba42a5da824707c59867261e8b3227b3e9655"
+    },
+    {
+      "file": "public/TDG/account-overlay.js",
+      "sha": "ed1ac2a92f75c58670ef15e1e68301197b55425e"
+    },
+    {
+      "file": "public/TDG/farmers-online.js",
+      "sha": "7483b6bb1856d7407064551406a178bcc0a116be"
+    },
+    {
+      "file": "public/TDG/index.html",
+      "sha": "2b9f4502a8b0d4c26c888f027e6a5b432b47f2a7"
+    },
+    {
+      "file": "public/TDG/live-army.js",
+      "sha": "a25ffffcba35d37b66fe4d488cf41c8c0f22439c"
+    },
+    {
+      "file": "public/TDG/portraits/angel.webp",
+      "sha": "6c370cb34597b19cb5ec8e415ee8beb00f7bc38e"
+    },
+    {
+      "file": "public/TDG/portraits/archer.webp",
+      "sha": "c483726252ac1a1a8edea9e3a3a430dc569d9ed7"
+    },
+    {
+      "file": "public/TDG/portraits/axoloti.png",
+      "sha": "98cefe3846e62b4fc790f43ec5c8e5c8a3d411d1"
+    },
+    {
+      "file": "public/TDG/portraits/axoloti.webp",
+      "sha": "139746d58815f99c8628c244d6e8e5cc73d81699"
+    },
+    {
+      "file": "public/TDG/portraits/axoloti_king.png",
+      "sha": "dc553787d626bcfb3582d0ea3a4f232b167f856f"
+    },
+    {
+      "file": "public/TDG/portraits/axoloti_king.webp",
+      "sha": "b0ffbbae3e218a58a60d97955bb940bf6a95a03b"
+    },
+    {
+      "file": "public/TDG/portraits/axoloti_king_royal.png",
+      "sha": "2c5ee0a5be2c6163b3ea9514db29969ef460b622"
+    },
+    {
+      "file": "public/TDG/portraits/axoloti_king_royal.webp",
+      "sha": "7e813deac21aa722ae43be71228549bb8e261c5e"
+    },
+    {
+      "file": "public/TDG/portraits/barracks.webp",
+      "sha": "cb0bfd48eec9680ed89bbc0fbcc4e1ef20cc7533"
+    },
+    {
+      "file": "public/TDG/portraits/battletank.webp",
+      "sha": "8c8aed77e279190d5007b0bddc74989525c04b3c"
+    },
+    {
+      "file": "public/TDG/portraits/bowman.webp",
+      "sha": "e4fcb4aafb184269ace8cb291f780dd6825ebf1f"
+    },
+    {
+      "file": "public/TDG/portraits/catapult.webp",
+      "sha": "fff41951294871329a9b24fc0d79bda087116f26"
+    },
+    {
+      "file": "public/TDG/portraits/commander.webp",
+      "sha": "ce31cc69213cc78e5cf24b63493eb33a83478159"
+    },
+    {
+      "file": "public/TDG/portraits/engineers.webp",
+      "sha": "6c68fb1e148305d19903391bd13a4c3e7414f9f8"
+    },
+    {
+      "file": "public/TDG/portraits/farm.webp",
+      "sha": "b8095a092bf900dbb0a0582adb4e5c84fa06394c"
+    },
+    {
+      "file": "public/TDG/portraits/farmer.webp",
+      "sha": "ce79c67e3e3152d8995608f940d3f21e1202cfca"
+    },
+    {
+      "file": "public/TDG/portraits/fireball.webp",
+      "sha": "f92512034da6c8f4dbfebc79563803afab8bdff2"
+    },
+    {
+      "file": "public/TDG/portraits/goblin.webp",
+      "sha": "e0b2196e58700f06112688771c17b5cd0dffa719"
+    },
+    {
+      "file": "public/TDG/portraits/heal.webp",
+      "sha": "bc3cb11f6878a69762d834e76094c3ac358118b5"
+    },
+    {
+      "file": "public/TDG/portraits/laboratory.webp",
+      "sha": "f4635f5dd6bc939e18f92bc75ec10c40e6beab21"
+    },
+    {
+      "file": "public/TDG/portraits/laser.webp",
+      "sha": "8d4e64e4ba7640e68288e61176f7b2768cdd88ed"
+    },
+    {
+      "file": "public/TDG/portraits/mint.webp",
+      "sha": "ee304f7323e0cfdec5db33cb35953a7a32a134eb"
+    },
+    {
+      "file": "public/TDG/portraits/missile.webp",
+      "sha": "61990e7b75d9ad36ac1c43b50814609d1f7aa5cd"
+    },
+    {
+      "file": "public/TDG/portraits/peka.webp",
+      "sha": "e04e9da13daa7ebf5f0e1c688df829c9ff498930"
+    },
+    {
+      "file": "public/TDG/portraits/rage.webp",
+      "sha": "ef1fcef4f61c010f73f2f01a372cd3ca243b0ad2"
+    },
+    {
+      "file": "public/TDG/portraits/skill-alpha-howl.webp",
+      "sha": "8332a8386adf50b304d24469d121df24c0650621"
+    },
+    {
+      "file": "public/TDG/portraits/skill-ancient-wyrm.webp",
+      "sha": "69d4959b5c1b5ff231f610ce076f27188340c249"
+    },
+    {
+      "file": "public/TDG/portraits/skill-archer-double.webp",
+      "sha": "ad6dd317c70e53254c969f17063a2121079a6369"
+    },
+    {
+      "file": "public/TDG/portraits/skill-archer-electric.webp",
+      "sha": "812bea0e2330d4e6c0abf218d833e23e6340a024"
+    },
+    {
+      "file": "public/TDG/portraits/skill-archer-fire.webp",
+      "sha": "ec9bc332cb2d5986b15efd121aa809e16a1dbc67"
+    },
+    {
+      "file": "public/TDG/portraits/skill-archer-ice.webp",
+      "sha": "1f509b6fd84cb1aaa8d21bb4881c61bf3d4a3462"
+    },
+    {
+      "file": "public/TDG/portraits/skill-archer-quad.webp",
+      "sha": "1902910f5856de76b6b7a16f473eb4e5aa1f43a4"
+    },
+    {
+      "file": "public/TDG/portraits/skill-archer-triple.webp",
+      "sha": "eae078afb96281bea3d712b17cc12949a3c2ac9c"
+    },
+    {
+      "file": "public/TDG/portraits/skill-barbed-heads.webp",
+      "sha": "13152cc68ee053790eed075b3ca8ae9ac3fe24ea"
+    },
+    {
+      "file": "public/TDG/portraits/skill-barn-coat.webp",
+      "sha": "9733fcad3b3218cae226b88836125844c3e5432e"
+    },
+    {
+      "file": "public/TDG/portraits/skill-blizzard-king.webp",
+      "sha": "ad7ad73068bacd1b828153610ce1adb8a5cb84ed"
+    },
+    {
+      "file": "public/TDG/portraits/skill-bodkin.webp",
+      "sha": "f08363c9adec959e8b5b65c0af855fbd87dd222f"
+    },
+    {
+      "file": "public/TDG/portraits/skill-bone-cache.webp",
+      "sha": "7da8773f4b76964eaee0192a7af132ddeeb56bdb"
+    },
+    {
+      "file": "public/TDG/portraits/skill-champion-crest.webp",
+      "sha": "0d195e9db8b8eb9d6be1d59750c8c7c41181826d"
+    },
+    {
+      "file": "public/TDG/portraits/skill-crowbar.webp",
+      "sha": "0bbf18ed27fc49cb55c79f3460754dcdc4217e81"
+    },
+    {
+      "file": "public/TDG/portraits/skill-deadeye.webp",
+      "sha": "ea149e3182e94c3084779031801a7e32482f4215"
+    },
+    {
+      "file": "public/TDG/portraits/skill-diamond-scales.webp",
+      "sha": "bc5575e4aa3631f69c8934cf233b77b0b5521dd2"
+    },
+    {
+      "file": "public/TDG/portraits/skill-draw-strength.webp",
+      "sha": "ffcca91d52e6a66273205ce3c2babc65e75d2fab"
+    },
+    {
+      "file": "public/TDG/portraits/skill-eagle-eye.webp",
+      "sha": "1e095804ca44d25ecbcaa521b4a205f56a567e54"
+    },
+    {
+      "file": "public/TDG/portraits/skill-field-marshal.webp",
+      "sha": "8d6329e668766ee5e1e6ca9311e7739554fd9e6c"
+    },
+    {
+      "file": "public/TDG/portraits/skill-fitted-armour.webp",
+      "sha": "a5fb332bbeb4a484f6eecdadf5d236e39f444a3b"
+    },
+    {
+      "file": "public/TDG/portraits/skill-flea-boots.webp",
+      "sha": "1bc5173cf293b592e64e2f1093d47e1a8bc84cf7"
+    },
+    {
+      "file": "public/TDG/portraits/skill-frost-claws.webp",
+      "sha": "7c1c3345df8ffd1a783f75887853f5307b572742"
+    },
+    {
+      "file": "public/TDG/portraits/skill-gallant-crest.webp",
+      "sha": "f5e9dd7dc174e6344e4b94c85492505b4dd1e39e"
+    },
+    {
+      "file": "public/TDG/portraits/skill-ghillie.webp",
+      "sha": "2cd59410cc20d2400cf82184e8f02648c62c355f"
+    },
+    {
+      "file": "public/TDG/portraits/skill-pack-lungs.webp",
+      "sha": "2a28a3b718084a33c0644d0e48bcb08cef15c112"
+    },
+    {
+      "file": "public/TDG/portraits/skill-parade-step.webp",
+      "sha": "ade219b8b3a81a1ac90161999eb2b80adde7b48f"
+    },
+    {
+      "file": "public/TDG/portraits/skill-permafrost.webp",
+      "sha": "a565af8309033d01ec9950562625310d72cedb3e"
+    },
+    {
+      "file": "public/TDG/portraits/skill-pitchfork-tip.webp",
+      "sha": "54475cd7cc985c0d93ec802786c5410d0d590d43"
+    },
+    {
+      "file": "public/TDG/portraits/skill-polished-plate.webp",
+      "sha": "d2d7683e4a97a0accf5613c8345f04af0ea47df5"
+    },
+    {
+      "file": "public/TDG/portraits/skill-pounding-gait.webp",
+      "sha": "894cbf4f6736ad24c3beef1943ea20ccaaa2e0f7"
+    },
+    {
+      "file": "public/TDG/portraits/skill-quick-lunge.webp",
+      "sha": "03eacf742bfbaa5c628969937a5aeb4694ddf207"
+    },
+    {
+      "file": "public/TDG/portraits/skill-quiver-guard.webp",
+      "sha": "4f55aaa0097bc8a2120c8407e77e3954a635e70a"
+    },
+    {
+      "file": "public/TDG/portraits/skill-ravenous.webp",
+      "sha": "93f82acff9965c65b8c5314bceece5b6ca43898b"
+    },
+    {
+      "file": "public/TDG/portraits/skill-razor-fangs.webp",
+      "sha": "a0c58b9188ba936efe14c695c8a0c75ab7db4aca"
+    },
+    {
+      "file": "public/TDG/portraits/skill-rime-fists.webp",
+      "sha": "aac6af8190f3bc86449d5718dfaf5536cce2f384"
+    },
+    {
+      "file": "public/TDG/portraits/skill-riposte.webp",
+      "sha": "701588af151ce5c853ba369f07be224023fe7555"
+    },
+    {
+      "file": "public/TDG/portraits/skill-sack-of-spoils.webp",
+      "sha": "6af0bb6480c9d880ed63ea39f58f87a3db77fdb9"
+    },
+    {
+      "file": "public/TDG/portraits/skill-scaled-bulk.webp",
+      "sha": "7a61db24311e1dc311ac122dacb2f04be5826546"
+    },
+    {
+      "file": "public/TDG/portraits/skill-scrap-armor.webp",
+      "sha": "657001ab445f1a0026fa77202e2cc926cfb3a83b"
+    },
+    {
+      "file": "public/TDG/portraits/skill-searing-jaws.webp",
+      "sha": "d366a3e2c62918e13b7e496ccefd384c139e8681"
+    },
+    {
+      "file": "public/TDG/portraits/skill-sharper-steel.webp",
+      "sha": "8caf6169358e51349b02071dc39f6e4e5ff9acf2"
+    },
+    {
+      "file": "public/TDG/portraits/skill-spread-electric-coil.webp",
+      "sha": "05c58f246896a41c750f63ce8f489a425a98fc66"
+    },
+    {
+      "file": "public/TDG/portraits/skill-spread-electric-volley.webp",
+      "sha": "7ba2a4b92fd3d0970d1f7bed29bba93a9000f7a5"
+    },
+    {
+      "file": "public/TDG/portraits/skill-spread-electric.webp",
+      "sha": "3dfc7e485d2de21ea409e779f41cf2413e9128e3"
+    },
+    {
+      "file": "public/TDG/portraits/skill-spread-fire-bellows.webp",
+      "sha": "9e6b5487a62bc7cd6ce37483f4e614b8ed637f6d"
+    },
+    {
+      "file": "public/TDG/portraits/skill-spread-fire-volley.webp",
+      "sha": "54faae0081569daa0d6710e1610fff946c7eeb93"
+    },
+    {
+      "file": "public/TDG/portraits/skill-spread-fire.webp",
+      "sha": "9b4885d0eba095ddebbaca944313f8d4be7956b9"
+    },
+    {
+      "file": "public/TDG/portraits/skill-spread-ice-pump.webp",
+      "sha": "c8abfcabcc783f987126d74ab858b44081d72abe"
+    },
+    {
+      "file": "public/TDG/portraits/skill-spread-ice-volley.webp",
+      "sha": "3a0326cbbeb1f144a7f221486e8f14a2ad2150e2"
+    },
+    {
+      "file": "public/TDG/portraits/skill-spread-ice.webp",
+      "sha": "518cc598e3e947aa4716282632ff60576b74d8ba"
+    },
+    {
+      "file": "public/TDG/portraits/skill-steady-breath.webp",
+      "sha": "c921b23a07a90e78b86caa52f38b6f7e5f84c4c4"
+    },
+    {
+      "file": "public/TDG/portraits/skill-sticky-fingers.webp",
+      "sha": "a56945a9a3850ea20c14e8bed1e99c530a0a323c"
+    },
+    {
+      "file": "public/TDG/portraits/skill-storm-wings.webp",
+      "sha": "e6b5aa030d05e030ba5745a8785ddf8e83882547"
+    },
+    {
+      "file": "public/TDG/portraits/skill-tempered-blade.webp",
+      "sha": "61d4987a1c7135cd1b17fa7f3598de1559ab8186"
+    },
+    {
+      "file": "public/TDG/portraits/skill-thick-fur.webp",
+      "sha": "1d4f4e33e3d9502ab18ef03f480b449117941327"
+    },
+    {
+      "file": "public/TDG/portraits/skill-thick-hide.webp",
+      "sha": "df884c4aa7e49931dd1d4d539605cc6c34e891ec"
+    },
+    {
+      "file": "public/TDG/portraits/skill-thresher.webp",
+      "sha": "d90133acddab251160f844856e271a9ae510a6d4"
+    },
+    {
+      "file": "public/TDG/portraits/skill-tower-shield.webp",
+      "sha": "3e5e724e3222631a663384d99333a2eea9f5719a"
+    },
+    {
+      "file": "public/TDG/portraits/skill-tusk-spikes.webp",
+      "sha": "533c75d49d43dd2cf7535914dfac444827605d94"
+    },
+    {
+      "file": "public/TDG/portraits/skill-twin-spears.webp",
+      "sha": "720877b956f69e37660be34805fbefae5600fcb0"
+    },
+    {
+      "file": "public/TDG/portraits/skill-war-mammoth.webp",
+      "sha": "81723457f40ee59e0cee7ed06a17ca6825f02837"
+    },
+    {
+      "file": "public/TDG/portraits/skill-werewolf.webp",
+      "sha": "4d08d53889848ea8972c020e3f3ed298a3ca0416"
+    },
+    {
+      "file": "public/TDG/portraits/skill-work-boots.webp",
+      "sha": "56e87871b1ed9cd107a77ce77a31211f34496978"
+    },
+    {
+      "file": "public/TDG/portraits/slime.webp",
+      "sha": "43cc5e8f2ce4c261cdcf0dd5cbc062d5d618c6c6"
+    },
+    {
+      "file": "public/TDG/portraits/slow.webp",
+      "sha": "5ac4e5c96ff92611e41d4bbe7f29ba8c57d64044"
+    },
+    {
+      "file": "public/TDG/portraits/sniper.webp",
+      "sha": "a7b5eb5af72264c52cc2d47f23f933a734ac9b7c"
+    },
+    {
+      "file": "public/TDG/portraits/speed.webp",
+      "sha": "f9952836ca708b0fa64085a44ac80b273de89059"
+    },
+    {
+      "file": "public/TDG/portraits/spread.webp",
+      "sha": "1c1ec4a5e68b46fa79eae87d4ac1653ad0aefb59"
+    },
+    {
+      "file": "public/TDG/portraits/striker.webp",
+      "sha": "b13bb1d342223258bbc7e2cc7740d1b667b32924"
+    },
+    {
+      "file": "public/TDG/portraits/swordsman.webp",
+      "sha": "6f89c8f17352912cbf960c2b8a54cc8e6587aa4a"
+    },
+    {
+      "file": "public/TDG/portraits/tank.webp",
+      "sha": "36b6c6b6e89aea5d427ed690cee56a59f5cacbf5"
+    },
+    {
+      "file": "public/TDG/portraits/turret.webp",
+      "sha": "e97b58cb7d1866fe8092db3e45ef64889e5e9905"
+    },
+    {
+      "file": "public/TDG/portraits/wolf_hunter.webp",
+      "sha": "c36fd7cb0d5f7359d80fd930be9b5f24e1335625"
+    },
+    {
+      "file": "public/TDG/portraits/yeti.webp",
+      "sha": "df16c3cb3087414fc8974770874c6a357a41dcc3"
+    },
+    {
+      "file": "public/TDG/presence.js",
+      "sha": "3e8e32032ebf676cd98c566aa7a31d17ca7a9369"
+    },
+    {
+      "file": "public/TDG/pvp-online.js",
+      "sha": "e882680f34075767005571f9c10ba52f9196b508"
+    },
+    {
+      "file": "public/TDG/sprites/angel-atk1.png",
+      "sha": "47d6a83ac1eec0a0dc44d9ff0620023a37640044"
+    },
+    {
+      "file": "public/TDG/sprites/angel-atk5.png",
+      "sha": "47d6a83ac1eec0a0dc44d9ff0620023a37640044"
+    },
+    {
+      "file": "public/TDG/sprites/angel-atk2.png",
+      "sha": "284e76bfc52e46569ffe193ceb3d8137f341dcf0"
+    },
+    {
+      "file": "public/TDG/sprites/angel-atk4.png",
+      "sha": "284e76bfc52e46569ffe193ceb3d8137f341dcf0"
+    },
+    {
+      "file": "public/TDG/sprites/angel-atk6.png",
+      "sha": "284e76bfc52e46569ffe193ceb3d8137f341dcf0"
+    },
+    {
+      "file": "public/TDG/sprites/angel-atk8.png",
+      "sha": "284e76bfc52e46569ffe193ceb3d8137f341dcf0"
+    },
+    {
+      "file": "public/TDG/sprites/angel-atk3.png",
+      "sha": "703d98f9408c3f3970e14ecd06a5468b4d27bf64"
+    },
+    {
+      "file": "public/TDG/sprites/angel-atk7.png",
+      "sha": "703d98f9408c3f3970e14ecd06a5468b4d27bf64"
+    },
+    {
+      "file": "public/TDG/sprites/angel-block1.png",
+      "sha": "0b00b9f088474b2eb9bbfcc3037863a04979c830"
+    },
+    {
+      "file": "public/TDG/sprites/angel-hurt1.png",
+      "sha": "0b00b9f088474b2eb9bbfcc3037863a04979c830"
+    },
+    {
+      "file": "public/TDG/sprites/angel-idle1.png",
+      "sha": "0b00b9f088474b2eb9bbfcc3037863a04979c830"
+    },
+    {
+      "file": "public/TDG/sprites/angel.png",
+      "sha": "0b00b9f088474b2eb9bbfcc3037863a04979c830"
+    },
+    {
+      "file": "public/TDG/sprites/angel-block2.png",
+      "sha": "912918f9055ff84718f6f603eae93563fd6f63d3"
+    },
+    {
+      "file": "public/TDG/sprites/angel-hurt2.png",
+      "sha": "912918f9055ff84718f6f603eae93563fd6f63d3"
+    },
+    {
+      "file": "public/TDG/sprites/angel-idle2.png",
+      "sha": "912918f9055ff84718f6f603eae93563fd6f63d3"
+    },
+    {
+      "file": "public/TDG/sprites/angel-block3.png",
+      "sha": "59c9409666bf61d66b8c9167f2f7345e3a8cd679"
+    },
+    {
+      "file": "public/TDG/sprites/angel-hurt3.png",
+      "sha": "59c9409666bf61d66b8c9167f2f7345e3a8cd679"
+    },
+    {
+      "file": "public/TDG/sprites/angel-idle3.png",
+      "sha": "59c9409666bf61d66b8c9167f2f7345e3a8cd679"
+    },
+    {
+      "file": "public/TDG/sprites/angel-block4.png",
+      "sha": "5f6fce1abf2a8951a2d7c63f1d20110788b00afd"
+    },
+    {
+      "file": "public/TDG/sprites/angel-hurt4.png",
+      "sha": "5f6fce1abf2a8951a2d7c63f1d20110788b00afd"
+    },
+    {
+      "file": "public/TDG/sprites/angel-idle4.png",
+      "sha": "5f6fce1abf2a8951a2d7c63f1d20110788b00afd"
+    },
+    {
+      "file": "public/TDG/sprites/angel-run1.png",
+      "sha": "fabc3a7da954bcdccddd214ea8512a954bb79e3e"
+    },
+    {
+      "file": "public/TDG/sprites/angel-run5.png",
+      "sha": "fabc3a7da954bcdccddd214ea8512a954bb79e3e"
+    },
+    {
+      "file": "public/TDG/sprites/angel-walk1.png",
+      "sha": "fabc3a7da954bcdccddd214ea8512a954bb79e3e"
+    },
+    {
+      "file": "public/TDG/sprites/angel-walk5.png",
+      "sha": "fabc3a7da954bcdccddd214ea8512a954bb79e3e"
+    },
+    {
+      "file": "public/TDG/sprites/angel-run2.png",
+      "sha": "607243549dfa00366186f7fe134fc0967e74479a"
+    },
+    {
+      "file": "public/TDG/sprites/angel-run4.png",
+      "sha": "607243549dfa00366186f7fe134fc0967e74479a"
+    },
+    {
+      "file": "public/TDG/sprites/angel-run6.png",
+      "sha": "607243549dfa00366186f7fe134fc0967e74479a"
+    },
+    {
+      "file": "public/TDG/sprites/angel-run8.png",
+      "sha": "607243549dfa00366186f7fe134fc0967e74479a"
+    },
+    {
+      "file": "public/TDG/sprites/angel-walk2.png",
+      "sha": "607243549dfa00366186f7fe134fc0967e74479a"
+    },
+    {
+      "file": "public/TDG/sprites/angel-walk4.png",
+      "sha": "607243549dfa00366186f7fe134fc0967e74479a"
+    },
+    {
+      "file": "public/TDG/sprites/angel-walk6.png",
+      "sha": "607243549dfa00366186f7fe134fc0967e74479a"
+    },
+    {
+      "file": "public/TDG/sprites/angel-walk8.png",
+      "sha": "607243549dfa00366186f7fe134fc0967e74479a"
+    },
+    {
+      "file": "public/TDG/sprites/angel-run3.png",
+      "sha": "afc681fc1ec3bfa1c047eb687bd78cffec67743a"
+    },
+    {
+      "file": "public/TDG/sprites/angel-run7.png",
+      "sha": "afc681fc1ec3bfa1c047eb687bd78cffec67743a"
+    },
+    {
+      "file": "public/TDG/sprites/angel-walk3.png",
+      "sha": "afc681fc1ec3bfa1c047eb687bd78cffec67743a"
+    },
+    {
+      "file": "public/TDG/sprites/angel-walk7.png",
+      "sha": "afc681fc1ec3bfa1c047eb687bd78cffec67743a"
+    },
+    {
+      "file": "public/TDG/sprites/archer-back.png",
+      "sha": "cb77fc16f42e8fbcd037f045fc9804e36da6f7e4"
+    },
+    {
+      "file": "public/TDG/sprites/archer-front.png",
+      "sha": "64a3c1580ed835e8039d5c8411e3f01d7cf3dd0f"
+    },
+    {
+      "file": "public/TDG/sprites/archer-with-crew.png",
+      "sha": "dbe47d1e19305aab6a0d9ed3c10c871061c9b8ea"
+    },
+    {
+      "file": "public/TDG/sprites/archer.png",
+      "sha": "9e7fae2c2bc90c4190a7d04385bbab8fe9a88c07"
+    },
+    {
+      "file": "public/TDG/sprites/arrow-electric.png",
+      "sha": "8d777b73a2cd3d12b14d32b018da154e55ebc85f"
+    },
+    {
+      "file": "public/TDG/sprites/arrow-fire.png",
+      "sha": "bcb85151f26b60769418b09aa872012ff199b832"
+    },
+    {
+      "file": "public/TDG/sprites/arrow-holy.png",
+      "sha": "cfafa58c47fd19621b8dafc6dbf49bb401be06ce"
+    },
+    {
+      "file": "public/TDG/sprites/arrow-ice.png",
+      "sha": "75221b831aa32203134b3b1f3a3898054d60545a"
+    },
+    {
+      "file": "public/TDG/sprites/arrow-normal.png",
+      "sha": "b80f743e6de2a9c684660cb3c5c82c07f19cb9f5"
+    },
+    {
+      "file": "public/TDG/sprites/axoloti-atk1.png",
+      "sha": "0a9da70eedddeb5563e3b831b6c1e9564c844b0b"
+    },
+    {
+      "file": "public/TDG/sprites/axoloti-atk2.png",
+      "sha": "195ab006edc0bea24ac936d3ac1b5cd281c9677f"
+    },
+    {
+      "file": "public/TDG/sprites/axoloti-atk3.png",
+      "sha": "861fdbc30db46333701bb56c870ec86401542b67"
+    },
+    {
+      "file": "public/TDG/sprites/axoloti-atk4.png",
+      "sha": "aa0aee648262a20c1aedc4a16a3629fe05db9c64"
+    },
+    {
+      "file": "public/TDG/sprites/wolf_hunter-run4.png",
+      "sha": "9c9d82d45bdefa1db1ac3b852c8b85c26b42706f"
+    },
+    {
+      "file": "public/TDG/sprites/wolf_hunter-run5.png",
+      "sha": "e623f95f8f7ecf73625665731178a2db1369342f"
+    },
+    {
+      "file": "public/TDG/sprites/wolf_hunter-run6.png",
+      "sha": "3749325e49d5f56ecff2f13b7789690328e6e0c0"
+    },
+    {
+      "file": "public/TDG/sprites/wolf_hunter-run7.png",
+      "sha": "484c612cd1e13f6fa60cc45bfff53ce21451ac89"
+    },
+    {
+      "file": "public/TDG/sprites/wolf_hunter-run8.png",
+      "sha": "d6d9657cf0776a55a3a3485a285121912397fa3f"
+    },
+    {
+      "file": "public/TDG/sprites/wolf_hunter-walk1.png",
+      "sha": "8cca67d13aac9ab5b16c3f0891517b8abc84d9a5"
+    },
+    {
+      "file": "public/TDG/sprites/wolf_hunter-walk2.png",
+      "sha": "aec9f97431c1af8ce34d62bc75a116e40d0ceeaa"
+    },
+    {
+      "file": "public/TDG/sprites/wolf_hunter-walk3.png",
+      "sha": "20f4777456309520e0066593a69bb4955ce15b14"
+    },
+    {
+      "file": "public/TDG/sprites/wolf_hunter-walk4.png",
+      "sha": "0741fd2714914838564ea688f308a42fde4081eb"
+    },
+    {
+      "file": "public/TDG/sprites/wolf_hunter-walk5.png",
+      "sha": "7e8af5fb54bf0ac81ba5162a5c9c7aab835bc41f"
+    },
+    {
+      "file": "public/TDG/sprites/wolf_hunter-walk6.png",
+      "sha": "48e1a42815e50f431a5d491be20a037ddd88fc9c"
+    },
+    {
+      "file": "public/TDG/sprites/wolf_hunter-walk7.png",
+      "sha": "cd380c80aea0d11d5120201c21fff8f2ad819750"
+    },
+    {
+      "file": "public/TDG/sprites/wolf_hunter-walk8.png",
+      "sha": "1cc3564ab56fd83dd4ac8186b4ddbeec32cedc7f"
+    },
+    {
+      "file": "public/TDG/sprites/yeti-atk1.png",
+      "sha": "28b8b9b2785487595d18cdb3e4841594c6872971"
+    },
+    {
+      "file": "public/TDG/sprites/yeti-atk5.png",
+      "sha": "28b8b9b2785487595d18cdb3e4841594c6872971"
+    },
+    {
+      "file": "public/TDG/sprites/yeti-atk2.png",
+      "sha": "8c612b0a06aa377f33a420fc343c83a838b979ab"
+    },
+    {
+      "file": "public/TDG/sprites/yeti-atk4.png",
+      "sha": "8c612b0a06aa377f33a420fc343c83a838b979ab"
+    },
+    {
+      "file": "public/TDG/sprites/yeti-atk6.png",
+      "sha": "8c612b0a06aa377f33a420fc343c83a838b979ab"
+    },
+    {
+      "file": "public/TDG/sprites/yeti-atk8.png",
+      "sha": "8c612b0a06aa377f33a420fc343c83a838b979ab"
+    },
+    {
+      "file": "public/TDG/sprites/yeti-atk3.png",
+      "sha": "d696fd649af0b156cb5b7e3e0b4d36f392bdab85"
+    },
+    {
+      "file": "public/TDG/sprites/yeti-atk7.png",
+      "sha": "d696fd649af0b156cb5b7e3e0b4d36f392bdab85"
+    },
+    {
+      "file": "public/TDG/sprites/yeti-block1.png",
+      "sha": "25ee9482f9ced5f1470b8dcafa3546ab6c46f04f"
+    },
+    {
+      "file": "public/TDG/sprites/yeti-hurt1.png",
+      "sha": "25ee9482f9ced5f1470b8dcafa3546ab6c46f04f"
+    },
+    {
+      "file": "public/TDG/sprites/yeti-idle1.png",
+      "sha": "25ee9482f9ced5f1470b8dcafa3546ab6c46f04f"
+    },
+    {
+      "file": "public/TDG/sprites/yeti.png",
+      "sha": "25ee9482f9ced5f1470b8dcafa3546ab6c46f04f"
+    },
+    {
+      "file": "public/TDG/sprites/yeti-block2.png",
+      "sha": "c57aec290b9b170fa04fc6d72556ab0cc934a59e"
+    },
+    {
+      "file": "public/TDG/sprites/yeti-hurt2.png",
+      "sha": "c57aec290b9b170fa04fc6d72556ab0cc934a59e"
+    },
+    {
+      "file": "public/TDG/sprites/yeti-idle2.png",
+      "sha": "c57aec290b9b170fa04fc6d72556ab0cc934a59e"
+    },
+    {
+      "file": "public/TDG/sprites/yeti-block3.png",
+      "sha": "5ab9290b296e6a70461ce0e1e6706711d3b9179c"
+    },
+    {
+      "file": "public/TDG/sprites/yeti-hurt3.png",
+      "sha": "5ab9290b296e6a70461ce0e1e6706711d3b9179c"
+    },
+    {
+      "file": "public/TDG/sprites/yeti-idle3.png",
+      "sha": "5ab9290b296e6a70461ce0e1e6706711d3b9179c"
+    },
+    {
+      "file": "public/TDG/sprites/yeti-block4.png",
+      "sha": "68267f865cf5d2669a704fe4be531e3b2296dd24"
+    },
+    {
+      "file": "public/TDG/sprites/yeti-hurt4.png",
+      "sha": "68267f865cf5d2669a704fe4be531e3b2296dd24"
+    },
+    {
+      "file": "public/TDG/sprites/yeti-idle4.png",
+      "sha": "68267f865cf5d2669a704fe4be531e3b2296dd24"
+    },
+    {
+      "file": "public/TDG/sprites/yeti-run1.png",
+      "sha": "fb2f2988cd0ae17e50057aa9e8f81ed086d71000"
+    },
+    {
+      "file": "public/TDG/sprites/yeti-run5.png",
+      "sha": "fb2f2988cd0ae17e50057aa9e8f81ed086d71000"
+    },
+    {
+      "file": "public/TDG/sprites/yeti-walk1.png",
+      "sha": "fb2f2988cd0ae17e50057aa9e8f81ed086d71000"
+    },
+    {
+      "file": "public/TDG/sprites/yeti-walk5.png",
+      "sha": "fb2f2988cd0ae17e50057aa9e8f81ed086d71000"
+    },
+    {
+      "file": "public/TDG/sprites/yeti-run2.png",
+      "sha": "8dfc3920816f8e40a552d02bfbe9517b48e339e3"
+    },
+    {
+      "file": "public/TDG/sprites/yeti-run4.png",
+      "sha": "8dfc3920816f8e40a552d02bfbe9517b48e339e3"
+    },
+    {
+      "file": "public/TDG/sprites/yeti-run6.png",
+      "sha": "8dfc3920816f8e40a552d02bfbe9517b48e339e3"
+    },
+    {
+      "file": "public/TDG/sprites/yeti-run8.png",
+      "sha": "8dfc3920816f8e40a552d02bfbe9517b48e339e3"
+    },
+    {
+      "file": "public/TDG/sprites/yeti-walk2.png",
+      "sha": "8dfc3920816f8e40a552d02bfbe9517b48e339e3"
+    },
+    {
+      "file": "public/TDG/sprites/yeti-walk4.png",
+      "sha": "8dfc3920816f8e40a552d02bfbe9517b48e339e3"
+    },
+    {
+      "file": "public/TDG/sprites/yeti-walk6.png",
+      "sha": "8dfc3920816f8e40a552d02bfbe9517b48e339e3"
+    },
+    {
+      "file": "public/TDG/sprites/yeti-walk8.png",
+      "sha": "8dfc3920816f8e40a552d02bfbe9517b48e339e3"
+    },
+    {
+      "file": "public/TDG/sprites/yeti-run3.png",
+      "sha": "c3e7ba441f0296218639ee9ad2c50b8f99e454e9"
+    },
+    {
+      "file": "public/TDG/sprites/yeti-run7.png",
+      "sha": "c3e7ba441f0296218639ee9ad2c50b8f99e454e9"
+    },
+    {
+      "file": "public/TDG/sprites/yeti-walk3.png",
+      "sha": "c3e7ba441f0296218639ee9ad2c50b8f99e454e9"
+    },
+    {
+      "file": "public/TDG/sprites/yeti-walk7.png",
+      "sha": "c3e7ba441f0296218639ee9ad2c50b8f99e454e9"
+    },
+    {
+      "file": "public/TDG/tft-online.js",
+      "sha": "f2ac4ecfd60ccf644ec492ed8139f56c23ee1360"
+    },
+    {
+      "file": "public/TDG/ui/cursor-staff.png",
+      "sha": "31d03ebccc61d02cc326068b38f905e846d05107"
+    },
+    {
+      "file": "public/TDG/ui/enemy-warning-angel.png",
+      "sha": "fc245cef1fccc1b8c19c78047f67722d3e762dfb"
+    },
+    {
+      "file": "public/TDG/ui/gold-coin.png",
+      "sha": "be022d21a1444a8dfbe62ea5df9f4b7f97a7e89e"
+    },
+    {
+      "file": "public/TDG/ui/ink-feather-cursor-32.png",
+      "sha": "343fe358306fa1812c98206dd83456c3bf8d5e7c"
+    },
+    {
+      "file": "public/TDG/ui/ink-feather-cursor-64.png",
+      "sha": "bfdf4481d7624b86d3fe01ca85d9ab0f881d8976"
+    },
+    {
+      "file": "public/TDG/ui/ink-feather-cursor-clickable-32.png",
+      "sha": "7999daf062474fac8184859efdb2be7cd5e49bc9"
+    },
+    {
+      "file": "public/TDG/ui/ink-feather-cursor-clickable-64.png",
+      "sha": "d40ee49359abd0503cf0facbda1487b0bc2e7164"
+    },
+    {
+      "file": "public/TDG/ui/ink-feather-cursor.png",
+      "sha": "bf3c9c28ccb6ea20f9cf844f54bc88ad602da4eb"
+    },
+    {
+      "file": "public/TDG/ui/ink-feather-grabbing-32.png",
+      "sha": "90b7ad223e45c486822a95c5c27acbf120686ef7"
+    },
+    {
+      "file": "public/TDG/ui/ink-feather-grabbing-64.png",
+      "sha": "b6bc9821cdcf2d8b1ee706dd43b381a522320c4a"
+    },
+    {
+      "file": "public/TDG/ui/ink-feather-grabbing.png",
+      "sha": "abe2c78e09bdf99be50a098808999ad621b6d089"
+    },
+    {
+      "file": "public/TDG/ui/inventory-bag.png",
+      "sha": "f8fcc671842233c40c7eb7e7e9ad94e0821330c2"
+    },
+    {
+      "file": "public/TV.mp4",
+      "sha": "94e83637ba0a79e86d63d6fdabbd211de0cdc3a5"
+    },
+    {
+      "file": "public/attention.mp3",
+      "sha": "7197f1dc5eca313a6632fadccc3cf1c6e0a5d94e"
+    },
+    {
+      "file": "public/barber.png",
+      "sha": "bcbd5d0b423f7316889f66393b0620e779d12ff7"
+    },
+    {
+      "file": "public/genesis.png",
+      "sha": "78eedd3a63670c280730ba5e902250a1fb450094"
+    },
+    {
+      "file": "public/hero-bg.png",
+      "sha": "6a34a54b39abec2ae80df16bd0441fa7e85ce959"
+    },
+    {
+      "file": "public/how-it-works.png",
+      "sha": "1ce70af736d1e25cc9125dde20426c48b13a5991"
+    },
+    {
+      "file": "public/live.png",
+      "sha": "a1e2195a6a0c274d08270e1536e737e3f56888b9"
+    },
+    {
+      "file": "public/mogenergy/mog-energy-background.png",
+      "sha": "07594ddcbac5e31b294190a1aaf078258699955e"
+    },
+    {
+      "file": "public/mogenergy/mog-energy-can.png",
+      "sha": "3e4f1a211084ddbcbed06950cac911642fd0d6f8"
+    },
+    {
+      "file": "public/pay.png",
+      "sha": "e4e722662c3895a411ef129f1962f3125bb1ff46"
+    },
+    {
+      "file": "public/pixaeffects/icon.svg",
+      "sha": "b54106ffdc1d75fb86f0ae1d4de832ec5eb0188d"
+    },
+    {
+      "file": "public/pixashop/PixaShop-User-Manual.md",
+      "sha": "e58e87dbafa9258acc6def86edb3597e11425226"
+    },
+    {
+      "file": "public/pixashop/icon.png",
+      "sha": "19ad96d3739e9b640acf03653633d0d907c9d521"
+    },
+    {
+      "file": "public/pixaworld.png",
+      "sha": "4ae67336d9453b10cd571deb0a58b960cddd0a76"
+    },
+    {
+      "file": "public/site.png",
+      "sha": "cfcff3f27d053c020d03ecf73c18fc51a1638827"
+    },
+    {
+      "file": "appMapReasoning.md",
+      "sha": "1f70a600734d4197a2cac4686a86d68c30a8f541"
+    },
+    {
+      "file": "auth.ts",
+      "sha": "0d41bb386d4e95001c9ee556f349421143a1b411"
+    },
+    {
+      "file": "components/ProductShowcase.module.css",
+      "sha": "01ba062075a2108917c9a63d4b4b06e80fa7d636"
+    },
+    {
+      "file": "components/ProductShowcase.tsx",
+      "sha": "31fee7693e1a839ce6ac39eecb3717059b160efb"
+    },
+    {
+      "file": "components/ai-website-pro/AiWebsiteProHome.tsx",
+      "sha": "fecbb1ca6fe0ca42a832aa5dc062e73380602493"
+    },
+    {
+      "file": "components/ai-website-pro/AiWebsiteProShell.tsx",
+      "sha": "07d704c7181a9eb0109ffaa3032c1f0b6ce2a167"
+    },
+    {
+      "file": "components/ai-website-pro/UseCasesMarqueeBackdrop.tsx",
+      "sha": "097fa3406a6ce5477cae4498a607f72d4fd17f8b"
+    },
+    {
+      "file": "components/analytics/GaPageView.tsx",
+      "sha": "6bfea278ccec1fbddebd745ec42dd3f21c1d582b"
+    },
+    {
+      "file": "components/auth/AccountForm.tsx",
+      "sha": "9d433b1b506f6bc2e6c42dce98ccd88910714344"
+    },
+    {
+      "file": "components/auth/AuthProvider.tsx",
+      "sha": "dd331a4123d6db0745af4bd7e2980ed559243cf1"
+    },
+    {
+      "file": "components/auth/Brand.tsx",
+      "sha": "af618933b048b4df0de14dbadf3280daaf87b358"
+    },
+    {
+      "file": "components/auth/SiteAccountBar.tsx",
+      "sha": "6ba76272c8c4f4b8c31021f2d09afe071574a866"
+    },
+    {
+      "file": "components/auth/SiteChrome.tsx",
+      "sha": "7648c990df6230bf92848e44b6833970b4f2f35f"
+    },
+    {
+      "file": "components/auth/WorkspaceNav.tsx",
+      "sha": "50588711fe085210f34acd6acebb473c82a87e18"
+    },
+    {
+      "file": "components/chat/AiImplementationChatWidget.tsx",
+      "sha": "56054ea6fd5846c8053a3c1ea5f8d4fe1008c4fc"
+    },
+    {
+      "file": "components/chat/CeoAdvisorPanel.tsx",
+      "sha": "96274fdaa9e065c9219b2abcf6ab5b64c6a07787"
+    },
+    {
+      "file": "components/presence/PresenceMap.tsx",
+      "sha": "3ea724c3b9d372932ad9aa1beff5ab0cc4207162"
+    },
+    {
+      "file": "components/presence/SitePresenceTracker.tsx",
+      "sha": "475d59d48b8147a4249bedf482e3a197460be238"
+    },
+    {
+      "file": "components/talk-ai/TalkToAiExperience.tsx",
+      "sha": "b76431b2eb6bf135c9c3ae78861db6caa0e55e6c"
+    },
+    {
+      "file": "components/ui/button.tsx",
+      "sha": "e29f49e184052a145c1f0c1119f80655a902064f"
+    },
+    {
+      "file": "components/ui/input.tsx",
+      "sha": "4227a1825b6c4f25111b6e9aca16d5d6f6f76103"
+    },
+    {
+      "file": "components/ui/textarea.tsx",
+      "sha": "e306969f5c90fed349d179884a891e3183966655"
+    },
+    {
+      "file": "firmware/MarineMonitor/MarineMonitor.ino",
+      "sha": "4ed15192bd9d1ffe6c3a5eb6a7f2fa2ee90d7f6c"
+    },
+    {
+      "file": "firmware/README.md",
+      "sha": "2ebd10621664b523383758541090582a86b153a4"
+    },
+    {
+      "file": "lib/ai-marketing-use-cases.ts",
+      "sha": "b8b22ee03c04cd6142251852cdf5d74ce1c2ba0a"
+    },
+    {
+      "file": "lib/baby-monitor.ts",
+      "sha": "bf8b99bb4aaab7fcd0ebb7a6dd51959550fa045f"
+    },
+    {
+      "file": "lib/booking/emails.ts",
+      "sha": "fb988b8174ca9fab44c89bc2a33e651d19eb2cba"
+    },
+    {
+      "file": "lib/booking/et.ts",
+      "sha": "0fa1f327ef72b18eafa7ff904b24731b2bfcf371"
+    },
+    {
+      "file": "lib/booking/init-tables.ts",
+      "sha": "58131efb84cf925a28890de24f5906cd38d49f82"
+    },
+    {
+      "file": "lib/booking/reminder-runner.ts",
+      "sha": "ad48e53362bcd8ecaa269b72c5f06218b59a5417"
+    },
+    {
+      "file": "lib/builder/ai.ts",
+      "sha": "b3d814d86f91fba43a6cb55bdf75be35910e6452"
+    },
+    {
+      "file": "lib/builder/document.ts",
+      "sha": "4b0ef94ad664d72f213c49ab204bdcd011d12c2c"
+    },
+    {
+      "file": "lib/builder/extract.ts",
+      "sha": "cd1a6f8ed80c79185d56dfdd7ed3ea039a342e9a"
+    },
+    {
+      "file": "lib/builder/page-content.ts",
+      "sha": "02128cfd911b2052738b4f349a7ee2998b8b26f6"
+    },
+    {
+      "file": "lib/builder/pictures.ts",
+      "sha": "f6a2e31907a15a778af008b27e36a9dbc32eb83f"
+    },
+    {
+      "file": "lib/builder/source.ts",
+      "sha": "5243c9f7c046686b45c594711f642269455ac208"
+    },
+    {
+      "file": "lib/builder/store.ts",
+      "sha": "514fc1b2a612300bbf4e4f35c1762fddf6bc3263"
+    },
+    {
+      "file": "lib/builder/style.ts",
+      "sha": "04ef6944c2b6664b2e85126b1c7141f3be4495df"
+    },
+    {
+      "file": "lib/ceo-coach-response-length.ts",
+      "sha": "9d1bd8bcf4437016d7f30ed4c1c8985d48295f5e"
+    },
+    {
+      "file": "lib/ceo-coach-response.ts",
+      "sha": "639480b9829f1be909a0e15df3c2c33651a1f60a"
+    },
+    {
+      "file": "lib/client-geo.ts",
+      "sha": "97bb12b54487577fc6da14caf9936d050ca9abe7"
+    },
+    {
+      "file": "lib/db.ts",
+      "sha": "738233ca7d9c93b6b459aca91aff99700353a92a"
+    },
+    {
+      "file": "lib/developer-auth.ts",
+      "sha": "15c427b13c6ac7b5ad3e2647c6aaf0e2e4f5c0ba"
+    },
+    {
+      "file": "lib/email-templates.ts",
+      "sha": "5e9fc9699ec2d4360aa037e4e85652ebc4251457"
+    },
+    {
+      "file": "lib/ga-reports-url.ts",
+      "sha": "f1961dcae573caa091acb7390bfff3cba54dc171"
+    },
+    {
+      "file": "lib/icon-db.ts",
+      "sha": "d9ab2a78da8b3e98a3875aeba6c2187798abb5e4"
+    },
+    {
+      "file": "lib/icon-pipeline.ts",
+      "sha": "08d9dee658d031a0964414907c13a1fa27a3ac76"
+    },
+    {
+      "file": "lib/ideaProjectHelpers.ts",
+      "sha": "f1b79b5b60451466836eb00f2d97feab2e564aab"
+    },
+    {
+      "file": "lib/password-accounts.ts",
+      "sha": "253937bf615080394ece411df0013c458ce4a36b"
+    },
+    {
+      "file": "lib/pixashop.ts",
+      "sha": "2184f49124788ce1bcebd4fb032157df1f6bccf8"
+    },
+    {
+      "file": "lib/processIdeaProjectZip.ts",
+      "sha": "cfb8f550ae10ab9bb3f70dfd6383f9b4520ad1c2"
+    },
+    {
+      "file": "lib/pusher.ts",
+      "sha": "0698b31c2006ceddce64b89414a8888c8f2326c4"
+    },
+    {
+      "file": "lib/resend-key.ts",
+      "sha": "2ee9db10def89048156f7a318d57d34258500bb3"
+    },
+    {
+      "file": "lib/site-users.ts",
+      "sha": "673476ca2966fa8254bcc6c1e1b0f5dd3632640e"
+    },
+    {
+      "file": "lib/tdg-join-ticket.ts",
+      "sha": "47b389cd98a6f1b8d1ab87c13154a9567316a99e"
+    },
+    {
+      "file": "lib/tdg-presence-log.ts",
+      "sha": "28da60b01dab37d7a4951c4c1b5fd242616111c6"
+    },
+    {
+      "file": "lib/tdg-presence.ts",
+      "sha": "980c9591bdcd68811224ff06d675fb347b66dc99"
+    },
+    {
+      "file": "lib/tdg-pvp-activity.ts",
+      "sha": "21be2aee57f1eb2c6bcfe85966f1bdc6b39e7931"
+    },
+    {
+      "file": "lib/tdg-pvp.ts",
+      "sha": "77c7b2bb99b8389d8b099ca76a76f56026a2994e"
+    },
+    {
+      "file": "lib/tdg-tft-lobby.ts",
+      "sha": "d46b8f9ae356ee1b2cbfff64d24ac88ca7df5eed"
+    },
+    {
+      "file": "lib/team-email.ts",
+      "sha": "4b69db82e0a32931acf0f5866c92946b73aa2fc1"
+    },
+    {
+      "file": "lib/utils.ts",
+      "sha": "c90970573af77a6d09641e5b319dff2f8075aafe"
+    },
+    {
+      "file": "next-env.d.ts",
+      "sha": "79ea33d5bd6bf5319667f287c6aec3a5e0ce256a"
+    },
+    {
+      "file": "next.config.js",
+      "sha": "c7455d0dab8f877f2af32239fada2015404d0f38"
+    },
+    {
+      "file": "package-lock.json",
+      "sha": "2fb6910a10347c506e9647b563a95a2a6172d0db"
+    },
+    {
+      "file": "package.json",
+      "sha": "46e9293a84309eecf5b08f6272ee98c4c40fda4e"
+    },
+    {
+      "file": "postcss.config.mjs",
+      "sha": "799a736da249be5760f2eb9867d3c9db40da968d"
+    },
+    {
+      "file": "render.yaml",
+      "sha": "0555f5041e66c25d4e4fee51b824fc418aab31eb"
+    },
+    {
+      "file": "scripts/post_device_status.py",
+      "sha": "6f51756c4a944eade5521cada22750ee9cf859b1"
+    },
+    {
+      "file": "scripts/test-builder.cjs",
+      "sha": "7d11473af900f2b1a0046427397e8096b9505245"
+    },
+    {
+      "file": "scripts/test-pixashop.cjs",
+      "sha": "fda9938c671cfdfc4a01e9c1d2888ca1acd23c02"
+    },
+    {
+      "file": "setup-vercel-env.sh",
+      "sha": "6de3498f06317771ed2e552c38a3543397222868"
+    },
+    {
+      "file": "setup-vercel-pusher.sh",
+      "sha": "5b9541b47629afc6e4b1b22c263ec9aa7baf3d64"
+    },
+    {
+      "file": "tailwind.config.ts",
+      "sha": "f37b77b0d712d1c920cdb21f3a7dc9b8c281df9e"
+    },
+    {
+      "file": "tdg-game-server/.env.example",
+      "sha": "ec5d83f0fbe69933b26ca46a5d5af454dba79161"
+    },
+    {
+      "file": "tdg-game-server/README.md",
+      "sha": "aa5f1b45a8154b22d5f76876f35fa85c633040db"
+    },
+    {
+      "file": "tdg-game-server/auth.js",
+      "sha": "61064c7e34776d3267de94a86379514d56c3c71d"
+    },
+    {
+      "file": "tdg-game-server/index.js",
+      "sha": "bd3e5c905c9d662e35fe6f8dd12c6b6e49bc46db"
+    },
+    {
+      "file": "tdg-game-server/package-lock.json",
+      "sha": "6a7eefed39dac77c0ade614af2e856477b25e26a"
+    },
+    {
+      "file": "tdg-game-server/package.json",
+      "sha": "3354a82b9cbd6c0b185f0b9456a7503fde3221f9"
+    },
+    {
+      "file": "tdg-game-server/room.js",
+      "sha": "98b75547c5307c8650e6924432808360304d8bdb"
+    },
+    {
+      "file": "tdg-game-server/sim/actions.js",
+      "sha": "82563ccf41aadec65dc06750d3d3d5d849108401"
+    },
+    {
+      "file": "tdg-game-server/sim/authoritative.js",
+      "sha": "93d2edfc8f15a06e724cf61f28fd576f05a48be5"
+    },
+    {
+      "file": "tdg-game-server/sim/index.js",
+      "sha": "8e2721cdfa9b1833b616d89d63cd33ee8313e73c"
+    },
+    {
+      "file": "tsconfig.json",
+      "sha": "8911419c836213c9d2730adba835c399162eb497"
+    },
+    {
+      "file": "tsconfig.tsbuildinfo",
+      "sha": "45fd9047da8ddf8b3c9eacecb5596041f6808ccd"
+    }
+  ],
+  "complete_source_tree": true,
+  "free_backend": "dpl_DSsgnFjuJGtsa2N8wmkjjtMKGajG",
+  "marketing": "dpl_FPJwJpHWs5wXfWHsjKkr4Rzsr6N8",
+  "routing_version": "1b6189a2-b30f-4306-818d-495e32554536",
+  "rollback_routing_version": "6fe50bc7-ebe8-4729-8c11-65eb2d7ed354",
+  "mode": "Free early access; no scheduled expiration; account and device approval retained",
+  "existing_paid_services": "not canceled; separate legacy billing portal preserved"
+}

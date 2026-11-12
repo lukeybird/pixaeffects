@@ -1,3 +1,9 @@
+CURRENT PRODUCTION — FREE PIXA EARLY ACCESS — 2026-11-12
+Owner selected everyone, no card and no scheduled expiration. Main backend is NOW dpl_DSsgnFjuJGtsa2N8wmkjjtMKGajG, based on all 535 immutable production files from old deployment dpl_6w71EygorJmZkXWmq1vvTQG8GYLe plus the reviewed free-access patch. Do not treat the old backend as current; keep it as rollback. Marketing dpl_FPJwJpHWs5wXfWHsjKkr4Rzsr6N8; routing 1b6189a2-b30f-4306-818d-495e32554536; routing rollback 6fe50bc7-ebe8-4729-8c11-65eb2d7ed354.
+/start creates free accounts or redirects existing users to the Pixa /account hub. /settings shows the same hub. Pixa download/device authorization no longer requires Stripe; account/device security remains. Existing builder billing and previous Stripe subscriptions were NOT canceled or changed. Existing release pins/enable flags unchanged. See website-free-access/README.txt, DEPLOYMENT.json, backend/* and test-patch.mjs for exact source provenance, mapping, tests and rollback. Full candidate compiled/type-checked; live signed-in hasAccess=true with null expiry verified. Unauthenticated/unknown devices remain denied. Never deploy stale GitHub main or this patch directory as a complete website. Native editor/signing acceptance is not implied.
+
+PRIOR HISTORY (PRESERVED)
+
 LIVE STYLES VERIFIED — 2026-11-12
 Homepage stylesheet now uses its content hash in the URL to avoid cached old CSS after route promotion. Final deployment dpl_7iYwn7bCTP6wNsYpZzyyNatA78Z1; final routing 6fe50bc7-ebe8-4729-8c11-65eb2d7ed354. Original rollback remains 01fd6746-4298-4fe8-92d3-35139947a344. Browser verified the correctly styled homepage and both /start CTA destinations. No billing changes.
 
