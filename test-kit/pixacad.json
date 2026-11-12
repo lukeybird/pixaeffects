@@ -1,0 +1,68 @@
+{
+  "product": "pixacad",
+  "version": "0.1.0",
+  "artifact_sha256": null,
+  "source_commit": null,
+  "platform": null,
+  "architecture": null,
+  "configured_explanations": 7,
+  "checks": [
+    {
+      "id": "identity",
+      "instruction": "Confirm the exact candidate version 0.1.0 and Pixa name/icon in the installed app and About. Record the downloaded artifact SHA-256.",
+      "status": "not-run",
+      "evidence": null
+    },
+    {
+      "id": "branding",
+      "instruction": "Inspect Home, title bar, About, menus, dialogs and installer/OS icon. No inherited product promotion, project-repository advertisement or nonexistent Discord link. Legal and contributor credits must remain.",
+      "status": "not-run",
+      "evidence": null
+    },
+    {
+      "id": "manual",
+      "instruction": "Open the offline user manual using Help/footer and F1. Search for a known section, then a nonsense term; verify matching and empty-result feedback.",
+      "status": "not-run",
+      "evidence": null
+    },
+    {
+      "id": "tour",
+      "instruction": "Start Quick tour or Shift+F1. There are 7 configured explanation entries. Visit each, use Back at step two, finish the final step, reopen and press Escape. Record missing/misleading explanations or missing controls.",
+      "status": "not-run",
+      "evidence": null
+    },
+    {
+      "id": "read_only",
+      "instruction": "Create a disposable unsaved edit first. Opening/closing help and the tour must not change the document, selection, active tool or dirty state.",
+      "status": "not-run",
+      "evidence": null
+    },
+    {
+      "id": "layout",
+      "instruction": "Check normal/narrow windows, 100%/200% display scaling, hidden toolbars, grouped tools and visible highlights. A tour must not claim a hidden control is visibly highlighted.",
+      "status": "not-run",
+      "evidence": null
+    },
+    {
+      "id": "account",
+      "instruction": "Use a designated test account and approve only this device code. Check restart, offline/reconnect, revocation and safe recovery without recording tokens or overwriting original files.",
+      "status": "not-run",
+      "evidence": null
+    },
+    {
+      "id": "editor",
+      "instruction": "Create a minimal native project, edit, undo/redo, save to a new folder and reopen. Import/export an advertised supported format and inspect the output. Record unsupported features honestly.",
+      "status": "not-run",
+      "evidence": null
+    },
+    {
+      "id": "updates",
+      "instruction": "Check that only the correct Pixa product feed is used. No matching release should say no newer update. Actual signed install/restart is a separate post-notarization gate; never disable OS verification.",
+      "status": "not-run",
+      "evidence": null
+    }
+  ],
+  "ready_for_release": false,
+  "notarization": "not-performed",
+  "note": "This checklist is a testing aid, not evidence that the candidate is already packaged, fully documented or accepted."
+}

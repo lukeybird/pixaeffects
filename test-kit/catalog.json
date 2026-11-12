@@ -1,0 +1,135 @@
+{
+  "schema_version": 1,
+  "purpose": "Developer/native acceptance test kit for sixteen editors; not a customer release catalog",
+  "products": [
+    {
+      "product": "pixashop",
+      "version": "0.20.5",
+      "checklist": "test-kit/pixashop.json",
+      "configured_explanations": 68,
+      "source_branch": "pixashop-product",
+      "packaged_candidate": "check current exact-source build evidence; no new Mac completion claimed"
+    },
+    {
+      "product": "pixaeffects",
+      "version": "0.1.3",
+      "checklist": "test-kit/pixaeffects.json",
+      "configured_explanations": 31,
+      "source_branch": "pixaeffects-product",
+      "packaged_candidate": "check current exact-source build evidence; no new Mac completion claimed"
+    },
+    {
+      "product": "pixavector",
+      "version": "0.1.1",
+      "checklist": "test-kit/pixavector.json",
+      "configured_explanations": 92,
+      "source_branch": "pixa-suite-product",
+      "packaged_candidate": "check current exact-source build evidence; no new Mac completion claimed"
+    },
+    {
+      "product": "pixafilm",
+      "version": "0.1.1",
+      "checklist": "test-kit/pixafilm.json",
+      "configured_explanations": 17,
+      "source_branch": "pixa-suite-product",
+      "packaged_candidate": "check current exact-source build evidence; no new Mac completion claimed"
+    },
+    {
+      "product": "pixalight",
+      "version": "0.1.0",
+      "checklist": "test-kit/pixalight.json",
+      "configured_explanations": 9,
+      "source_branch": "pixa-suite-product",
+      "packaged_candidate": "check current exact-source build evidence; no new Mac completion claimed"
+    },
+    {
+      "product": "pixapdf",
+      "version": "0.1.0",
+      "checklist": "test-kit/pixapdf.json",
+      "configured_explanations": 23,
+      "source_branch": "pixa-suite-product",
+      "packaged_candidate": "check current exact-source build evidence; no new Mac completion claimed"
+    },
+    {
+      "product": "pixadesign",
+      "version": "0.1.0",
+      "checklist": "test-kit/pixadesign.json",
+      "configured_explanations": 37,
+      "source_branch": "pixa-suite-product",
+      "packaged_candidate": "check current exact-source build evidence; no new Mac completion claimed"
+    },
+    {
+      "product": "pixainterface",
+      "version": "0.1.0",
+      "checklist": "test-kit/pixainterface.json",
+      "configured_explanations": 26,
+      "source_branch": "pixa-suite-product",
+      "packaged_candidate": "check current exact-source build evidence; no new Mac completion claimed"
+    },
+    {
+      "product": "pixatexture",
+      "version": "0.1.0",
+      "checklist": "test-kit/pixatexture.json",
+      "configured_explanations": 9,
+      "source_branch": "pixa-suite-product",
+      "packaged_candidate": "check current exact-source build evidence; no new Mac completion claimed"
+    },
+    {
+      "product": "pixamaterial",
+      "version": "0.1.0",
+      "checklist": "test-kit/pixamaterial.json",
+      "configured_explanations": 6,
+      "source_branch": "pixa-suite-product",
+      "packaged_candidate": "check current exact-source build evidence; no new Mac completion claimed"
+    },
+    {
+      "product": "pixaword",
+      "version": "0.1.0",
+      "checklist": "test-kit/pixaword.json",
+      "configured_explanations": 10,
+      "source_branch": "pixa-suite-product",
+      "packaged_candidate": "check current exact-source build evidence; no new Mac completion claimed"
+    },
+    {
+      "product": "pixasound",
+      "version": "0.1.0",
+      "checklist": "test-kit/pixasound.json",
+      "configured_explanations": 7,
+      "source_branch": "pixa-suite-product",
+      "packaged_candidate": "check current exact-source build evidence; no new Mac completion claimed"
+    },
+    {
+      "product": "pixadeck",
+      "version": "0.1.0",
+      "checklist": "test-kit/pixadeck.json",
+      "configured_explanations": 6,
+      "source_branch": "pixa-suite-product",
+      "packaged_candidate": "check current exact-source build evidence; no new Mac completion claimed"
+    },
+    {
+      "product": "pixacad",
+      "version": "0.1.0",
+      "checklist": "test-kit/pixacad.json",
+      "configured_explanations": 7,
+      "source_branch": "pixa-suite-product",
+      "packaged_candidate": "check current exact-source build evidence; no new Mac completion claimed"
+    },
+    {
+      "product": "pixagrid",
+      "version": "0.1.0",
+      "checklist": "test-kit/pixagrid.json",
+      "configured_explanations": 9,
+      "source_branch": "pixa-suite-product",
+      "packaged_candidate": "check current exact-source build evidence; no new Mac completion claimed"
+    },
+    {
+      "product": "pixaanything",
+      "version": "0.1.0",
+      "checklist": "test-kit/pixaanything.json",
+      "configured_explanations": 81,
+      "source_branch": "pixa-suite-product",
+      "packaged_candidate": "check current exact-source build evidence; no new Mac completion claimed"
+    }
+  ],
+  "public_downloads_enabled": false
+}
