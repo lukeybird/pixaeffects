@@ -1,0 +1,169 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-12",
+  "all_sixteen_complete": false,
+  "changes": [
+    "accessible manual search labels shared by all suite editors",
+    "F1 offline manual and Shift+F1 tool tour",
+    "owned manual links captured as offline help without intercepting unrelated document URLs",
+    "headless interaction checks for every configured tour step in fourteen suites"
+  ],
+  "tests": {
+    "help_ui_checks": 71,
+    "help_ui_checks_passed": 71,
+    "configured_suite_explanations": 339,
+    "font_scope": "SourceSans3 fixture from prepared sources; does not verify each installed editor font set",
+    "suite_python": {
+      "run": 36,
+      "pass": 35,
+      "skip": 1
+    },
+    "fresh_preparations_and_source_audits_passed": 14
+  },
+  "products": {
+    "pixavector": {
+      "configured_explanations": 92,
+      "help_ui_checks_passed": 5,
+      "inventory_scope": "source-backed tool registry",
+      "fresh_prepare_and_source_audit": "passed",
+      "installed_branding": "pending",
+      "native_editor_help_integration": "pending packaged acceptance",
+      "ready_for_notarization": false
+    },
+    "pixafilm": {
+      "configured_explanations": 17,
+      "help_ui_checks_passed": 5,
+      "inventory_scope": "source-backed tool registry",
+      "fresh_prepare_and_source_audit": "passed",
+      "installed_branding": "pending",
+      "native_editor_help_integration": "pending packaged acceptance",
+      "ready_for_notarization": false
+    },
+    "pixalight": {
+      "configured_explanations": 9,
+      "help_ui_checks_passed": 5,
+      "inventory_scope": "source-anchored control groups; exhaustive per-tool coverage not established",
+      "fresh_prepare_and_source_audit": "passed",
+      "installed_branding": "pending",
+      "native_editor_help_integration": "pending packaged acceptance",
+      "ready_for_notarization": false
+    },
+    "pixapdf": {
+      "configured_explanations": 23,
+      "help_ui_checks_passed": 5,
+      "inventory_scope": "source-anchored control groups; exhaustive per-tool coverage not established",
+      "fresh_prepare_and_source_audit": "passed",
+      "installed_branding": "pending",
+      "native_editor_help_integration": "pending packaged acceptance",
+      "ready_for_notarization": false
+    },
+    "pixadesign": {
+      "configured_explanations": 37,
+      "help_ui_checks_passed": 5,
+      "inventory_scope": "source-backed tool registry",
+      "fresh_prepare_and_source_audit": "passed",
+      "installed_branding": "pending",
+      "native_editor_help_integration": "pending packaged acceptance",
+      "ready_for_notarization": false
+    },
+    "pixainterface": {
+      "configured_explanations": 26,
+      "help_ui_checks_passed": 5,
+      "inventory_scope": "source-backed tool registry",
+      "fresh_prepare_and_source_audit": "passed",
+      "installed_branding": "pending",
+      "native_editor_help_integration": "pending packaged acceptance",
+      "ready_for_notarization": false
+    },
+    "pixatexture": {
+      "configured_explanations": 9,
+      "help_ui_checks_passed": 5,
+      "inventory_scope": "source-backed tool registry",
+      "fresh_prepare_and_source_audit": "passed",
+      "installed_branding": "pending",
+      "native_editor_help_integration": "pending packaged acceptance",
+      "ready_for_notarization": false
+    },
+    "pixamaterial": {
+      "configured_explanations": 6,
+      "help_ui_checks_passed": 5,
+      "inventory_scope": "source-anchored control groups; exhaustive per-tool coverage not established",
+      "fresh_prepare_and_source_audit": "passed",
+      "installed_branding": "pending",
+      "native_editor_help_integration": "pending packaged acceptance",
+      "ready_for_notarization": false
+    },
+    "pixaword": {
+      "configured_explanations": 10,
+      "help_ui_checks_passed": 5,
+      "inventory_scope": "source-anchored control groups; exhaustive per-tool coverage not established",
+      "fresh_prepare_and_source_audit": "passed",
+      "installed_branding": "pending",
+      "native_editor_help_integration": "pending packaged acceptance",
+      "ready_for_notarization": false
+    },
+    "pixasound": {
+      "configured_explanations": 7,
+      "help_ui_checks_passed": 5,
+      "inventory_scope": "source-backed tool registry",
+      "fresh_prepare_and_source_audit": "passed",
+      "installed_branding": "pending",
+      "native_editor_help_integration": "pending packaged acceptance",
+      "ready_for_notarization": false
+    },
+    "pixadeck": {
+      "configured_explanations": 6,
+      "help_ui_checks_passed": 5,
+      "inventory_scope": "source-anchored control groups; exhaustive per-tool coverage not established",
+      "fresh_prepare_and_source_audit": "passed",
+      "installed_branding": "pending",
+      "native_editor_help_integration": "pending packaged acceptance",
+      "ready_for_notarization": false
+    },
+    "pixacad": {
+      "configured_explanations": 7,
+      "help_ui_checks_passed": 5,
+      "inventory_scope": "source-anchored control groups; exhaustive per-tool coverage not established",
+      "fresh_prepare_and_source_audit": "passed",
+      "installed_branding": "pending",
+      "native_editor_help_integration": "pending packaged acceptance",
+      "ready_for_notarization": false
+    },
+    "pixagrid": {
+      "configured_explanations": 9,
+      "help_ui_checks_passed": 5,
+      "inventory_scope": "source-anchored control groups; exhaustive per-tool coverage not established",
+      "fresh_prepare_and_source_audit": "passed",
+      "installed_branding": "pending",
+      "native_editor_help_integration": "pending packaged acceptance",
+      "ready_for_notarization": false
+    },
+    "pixaanything": {
+      "configured_explanations": 81,
+      "help_ui_checks_passed": 5,
+      "inventory_scope": "source-backed tool registry",
+      "fresh_prepare_and_source_audit": "passed",
+      "installed_branding": "pending",
+      "native_editor_help_integration": "pending packaged acceptance",
+      "ready_for_notarization": false
+    },
+    "pixashop": {
+      "configured_explanations": 68,
+      "product_tests_previous_pass": 11,
+      "scope": "existing separate product guide; not the shared help UI harness",
+      "installed_current_candidate_acceptance": "pending"
+    },
+    "pixaeffects": {
+      "configured_explanations": 31,
+      "product_tests_previous_pass": 16,
+      "scope": "existing separate product guide; not the shared help UI harness",
+      "installed_current_candidate_acceptance": "pending"
+    }
+  },
+  "remaining": [
+    "Finish exhaustive tool/control inventory for seven control-guide products",
+    "Connect/verify visible tool highlights in remaining editor toolbars",
+    "Build matching current binaries and inspect branding/help in each installed application",
+    "Mac-specific installed acceptance requires the owner Mac; no signing/notarization performed"
+  ]
+}

@@ -90,6 +90,7 @@ impl eframe::App for PixaShell {
             });
         });
         if self.can_edit(){eframe::App::ui(self.inner.as_mut(),ui,frame);}else{self.locked(ui);}
+        self.help.capture_requests(ui.ctx());
         if let Some(request)=ui.ctx().data_mut(|d|d.remove_temp::<String>(egui::Id::unique("pixa-help-request"))) {
             if request=="pixa:manual" {self.help.open=true;} else if request=="pixa:tool-tour" {self.help.start_tour();}
         }
@@ -107,6 +108,7 @@ impl eframe::App for PixaShell {
         self.updates.show(ui.ctx());
     }
     fn raw_input_hook(&mut self,ctx:&egui::Context,raw:&mut egui::RawInput){
+        self.help.handle_shortcuts(raw);
         if self.can_edit(){eframe::App::raw_input_hook(self.inner.as_mut(),ctx,raw);}else{raw.dropped_files.clear();raw.hovered_files.clear();}
     }
     fn save(&mut self,storage:&mut dyn eframe::Storage){eframe::App::save(self.inner.as_mut(),storage);}

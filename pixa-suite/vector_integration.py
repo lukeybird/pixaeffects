@@ -94,7 +94,6 @@ def install(root, app):
     manifest = desktop / 'Cargo.toml'
     replace_once(manifest, '[dev-dependencies]', '[dev-dependencies]\negui_kittest = { workspace = true }')
     help_ui = desktop / 'src/pixa_help.rs'
-    replace_once(help_ui, 'ui.add(egui::TextEdit::singleline(&mut self.query).hint_text("Search the manual"));', 'let label = ui.label("Search the manual");\n                    ui.add(egui::TextEdit::singleline(&mut self.query).hint_text("Search the manual")).labelled_by(label.id);')
     help_ui.write_text(help_ui.read_text(encoding='utf-8') + '\n#[cfg(test)]\n#[path = "pixa_help_acceptance.rs"]\nmod acceptance;\n', encoding='utf-8')
     (desktop / 'src/pixa_help_acceptance.rs').write_text((ROOT / 'vector-tests/help.rs').read_text(encoding='utf-8'), encoding='utf-8')
     updates = desktop / 'src/pixa_updates.rs'

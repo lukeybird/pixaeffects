@@ -14,13 +14,44 @@ impl Default for HelpUi {
 }
 impl HelpUi {
     pub fn start_tour(&mut self) { self.step = 0; self.tools_mode=self.guide.as_ref().is_ok_and(|g|!g.tools.is_empty()); self.tour_open = true; }
+    pub fn handle_shortcuts(&mut self, input: &mut egui::RawInput) {
+        input.events.retain(|event| {
+            if let egui::Event::Key { key: egui::Key::F1, pressed, repeat, modifiers, .. } = event {
+                if !modifiers.ctrl && !modifiers.alt && !modifiers.command && !modifiers.mac_cmd {
+                    if *pressed && !*repeat {
+                        if modifiers.shift { self.start_tour(); } else { self.open = true; }
+                    }
+                    // Consume both press and release so the underlying editor
+                    // cannot open an unrelated online help page as well.
+                    return false;
+                }
+            }
+            true
+        });
+    }
+    pub fn capture_requests(&mut self, ctx: &egui::Context) {
+        let mut manual = false;
+        let mut tour = false;
+        ctx.output_mut(|output| output.commands.retain(|command| {
+            if let egui::OutputCommand::OpenUrl(request) = command {
+                if matches!(request.url.as_str(), "pixa:manual" | "https://aiwebdesignfirm.com/pixa-showcase/manuals/@ID@" | "https://aiwebdesignfirm.com/@ID@/manual") {
+                    manual = true; return false;
+                }
+                if request.url == "pixa:tool-tour" { tour = true; return false; }
+            }
+            true
+        }));
+        if manual { self.open = true; }
+        if tour { self.start_tour(); }
+    }
     pub fn show(&mut self, ctx: &egui::Context) {
         egui::Window::new("@NAME@ — Manual").open(&mut self.open).default_width(580.0).default_height(500.0).show(ctx, |ui| {
             match &self.guide {
                 Err(error) => { ui.label(error); }
                 Ok(guide) => {
                     ui.heading(&guide.title); ui.small(&guide.scope);
-                    ui.add(egui::TextEdit::singleline(&mut self.query).hint_text("Search the manual"));
+                    let label = ui.label("Search the manual");
+                    ui.add(egui::TextEdit::singleline(&mut self.query).hint_text("Search the manual")).labelled_by(label.id);
                     let query = self.query.trim().to_lowercase(); let mut shown = 0;
                     egui::ScrollArea::vertical().show(ui, |ui| {
                         for chapter in guide.chapters.iter().chain(&guide.tools) {
