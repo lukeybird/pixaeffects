@@ -260,5 +260,26 @@
     "updater_message": "Available-release and empty-feed responses now have distinct tested messages",
     "build_receipt": "Source digest captured before build and compared afterward; concurrent source changes cannot receive a success receipt",
     "linux_release": "First normal-optimization PixaVector attempt was SIGKILLed; no installer produced. Lower-memory retry pending."
+  },
+  "latest_source": "516f32be4160798006b5acda30fbb5734dd7364c",
+  "latest_build_runs": {
+    "suite_checks": 43179720999,
+    "pixavector_unsigned_mac": 43179720683,
+    "pixashop_0_20_5": 43177940756,
+    "pixaeffects_0_1_2": 43177931931
+  },
+  "linux_candidate_execution": {
+    "state": "running",
+    "products": 14,
+    "profile": {
+      "opt_level": 1,
+      "lto": false,
+      "codegen_units": 16,
+      "jobs": 1
+    },
+    "first_normal_optimized_vector_attempt": "SIGKILL; no archive produced",
+    "per_product_status_file": "PIXA_SUITE_LINUX_CANDIDATES.json",
+    "scope": "Unsigned lower-memory candidates, no production-performance or native acceptance approval. Vector runs separately from the other thirteen.",
+    "archive_count_completed": 0
   }
 }
