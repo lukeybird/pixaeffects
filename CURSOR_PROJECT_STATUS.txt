@@ -1,3 +1,6 @@
+LIVE STYLES VERIFIED — 2026-11-12
+Homepage stylesheet now uses its content hash in the URL to avoid cached old CSS after route promotion. Final deployment dpl_7iYwn7bCTP6wNsYpZzyyNatA78Z1; final routing 6fe50bc7-ebe8-4729-8c11-65eb2d7ed354. Original rollback remains 01fd6746-4298-4fe8-92d3-35139947a344. Browser verified the correctly styled homepage and both /start CTA destinations. No billing changes.
+
 TRIAL HOMEPAGE — 2026-11-12
 Homepage now focuses on a free 7-day trial and the Pixa app family. Both primary CTAs use existing /start; live /start was inspected and shows card required, then $99.99/month. Those existing terms are visible on the homepage. App availability is explicit: PixaShop available now, others as released. All 16 icons link to existing product pages. Technical progress remains on /products and product detail pages. No billing/account/API, installer, download flag or native changes. Deployment dpl_3HkUTo111j1ECi1kJzgzbK5Fa5oa; routing e14c4430-aea4-4982-b938-7a5f6d28362a; rollback 01fd6746-4298-4fe8-92d3-35139947a344.
 
