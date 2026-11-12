@@ -28,9 +28,13 @@ if __name__=='__main__':
  receipt=logs/(app['id']+'-release.json')
  if receipt.exists():receipt.unlink()
  env=os.environ.copy();env['CARGO_TARGET_DIR']=str(ROOT/'target');env['PIXA_ACCESS_MODE']=args.access_mode
- initial_digest=source_digest(source)
- command=['cargo','+'+app['rust_toolchain'],'build','-p',app['package']]+(['--release'] if args.release else [])
+ command=['cargo','+'+app['rust_toolchain'],'build','--locked','-p',app['package']]+(['--release'] if args.release else [])
  with (logs/(app['id']+'-build.log')).open('w') as log:
+  # The overlay adds platform/runtime dependencies. Resolve their lock entries
+  # before freezing provenance; compilation itself must not change the lock.
+  resolution=subprocess.run(['cargo','+'+app['rust_toolchain'],'metadata','--no-deps','--format-version','1'],cwd=source,env=env,stdout=subprocess.DEVNULL,stderr=log)
+  if resolution.returncode:raise SystemExit(resolution.returncode)
+  initial_digest=source_digest(source)
   result=subprocess.run(command,cwd=source,env=env,stdout=log,stderr=subprocess.STDOUT)
  if result.returncode:raise SystemExit(result.returncode)
  if source_digest(source)!=initial_digest:raise RuntimeError('Source changed while building; no successful receipt was written. Rebuild from the current prepared source.')
