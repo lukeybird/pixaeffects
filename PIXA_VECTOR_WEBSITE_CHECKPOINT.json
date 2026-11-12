@@ -1,0 +1,17 @@
+{
+  "product": "pixavector",
+  "date": "2026-11-12",
+  "source_commit": "ca5d880eaddea8f7a1816aaa2b345dc2c5459a04",
+  "deployment": "dpl_9uhf5XN44zCstzm6UEqk6RAkmbJr",
+  "origin": "https://pixa-showcase-7flgyv1m8-luke-bargers-projects.vercel.app",
+  "routing": "05c44471-c61d-49c1-9564-8e0852ab6aef",
+  "rollback_routing": "e5ec21f9-fa3f-4ba9-b00d-2d5a3da4452c",
+  "backend_unchanged": "dpl_DSsgnFjuJGtsa2N8wmkjjtMKGajG",
+  "browser_verified_url": "https://aiwebdesignfirm.com/products/pixavector",
+  "progress": "5/7 implementation/listed-check steps complete",
+  "download": "Coming soon",
+  "route_changes": "12 existing marketing destination origins only",
+  "billing_changed": false,
+  "public_downloads_enabled": false,
+  "backup": "/workspace/scratch/b3e6d390500f/vector-marketing-backup"
+}

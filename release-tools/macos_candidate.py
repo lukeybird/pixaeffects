@@ -9,6 +9,8 @@ def validate_bundle(app,product):
  with (app/'Contents/Info.plist').open('rb') as f:info=plistlib.load(f)
  for field,expected in [('CFBundleIdentifier',product['bundle_id']),('CFBundleShortVersionString',product['version'])]:
   if info.get(field)!=expected:raise ValueError('Bundle identity/version does not match the product catalog: '+field)
+ if product['id']=='pixafilm' and (not isinstance(info.get('NSMicrophoneUsageDescription'),str) or not info['NSMicrophoneUsageDescription'].strip()):
+  raise ValueError('PixaFilm needs NSMicrophoneUsageDescription before recording acceptance or signing; copy the purpose text from its prepared macOS Info.plist.in')
  executable=info.get('CFBundleExecutable')
  if not isinstance(executable,str) or Path(executable).name!=executable or executable in {'.','..',''}:raise ValueError('Invalid bundle executable')
  binary=app/'Contents/MacOS'/executable
@@ -24,6 +26,16 @@ def macho(file):
  if not file.is_file() or file.is_symlink():return False
  with file.open('rb') as f:magic=f.read(4)
  return magic in {bytes.fromhex(x) for x in ('feedface','cefaedfe','feedfacf','cffaedfe','cafebabe','bebafeca','cafebabf','bfbafeca')}
+
+def signing_command(identity,target,product,app,temporary):
+ command=['/usr/bin/codesign','--force','--options','runtime','--timestamp','--sign',identity]
+ # Voice-over needs audio input under the hardened runtime. Grant only that app
+ # permission; do not disable library validation, signature checks or notarization.
+ if product['id']=='pixafilm' and target==app:
+  entitlements=temporary/'pixafilm-audio.entitlements'
+  entitlements.write_bytes(plistlib.dumps({'com.apple.security.device.audio-input':True}))
+  command+=['--entitlements',entitlements]
+ return command+[target]
 
 def main():
  p=argparse.ArgumentParser(description=__doc__)
@@ -57,7 +69,7 @@ def main():
   # Sign nested Mach-O files and code bundles inside out before sealing the app.
   nested=sorted([f for f in app.rglob('*') if macho(f) and f!=binary],key=lambda f:len(f.parts),reverse=True)
   bundles=sorted([f for f in app.rglob('*') if f.is_dir() and f.suffix in {'.framework','.bundle','.xpc','.app'}],key=lambda f:len(f.parts),reverse=True)
-  for file in nested+bundles+[app]:run(['/usr/bin/codesign','--force','--options','runtime','--timestamp','--sign',args.identity,file])
+  for file in nested+bundles+[app]:run(signing_command(args.identity,file,product,app,temporary))
   run(['/usr/bin/codesign','--verify','--deep','--strict','--verbose=2',app])
   archive=temporary/'notarize.zip'
   run(['/usr/bin/ditto','-c','-k','--keepParent',app,archive])

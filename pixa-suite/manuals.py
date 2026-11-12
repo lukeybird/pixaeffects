@@ -86,6 +86,9 @@ def guide(app,source=None):
  if app['id']=='pixavector':
   chapters[0]['body']+=' Open Help → PixaVector User Manual or the Manual footer button for offline instructions. Help → Quick Tool Tour walks through all 92 registered tools; Next, Back, Finish and Escape control the read-only bubbles. Visible toolbar groups are highlighted without changing your active tool or document.'
   chapters[5]['body']+=' PixaVector checks its own publisher feed in the background once at startup. An available matching update opens the Updates window; downloading and installation still require your choice.'
+ if app['id']=='pixafilm':
+  chapters[0]['body']+=' Help → PixaFilm User Manual (also F1) opens this offline guide. Help → Quick Tool Tour explains all 17 timeline tools with Next, Back, Finish and Escape; visible tool groups are highlighted without changing your active tool or project.'
+  chapters[5]['body']+=' PixaFilm checks its own publisher feed in the background once at startup. A matching available update opens the Updates window. Downloading and installation still require your choice.'
  return {'schema_version':1,'product':app['id'],'name':app['name'],'title':app['name']+' User Manual','scope':'Product workflows, account access, recovery and updates. Source-backed tool tours are included where a registered tool catalog is connected; this is not a complete reference for every editor command.','chapters':chapters,'tour':chapters[:4],'tools':tool_chapters(app,source)}
 def markdown(app,source=None):
  data=guide(app,source)

@@ -28,7 +28,7 @@
       "upstream_name": "FilmCraft",
       "name": "PixaFilm",
       "id": "pixafilm",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "bundle_id": "com.aiwebdesignfirm.pixafilm",
       "tagline": "Video editing",
       "color": "#a99aff",

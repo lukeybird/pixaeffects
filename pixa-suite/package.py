@@ -33,6 +33,9 @@ def package(app_id, candidate=False):
   contents=stage/(app['name']+'.app')/'Contents';(contents/'MacOS').mkdir(parents=True);(contents/'Resources').mkdir()
   executable=contents/'MacOS'/app['id']
   info={'CFBundleName':app['name'],'CFBundleDisplayName':app['name'],'CFBundleIdentifier':app['bundle_id'],'CFBundleExecutable':app['id'],'CFBundleShortVersionString':app['version'],'CFBundleVersion':app['version'],'CFBundlePackageType':'APPL','CFBundleIconFile':'app.icns','NSHighResolutionCapable':True}
+  if app['id']=='pixafilm':
+   info['NSMicrophoneUsageDescription']='PixaFilm uses the microphone to record voice-over onto the timeline.'
+   info['LSApplicationCategoryType']='public.app-category.video'
   (contents/'Info.plist').write_bytes(plistlib.dumps(info))
   icons=list((source/'assets/app-icon').rglob('*.icns'))
   if not icons:raise RuntimeError('No prepared Mac app icon')

@@ -162,3 +162,6 @@ def install(root,app):
  if app['id']=='pixavector':
   from vector_integration import install as install_vector
   install_vector(root,app)
+ if app['id']=='pixafilm':
+  from film_integration import install as install_film
+  install_film(root,app)

@@ -1,0 +1,151 @@
+{
+  "schema_version": 1,
+  "product": "pixafilm",
+  "version": "0.1.1",
+  "checked_at": "2026-11-12",
+  "base_branch_head": "ca5d880eaddea8f7a1816aaa2b345dc2c5459a04",
+  "upstream_revision": "f4090d7b34a467a1bcabc91652d166a94f68dfbe",
+  "scope": "Non-Mac implementation and the specifically listed Linux/headless checks. Not exhaustive editor acceptance, a Mac build or Apple approval.",
+  "upstream_stage": "alpha",
+  "documented_limitations": {
+    "source": "Pinned source docs/gaps.md and docs/target-app-parity.md",
+    "examples": [
+      "Premiere .prproj interchange",
+      "10-bit/4:2:2 camera media and hardware dependence",
+      "Partial hardware acceleration and platform/performance validation"
+    ],
+    "parity_claim": false
+  },
+  "build_receipt": {
+    "app": "pixafilm",
+    "revision": "f4090d7b34a467a1bcabc91652d166a94f68dfbe",
+    "source_digest": "ace451043c49a16958bf8138ddbeb9f1d07ee9ccce0801fb864ccf932765762f",
+    "sha256": "113c3711bfd006a5883ad90716383dc3be69e3527ba7838f7bd7b98ede79265d",
+    "platform": "linux",
+    "access_mode": "subscription",
+    "signed": false,
+    "release_ready": false,
+    "archive": "pixafilm-0.1.1-linux-x86_64-candidate.tar.gz",
+    "archive_sha256": "5ce64c344a031a21c5d7ba64450b19615cf6fff92f3c16c96d94cdac28767ee1",
+    "architecture": "x86_64",
+    "channel": "candidate"
+  },
+  "archive_bytes": 34034323,
+  "profile": {
+    "rust": "1.95.0",
+    "release_opt_level": 1,
+    "lto": false,
+    "codegen_units": 16,
+    "build_jobs": 1,
+    "ui_test_crate_opt_level": 0,
+    "production_performance_verified": false
+  },
+  "environment": {
+    "host": "Linux x86_64",
+    "alsa": "Real installed libasound.so.2, version 1.2.14, linked through private workspace pkg-config metadata; no stub, system installation or bundled ALSA copy",
+    "runtime_linkage": "No missing libraries on this host; not a portable Linux compatibility certification"
+  },
+  "checks": {
+    "python_suite": {
+      "run": 29,
+      "passed": 28,
+      "skipped": 1,
+      "skip": "Standalone Shop/Effects icon overlays live on other branches"
+    },
+    "shared_runtime": {
+      "passed": 20,
+      "toolchain": "stable 1.99.1",
+      "reused_unchanged_source": true,
+      "live_account": false
+    },
+    "native_app_help_updates": {
+      "passed": 7,
+      "tool_tour_steps": 17
+    },
+    "native_ui_routing_header_anchors": {
+      "passed": 3
+    },
+    "existing_browser_link_regressions": {
+      "passed": 4
+    },
+    "engine_workflow": {
+      "passed": true,
+      "coverage": [
+        "Original procedural four-frame video fixture",
+        "H.264 movie import",
+        "Sequence/timeline edit",
+        "Undo/redo",
+        "Native save/reopen equality",
+        "CPU H.264 and WAV export",
+        "Export signatures and movie re-import"
+      ],
+      "visual_quality_audio_sync_all_formats_verified": false
+    },
+    "native_recovery": {
+      "passed": true,
+      "original_and_dirty_state_preserved": true
+    },
+    "clean_preparation": {
+      "passed": true,
+      "matching_generated_rust_files": 14,
+      "matching_packaging_files": 6,
+      "manifest_difference": "Only expected relative runtime dependency path"
+    },
+    "source_preflight": {
+      "product": "pixafilm",
+      "upstream_revision": "f4090d7b34a467a1bcabc91652d166a94f68dfbe",
+      "checks_passed": true,
+      "failures": [],
+      "licenses_retained": [
+        "LICENSE-MIT",
+        "LICENSE-APACHE"
+      ],
+      "embedded_starter_chapters": 12,
+      "embedded_tour_steps": 4,
+      "tool_reference_chapters": 17,
+      "exhaustive_manual_verified": false,
+      "graphical_acceptance": "not-run",
+      "signed_updater_install_restart": "implemented-macos-unverified",
+      "ready_for_signing": false
+    },
+    "package_notices": {
+      "passed": true,
+      "license_document_count": 39
+    },
+    "microphone_preflight": {
+      "passed": true,
+      "synthetic_metadata_and_signing_argument_tests_only": true,
+      "prior_helper_regression_reproduced": true,
+      "real_mac_recording": false
+    }
+  },
+  "fixes": [
+    "Native F1, Help and Settings manual routes open the Pixa offline guide",
+    "17-tool read-only tour anchors and accessible manual search",
+    "Own-publisher update menu/startup prompt and stale-offer clearing",
+    "Remove Discord invitation and duplicate header Account target",
+    "Pixa CLI, About/resource labels and packaging publisher metadata",
+    "Separate upstream MSI upgrade GUID and registry discovery identity",
+    "Mac package microphone purpose text; signing helper rejects missing text and grants only audio-input to Film main bundle",
+    "Retained recursive asset/font/icon license notices (shared packager fix)"
+  ],
+  "deferred": [
+    "Universal Mac 0.1.1 app and installed visual/editor/audio acceptance",
+    "Real account approval, OS credential persistence and revocation/recovery",
+    "Apple signing/notarization, stapler and Gatekeeper",
+    "Actual signed own-feed install/restart/cancel/rollback acceptance",
+    "Windows package and install/uninstall acceptance",
+    "Broader camera-format, hardware, performance and real-world media acceptance",
+    "Approved customer release and verified website download"
+  ],
+  "non_mac_preparation_complete": true,
+  "mac_handoff_prepared": true,
+  "ready_for_signing": false,
+  "signed": false,
+  "release_ready": false,
+  "downloads_enabled": false,
+  "workflow_changes": false,
+  "runtime_changes": false,
+  "billing_changes": false,
+  "handoff": "CURSOR_PIXAFILM_MAC_HANDOFF.txt"
+}

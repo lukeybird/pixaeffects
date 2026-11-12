@@ -502,98 +502,37 @@
       {
         "label": "Source setup",
         "passed": true,
-        "note": "Pinned product source is prepared."
+        "note": "PixaFilm 0.1.1 is prepared from pinned source f4090d7b. This alpha candidate retains documented codec, format and hardware limitations; it is not a claim of Premiere parity."
       },
       {
-        "label": "Complete Pixa branding",
-        "passed": false,
-        "note": "Source metadata and translations cleaned; installed-app visual audit remains pending.",
-        "checks": [
-          {
-            "label": "Source publication metadata",
-            "passed": true,
-            "note": "Publisher, app IDs and upstream screenshots corrected; original icons and legal notices retained."
-          },
-          {
-            "label": "Installed application branding",
-            "passed": false,
-            "note": "Rebuild and inspect the menus, dialogs and package on each supported platform."
-          }
-        ]
+        "label": "Pixa branding implementation",
+        "passed": true,
+        "note": "Original purple F mark, Pixa names, publisher links, menus and CLI identity implemented. Discord invitation and duplicate header Account button removed; legal credits retained. Installer identity is separate from upstream. Mac visual acceptance remains pending."
       },
       {
-        "label": "Manual, tutorials, activation & updater",
-        "passed": false,
-        "note": "Expanded offline manual, source-backed control tour and own-publisher Mac updater implemented. Packaged application and update acceptance remain unverified.",
-        "checks": [
-          {
-            "label": "Embedded manual and source-backed control tour",
-            "passed": true,
-            "note": "12 workflow chapters and 17 source-backed tool/control explanations generated for this app. Coverage is not every editor command."
-          },
-          {
-            "label": "Complete tool reference",
-            "passed": false,
-            "note": "Source-backed controls are documented; exhaustive command coverage and installed help acceptance remain unverified."
-          },
-          {
-            "label": "Account and recovery source integration",
-            "passed": true,
-            "note": "Shared account UI, OS credential storage and recovery adapters are present; source preflight passed."
-          },
-          {
-            "label": "Activation acceptance",
-            "passed": false,
-            "note": "Real sign-in, expiry and recovery must be exercised in the packaged application."
-          },
-          {
-            "label": "Own-publisher Mac updater source",
-            "passed": true,
-            "note": "Connected to product-scoped Pixa releases with checksum, Developer ID, bundle identity and Gatekeeper checks. No upstream feed or public suite release enabled."
-          },
-          {
-            "label": "Install-and-restart updater",
-            "passed": false,
-            "note": "Own-product release discovery and Mac signature-checked staging/restart/rollback code implemented; real install/restart acceptance pending. Windows/Linux installation remains manual."
-          }
-        ]
+        "label": "Manual, tool tour, account & updater implementation",
+        "passed": true,
+        "note": "12 offline workflow chapters and all 17 registered editor tools documented. F1, Settings Help and Help menu route to Pixa; visible tool groups have read-only tour highlights. Startup own-feed update prompt and shared account/recovery integration implemented. Real-account and signed-update acceptance remain pending."
       },
       {
-        "label": "Compile & package installers",
-        "passed": false,
-        "note": "Current Linux compilation passed. Fresh cross-platform checks are queued/running; customer packages and release acceptance remain pending.",
-        "checks": [
-          {
-            "label": "Historical three-platform compile/recovery checks",
-            "passed": true,
-            "note": "All 42 unique product/OS jobs passed on source 728fa546; new metadata changes still need CI."
-          },
-          {
-            "label": "Customer installer",
-            "passed": false,
-            "note": "Compile checks do not create release installers. No verified customer installer recorded."
-          },
-          {
-            "label": "Current Linux native compile",
-            "passed": true,
-            "note": "Current updater/manual source a1b5294 passes Cargo check. This is not a packaged application or graphical acceptance."
-          }
-        ]
+        "label": "Linux candidate build & package",
+        "passed": true,
+        "note": "0.1.1 account-gated Linux x86_64 candidate built and packaged with a matching source/binary receipt, manual and asset/font/icon notices. Unsigned and unpublished; this is not a Mac or Windows installer."
       },
       {
-        "label": "Application & update testing",
-        "passed": false,
-        "note": "Full editor, access and install/restart update acceptance is not yet verified."
+        "label": "Core workflow & recovery checks",
+        "passed": true,
+        "note": "Linux procedural-video import, timeline edit, undo/redo, native save/reopen, CPU H.264/WAV export, movie re-import and recovery passed. Seven app Help/updater tests, three native UI checks and four existing browser-link tests passed. Real media quality, hardware and Mac update acceptance remain separate."
       },
       {
-        "label": "Apple signing & notarization",
+        "label": "Mac build, signing & acceptance",
         "passed": false,
-        "note": "Verified signed/notarized Mac release remains pending."
+        "note": "Build the new 0.1.1 universal app, include microphone purpose text and matching license notices, then test real editor/audio/account access. Apple signing/notarization and signed install/restart acceptance remain. Source signing preflight is implemented; no signing was performed here."
       },
       {
         "label": "Verified website download",
         "passed": false,
-        "note": "Customer download remains Coming soon."
+        "note": "Coming soon until a signed, accepted release is approved and published. Billing and public download settings are unchanged."
       }
     ],
     "pixagrid": [
@@ -1491,6 +1430,7 @@
     ]
   },
   "app_checked_at": {
-    "pixavector": "2026-11-12"
+    "pixavector": "2026-11-12",
+    "pixafilm": "2026-11-12"
   }
 }
