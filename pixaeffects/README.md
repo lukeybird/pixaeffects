@@ -14,3 +14,7 @@ The existing trial/subscription entitlement is shared, with separate device toke
 Publish only after native build, activation, render/export, signature/notarization and real updater checks. Only Mac supports in-app installation. Windows and Linux use website downloads. CI signing credentials are not configured.
 
 Required upstream licenses and contributor credits remain intact. In-app repository/Discord promotion is removed. Public fork source remains public; hiding links does not make it private.
+
+## Branding audit candidate 0.1.1
+
+See root PIXA_EFFECTS_BRANDING_AUDIT.json. Product preparation now removes dormant community/source-promotion commands, updates account controls, filters obsolete translated promotions, cleans Linux metadata/publisher branding and uses a PixaEffects demo title. Nine Python checks pass; full native and installed-app acceptance remains pending. Existing credits/licenses and original E icon are preserved. Build this revision before signing; do not relabel the previous 0.1.0 artifact.

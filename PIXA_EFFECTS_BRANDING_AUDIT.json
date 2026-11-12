@@ -1,0 +1,33 @@
+{
+  "product": "PixaEffects",
+  "candidate_version": "0.1.1",
+  "base_source": "7280f7e04559b4e2288ca679e48ebf464835397d",
+  "source_audit": "passed",
+  "tests": {
+    "command": "python -m unittest discover -s pixaeffects/tests -v",
+    "passed": 9,
+    "regression_evidence": "Two new regression tests fail against the previous prepared source and pass after cleanup.",
+    "fresh_preparation": "Reproduced from a separate clean worktree.",
+    "metadata_xml": "Parsed successfully."
+  },
+  "fixes": [
+    "Remove dormant promotional Discord and repository command registrations",
+    "Route existing About/Home account controls to help.account",
+    "Retire obsolete promotional translation entries",
+    "Use own publisher and URLs in Linux metadata; remove upstream screenshot",
+    "Change visible demo title and command-line app name to PixaEffects"
+  ],
+  "preserved": [
+    "Original pixel E icon",
+    "Licenses, notices and contributor credits",
+    "Internal crate/file-format identifiers",
+    "Activation and updater implementations",
+    "Existing releases, website and billing"
+  ],
+  "pending": [
+    "Native compile of this revision",
+    "Installed GUI branding and translated UI acceptance",
+    "Mac signing/notarization and verified release publication"
+  ],
+  "completion": "Source branding audit passed; complete shipped-installer branding remains pending."
+}
