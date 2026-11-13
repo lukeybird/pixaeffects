@@ -1,0 +1,192 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-11-13",
+  "deployment": "dpl_FjLuMBbpjFzAUxPphsbpvpQS1HgC",
+  "origin": "https://pixa-showcase-mkes5dgm5-luke-bargers-projects.vercel.app",
+  "routing_version": "58662b2f-51bb-434a-9563-2346b6532674",
+  "rollback_routing": "13ed98a8-648b-4672-a3dc-294efd1a12ad",
+  "unchanged_backend": "dpl_DSsgnFjuJGtsa2N8wmkjjtMKGajG",
+  "products": [
+    {
+      "product": "pixashop",
+      "version": "0.20.5",
+      "repository": "lukeybird/pixashop",
+      "tag": "v0.20.5",
+      "release_url": "https://github.com/lukeybird/pixashop/releases/tag/v0.20.5",
+      "macos": {
+        "url": "https://github.com/lukeybird/pixashop/releases/download/v0.20.5/pixashop-0.20.5-macos-universal.dmg",
+        "sha256": "21a74fd12824f90deb71ec38d5743f8655ea8c54fd41e539ae0bf9173cf37008",
+        "size": 90030790,
+        "checksum_url": "https://github.com/lukeybird/pixashop/releases/download/v0.20.5/pixashop-0.20.5-macos-universal.dmg.sha256"
+      },
+      "notarization": "Publisher reports Developer ID signing and Apple acceptance; not independently rerun on macOS"
+    },
+    {
+      "product": "pixavector",
+      "version": "0.1.1",
+      "repository": "lukeybird/pixaeffects",
+      "tag": "pixavector-v0.1.1",
+      "release_url": "https://github.com/lukeybird/pixaeffects/releases/tag/pixavector-v0.1.1",
+      "macos": {
+        "url": "https://github.com/lukeybird/pixaeffects/releases/download/pixavector-v0.1.1/pixavector-0.1.1-macos-universal.dmg",
+        "sha256": "7f0f69cd1dae35fb1466a26427d139bec7330727879aedce0e9c333eee541cbc",
+        "size": 124393261,
+        "checksum_url": "https://github.com/lukeybird/pixaeffects/releases/download/pixavector-v0.1.1/pixavector-0.1.1-macos-universal.dmg.sha256"
+      },
+      "notarization": "Publisher reports Developer ID signing and Apple acceptance; not independently rerun on macOS"
+    },
+    {
+      "product": "pixapdf",
+      "version": "0.1.0",
+      "repository": "lukeybird/pixaeffects",
+      "tag": "pixapdf-v0.1.0",
+      "release_url": "https://github.com/lukeybird/pixaeffects/releases/tag/pixapdf-v0.1.0",
+      "macos": {
+        "url": "https://github.com/lukeybird/pixaeffects/releases/download/pixapdf-v0.1.0/pixapdf-0.1.0-macos-universal.dmg",
+        "sha256": "f848c1035b2fa639916009d811ce488852d3b0242dd242e2f2230b43bcfc1de6",
+        "size": 70133945,
+        "checksum_url": "https://github.com/lukeybird/pixaeffects/releases/download/pixapdf-v0.1.0/pixapdf-0.1.0-macos-universal.dmg.sha256"
+      },
+      "notarization": "Publisher reports Developer ID signing and Apple acceptance; not independently rerun on macOS"
+    },
+    {
+      "product": "pixalight",
+      "version": "0.1.0",
+      "repository": "lukeybird/pixaeffects",
+      "tag": "pixalight-v0.1.0",
+      "release_url": "https://github.com/lukeybird/pixaeffects/releases/tag/pixalight-v0.1.0",
+      "macos": {
+        "url": "https://github.com/lukeybird/pixaeffects/releases/download/pixalight-v0.1.0/pixalight-0.1.0-macos-universal.dmg",
+        "sha256": "37a117de99fc2d1b7ce7799fedda637e2f43da1c3da0a311cd3d170410167e0a",
+        "size": 70992329,
+        "checksum_url": "https://github.com/lukeybird/pixaeffects/releases/download/pixalight-v0.1.0/pixalight-0.1.0-macos-universal.dmg.sha256"
+      },
+      "notarization": "Publisher reports Developer ID signing and Apple acceptance; not independently rerun on macOS"
+    },
+    {
+      "product": "pixafilm",
+      "version": "0.1.1",
+      "repository": "lukeybird/pixaeffects",
+      "tag": "pixafilm-v0.1.1",
+      "release_url": "https://github.com/lukeybird/pixaeffects/releases/tag/pixafilm-v0.1.1",
+      "macos": {
+        "url": "https://github.com/lukeybird/pixaeffects/releases/download/pixafilm-v0.1.1/pixafilm-0.1.1-macos-universal.dmg",
+        "sha256": "4a70dc9a4a858d8df2dc742399d2a2e1a29495b9d47d0819aa136dbb8e23cbe5",
+        "size": 61044113,
+        "checksum_url": "https://github.com/lukeybird/pixaeffects/releases/download/pixafilm-v0.1.1/pixafilm-0.1.1-macos-universal.dmg.sha256"
+      },
+      "notarization": "Publisher reports Developer ID signing and Apple acceptance; not independently rerun on macOS"
+    },
+    {
+      "product": "pixaeffects",
+      "version": "0.1.3",
+      "repository": "lukeybird/pixaeffects",
+      "tag": "pixaeffects-v0.1.3",
+      "release_url": "https://github.com/lukeybird/pixaeffects/releases/tag/pixaeffects-v0.1.3",
+      "macos": {
+        "url": "https://github.com/lukeybird/pixaeffects/releases/download/pixaeffects-v0.1.3/pixaeffects-0.1.3-macos-universal.dmg",
+        "sha256": "69f722d6dec82f3582a3173ca859d235929fd289bc6d3eff3e8d9eeb81f52ec8",
+        "size": 87192408,
+        "checksum_url": "https://github.com/lukeybird/pixaeffects/releases/download/pixaeffects-v0.1.3/pixaeffects-0.1.3-macos-universal.dmg.sha256"
+      },
+      "notarization": "Publisher reports Developer ID signing and Apple acceptance; not independently rerun on macOS"
+    }
+  ],
+  "verification": {
+    "file_checks": [
+      {
+        "product": "pixashop",
+        "sha256": "21a74fd12824f90deb71ec38d5743f8655ea8c54fd41e539ae0bf9173cf37008",
+        "size": 90030790,
+        "verified": true
+      },
+      {
+        "product": "pixavector",
+        "sha256": "7f0f69cd1dae35fb1466a26427d139bec7330727879aedce0e9c333eee541cbc",
+        "size": 124393261,
+        "verified": true
+      },
+      {
+        "product": "pixapdf",
+        "sha256": "f848c1035b2fa639916009d811ce488852d3b0242dd242e2f2230b43bcfc1de6",
+        "size": 70133945,
+        "verified": true
+      },
+      {
+        "product": "pixalight",
+        "sha256": "37a117de99fc2d1b7ce7799fedda637e2f43da1c3da0a311cd3d170410167e0a",
+        "size": 70992329,
+        "verified": true
+      },
+      {
+        "product": "pixafilm",
+        "sha256": "4a70dc9a4a858d8df2dc742399d2a2e1a29495b9d47d0819aa136dbb8e23cbe5",
+        "size": 61044113,
+        "verified": true
+      },
+      {
+        "product": "pixaeffects",
+        "sha256": "69f722d6dec82f3582a3173ca859d235929fd289bc6d3eff3e8d9eeb81f52ec8",
+        "size": 87192408,
+        "verified": true
+      }
+    ],
+    "live_pages": [
+      {
+        "product": "pixashop",
+        "page": "https://aiwebdesignfirm.com/products/pixashop",
+        "status": 200,
+        "download_href_matches": true
+      },
+      {
+        "product": "pixavector",
+        "page": "https://aiwebdesignfirm.com/products/pixavector",
+        "status": 200,
+        "download_href_matches": true
+      },
+      {
+        "product": "pixapdf",
+        "page": "https://aiwebdesignfirm.com/products/pixapdf",
+        "status": 200,
+        "download_href_matches": true
+      },
+      {
+        "product": "pixalight",
+        "page": "https://aiwebdesignfirm.com/products/pixalight",
+        "status": 200,
+        "download_href_matches": true
+      },
+      {
+        "product": "pixafilm",
+        "page": "https://aiwebdesignfirm.com/products/pixafilm",
+        "status": 200,
+        "download_href_matches": true
+      },
+      {
+        "product": "pixaeffects",
+        "page": "https://aiwebdesignfirm.com/products/pixaeffects",
+        "status": 200,
+        "download_href_matches": true
+      },
+      {
+        "page": "https://aiwebdesignfirm.com/pixashop",
+        "status": 200,
+        "expected_download_visible": true
+      },
+      {
+        "page": "https://www.aiwebdesignfirm.com/products/pixaeffects",
+        "status": 200,
+        "expected_download_visible": true
+      },
+      {
+        "page": "https://aiwebdesignfirm.com/pixaeffects",
+        "status": 200,
+        "expected_download_visible": true
+      }
+    ]
+  },
+  "scope": "Six Mac downloads and marketing navigation only. Publisher release notes report signing/notarization. Full DMG bytes, GitHub digest, sidecar checksum, size and live links verified. No independent macOS Gatekeeper/notary rerun or full editor/account/update acceptance.",
+  "native_code_changes": false,
+  "billing_changes": false,
+  "release_asset_changes": false
+}

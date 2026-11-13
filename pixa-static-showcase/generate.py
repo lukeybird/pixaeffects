@@ -16,6 +16,12 @@ def shell(title,description,body,path='/'):
  return f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#0b101a"><title>{e(title)} | Pixa by AIWebDesignFirm</title><meta name="description" content="{e(description)}"><link rel="canonical" href="https://aiwebdesignfirm.com{e(path)}"><link rel="stylesheet" href="/pixa-showcase/catalog.css"></head><body><div class="site"><a class="skip" href="#main-content">Skip to content</a><header class="nav"><a class="wordmark" href="/">Pixa<span>by AIWebDesignFirm</span></a><nav aria-label="Main navigation"><a href="/products">All apps</a><a href="/launcher">Launcher</a><a href="https://aiwebdesignfirm.com/settings">Your account →</a></nav></header><main id="main-content">{body}</main><footer class="footer"><a href="/products">The Pixa app family</a><p>by AIWebDesignFirm</p><div><a href="https://aiwebdesignfirm.com/pixashop/manual">PixaShop help</a><a href="https://aiwebdesignfirm.com/settings">Your Pixa account</a></div></footer></div></body></html>'''
 
 progress=json.loads((ROOT/'progress.json').read_text())
+downloads=json.loads((ROOT/'downloads.json').read_text())['apps']
+def download_links(pid):
+ release=downloads.get(pid)
+ if not release:return '<button class="pending" type="button" disabled>Coming soon</button>'
+ mac=release['macos']
+ return '<a class="primary" href="'+e(mac['url'])+'">Download for Mac · v'+e(release['version'])+' ↓</a><p class="note">Universal installer for Apple Silicon and Intel. <a href="'+e(mac['checksum_url'])+'">SHA-256 checksum</a></p>'
 def progress_panel(pid):
  rows=progress['apps'][pid]
  def item(r):
@@ -25,30 +31,38 @@ def progress_panel(pid):
   return '<li><span class="statusLight '+('passed' if r['passed'] else 'pendingLight')+'" aria-hidden="true"></span><div><strong>'+e(r['label'])+'</strong><small>'+('Passed' if r['passed'] else 'Pending / unverified')+' — '+e(r['note'])+'</small>'+sub+'</div></li>'
  items=''.join(item(r) for r in rows)
  stamp=progress.get('app_checked_at',{}).get(pid,progress['verified_at'][:10])
- scope='complete' if pid in {'pixavector','pixafilm'} else 'verified'
- explanation='Green: completed implementation or the listed checks. Red: pending. Mac release acceptance and public download approval remain separate.' if pid in {'pixavector','pixafilm'} else 'Green: passed. Red: pending or unverified. Source checks and compile checks do not approve a release.'
+ scope='recorded' if pid in downloads else 'verified'
+ explanation='Green: the stated milestone is recorded. Red: pending or unverified. Source checks and published signing records do not establish complete editor, account or update acceptance.'
  return '<details class="buildProgress"><summary>Build progress <span>'+str(sum(r['passed'] for r in rows))+'/7 '+scope+'</span></summary><ol>'+items+'</ol><p>Last checked: '+e(stamp)+'. '+explanation+'</p></details>'
 
 def grid():
  cards=[]
  for p in products:
-  status='See download availability' if p['id']=='pixashop' else ('Build complete · release pending' if p['id']=='pixaeffects' else 'Coming soon')
-  cards.append(f'<article class="card"><a class="cardLink" href="/products/{p["id"]}">{icon(p)}<p class="category">{e(p["category"])}</p><h3>{e(p["name"])}<span aria-hidden="true">→</span></h3><p>{e(p["summary"])}</p><div class="cardFoot"><span>{status}</span><span aria-hidden="true">Explore →</span></div></a>{progress_panel(p["id"])}</article>')
+  status=('Mac download · v'+downloads[p['id']]['version']) if p['id'] in downloads else 'Coming soon'
+  destination='/products/'+p['id']+('#downloads' if p['id'] in downloads else '')
+  cards.append(f'<article class="card"><a class="cardLink" href="{destination}">{icon(p)}<p class="category">{e(p["category"])}</p><h3>{e(p["name"])}<span aria-hidden="true">→</span></h3><p>{e(p["summary"])}</p><div class="cardFoot"><span>{status}</span><span aria-hidden="true">Explore →</span></div></a>{progress_panel(p["id"])}</article>')
  return '<section class="section" id="products" aria-labelledby="catalog-heading"><div class="sectionHead"><div><p class="eyebrow">FIND YOUR WORKSPACE</p><h2 id="catalog-heading">One family. Every kind of idea.</h2></div><p>Discover the Pixa apps. Each product page shows its current download status.</p></div><div class="grid">'+''.join(cards)+'</div></section>'
-app_wall=''.join('<a class="trialApp" href="/products/'+e(p['id'])+'">'+icon(p,64)+'<span>'+e(p['name'])+'</span></a>' for p in products)
+app_wall=''.join('<a class="trialApp" href="/products/'+e(p['id'])+('#downloads' if p['id'] in downloads else '')+'">'+icon(p,64)+'<span>'+e(p['name'])+'</span></a>' for p in products)
 home='<section class="trialHero"><div class="trialCopy"><p class="eyebrow">ONE ACCOUNT. THE PIXA APP FAMILY.</p><h1>Your creative toolkit.<br><span>Free early access.</span></h1><p class="trialLead">A creative toolkit for images, video, design, audio and more. One account brings your Pixa workspaces together.</p><a class="primary trialCta" href="/start">Get free access <span aria-hidden="true">→</span></a><p class="trialTerms">No credit card. No subscription. No scheduled expiration.</p><p class="trialAvailability"><span class="statusLight passed" aria-hidden="true"></span>PixaShop is available now. Other apps become available as they launch. <a href="/products">See each app’s release status →</a></p></div><div class="trialFamily" aria-label="Explore the Pixa app family">'+app_wall+'</div></section><section class="trialSteps"><p class="eyebrow">FROM AN IDEA TO YOUR NEXT PROJECT</p><h2>One simple way to start.</h2><div><article><span>01</span><h3>Create your account</h3><p>Create a free account. No checkout or payment details needed.</p></article><article><span>02</span><h3>Choose your workspace</h3><p>Download an available app and activate it with your account.</p></article><article><span>03</span><h3>Make something yours</h3><p>Explore the tools, open the manual and start creating.</p></article></div></section><section class="trialEnd"><h2>Your next idea starts here.</h2><a class="primary" href="/start">Get free access <span aria-hidden="true">→</span></a><p>One account for the Pixa app family. Availability varies by app.</p></section>'
+home=home.replace('PixaShop is available now. Other apps become available as they launch.','Six Pixa apps are available for Mac. More apps and platforms are on the way.')
 home_page=shell('Pixa — Free early access','Use released Pixa apps free. No credit card, subscription or scheduled expiration. One account for the creative app family.',home)
 home_page=home_page.replace('<a href="/launcher">Launcher</a>','')
 (OUT/'index.html').write_text(home_page)
 (OUT/'products.html').write_text(shell('All Pixa apps','Explore all sixteen Pixa apps and their current download availability.','<section class="hero"><p class="eyebrow">THE COMPLETE FAMILY</p><h1>A workspace<br><span>for every idea.</span></h1><p class="lead">Images, films, layouts, documents, sound. Find the app built around your kind of work.</p></section>'+grid(),'/products'))
 (OUT/'products').mkdir(exist_ok=True)
 for p in products:
- available=p['id']=='pixashop'
+ available=p['id'] in downloads
+ if available:
+  p={**p,'description':p['description'].replace('This Pixa edition is still being prepared for release.','Available now as an early-access Mac download.')}
  features=''.join(f'<article><h3>{e(title)}</h3><p>{e(copy)}</p></article>' for title,copy in p['capabilities'])
- action='<a class="primary" href="https://aiwebdesignfirm.com/pixashop">Open PixaShop downloads →</a>' if available else '<button class="pending" type="button" disabled>Coming soon</button>'
- text='Choose an available installer on the existing PixaShop download page. Your account and access requirements apply.' if available else 'The Pixa edition is being prepared for release. A verified installer will be available here when it is ready.'
- if p['id']=='pixaeffects': text='Version 0.1.2 builds and testing packages are complete for Mac (Apple Silicon and Intel), Windows and Linux. Hands-on app testing, Apple signing and publication remain pending. Public downloads are not available yet.'
- platforms=''.join('<div><strong>'+platform+'</strong><span>'+('Check download page' if available else ('Build complete · not released' if p['id']=='pixaeffects' else 'Coming soon'))+'</span></div>' for platform in ('macOS','Windows','Linux'))
+ action=download_links(p['id'])
+ text='Early access for Mac. Download the app, move it to Applications and connect your Pixa account. Some features remain in development.' if available else 'The Pixa edition is being prepared for release. A verified installer will be available here when it is ready.'
+ platform_rows=[('macOS','Available · v'+downloads[p['id']]['version'] if available else 'Coming soon')]
+ for osname in ['Windows','Linux']:
+  platform_rows.append((osname,'Available · v0.20.4' if p['id']=='pixashop' else 'Coming soon'))
+ platforms=''.join('<div><strong>'+platform+'</strong><span>'+e(status)+'</span></div>' for platform,status in platform_rows)
+ if p['id']=='pixashop':
+  action+='<p class="note">Other platforms · v0.20.4: <a href="https://github.com/lukeybird/pixashop/releases/download/v0.20.4/pixashop-0.20.4-windows-x64-portable.zip">Windows portable ZIP</a> · <a href="https://github.com/lukeybird/pixashop/releases/download/v0.20.4/pixashop-0.20.4-linux-x86_64.tar.gz">Linux archive</a>. Windows is unsigned; platform testing remains incomplete.</p>'
  body=f'<section class="detailHero"><div><a class="back" href="/products">← All Pixa apps</a><p class="eyebrow">{e(p["category"])}</p><h1>{e(p["name"])}<span class="dot">.</span></h1><p class="lead">{e(p["summary"])}</p><p class="description">{e(p["description"])}</p><a class="primary" href="#downloads">'+('Find your download' if available else 'View release status')+f' ↓</a></div><div class="heroIcon">{icon(p,240)}</div></section><section class="section"><p class="eyebrow">THE WORKSPACE</p><h2>Made for {e(p["use"])}.</h2><div class="features">{features}</div></section><section class="download" id="downloads"><div><p class="eyebrow">{e(p["name"].upper())}</p><h2>'+('Your next project starts here.' if available else ('Build complete.' if p['id']=='pixaeffects' else 'Coming soon.'))+f'</h2><p>{text}</p>{action}</div><div class="platforms" aria-label="Platform availability">{platforms}</div></section><section class="more"><p>Explore the rest of your creative toolkit.</p><a href="/products">Browse all apps →</a></section>'
  guide_file=ROOT.parent/'pixa-suite/manuals/generated'/(p['id']+'.json')
  if guide_file.is_file():

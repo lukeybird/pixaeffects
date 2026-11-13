@@ -460,27 +460,9 @@
         ]
       },
       {
-        "label": "Compile & package installers",
+        "label": "Mac installer published",
         "passed": true,
-        "note": "Version 0.1.2 builds and testing packages are complete for Mac (arm64 + Intel), Windows and Linux. These are unsigned testing artifacts; public release is still pending.",
-        "checks": [
-          {
-            "label": "Mac, Windows and Linux builds",
-            "passed": true,
-            "note": "Run 43177931931 completed successfully on exact source 3a708281c8e674ff2dad0af0624c5cf9ff77f840."
-          },
-          {
-            "label": "Testing packages uploaded",
-            "passed": true,
-            "note": "All three testing artifacts are present and unexpired: universal Mac DMG, Windows portable ZIP and Linux archive."
-          }
-        ],
-        "evidence": {
-          "build_run": 43177931931,
-          "source_sha": "3a708281c8e674ff2dad0af0624c5cf9ff77f840",
-          "version": "0.1.2",
-          "kind": "unsigned-testing-only"
-        }
+        "note": "Universal Mac v0.1.3 is published. Other platform/version availability is shown separately."
       },
       {
         "label": "Application & update testing",
@@ -488,14 +470,14 @@
         "note": "Packaged editor launch, activation, import, animation, save/reopen, render/export, and signed update/restart still require hands-on acceptance."
       },
       {
-        "label": "Apple signing & notarization",
-        "passed": false,
-        "note": "Version 0.1.2 Mac candidate awaits Developer ID signing, Apple notarization, stapling and Gatekeeper verification."
+        "label": "Mac signing and notarization \u2014 publisher record",
+        "passed": true,
+        "note": "The published v0.1.3 release reports Developer ID signing and Apple acceptance. The installer hash matches its GitHub digest and checksum. Gatekeeper was not independently rerun in this Linux verification."
       },
       {
-        "label": "Verified website download",
-        "passed": false,
-        "note": "Coming soon until the signed release and customer download have been verified."
+        "label": "Published Mac download",
+        "passed": true,
+        "note": "Public v0.1.3 Mac installer bytes and checksum were downloaded and matched. Full editor, account and update acceptance remain separate."
       }
     ],
     "pixafilm": [
@@ -515,24 +497,24 @@
         "note": "12 offline workflow chapters and all 17 registered editor tools documented. F1, Settings Help and Help menu route to Pixa; visible tool groups have read-only tour highlights. Startup own-feed update prompt and shared account/recovery integration implemented. Real-account and signed-update acceptance remain pending."
       },
       {
-        "label": "Linux candidate build & package",
+        "label": "Mac installer published",
         "passed": true,
-        "note": "0.1.1 account-gated Linux x86_64 candidate built and packaged with a matching source/binary receipt, manual and asset/font/icon notices. Unsigned and unpublished; this is not a Mac or Windows installer."
+        "note": "Universal Mac v0.1.1 is published. Other platform/version availability is shown separately."
       },
       {
-        "label": "Core workflow & recovery checks",
+        "label": "Installed Mac acceptance",
+        "passed": false,
+        "note": "Historical Linux core workflow and recovery checks passed. Installed editing, real account approval and signed update/restart acceptance for this Mac download remain unverified."
+      },
+      {
+        "label": "Mac signing and notarization \u2014 publisher record",
         "passed": true,
-        "note": "Linux procedural-video import, timeline edit, undo/redo, native save/reopen, CPU H.264/WAV export, movie re-import and recovery passed. Seven app Help/updater tests, three native UI checks and four existing browser-link tests passed. Real media quality, hardware and Mac update acceptance remain separate."
+        "note": "The published v0.1.1 release reports Developer ID signing and Apple acceptance. The installer hash matches its GitHub digest and checksum. Gatekeeper was not independently rerun in this Linux verification."
       },
       {
-        "label": "Mac build, signing & acceptance",
-        "passed": false,
-        "note": "Build the new 0.1.1 universal app, include microphone purpose text and matching license notices, then test real editor/audio/account access. Apple signing/notarization and signed install/restart acceptance remain. Source signing preflight is implemented; no signing was performed here."
-      },
-      {
-        "label": "Verified website download",
-        "passed": false,
-        "note": "Coming soon until a signed, accepted release is approved and published. Billing and public download settings are unchanged."
+        "label": "Published Mac download",
+        "passed": true,
+        "note": "Public v0.1.1 Mac installer bytes and checksum were downloaded and matched. Full editor, account and update acceptance remain separate."
       }
     ],
     "pixagrid": [
@@ -792,26 +774,9 @@
         ]
       },
       {
-        "label": "Compile & package installers",
-        "passed": false,
-        "note": "Current Linux compilation passed. Fresh cross-platform checks are queued/running; customer packages and release acceptance remain pending.",
-        "checks": [
-          {
-            "label": "Historical three-platform compile/recovery checks",
-            "passed": true,
-            "note": "All 42 unique product/OS jobs passed on source 728fa546; new metadata changes still need CI."
-          },
-          {
-            "label": "Customer installer",
-            "passed": false,
-            "note": "Compile checks do not create release installers. No verified customer installer recorded."
-          },
-          {
-            "label": "Current Linux native compile",
-            "passed": true,
-            "note": "Current updater/manual source a1b5294 passes Cargo check. This is not a packaged application or graphical acceptance."
-          }
-        ]
+        "label": "Mac installer published",
+        "passed": true,
+        "note": "Universal Mac v0.1.0 is published. Other platform/version availability is shown separately."
       },
       {
         "label": "Application & update testing",
@@ -819,14 +784,14 @@
         "note": "Full editor, access and install/restart update acceptance is not yet verified."
       },
       {
-        "label": "Apple signing & notarization",
-        "passed": false,
-        "note": "Verified signed/notarized Mac release remains pending."
+        "label": "Mac signing and notarization \u2014 publisher record",
+        "passed": true,
+        "note": "The published v0.1.0 release reports Developer ID signing and Apple acceptance. The installer hash matches its GitHub digest and checksum. Gatekeeper was not independently rerun in this Linux verification."
       },
       {
-        "label": "Verified website download",
-        "passed": false,
-        "note": "Customer download remains Coming soon."
+        "label": "Published Mac download",
+        "passed": true,
+        "note": "Public v0.1.0 Mac installer bytes and checksum were downloaded and matched. Full editor, account and update acceptance remain separate."
       }
     ],
     "pixamaterial": [
@@ -988,26 +953,9 @@
         ]
       },
       {
-        "label": "Compile & package installers",
-        "passed": false,
-        "note": "Current Linux compilation passed. Fresh cross-platform checks are queued/running; customer packages and release acceptance remain pending.",
-        "checks": [
-          {
-            "label": "Historical three-platform compile/recovery checks",
-            "passed": true,
-            "note": "All 42 unique product/OS jobs passed on source 728fa546; new metadata changes still need CI."
-          },
-          {
-            "label": "Customer installer",
-            "passed": false,
-            "note": "Compile checks do not create release installers. No verified customer installer recorded."
-          },
-          {
-            "label": "Current Linux native compile",
-            "passed": true,
-            "note": "Current updater/manual source a1b5294 passes Cargo check. This is not a packaged application or graphical acceptance."
-          }
-        ]
+        "label": "Mac installer published",
+        "passed": true,
+        "note": "Universal Mac v0.1.0 is published. Other platform/version availability is shown separately."
       },
       {
         "label": "Application & update testing",
@@ -1015,14 +963,14 @@
         "note": "Full editor, access and install/restart update acceptance is not yet verified."
       },
       {
-        "label": "Apple signing & notarization",
-        "passed": false,
-        "note": "Verified signed/notarized Mac release remains pending."
+        "label": "Mac signing and notarization \u2014 publisher record",
+        "passed": true,
+        "note": "The published v0.1.0 release reports Developer ID signing and Apple acceptance. The installer hash matches its GitHub digest and checksum. Gatekeeper was not independently rerun in this Linux verification."
       },
       {
-        "label": "Verified website download",
-        "passed": false,
-        "note": "Customer download remains Coming soon."
+        "label": "Published Mac download",
+        "passed": true,
+        "note": "Public v0.1.0 Mac installer bytes and checksum were downloaded and matched. Full editor, account and update acceptance remain separate."
       }
     ],
     "pixashop": [
@@ -1033,8 +981,8 @@
       },
       {
         "label": "Complete Pixa branding",
-        "passed": true,
-        "note": "PixaShop branding completed and confirmed.",
+        "passed": false,
+        "note": "Earlier-release evidence remains historical. Installed v0.20.5 acceptance for this milestone has not been independently verified.",
         "evidence": {
           "repository": "lukeybird/pixashop",
           "commit": "5b4551b95c632910dbb546df2797245380aa6942",
@@ -1047,8 +995,8 @@
       },
       {
         "label": "Manual, tutorials, activation & updater",
-        "passed": true,
-        "note": "Manual, tutorials, activation and PixaShop update channel completed and confirmed.",
+        "passed": false,
+        "note": "Earlier-release evidence remains historical. Installed v0.20.5 acceptance for this milestone has not been independently verified.",
         "evidence": {
           "confirmation": "Product owner confirmed completion in this conversation",
           "confirmed_at": "2026-11-11T02:42:03.228Z",
@@ -1056,19 +1004,14 @@
         }
       },
       {
-        "label": "Compile & package installers",
+        "label": "Mac installer published",
         "passed": true,
-        "note": "0.20.4 Mac, Windows and Linux packages are published; the Mac asset matches the recorded signed-release digest. A separate 0.20.5 candidate updates obsolete paid-trial wording to free-account access; packaging run 43177940756 is queued. Existing published downloads are unchanged.",
-        "evidence": {
-          "release": "https://github.com/lukeybird/pixashop/releases/tag/v0.20.4",
-          "commit": "5b4551b95c632910dbb546df2797245380aa6942",
-          "build_run": 42946140053
-        }
+        "note": "Universal Mac v0.20.5 is published. Other platform/version availability is shown separately."
       },
       {
         "label": "Application & update testing",
-        "passed": true,
-        "note": "Owner confirmed the 0.20.4 Mac app. A separate old-to-new updater install/restart run is not recorded.",
+        "passed": false,
+        "note": "Earlier-release evidence remains historical. Installed v0.20.5 acceptance for this milestone has not been independently verified.",
         "evidence": {
           "confirmation": "Product owner tested the 0.20.4 Mac app and confirmed it is good",
           "confirmed_at": "2026-11-11T04:08:00Z",
@@ -1077,24 +1020,14 @@
         }
       },
       {
-        "label": "Apple signing & notarization",
+        "label": "Mac signing and notarization \u2014 publisher record",
         "passed": true,
-        "note": "PixaShop 0.20.4 Mac DMG is signed, notarized, stapled, and accepted by Gatekeeper.",
-        "evidence": {
-          "sha256": "bdb0b5a4d0cd9830023bdf1e4c6908dea69c694b0bbf21f21fb5922e88ef3245",
-          "notarization_submission": "e95c55a5-3d88-46a8-a777-ba7d5c91677c",
-          "gatekeeper": "accepted"
-        }
+        "note": "The published v0.20.5 release reports Developer ID signing and Apple acceptance. The installer hash matches its GitHub digest and checksum. Gatekeeper was not independently rerun in this Linux verification."
       },
       {
-        "label": "Verified website download",
+        "label": "Published Mac download",
         "passed": true,
-        "note": "The live site still serves the existing PixaShop download. v0.20.4 is published on GitHub, and the website pin was not changed.",
-        "evidence": {
-          "github_release": "v0.20.4",
-          "website_pin": "unchanged",
-          "reason": "Saved Vercel login is invalid. Do not deploy stale website main."
-        }
+        "note": "Public v0.20.5 Mac installer bytes and checksum were downloaded and matched. Full editor, account and update acceptance remain separate."
       }
     ],
     "pixasound": [
@@ -1310,24 +1243,24 @@
         "note": "12 offline workflow chapters and 92 tool explanations; native Help, tour highlights and startup own-feed update prompt checked. Shared account protocol tests passed. Real account and signed install/restart acceptance remain in the Mac step."
       },
       {
-        "label": "Linux candidate build & package",
+        "label": "Mac installer published",
         "passed": true,
-        "note": "0.1.1 native Linux candidate built and packaged with source receipt and asset/font/icon license notices. This is unsigned, unpublished and not a Mac or Windows installer."
+        "note": "Universal Mac v0.1.1 is published. Other platform/version availability is shown separately."
       },
       {
-        "label": "Core workflow & recovery checks",
+        "label": "Installed Mac acceptance",
+        "passed": false,
+        "note": "Historical Linux core workflow and recovery checks passed. Installed editing, real account approval and signed update/restart acceptance for this Mac download remain unverified."
+      },
+      {
+        "label": "Mac signing and notarization \u2014 publisher record",
         "passed": true,
-        "note": "Linux engine drawing, undo/redo, native save/reopen, SVG import, SVG/PDF/PNG export and recovery passed; headless Help/tour/update UI tests passed. These do not verify every editor feature or a real Mac update."
+        "note": "The published v0.1.1 release reports Developer ID signing and Apple acceptance. The installer hash matches its GitHub digest and checksum. Gatekeeper was not independently rerun in this Linux verification."
       },
       {
-        "label": "Mac build, signing & acceptance",
-        "passed": false,
-        "note": "Build the new 0.1.1 universal app; inspect installed branding/help, real account access and editor workflows, then Apple signing/notarization and signed own-feed install/restart testing. Assigned to the other computer."
-      },
-      {
-        "label": "Verified website download",
-        "passed": false,
-        "note": "Coming soon until a signed, accepted release is approved and published. No download or billing settings changed."
+        "label": "Published Mac download",
+        "passed": true,
+        "note": "Public v0.1.1 Mac installer bytes and checksum were downloaded and matched. Full editor, account and update acceptance remain separate."
       }
     ],
     "pixaword": [
@@ -1430,7 +1363,11 @@
     ]
   },
   "app_checked_at": {
-    "pixavector": "2026-11-12",
-    "pixafilm": "2026-11-12"
+    "pixavector": "2026-11-13",
+    "pixafilm": "2026-11-13",
+    "pixashop": "2026-11-13",
+    "pixapdf": "2026-11-13",
+    "pixalight": "2026-11-13",
+    "pixaeffects": "2026-11-13"
   }
 }
