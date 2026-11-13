@@ -73,6 +73,12 @@ def brand_assets(root,app):
                 else:im.save(p,format='PNG')
             rel=p.relative_to(root).as_posix();changed.append(rel)
             Path(str(p)+'.attribution').write_text(f'asset: {p.name}\ntitle: {app["name"]} original pixel letter mark\nauthor: AIWebDesignFirm\nsource: original work\nlicense: MIT OR Apache-2.0\nlicense-file: LICENSE-MIT\nadded: 2026-11-09 by AIWebDesignFirm\nnotes: Procedural Pixa product-initial mark, not upstream trademark artwork.\n', encoding="utf-8")
+    icon_dir=root/'assets/app-icon'
+    if icon_dir.is_dir() and not any(icon_dir.rglob('*.icns')):
+        destination=icon_dir/(app['id']+'.icns')
+        icon(app,1024).save(destination,format='ICNS')
+        rel=destination.relative_to(root).as_posix();changed.append(rel)
+        Path(str(destination)+'.attribution').write_text(f'asset: {destination.name}\ntitle: {app["name"]} original pixel letter mark\nauthor: AIWebDesignFirm\nsource: original work\nlicense: MIT OR Apache-2.0\nlicense-file: LICENSE-MIT\nadded: 2026-11-13 by AIWebDesignFirm\nnotes: Mac icon generated from the procedural Pixa product-initial mark.\n', encoding="utf-8")
     return changed
 
 def prepare(app, sources):
