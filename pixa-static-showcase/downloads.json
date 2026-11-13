@@ -85,6 +85,136 @@
         "checksum_url": "https://github.com/lukeybird/pixaeffects/releases/download/pixaeffects-v0.1.3/pixaeffects-0.1.3-macos-universal.dmg.sha256"
       },
       "notarization": "Publisher reports Developer ID signing and Apple acceptance; not independently rerun on macOS"
+    },
+    "pixaword": {
+      "version": "0.1.0",
+      "repository": "lukeybird/pixaeffects",
+      "tag": "pixaword-v0.1.0",
+      "release_url": "https://github.com/lukeybird/pixaeffects/releases/tag/pixaword-v0.1.0",
+      "macos": {
+        "url": "https://github.com/lukeybird/pixaeffects/releases/download/pixaword-v0.1.0/pixaword-0.1.0-macos-universal.dmg",
+        "sha256": "52d1562f454d30ee96e1d64ac881f7e7c6201a0fdfa0f4f33a2877b5f44cc66a",
+        "size": 71535081,
+        "checksum_url": "https://github.com/lukeybird/pixaeffects/releases/download/pixaword-v0.1.0/pixaword-0.1.0-macos-universal.dmg.sha256"
+      },
+      "notarization": "Publisher release reports Developer ID signing and Apple notarization acceptance; independent Mac checks not rerun here."
+    },
+    "pixatexture": {
+      "version": "0.1.0",
+      "repository": "lukeybird/pixaeffects",
+      "tag": "pixatexture-v0.1.0",
+      "release_url": "https://github.com/lukeybird/pixaeffects/releases/tag/pixatexture-v0.1.0",
+      "macos": {
+        "url": "https://github.com/lukeybird/pixaeffects/releases/download/pixatexture-v0.1.0/pixatexture-0.1.0-macos-universal.dmg",
+        "sha256": "0c565f7d63ef809ee7e684387e191d7cfccbfecde4aad3cc6fd4783930add252",
+        "size": 32994254,
+        "checksum_url": "https://github.com/lukeybird/pixaeffects/releases/download/pixatexture-v0.1.0/pixatexture-0.1.0-macos-universal.dmg.sha256"
+      },
+      "notarization": "Publisher release reports Developer ID signing and Apple notarization acceptance; independent Mac checks not rerun here."
+    },
+    "pixasound": {
+      "version": "0.1.0",
+      "repository": "lukeybird/pixaeffects",
+      "tag": "pixasound-v0.1.0",
+      "release_url": "https://github.com/lukeybird/pixaeffects/releases/tag/pixasound-v0.1.0",
+      "macos": {
+        "url": "https://github.com/lukeybird/pixaeffects/releases/download/pixasound-v0.1.0/pixasound-0.1.0-macos-universal.dmg",
+        "sha256": "4ac66c5cf0cff81543c273df0c1e1dbcb391459701e9ed5c04aef992e0ea206c",
+        "size": 33989887,
+        "checksum_url": "https://github.com/lukeybird/pixaeffects/releases/download/pixasound-v0.1.0/pixasound-0.1.0-macos-universal.dmg.sha256"
+      },
+      "notarization": "Publisher release reports Developer ID signing and Apple notarization acceptance; independent Mac checks not rerun here."
+    },
+    "pixamaterial": {
+      "version": "0.1.0",
+      "repository": "lukeybird/pixaeffects",
+      "tag": "pixamaterial-v0.1.0",
+      "release_url": "https://github.com/lukeybird/pixaeffects/releases/tag/pixamaterial-v0.1.0",
+      "macos": {
+        "url": "https://github.com/lukeybird/pixaeffects/releases/download/pixamaterial-v0.1.0/pixamaterial-0.1.0-macos-universal.dmg",
+        "sha256": "e26636a67c11031edbbadd3a1351fd6b60444b3497bd348dd842735090051ca6",
+        "size": 30667085,
+        "checksum_url": "https://github.com/lukeybird/pixaeffects/releases/download/pixamaterial-v0.1.0/pixamaterial-0.1.0-macos-universal.dmg.sha256"
+      },
+      "notarization": "Publisher release reports Developer ID signing and Apple notarization acceptance; independent Mac checks not rerun here."
+    },
+    "pixainterface": {
+      "version": "0.1.0",
+      "repository": "lukeybird/pixaeffects",
+      "tag": "pixainterface-v0.1.0",
+      "release_url": "https://github.com/lukeybird/pixaeffects/releases/tag/pixainterface-v0.1.0",
+      "macos": {
+        "url": "https://github.com/lukeybird/pixaeffects/releases/download/pixainterface-v0.1.0/pixainterface-0.1.0-macos-universal.dmg",
+        "sha256": "840f8ea60b1a9b085bb82ede893840fbdb8280b4ad75848071f0c214583a04de",
+        "size": 66637644,
+        "checksum_url": "https://github.com/lukeybird/pixaeffects/releases/download/pixainterface-v0.1.0/pixainterface-0.1.0-macos-universal.dmg.sha256"
+      },
+      "notarization": "Publisher release reports Developer ID signing and Apple notarization acceptance; independent Mac checks not rerun here."
+    },
+    "pixagrid": {
+      "version": "0.1.0",
+      "repository": "lukeybird/pixaeffects",
+      "tag": "pixagrid-v0.1.0",
+      "release_url": "https://github.com/lukeybird/pixaeffects/releases/tag/pixagrid-v0.1.0",
+      "macos": {
+        "url": "https://github.com/lukeybird/pixaeffects/releases/download/pixagrid-v0.1.0/pixagrid-0.1.0-macos-universal.dmg",
+        "sha256": "be756619c49000da209a34692b1fb4744c52d3b70884056967b621fa6f1ac3ee",
+        "size": 41511463,
+        "checksum_url": "https://github.com/lukeybird/pixaeffects/releases/download/pixagrid-v0.1.0/pixagrid-0.1.0-macos-universal.dmg.sha256"
+      },
+      "notarization": "Publisher release reports Developer ID signing and Apple notarization acceptance; independent Mac checks not rerun here."
+    },
+    "pixadeck": {
+      "version": "0.1.0",
+      "repository": "lukeybird/pixaeffects",
+      "tag": "pixadeck-v0.1.0",
+      "release_url": "https://github.com/lukeybird/pixaeffects/releases/tag/pixadeck-v0.1.0",
+      "macos": {
+        "url": "https://github.com/lukeybird/pixaeffects/releases/download/pixadeck-v0.1.0/pixadeck-0.1.0-macos-universal.dmg",
+        "sha256": "731f25e683f39768df2203ac471b6f4d5e97d33b2942ff97e5259580681967c9",
+        "size": 50358025,
+        "checksum_url": "https://github.com/lukeybird/pixaeffects/releases/download/pixadeck-v0.1.0/pixadeck-0.1.0-macos-universal.dmg.sha256"
+      },
+      "notarization": "Publisher release reports Developer ID signing and Apple notarization acceptance; independent Mac checks not rerun here."
+    },
+    "pixacad": {
+      "version": "0.1.0",
+      "repository": "lukeybird/pixaeffects",
+      "tag": "pixacad-v0.1.0",
+      "release_url": "https://github.com/lukeybird/pixaeffects/releases/tag/pixacad-v0.1.0",
+      "macos": {
+        "url": "https://github.com/lukeybird/pixaeffects/releases/download/pixacad-v0.1.0/pixacad-0.1.0-macos-universal.dmg",
+        "sha256": "4473b81fcdbc146dfd82618bc07e011291d73f0648c826f70a80539cfa5dff0e",
+        "size": 57764845,
+        "checksum_url": "https://github.com/lukeybird/pixaeffects/releases/download/pixacad-v0.1.0/pixacad-0.1.0-macos-universal.dmg.sha256"
+      },
+      "notarization": "Publisher release reports Developer ID signing and Apple notarization acceptance; independent Mac checks not rerun here."
+    },
+    "pixaanything": {
+      "version": "0.1.0",
+      "repository": "lukeybird/pixaeffects",
+      "tag": "pixaanything-v0.1.0",
+      "release_url": "https://github.com/lukeybird/pixaeffects/releases/tag/pixaanything-v0.1.0",
+      "macos": {
+        "url": "https://github.com/lukeybird/pixaeffects/releases/download/pixaanything-v0.1.0/pixaanything-0.1.0-macos-universal.dmg",
+        "sha256": "fe1d564e2fbad03e712d268de50a8a294e08e6516946450060217b8b49c61383",
+        "size": 48276443,
+        "checksum_url": "https://github.com/lukeybird/pixaeffects/releases/download/pixaanything-v0.1.0/pixaanything-0.1.0-macos-universal.dmg.sha256"
+      },
+      "notarization": "Publisher release reports Developer ID signing and Apple notarization acceptance; independent Mac checks not rerun here."
+    },
+    "pixadesign": {
+      "version": "0.1.0",
+      "repository": "lukeybird/pixaeffects",
+      "tag": "pixadesign-v0.1.0",
+      "release_url": "https://github.com/lukeybird/pixaeffects/releases/tag/pixadesign-v0.1.0",
+      "macos": {
+        "url": "https://github.com/lukeybird/pixaeffects/releases/download/pixadesign-v0.1.0/pixadesign-0.1.0-macos-universal.dmg",
+        "sha256": "19ed331774c3cee3f1c82de00000836ee14516717cb90af7da75613ab3a771b6",
+        "size": 84424586,
+        "checksum_url": "https://github.com/lukeybird/pixaeffects/releases/download/pixadesign-v0.1.0/pixadesign-0.1.0-macos-universal.dmg.sha256"
+      },
+      "notarization": "Publisher release reports Developer ID signing and Apple notarization acceptance; independent Mac checks not rerun here."
     }
   }
 }

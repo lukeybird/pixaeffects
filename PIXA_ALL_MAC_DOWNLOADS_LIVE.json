@@ -1,0 +1,240 @@
+{
+  "checked_at": "2026-11-13",
+  "scope": "Published Mac installer availability; not full app acceptance",
+  "apps": {
+    "pixashop": {
+      "product": "pixashop",
+      "version": "0.20.5",
+      "repository": "lukeybird/pixashop",
+      "tag": "v0.20.5",
+      "release_url": "https://github.com/lukeybird/pixashop/releases/tag/v0.20.5",
+      "macos": {
+        "url": "https://github.com/lukeybird/pixashop/releases/download/v0.20.5/pixashop-0.20.5-macos-universal.dmg",
+        "sha256": "21a74fd12824f90deb71ec38d5743f8655ea8c54fd41e539ae0bf9173cf37008",
+        "size": 90030790,
+        "checksum_url": "https://github.com/lukeybird/pixashop/releases/download/v0.20.5/pixashop-0.20.5-macos-universal.dmg.sha256"
+      },
+      "notarization": "Publisher reports Developer ID signing and Apple acceptance; not independently rerun on macOS"
+    },
+    "pixavector": {
+      "product": "pixavector",
+      "version": "0.1.1",
+      "repository": "lukeybird/pixaeffects",
+      "tag": "pixavector-v0.1.1",
+      "release_url": "https://github.com/lukeybird/pixaeffects/releases/tag/pixavector-v0.1.1",
+      "macos": {
+        "url": "https://github.com/lukeybird/pixaeffects/releases/download/pixavector-v0.1.1/pixavector-0.1.1-macos-universal.dmg",
+        "sha256": "7f0f69cd1dae35fb1466a26427d139bec7330727879aedce0e9c333eee541cbc",
+        "size": 124393261,
+        "checksum_url": "https://github.com/lukeybird/pixaeffects/releases/download/pixavector-v0.1.1/pixavector-0.1.1-macos-universal.dmg.sha256"
+      },
+      "notarization": "Publisher reports Developer ID signing and Apple acceptance; not independently rerun on macOS"
+    },
+    "pixapdf": {
+      "product": "pixapdf",
+      "version": "0.1.0",
+      "repository": "lukeybird/pixaeffects",
+      "tag": "pixapdf-v0.1.0",
+      "release_url": "https://github.com/lukeybird/pixaeffects/releases/tag/pixapdf-v0.1.0",
+      "macos": {
+        "url": "https://github.com/lukeybird/pixaeffects/releases/download/pixapdf-v0.1.0/pixapdf-0.1.0-macos-universal.dmg",
+        "sha256": "f848c1035b2fa639916009d811ce488852d3b0242dd242e2f2230b43bcfc1de6",
+        "size": 70133945,
+        "checksum_url": "https://github.com/lukeybird/pixaeffects/releases/download/pixapdf-v0.1.0/pixapdf-0.1.0-macos-universal.dmg.sha256"
+      },
+      "notarization": "Publisher reports Developer ID signing and Apple acceptance; not independently rerun on macOS"
+    },
+    "pixalight": {
+      "product": "pixalight",
+      "version": "0.1.0",
+      "repository": "lukeybird/pixaeffects",
+      "tag": "pixalight-v0.1.0",
+      "release_url": "https://github.com/lukeybird/pixaeffects/releases/tag/pixalight-v0.1.0",
+      "macos": {
+        "url": "https://github.com/lukeybird/pixaeffects/releases/download/pixalight-v0.1.0/pixalight-0.1.0-macos-universal.dmg",
+        "sha256": "37a117de99fc2d1b7ce7799fedda637e2f43da1c3da0a311cd3d170410167e0a",
+        "size": 70992329,
+        "checksum_url": "https://github.com/lukeybird/pixaeffects/releases/download/pixalight-v0.1.0/pixalight-0.1.0-macos-universal.dmg.sha256"
+      },
+      "notarization": "Publisher reports Developer ID signing and Apple acceptance; not independently rerun on macOS"
+    },
+    "pixafilm": {
+      "product": "pixafilm",
+      "version": "0.1.1",
+      "repository": "lukeybird/pixaeffects",
+      "tag": "pixafilm-v0.1.1",
+      "release_url": "https://github.com/lukeybird/pixaeffects/releases/tag/pixafilm-v0.1.1",
+      "macos": {
+        "url": "https://github.com/lukeybird/pixaeffects/releases/download/pixafilm-v0.1.1/pixafilm-0.1.1-macos-universal.dmg",
+        "sha256": "4a70dc9a4a858d8df2dc742399d2a2e1a29495b9d47d0819aa136dbb8e23cbe5",
+        "size": 61044113,
+        "checksum_url": "https://github.com/lukeybird/pixaeffects/releases/download/pixafilm-v0.1.1/pixafilm-0.1.1-macos-universal.dmg.sha256"
+      },
+      "notarization": "Publisher reports Developer ID signing and Apple acceptance; not independently rerun on macOS"
+    },
+    "pixaeffects": {
+      "product": "pixaeffects",
+      "version": "0.1.3",
+      "repository": "lukeybird/pixaeffects",
+      "tag": "pixaeffects-v0.1.3",
+      "release_url": "https://github.com/lukeybird/pixaeffects/releases/tag/pixaeffects-v0.1.3",
+      "macos": {
+        "url": "https://github.com/lukeybird/pixaeffects/releases/download/pixaeffects-v0.1.3/pixaeffects-0.1.3-macos-universal.dmg",
+        "sha256": "69f722d6dec82f3582a3173ca859d235929fd289bc6d3eff3e8d9eeb81f52ec8",
+        "size": 87192408,
+        "checksum_url": "https://github.com/lukeybird/pixaeffects/releases/download/pixaeffects-v0.1.3/pixaeffects-0.1.3-macos-universal.dmg.sha256"
+      },
+      "notarization": "Publisher reports Developer ID signing and Apple acceptance; not independently rerun on macOS"
+    },
+    "pixaword": {
+      "version": "0.1.0",
+      "repository": "lukeybird/pixaeffects",
+      "tag": "pixaword-v0.1.0",
+      "release_url": "https://github.com/lukeybird/pixaeffects/releases/tag/pixaword-v0.1.0",
+      "macos": {
+        "url": "https://github.com/lukeybird/pixaeffects/releases/download/pixaword-v0.1.0/pixaword-0.1.0-macos-universal.dmg",
+        "sha256": "52d1562f454d30ee96e1d64ac881f7e7c6201a0fdfa0f4f33a2877b5f44cc66a",
+        "size": 71535081,
+        "checksum_url": "https://github.com/lukeybird/pixaeffects/releases/download/pixaword-v0.1.0/pixaword-0.1.0-macos-universal.dmg.sha256"
+      },
+      "notarization": "Publisher release reports Developer ID signing and Apple notarization acceptance; independent Mac checks not rerun here."
+    },
+    "pixatexture": {
+      "version": "0.1.0",
+      "repository": "lukeybird/pixaeffects",
+      "tag": "pixatexture-v0.1.0",
+      "release_url": "https://github.com/lukeybird/pixaeffects/releases/tag/pixatexture-v0.1.0",
+      "macos": {
+        "url": "https://github.com/lukeybird/pixaeffects/releases/download/pixatexture-v0.1.0/pixatexture-0.1.0-macos-universal.dmg",
+        "sha256": "0c565f7d63ef809ee7e684387e191d7cfccbfecde4aad3cc6fd4783930add252",
+        "size": 32994254,
+        "checksum_url": "https://github.com/lukeybird/pixaeffects/releases/download/pixatexture-v0.1.0/pixatexture-0.1.0-macos-universal.dmg.sha256"
+      },
+      "notarization": "Publisher release reports Developer ID signing and Apple notarization acceptance; independent Mac checks not rerun here."
+    },
+    "pixasound": {
+      "version": "0.1.0",
+      "repository": "lukeybird/pixaeffects",
+      "tag": "pixasound-v0.1.0",
+      "release_url": "https://github.com/lukeybird/pixaeffects/releases/tag/pixasound-v0.1.0",
+      "macos": {
+        "url": "https://github.com/lukeybird/pixaeffects/releases/download/pixasound-v0.1.0/pixasound-0.1.0-macos-universal.dmg",
+        "sha256": "4ac66c5cf0cff81543c273df0c1e1dbcb391459701e9ed5c04aef992e0ea206c",
+        "size": 33989887,
+        "checksum_url": "https://github.com/lukeybird/pixaeffects/releases/download/pixasound-v0.1.0/pixasound-0.1.0-macos-universal.dmg.sha256"
+      },
+      "notarization": "Publisher release reports Developer ID signing and Apple notarization acceptance; independent Mac checks not rerun here."
+    },
+    "pixamaterial": {
+      "version": "0.1.0",
+      "repository": "lukeybird/pixaeffects",
+      "tag": "pixamaterial-v0.1.0",
+      "release_url": "https://github.com/lukeybird/pixaeffects/releases/tag/pixamaterial-v0.1.0",
+      "macos": {
+        "url": "https://github.com/lukeybird/pixaeffects/releases/download/pixamaterial-v0.1.0/pixamaterial-0.1.0-macos-universal.dmg",
+        "sha256": "e26636a67c11031edbbadd3a1351fd6b60444b3497bd348dd842735090051ca6",
+        "size": 30667085,
+        "checksum_url": "https://github.com/lukeybird/pixaeffects/releases/download/pixamaterial-v0.1.0/pixamaterial-0.1.0-macos-universal.dmg.sha256"
+      },
+      "notarization": "Publisher release reports Developer ID signing and Apple notarization acceptance; independent Mac checks not rerun here."
+    },
+    "pixainterface": {
+      "version": "0.1.0",
+      "repository": "lukeybird/pixaeffects",
+      "tag": "pixainterface-v0.1.0",
+      "release_url": "https://github.com/lukeybird/pixaeffects/releases/tag/pixainterface-v0.1.0",
+      "macos": {
+        "url": "https://github.com/lukeybird/pixaeffects/releases/download/pixainterface-v0.1.0/pixainterface-0.1.0-macos-universal.dmg",
+        "sha256": "840f8ea60b1a9b085bb82ede893840fbdb8280b4ad75848071f0c214583a04de",
+        "size": 66637644,
+        "checksum_url": "https://github.com/lukeybird/pixaeffects/releases/download/pixainterface-v0.1.0/pixainterface-0.1.0-macos-universal.dmg.sha256"
+      },
+      "notarization": "Publisher release reports Developer ID signing and Apple notarization acceptance; independent Mac checks not rerun here."
+    },
+    "pixagrid": {
+      "version": "0.1.0",
+      "repository": "lukeybird/pixaeffects",
+      "tag": "pixagrid-v0.1.0",
+      "release_url": "https://github.com/lukeybird/pixaeffects/releases/tag/pixagrid-v0.1.0",
+      "macos": {
+        "url": "https://github.com/lukeybird/pixaeffects/releases/download/pixagrid-v0.1.0/pixagrid-0.1.0-macos-universal.dmg",
+        "sha256": "be756619c49000da209a34692b1fb4744c52d3b70884056967b621fa6f1ac3ee",
+        "size": 41511463,
+        "checksum_url": "https://github.com/lukeybird/pixaeffects/releases/download/pixagrid-v0.1.0/pixagrid-0.1.0-macos-universal.dmg.sha256"
+      },
+      "notarization": "Publisher release reports Developer ID signing and Apple notarization acceptance; independent Mac checks not rerun here."
+    },
+    "pixadeck": {
+      "version": "0.1.0",
+      "repository": "lukeybird/pixaeffects",
+      "tag": "pixadeck-v0.1.0",
+      "release_url": "https://github.com/lukeybird/pixaeffects/releases/tag/pixadeck-v0.1.0",
+      "macos": {
+        "url": "https://github.com/lukeybird/pixaeffects/releases/download/pixadeck-v0.1.0/pixadeck-0.1.0-macos-universal.dmg",
+        "sha256": "731f25e683f39768df2203ac471b6f4d5e97d33b2942ff97e5259580681967c9",
+        "size": 50358025,
+        "checksum_url": "https://github.com/lukeybird/pixaeffects/releases/download/pixadeck-v0.1.0/pixadeck-0.1.0-macos-universal.dmg.sha256"
+      },
+      "notarization": "Publisher release reports Developer ID signing and Apple notarization acceptance; independent Mac checks not rerun here."
+    },
+    "pixacad": {
+      "version": "0.1.0",
+      "repository": "lukeybird/pixaeffects",
+      "tag": "pixacad-v0.1.0",
+      "release_url": "https://github.com/lukeybird/pixaeffects/releases/tag/pixacad-v0.1.0",
+      "macos": {
+        "url": "https://github.com/lukeybird/pixaeffects/releases/download/pixacad-v0.1.0/pixacad-0.1.0-macos-universal.dmg",
+        "sha256": "4473b81fcdbc146dfd82618bc07e011291d73f0648c826f70a80539cfa5dff0e",
+        "size": 57764845,
+        "checksum_url": "https://github.com/lukeybird/pixaeffects/releases/download/pixacad-v0.1.0/pixacad-0.1.0-macos-universal.dmg.sha256"
+      },
+      "notarization": "Publisher release reports Developer ID signing and Apple notarization acceptance; independent Mac checks not rerun here."
+    },
+    "pixaanything": {
+      "version": "0.1.0",
+      "repository": "lukeybird/pixaeffects",
+      "tag": "pixaanything-v0.1.0",
+      "release_url": "https://github.com/lukeybird/pixaeffects/releases/tag/pixaanything-v0.1.0",
+      "macos": {
+        "url": "https://github.com/lukeybird/pixaeffects/releases/download/pixaanything-v0.1.0/pixaanything-0.1.0-macos-universal.dmg",
+        "sha256": "fe1d564e2fbad03e712d268de50a8a294e08e6516946450060217b8b49c61383",
+        "size": 48276443,
+        "checksum_url": "https://github.com/lukeybird/pixaeffects/releases/download/pixaanything-v0.1.0/pixaanything-0.1.0-macos-universal.dmg.sha256"
+      },
+      "notarization": "Publisher release reports Developer ID signing and Apple notarization acceptance; independent Mac checks not rerun here."
+    },
+    "pixadesign": {
+      "version": "0.1.0",
+      "repository": "lukeybird/pixaeffects",
+      "tag": "pixadesign-v0.1.0",
+      "release_url": "https://github.com/lukeybird/pixaeffects/releases/tag/pixadesign-v0.1.0",
+      "macos": {
+        "url": "https://github.com/lukeybird/pixaeffects/releases/download/pixadesign-v0.1.0/pixadesign-0.1.0-macos-universal.dmg",
+        "sha256": "19ed331774c3cee3f1c82de00000836ee14516717cb90af7da75613ab3a771b6",
+        "size": 84424586,
+        "checksum_url": "https://github.com/lukeybird/pixaeffects/releases/download/pixadesign-v0.1.0/pixadesign-0.1.0-macos-universal.dmg.sha256"
+      },
+      "notarization": "Publisher release reports Developer ID signing and Apple notarization acceptance; independent Mac checks not rerun here."
+    }
+  },
+  "live_product_pages_verified": [
+    "pixashop",
+    "pixavector",
+    "pixapdf",
+    "pixalight",
+    "pixafilm",
+    "pixaeffects",
+    "pixaword",
+    "pixatexture",
+    "pixasound",
+    "pixamaterial",
+    "pixainterface",
+    "pixagrid",
+    "pixadeck",
+    "pixacad",
+    "pixaanything",
+    "pixadesign"
+  ],
+  "deployment": "dpl_5ygJ8Mv9re3Bbcy1BZJ69Y6zE1ai",
+  "routing": "1c2e40a1-792c-4093-81a8-971f326d57c4"
+}

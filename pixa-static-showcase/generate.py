@@ -22,29 +22,20 @@ def download_links(pid):
  if not release:return '<button class="pending" type="button" disabled>Coming soon</button>'
  mac=release['macos']
  return '<a class="primary" href="'+e(mac['url'])+'">Download for Mac · v'+e(release['version'])+' ↓</a><p class="note">Universal installer for Apple Silicon and Intel. <a href="'+e(mac['checksum_url'])+'">SHA-256 checksum</a></p>'
-def progress_panel(pid):
- rows=progress['apps'][pid]
- def item(r):
-  sub=''
-  if r.get('checks'):
-   sub='<ul class="progressChecks">'+''.join(item(c) for c in r['checks'])+'</ul>'
-  return '<li><span class="statusLight '+('passed' if r['passed'] else 'pendingLight')+'" aria-hidden="true"></span><div><strong>'+e(r['label'])+'</strong><small>'+('Passed' if r['passed'] else 'Pending / unverified')+' — '+e(r['note'])+'</small>'+sub+'</div></li>'
- items=''.join(item(r) for r in rows)
- stamp=progress.get('app_checked_at',{}).get(pid,progress['verified_at'][:10])
- scope='recorded' if pid in downloads else 'verified'
- explanation='Green: the stated milestone is recorded. Red: pending or unverified. Source checks and published signing records do not establish complete editor, account or update acceptance.'
- return '<details class="buildProgress"><summary>Build progress <span>'+str(sum(r['passed'] for r in rows))+'/7 '+scope+'</span></summary><ol>'+items+'</ol><p>Last checked: '+e(stamp)+'. '+explanation+'</p></details>'
+def readiness_badge(pid):
+ ready=pid in downloads
+ return '<span class="readiness '+('isReady' if ready else 'notReady')+'"><span aria-hidden="true">'+('●' if ready else '●')+'</span> '+('Ready' if ready else 'Not ready')+'</span>'
 
 def grid():
  cards=[]
  for p in products:
   status=('Mac download · v'+downloads[p['id']]['version']) if p['id'] in downloads else 'Coming soon'
   destination='/products/'+p['id']+('#downloads' if p['id'] in downloads else '')
-  cards.append(f'<article class="card"><a class="cardLink" href="{destination}">{icon(p)}<p class="category">{e(p["category"])}</p><h3>{e(p["name"])}<span aria-hidden="true">→</span></h3><p>{e(p["summary"])}</p><div class="cardFoot"><span>{status}</span><span aria-hidden="true">Explore →</span></div></a>{progress_panel(p["id"])}</article>')
- return '<section class="section" id="products" aria-labelledby="catalog-heading"><div class="sectionHead"><div><p class="eyebrow">FIND YOUR WORKSPACE</p><h2 id="catalog-heading">One family. Every kind of idea.</h2></div><p>Discover the Pixa apps. Each product page shows its current download status.</p></div><div class="grid">'+''.join(cards)+'</div></section>'
+  cards.append(f'<article class="card"><a class="cardLink" href="{destination}">{readiness_badge(p["id"])}{icon(p)}<p class="category">{e(p["category"])}</p><h3>{e(p["name"])}<span aria-hidden="true">→</span></h3><p>{e(p["summary"])}</p><div class="cardFoot"><span>{status}</span><span aria-hidden="true">Explore →</span></div></a></article>')
+ return '<section class="section" id="products" aria-labelledby="catalog-heading"><div class="sectionHead"><div><p class="eyebrow">FIND YOUR WORKSPACE</p><h2 id="catalog-heading">One family. Every kind of idea.</h2></div><p>Discover the Pixa apps. Ready means a Mac download is available. Choose an app to download it.</p></div><div class="grid">'+''.join(cards)+'</div></section>'
 app_wall=''.join('<a class="trialApp" href="/products/'+e(p['id'])+('#downloads' if p['id'] in downloads else '')+'">'+icon(p,64)+'<span>'+e(p['name'])+'</span></a>' for p in products)
 home='<section class="trialHero"><div class="trialCopy"><p class="eyebrow">ONE ACCOUNT. THE PIXA APP FAMILY.</p><h1>Your creative toolkit.<br><span>Free early access.</span></h1><p class="trialLead">A creative toolkit for images, video, design, audio and more. One account brings your Pixa workspaces together.</p><a class="primary trialCta" href="/start">Get free access <span aria-hidden="true">→</span></a><p class="trialTerms">No credit card. No subscription. No scheduled expiration.</p><p class="trialAvailability"><span class="statusLight passed" aria-hidden="true"></span>PixaShop is available now. Other apps become available as they launch. <a href="/products">See each app’s release status →</a></p></div><div class="trialFamily" aria-label="Explore the Pixa app family">'+app_wall+'</div></section><section class="trialSteps"><p class="eyebrow">FROM AN IDEA TO YOUR NEXT PROJECT</p><h2>One simple way to start.</h2><div><article><span>01</span><h3>Create your account</h3><p>Create a free account. No checkout or payment details needed.</p></article><article><span>02</span><h3>Choose your workspace</h3><p>Download an available app and activate it with your account.</p></article><article><span>03</span><h3>Make something yours</h3><p>Explore the tools, open the manual and start creating.</p></article></div></section><section class="trialEnd"><h2>Your next idea starts here.</h2><a class="primary" href="/start">Get free access <span aria-hidden="true">→</span></a><p>One account for the Pixa app family. Availability varies by app.</p></section>'
-home=home.replace('PixaShop is available now. Other apps become available as they launch.','Six Pixa apps are available for Mac. More apps and platforms are on the way.')
+home=home.replace('PixaShop is available now. Other apps become available as they launch.','All sixteen Pixa apps are available for Mac. More platforms are on the way.')
 home_page=shell('Pixa — Free early access','Use released Pixa apps free. No credit card, subscription or scheduled expiration. One account for the creative app family.',home)
 home_page=home_page.replace('<a href="/launcher">Launcher</a>','')
 (OUT/'index.html').write_text(home_page)
@@ -63,7 +54,7 @@ for p in products:
  platforms=''.join('<div><strong>'+platform+'</strong><span>'+e(status)+'</span></div>' for platform,status in platform_rows)
  if p['id']=='pixashop':
   action+='<p class="note">Other platforms · v0.20.4: <a href="https://github.com/lukeybird/pixashop/releases/download/v0.20.4/pixashop-0.20.4-windows-x64-portable.zip">Windows portable ZIP</a> · <a href="https://github.com/lukeybird/pixashop/releases/download/v0.20.4/pixashop-0.20.4-linux-x86_64.tar.gz">Linux archive</a>. Windows is unsigned; platform testing remains incomplete.</p>'
- body=f'<section class="detailHero"><div><a class="back" href="/products">← All Pixa apps</a><p class="eyebrow">{e(p["category"])}</p><h1>{e(p["name"])}<span class="dot">.</span></h1><p class="lead">{e(p["summary"])}</p><p class="description">{e(p["description"])}</p><a class="primary" href="#downloads">'+('Find your download' if available else 'View release status')+f' ↓</a></div><div class="heroIcon">{icon(p,240)}</div></section><section class="section"><p class="eyebrow">THE WORKSPACE</p><h2>Made for {e(p["use"])}.</h2><div class="features">{features}</div></section><section class="download" id="downloads"><div><p class="eyebrow">{e(p["name"].upper())}</p><h2>'+('Your next project starts here.' if available else ('Build complete.' if p['id']=='pixaeffects' else 'Coming soon.'))+f'</h2><p>{text}</p>{action}</div><div class="platforms" aria-label="Platform availability">{platforms}</div></section><section class="more"><p>Explore the rest of your creative toolkit.</p><a href="/products">Browse all apps →</a></section>'
+ body=f'<section class="detailHero"><div><a class="back" href="/products">← All Pixa apps</a><p class="eyebrow">{e(p["category"])}</p><h1>{e(p["name"])}<span class="dot">.</span></h1><p class="lead">{e(p["summary"])}</p><p class="description">{e(p["description"])}</p><a class="primary" href="#downloads">'+('Find your download' if available else 'View release status')+f' ↓</a></div><div class="heroIcon">{readiness_badge(p["id"])}{icon(p,240)}</div></section><section class="section"><p class="eyebrow">THE WORKSPACE</p><h2>Made for {e(p["use"])}.</h2><div class="features">{features}</div></section><section class="download" id="downloads"><div><p class="eyebrow">{e(p["name"].upper())}</p><h2>'+('Your next project starts here.' if available else ('Build complete.' if p['id']=='pixaeffects' else 'Coming soon.'))+f'</h2><p>{text}</p>{action}</div><div class="platforms" aria-label="Platform availability">{platforms}</div></section><section class="more"><p>Explore the rest of your creative toolkit.</p><a href="/products">Browse all apps →</a></section>'
  guide_file=ROOT.parent/'pixa-suite/manuals/generated'/(p['id']+'.json')
  if guide_file.is_file():
   manual_path='/pixa-showcase/manuals/'+p['id']
@@ -74,7 +65,7 @@ for p in products:
   manual='<article class="pixaManual"><a href="/products/'+e(p['id'])+'">← '+e(p['name'])+'</a><p class="eyebrow">PIXA USER MANUAL</p><h1>'+e(p['name'])+'</h1><p class="lead">'+e(guide['scope'])+'</p><p>Use your browser’s Find command to search this manual. The app includes the same guide in its Manual and Quick tour controls. Download availability is shown on the product page.</p><details><summary>Contents</summary><ol>'+navigation+'</ol></details>'+contents+'</article>'
   destination=assets/'manuals';destination.mkdir(exist_ok=True)
   (destination/(p['id']+'.html')).write_text(shell(p['name']+' User Manual','Learn the '+p['name']+' workflows and controls.',manual,manual_path))
- (OUT/'products'/(p['id']+'.html')).write_text(shell(p['name']+' — '+p['category'],p['summary'],body.replace('<section class="more">','<section class="section productProgress"><h2>Release progress</h2>'+progress_panel(p['id'])+'</section><section class="more">'),'/products/'+p['id']))
+ (OUT/'products'/(p['id']+'.html')).write_text(shell(p['name']+' — '+p['category'],p['summary'],body,'/products/'+p['id']))
 launcher='<section class="hero"><p class="eyebrow">PIXA LAUNCHER</p><h1>One place.<br><span>Your whole toolkit.</span></h1><p class="lead">The planned starting point for discovering, installing and opening your Pixa apps.</p><button class="pending" type="button" disabled>Coming soon</button><p class="note">A launcher installer is not available yet.</p></section><section class="section"><p class="eyebrow">THE DIRECTION</p><h2>A simpler way into your work.</h2><div class="features"><article><h3>Discover your apps</h3><p>A clear library of Pixa workspaces, planned for one home.</p></article><article><h3>Install what you need</h3><p>Individual app installation is planned, without downloading the whole family.</p></article><article><h3>Keep moving forward</h3><p>A verified update and restart flow is planned for future releases.</p></article></div></section><section class="more"><p>Explore the individual products now.</p><a href="/products">Browse all apps →</a></section>'
 (OUT/'launcher.html').write_text(shell('Pixa Launcher — Coming soon','The planned home for your Pixa apps. Launcher download coming soon.',launcher,'/launcher'))
 (OUT/'404.html').write_text(shell('Page not found','Explore the Pixa app family.','<section class="hero"><p class="eyebrow">PAGE NOT FOUND</p><h1>Find your next idea.</h1><a class="primary" href="/products">Browse all apps →</a></section>'))
@@ -89,6 +80,8 @@ print('Built script-free showcase: 16 product pages, catalog, launcher and origi
 """)
 
 (assets/'catalog.css').write_text((assets/'catalog.css').read_text()+"\n.pixaManual{max-width:800px;padding:56px 28px 90px;margin:auto}.pixaManual h1{font-size:48px;margin:15px 0}.pixaManual>p,.pixaManual section p{color:#bac5d4;line-height:1.8}.pixaManual section{padding:24px 0;border-bottom:1px solid #28303f;scroll-margin-top:30px}.pixaManual h2{font-size:23px;line-height:1.4}.pixaManual details{margin:30px 0;padding:18px 22px;background:#141d2a;border-radius:12px}.pixaManual summary{cursor:pointer}.pixaManual li{padding:5px 0}.pixaManual a{color:#76d8ee}\n")
+
+(assets/'catalog.css').write_text((assets/'catalog.css').read_text()+"\n.card,.heroIcon{position:relative}.readiness{position:absolute;right:20px;top:20px;display:inline-flex;align-items:center;gap:7px;padding:7px 10px;border-radius:999px;font-size:12px;font-weight:700;line-height:1.2;white-space:nowrap}.readiness.isReady{color:#98f0b1;background:#153629;border:1px solid #2c6b46}.readiness.notReady{color:#ffb1b6;background:#392029;border:1px solid #683743}.readiness span{font-size:10px}.heroIcon .readiness{top:12px;right:12px}@media(max-width:420px){.readiness{right:12px;top:12px;font-size:11px}}\n")
 
 # A content-addressed stylesheet URL prevents the prior marketing CSS remaining cached after a route promotion.
 import hashlib
