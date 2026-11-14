@@ -1,3 +1,32 @@
+MAC UNIVERSAL BUILD SUCCEEDED — 2026-11-14
+
+Run: https://github.com/lukeybird/pixaeffects/actions/runs/43571955021
+Source: 93a3cfe5ce4eb2338ea8e638c3e21ace52c5a95a
+Artifact: PixaLauncher-0.2.0-macOS-universal-UNSIGNED (id 14105620456)
+Both native release slices, 17 Rust tests, 2 packaging tests, fmt, Clippy, universal assembly, ad-hoc signature structure, exact clean-source receipt and native --version passed. This is NOT Developer ID signed or notarized. Do not publish this Actions artifact as the website installer. Artifact evidence: PIXA_LAUNCHER_MAC_BUILD.json. Existing sixteen app downloads remain untouched.
+
+Avoid rebuilding if the artifact is still available. On the publisher Mac, in a current complete checkout with gh authenticated:
+
+  gh run download 43571955021 --repo lukeybird/pixaeffects --name PixaLauncher-0.2.0-macOS-universal-UNSIGNED --dir "$HOME/Downloads/PixaLauncher-0.2.0-CI"
+
+Validate the downloaded inner ZIP against SHA256SUMS.txt before extraction. Its checksum line was written with a dist/ prefix in the CI workspace; compare the hash to the same ZIP basename in the extracted artifact rather than treating that prefix as a local directory requirement. The outer Actions archive digest is a separate digest recorded in PIXA_LAUNCHER_MAC_BUILD.json.
+
+  ditto -x -k "$HOME/Downloads/PixaLauncher-0.2.0-CI/pixa-launcher-0.2.0-macos-universal-UNSIGNED.zip" "$HOME/Downloads/PixaLauncher-0.2.0-CI/extracted"
+
+Inspect CANDIDATE.json: source must be exactly 93a3cfe5ce4eb2338ea8e638c3e21ace52c5a95a, source_dirty false, universal, version 0.2.0. Check its executable SHA against the extracted app. Exercise all seven real-Mac acceptance items in pixa-launcher/ACCEPTANCE_TEMPLATE.json. Make a separate acceptance JSON containing the actual source/hash and only mark a check passed after observing it. Do not fabricate results.
+
+After acceptance, use the new helper from the current checkout (not necessarily the older candidate source checkout):
+
+  python3 pixa-launcher/finish_macos.py "$HOME/Downloads/PixaLauncher-0.2.0-CI/extracted/Pixa Launcher.app" --receipt "$HOME/Downloads/PixaLauncher-0.2.0-CI/CANDIDATE.json" --acceptance "$HOME/Downloads/PixaLauncher-0.2.0-CI/acceptance.json" --profile pixaWorld --output "$HOME/Documents/PixaLauncher-Release-0.2.0" --publish
+
+Use the actual existing Keychain profile on that Mac; pixaWorld is the newer-machine record, PixaShop-Notary is the older-machine record. This argument is a profile name, never a password. Choose a new output folder if it exists.
+
+The helper binds acceptance to the exact binary/source, delegates hardened-runtime signing/notarization to the existing release tool with the exact Team 945M5X4DY3 identity, validates the final mounted app, writes the final DMG/checksum/report, then optionally creates pixalauncher-v0.2.0 without changing Latest for the other apps. No private key export. The helper's guard tests pass; its Apple execution still requires the real publisher Mac. Stop on any failure. Do not override an existing release/tag without inspection.
+
+Only after the public final release exists should the website launcher page be enabled for its exact pixalauncher-0.2.0-macos-universal.dmg asset. Verify public bytes, checksum, report, version and link. Preserve current production backend/billing and all sixteen editor links. No signed launcher, notarization or public download is claimed yet.
+
+PREVIOUS IMPLEMENTATION / RELEASE GUIDANCE (preserved)
+
 PIXA LAUNCHER 0.2.0 — MAC BUILD / ACCEPTANCE / SIGNING HANDOFF
 
 Repository: lukeybird/pixaeffects

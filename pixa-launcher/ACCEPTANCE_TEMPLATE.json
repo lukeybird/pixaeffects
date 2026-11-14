@@ -1,0 +1,13 @@
+{
+  "source_commit": "COPY_FROM_CANDIDATE_JSON",
+  "executable_sha256": "COPY_FROM_CANDIDATE_JSON",
+  "checks": {
+    "library_search_help": "not-run",
+    "install_and_open": "not-run",
+    "cancel_and_retry": "not-run",
+    "running_app_update_refused": "not-run",
+    "previous_app_preserved": "not-run",
+    "documents_survive_update": "not-run",
+    "editor_account_activation": "not-run"
+  }
+}

@@ -66,3 +66,9 @@ Check for app updates discovers editor releases only. It does not update/restart
 End-user Macs use /usr/bin/hdiutil, /usr/bin/ditto, /usr/bin/codesign, /usr/sbin/spctl, /usr/bin/sw_vers, /bin/ps and /usr/bin/open. The launcher reads the Mach-O universal header itself; customers do not need Rust, Xcode or lipo. Only the publisher's packaging script uses lipo/iconutil and Rust.
 
 No website, billing, editor binary, signing identity or published download is changed by building the launcher. No credentials belong in source or command arguments.
+
+## Finished Mac candidate and signing helper
+
+The universal Mac candidate completed in Actions run 43571955021 at source 93a3cfe5ce4eb2338ea8e638c3e21ace52c5a95a. See ../PIXA_LAUNCHER_MAC_BUILD.json and the updated Cursor handoff for the exact artifact; it is unsigned for public distribution. Reuse it rather than repeating both builds.
+
+After actual Mac acceptance, copy ACCEPTANCE_TEMPLATE.json into a separate result file, record the candidate source/executable hash and observed pass results, then run finish_macos.py with the app, --receipt, --acceptance, --profile and a fresh --output folder. Add --publish only to upload the final notarized DMG and report. The helper never enables the website automatically, exports a key, or accepts incomplete/different-build test results. It uses the existing publisher Mac Keychain and shared release-tools/macos_candidate.py. Its receipt/acceptance guards have Linux unit tests; actual Apple signing still runs only on the publisher Mac.

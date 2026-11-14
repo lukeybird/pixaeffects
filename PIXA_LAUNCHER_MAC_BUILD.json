@@ -1,0 +1,94 @@
+{
+  "checked_at": "2026-11-14",
+  "source_commit": "93a3cfe5ce4eb2338ea8e638c3e21ace52c5a95a",
+  "run_id": 43571955021,
+  "run_url": "https://github.com/lukeybird/pixaeffects/actions/runs/43571955021",
+  "conclusion": "success",
+  "jobs": [
+    {
+      "id": 132378046315,
+      "name": "universal-candidate",
+      "conclusion": "success",
+      "steps": [
+        {
+          "name": "Set up job",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683",
+          "conclusion": "success"
+        },
+        {
+          "name": "Install Rust build tools",
+          "conclusion": "success"
+        },
+        {
+          "name": "Test launcher",
+          "conclusion": "success"
+        },
+        {
+          "name": "Build and assemble both Mac architectures",
+          "conclusion": "success"
+        },
+        {
+          "name": "Verify exact candidate and archive",
+          "conclusion": "success"
+        },
+        {
+          "name": "Upload unsigned Mac test candidate",
+          "conclusion": "success"
+        },
+        {
+          "name": "Post Run actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683",
+          "conclusion": "success"
+        },
+        {
+          "name": "Complete job",
+          "conclusion": "success"
+        }
+      ]
+    }
+  ],
+  "artifact": {
+    "id": 14105620456,
+    "name": "PixaLauncher-0.2.0-macOS-universal-UNSIGNED",
+    "size_in_bytes": 8290269,
+    "github_artifact_archive_digest": "sha256:c5d28022c25da0585aca778adc73d9327bb05acbaf6ce5e8300cdb8a36dbe220",
+    "expires_at": "2026-11-28T07:53:53Z",
+    "url": "https://github.com/lukeybird/pixaeffects/actions/runs/43571955021/artifacts/14105620456"
+  },
+  "verified": [
+    "Apple Silicon release compilation passed",
+    "Intel release compilation passed",
+    "combined universal architectures: x86_64 arm64",
+    "ad-hoc bundle codesign verification passed",
+    "native Mac --version: Pixa Launcher 0.2.0",
+    "exact source/version/bundle/clean receipt checks passed",
+    "17 Rust tests passed; live network test ignored on CI",
+    "2 packaging tests passed; fmt and warnings-denied Clippy passed"
+  ],
+  "log_evidence": [
+    "2026-11-14T07:40:45.6620900Z test result: ok. 14 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.05s",
+    "2026-11-14T07:40:45.6951210Z test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.02s",
+    "2026-11-14T07:40:45.7041320Z test result: ok. 0 passed; 0 failed; 1 ignored; 0 measured; 0 filtered out; finished in 0.00s",
+    "2026-11-14T07:40:45.8469020Z test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s",
+    "2026-11-14T07:41:35.1752200Z Ran 2 tests in 2.210s",
+    "2026-11-14T07:41:35.1753800Z Unsigned universal candidate: /private/var/folders/20/jp1_0n3n7kndh6rnbqb5344m0000gn/T/tmpaoe4viil/output/Pixa Launcher.app",
+    "2026-11-14T07:47:14.3512900Z     Finished `release` profile [optimized] target(s) in 5m 38s",
+    "2026-11-14T07:53:40.0807720Z     Finished `release` profile [optimized] target(s) in 6m 25s",
+    "2026-11-14T07:53:49.8938910Z Unsigned universal candidate: /Users/runner/work/_temp/PixaLauncher-0.2.0-candidate/Pixa Launcher.app",
+    "2026-11-14T07:53:50.1070480Z x86_64 arm64",
+    "2026-11-14T07:53:50.2829080Z Pixa Launcher 0.2.0"
+  ],
+  "developer_id_signed": false,
+  "notarized": false,
+  "website_download_enabled": false,
+  "remaining": [
+    "actual Mac GUI/install/open/update/cancel/account acceptance",
+    "Developer ID signing in publisher Mac Keychain",
+    "Apple notarization and final DMG verification",
+    "public final release upload and website enablement"
+  ],
+  "finishing_helper": "pixa-launcher/finish_macos.py",
+  "helper_validation": "Two new receipt/acceptance guard tests passed on Linux; Apple signing/publishing path not executed here"
+}
