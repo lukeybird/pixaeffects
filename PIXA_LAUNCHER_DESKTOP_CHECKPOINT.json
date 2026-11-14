@@ -1,0 +1,56 @@
+{
+  "date": "2026-11-14",
+  "version": "0.2.0",
+  "status": "Native launcher implementation and host checks complete; Mac candidate/acceptance/signing remain pending",
+  "base_commit": "6ad356b837e5dedc7559412da516dc472e44b5e2",
+  "scope": [
+    "sixteen-product library and search",
+    "installed detection and open",
+    "Mac verified download/install/update implementation",
+    "progress/cancel and installation confirmation",
+    "publisher and bundle validation",
+    "preserved prior app and failed-promotion recovery",
+    "offline Help and existing account links"
+  ],
+  "verification": {
+    "rust_unit_tests_passed": 17,
+    "clippy_all_targets_warnings_denied": "passed",
+    "python_packaging_tests_passed": 2,
+    "live_release_discovery": "all sixteen public releases found",
+    "live_download": "PixaMaterial 0.1.0, 30667085 bytes, e26636a67c11031edbbadd3a1351fd6b60444b3497bd348dd842735090051ca6",
+    "native_gui": "Linux Xorg/software GL window launched and screenshot visually inspected",
+    "headless_ui": "default and minimum window size, search/no results, Help/confirmation rendering, error-state recovery",
+    "dependency_notices": "resolved Mac graph included; identical full license texts deduplicated; font notices included"
+  },
+  "pending": [
+    "universal Mac build",
+    "actual Mac install/Open/update/cancel/activation acceptance",
+    "Developer ID signing and Apple notarization",
+    "published final launcher installer and website download",
+    "launcher self-update (not part of this implementation)"
+  ],
+  "unchanged": [
+    "billing",
+    "website",
+    "editor release assets",
+    "editor activation behavior",
+    "private signing keys"
+  ],
+  "source_files_sha256": {
+    "pixa-launcher/Cargo.lock": "02a80af13d143ca0c34580f79a11575f74d28a5154c48258095d92128cb363c1",
+    "pixa-launcher/ATTRIBUTION.md": "f409863772a98b2c296aad5c051eb628e397e2411a5f7ed5e585f1ac0321d6ba",
+    "pixa-launcher/Cargo.toml": "86490a700d6aeb14e1e416ec16505c0fe57aca85c28cb5c27f7d7ef97d6c52da",
+    "pixa-launcher/catalog.json": "5274e80dddc66d4087a085cd300310d7faed02a2c11c13f6b53180240fead17f",
+    "pixa-launcher/README.md": "68cdf312a6a42886dfde2195dde8ff858dac70a9fb268777b840540cc0cbf452",
+    "pixa-launcher/THIRD_PARTY_LICENSES.txt": "595f8a4c9fe2f769983e88f53d8cf4d56afcc6b6a5c885a97a02e8ad01df0fe5",
+    "pixa-launcher/.gitignore": "be98d0515e63be16340ee17d43ac832cd580f7eed740c4dd1d8f953d5f65a339",
+    "pixa-launcher/package_macos.py": "cccb4337cdd88478d09c6dd7b44f338c2177f1b3e88435e29423c048f999b401",
+    "pixa-launcher/generate_notices.py": "157333320b7dd617851dcc6be49249548cd1dcdb70b11523f7ad307d7d5a3a44",
+    "pixa-launcher/src/catalog.rs": "529d9767003139394eaffc31dc2117fb8f50f76a798574eb6daf4b8e9cdc1dde",
+    "pixa-launcher/src/installer.rs": "f6dba5ad27e77fd1b8091046feeec0d19cbbd6be1b9838ee0afd3934c49f3706",
+    "pixa-launcher/src/main.rs": "4869eb15af5b27f0aea1c1f96c850a2248d60ff67fcddf894074ca2f450ad2e1",
+    "pixa-launcher/src/lib.rs": "99b93aee95fdc5dd39bb43bb47112d5b4db7d6f295114236bbefc023d3d181b2",
+    "pixa-launcher/tests/live_download.rs": "7b964c1af36b795bd18544c01bbfcc277d481f743e6b8a0f089dc14fe1f5c108",
+    "pixa-launcher/tests/test_package.py": "65e0b36a0916a653331a8b17583c2208e8c1ee7a8c9222e19a8e960de8fb01a2"
+  }
+}

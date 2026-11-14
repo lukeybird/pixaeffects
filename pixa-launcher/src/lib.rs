@@ -159,7 +159,7 @@ fn plain_version(version: &str) -> bool {
 fn expected_url(product: &str, version: &str, url: &str) -> Result<(), ManifestError> {
     let name = format!("{product}-{version}-macos-universal.dmg");
     let repository = if product == "pixashop" { "pixashop" } else { "pixaeffects" };
-    let tag = if matches!(product, "pixashop" | "pixaeffects") { format!("v{version}") } else { format!("{product}-v{version}") };
+    let tag = if product == "pixashop" { format!("v{version}") } else { format!("{product}-v{version}") };
     let expected = format!("https://github.com/lukeybird/{repository}/releases/download/{tag}/{name}");
     if url != expected {
         return Err(ManifestError::Url);
@@ -248,3 +248,6 @@ mod tests {
         assert!(matches!(accept_manifest(&" ".repeat(MAX_MANIFEST_BYTES + 1), "", &key().verifying_key(), 1000, 1), Err(ManifestError::Size)));
     }
 }
+
+pub mod catalog;
+pub mod installer;

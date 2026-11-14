@@ -1,0 +1,1890 @@
+[
+  {
+    "id": "pixashop",
+    "name": "PixaShop",
+    "category": "Images",
+    "summary": "Edit photos, paint and compose with layers.",
+    "version": "0.20.5",
+    "url": "https://github.com/lukeybird/pixashop/releases/download/v0.20.5/pixashop-0.20.5-macos-universal.dmg",
+    "size": 90030790,
+    "sha256": "21a74fd12824f90deb71ec38d5743f8655ea8c54fd41e539ae0bf9173cf37008",
+    "icon": [
+      {
+        "x": 8.0,
+        "y": 8.0,
+        "w": 1008.0,
+        "h": 1008.0,
+        "color": "#101e32",
+        "radius": 220.0
+      },
+      {
+        "x": 314.6,
+        "y": 174.6,
+        "w": 114.8,
+        "h": 114.8,
+        "color": "#54c8ff",
+        "radius": 16.8
+      },
+      {
+        "x": 454.6,
+        "y": 174.6,
+        "w": 114.8,
+        "h": 114.8,
+        "color": "#54c8ff",
+        "radius": 16.8
+      },
+      {
+        "x": 594.6,
+        "y": 174.6,
+        "w": 114.8,
+        "h": 114.8,
+        "color": "#54c8ff",
+        "radius": 16.8
+      },
+      {
+        "x": 314.6,
+        "y": 314.6,
+        "w": 114.8,
+        "h": 114.8,
+        "color": "#54c8ff",
+        "radius": 16.8
+      },
+      {
+        "x": 314.6,
+        "y": 454.6,
+        "w": 114.8,
+        "h": 114.8,
+        "color": "#54c8ff",
+        "radius": 16.8
+      },
+      {
+        "x": 454.6,
+        "y": 454.6,
+        "w": 114.8,
+        "h": 114.8,
+        "color": "#54c8ff",
+        "radius": 16.8
+      },
+      {
+        "x": 594.6,
+        "y": 454.6,
+        "w": 114.8,
+        "h": 114.8,
+        "color": "#54c8ff",
+        "radius": 16.8
+      },
+      {
+        "x": 594.6,
+        "y": 594.6,
+        "w": 114.8,
+        "h": 114.8,
+        "color": "#54c8ff",
+        "radius": 16.8
+      },
+      {
+        "x": 314.6,
+        "y": 734.6,
+        "w": 114.8,
+        "h": 114.8,
+        "color": "#54c8ff",
+        "radius": 16.8
+      },
+      {
+        "x": 454.6,
+        "y": 734.6,
+        "w": 114.8,
+        "h": 114.8,
+        "color": "#54c8ff",
+        "radius": 16.8
+      },
+      {
+        "x": 594.6,
+        "y": 734.6,
+        "w": 114.8,
+        "h": 114.8,
+        "color": "#54c8ff",
+        "radius": 16.8
+      }
+    ]
+  },
+  {
+    "id": "pixaeffects",
+    "name": "PixaEffects",
+    "category": "Motion",
+    "summary": "Animate titles, build compositions and explore visual effects.",
+    "version": "0.1.3",
+    "url": "https://github.com/lukeybird/pixaeffects/releases/download/pixaeffects-v0.1.3/pixaeffects-0.1.3-macos-universal.dmg",
+    "size": 87192408,
+    "sha256": "69f722d6dec82f3582a3173ca859d235929fd289bc6d3eff3e8d9eeb81f52ec8",
+    "icon": [
+      {
+        "x": 8.0,
+        "y": 8.0,
+        "w": 1008.0,
+        "h": 1008.0,
+        "color": "#211536",
+        "radius": 220.0
+      },
+      {
+        "x": 314.6,
+        "y": 174.6,
+        "w": 114.8,
+        "h": 114.8,
+        "color": "#b89aff",
+        "radius": 16.8
+      },
+      {
+        "x": 454.6,
+        "y": 174.6,
+        "w": 114.8,
+        "h": 114.8,
+        "color": "#b89aff",
+        "radius": 16.8
+      },
+      {
+        "x": 594.6,
+        "y": 174.6,
+        "w": 114.8,
+        "h": 114.8,
+        "color": "#b89aff",
+        "radius": 16.8
+      },
+      {
+        "x": 314.6,
+        "y": 314.6,
+        "w": 114.8,
+        "h": 114.8,
+        "color": "#b89aff",
+        "radius": 16.8
+      },
+      {
+        "x": 314.6,
+        "y": 454.6,
+        "w": 114.8,
+        "h": 114.8,
+        "color": "#b89aff",
+        "radius": 16.8
+      },
+      {
+        "x": 454.6,
+        "y": 454.6,
+        "w": 114.8,
+        "h": 114.8,
+        "color": "#b89aff",
+        "radius": 16.8
+      },
+      {
+        "x": 314.6,
+        "y": 594.6,
+        "w": 114.8,
+        "h": 114.8,
+        "color": "#b89aff",
+        "radius": 16.8
+      },
+      {
+        "x": 314.6,
+        "y": 734.6,
+        "w": 114.8,
+        "h": 114.8,
+        "color": "#b89aff",
+        "radius": 16.8
+      },
+      {
+        "x": 454.6,
+        "y": 734.6,
+        "w": 114.8,
+        "h": 114.8,
+        "color": "#b89aff",
+        "radius": 16.8
+      },
+      {
+        "x": 594.6,
+        "y": 734.6,
+        "w": 114.8,
+        "h": 114.8,
+        "color": "#b89aff",
+        "radius": 16.8
+      }
+    ]
+  },
+  {
+    "id": "pixavector",
+    "name": "PixaVector",
+    "category": "Design",
+    "summary": "Give lines, shapes and ideas a sharper edge.",
+    "version": "0.1.1",
+    "url": "https://github.com/lukeybird/pixaeffects/releases/download/pixavector-v0.1.1/pixavector-0.1.1-macos-universal.dmg",
+    "size": 124393261,
+    "sha256": "7f0f69cd1dae35fb1466a26427d139bec7330727879aedce0e9c333eee541cbc",
+    "icon": [
+      {
+        "x": 8.0,
+        "y": 8.0,
+        "w": 1008.0,
+        "h": 1008.0,
+        "color": "#2b170b",
+        "radius": 220.0
+      },
+      {
+        "x": 314.6,
+        "y": 174.6,
+        "w": 114.8,
+        "h": 114.8,
+        "color": "#ff9a45",
+        "radius": 16.8
+      },
+      {
+        "x": 594.6,
+        "y": 174.6,
+        "w": 114.8,
+        "h": 114.8,
+        "color": "#ff9a45",
+        "radius": 16.8
+      },
+      {
+        "x": 314.6,
+        "y": 314.6,
+        "w": 114.8,
+        "h": 114.8,
+        "color": "#ff9a45",
+        "radius": 16.8
+      },
+      {
+        "x": 594.6,
+        "y": 314.6,
+        "w": 114.8,
+        "h": 114.8,
+        "color": "#ff9a45",
+        "radius": 16.8
+      },
+      {
+        "x": 314.6,
+        "y": 454.6,
+        "w": 114.8,
+        "h": 114.8,
+        "color": "#ff9a45",
+        "radius": 16.8
+      },
+      {
+        "x": 594.6,
+        "y": 454.6,
+        "w": 114.8,
+        "h": 114.8,
+        "color": "#ff9a45",
+        "radius": 16.8
+      },
+      {
+        "x": 314.6,
+        "y": 594.6,
+        "w": 114.8,
+        "h": 114.8,
+        "color": "#ff9a45",
+        "radius": 16.8
+      },
+      {
+        "x": 594.6,
+        "y": 594.6,
+        "w": 114.8,
+        "h": 114.8,
+        "color": "#ff9a45",
+        "radius": 16.8
+      },
+      {
+        "x": 454.6,
+        "y": 734.6,
+        "w": 114.8,
+        "h": 114.8,
+        "color": "#ff9a45",
+        "radius": 16.8
+      }
+    ]
+  },
+  {
+    "id": "pixafilm",
+    "name": "PixaFilm",
+    "category": "Video",
+    "summary": "Turn your footage into a story.",
+    "version": "0.1.1",
+    "url": "https://github.com/lukeybird/pixaeffects/releases/download/pixafilm-v0.1.1/pixafilm-0.1.1-macos-universal.dmg",
+    "size": 61044113,
+    "sha256": "4a70dc9a4a858d8df2dc742399d2a2e1a29495b9d47d0819aa136dbb8e23cbe5",
+    "icon": [
+      {
+        "x": 8.0,
+        "y": 8.0,
+        "w": 1008.0,
+        "h": 1008.0,
+        "color": "#1c1538",
+        "radius": 220.0
+      },
+      {
+        "x": 314.6,
+        "y": 174.6,
+        "w": 114.8,
+        "h": 114.8,
+        "color": "#a99aff",
+        "radius": 16.8
+      },
+      {
+        "x": 454.6,
+        "y": 174.6,
+        "w": 114.8,
+        "h": 114.8,
+        "color": "#a99aff",
+        "radius": 16.8
+      },
+      {
+        "x": 594.6,
+        "y": 174.6,
+        "w": 114.8,
+        "h": 114.8,
+        "color": "#a99aff",
+        "radius": 16.8
+      },
+      {
+        "x": 314.6,
+        "y": 314.6,
+        "w": 114.8,
+        "h": 114.8,
+        "color": "#a99aff",
+        "radius": 16.8
+      },
+      {
+        "x": 314.6,
+        "y": 454.6,
+        "w": 114.8,
+        "h": 114.8,
+        "color": "#a99aff",
+        "radius": 16.8
+      },
+      {
+        "x": 454.6,
+        "y": 454.6,
+        "w": 114.8,
+        "h": 114.8,
+        "color": "#a99aff",
+        "radius": 16.8
+      },
+      {
+        "x": 314.6,
+        "y": 594.6,
+        "w": 114.8,
+        "h": 114.8,
+        "color": "#a99aff",
+        "radius": 16.8
+      },
+      {
+        "x": 314.6,
+        "y": 734.6,
+        "w": 114.8,
+        "h": 114.8,
+        "color": "#a99aff",
+        "radius": 16.8
+      }
+    ]
+  },
+  {
+    "id": "pixalight",
+    "name": "PixaLight",
+    "category": "Photography",
+    "summary": "Bring out the image you saw.",
+    "version": "0.1.0",
+    "url": "https://github.com/lukeybird/pixaeffects/releases/download/pixalight-v0.1.0/pixalight-0.1.0-macos-universal.dmg",
+    "size": 70992329,
+    "sha256": "37a117de99fc2d1b7ce7799fedda637e2f43da1c3da0a311cd3d170410167e0a",
+    "icon": [
+      {
+        "x": 8.0,
+        "y": 8.0,
+        "w": 1008.0,
+        "h": 1008.0,
+        "color": "#101f36",
+        "radius": 220.0
+      },
+      {
+        "x": 314.6,
+        "y": 174.6,
+        "w": 114.8,
+        "h": 114.8,
+        "color": "#65c8ff",
+        "radius": 16.8
+      },
+      {
+        "x": 314.6,
+        "y": 314.6,
+        "w": 114.8,
+        "h": 114.8,
+        "color": "#65c8ff",
+        "radius": 16.8
+      },
+      {
+        "x": 314.6,
+        "y": 454.6,
+        "w": 114.8,
+        "h": 114.8,
+        "color": "#65c8ff",
+        "radius": 16.8
+      },
+      {
+        "x": 314.6,
+        "y": 594.6,
+        "w": 114.8,
+        "h": 114.8,
+        "color": "#65c8ff",
+        "radius": 16.8
+      },
+      {
+        "x": 314.6,
+        "y": 734.6,
+        "w": 114.8,
+        "h": 114.8,
+        "color": "#65c8ff",
+        "radius": 16.8
+      },
+      {
+        "x": 454.6,
+        "y": 734.6,
+        "w": 114.8,
+        "h": 114.8,
+        "color": "#65c8ff",
+        "radius": 16.8
+      },
+      {
+        "x": 594.6,
+        "y": 734.6,
+        "w": 114.8,
+        "h": 114.8,
+        "color": "#65c8ff",
+        "radius": 16.8
+      }
+    ]
+  },
+  {
+    "id": "pixapdf",
+    "name": "PixaPDF",
+    "category": "Documents",
+    "summary": "Bring order to your documents.",
+    "version": "0.1.0",
+    "url": "https://github.com/lukeybird/pixaeffects/releases/download/pixapdf-v0.1.0/pixapdf-0.1.0-macos-universal.dmg",
+    "size": 70133945,
+    "sha256": "f848c1035b2fa639916009d811ce488852d3b0242dd242e2f2230b43bcfc1de6",
+    "icon": [
+      {
+        "x": 8.0,
+        "y": 8.0,
+        "w": 1008.0,
+        "h": 1008.0,
+        "color": "#301317",
+        "radius": 220.0
+      },
+      {
+        "x": 177.564,
+        "y": 363.018,
+        "w": 50.691,
+        "h": 50.691,
+        "color": "#ff666c",
+        "radius": 7.418
+      },
+      {
+        "x": 239.382,
+        "y": 363.018,
+        "w": 50.691,
+        "h": 50.691,
+        "color": "#ff666c",
+        "radius": 7.418
+      },
+      {
+        "x": 301.2,
+        "y": 363.018,
+        "w": 50.691,
+        "h": 50.691,
+        "color": "#ff666c",
+        "radius": 7.418
+      },
+      {
+        "x": 177.564,
+        "y": 424.836,
+        "w": 50.691,
+        "h": 50.691,
+        "color": "#ff666c",
+        "radius": 7.418
+      },
+      {
+        "x": 301.2,
+        "y": 424.836,
+        "w": 50.691,
+        "h": 50.691,
+        "color": "#ff666c",
+        "radius": 7.418
+      },
+      {
+        "x": 177.564,
+        "y": 486.655,
+        "w": 50.691,
+        "h": 50.691,
+        "color": "#ff666c",
+        "radius": 7.418
+      },
+      {
+        "x": 239.382,
+        "y": 486.655,
+        "w": 50.691,
+        "h": 50.691,
+        "color": "#ff666c",
+        "radius": 7.418
+      },
+      {
+        "x": 301.2,
+        "y": 486.655,
+        "w": 50.691,
+        "h": 50.691,
+        "color": "#ff666c",
+        "radius": 7.418
+      },
+      {
+        "x": 177.564,
+        "y": 548.473,
+        "w": 50.691,
+        "h": 50.691,
+        "color": "#ff666c",
+        "radius": 7.418
+      },
+      {
+        "x": 177.564,
+        "y": 610.291,
+        "w": 50.691,
+        "h": 50.691,
+        "color": "#ff666c",
+        "radius": 7.418
+      },
+      {
+        "x": 424.836,
+        "y": 363.018,
+        "w": 50.691,
+        "h": 50.691,
+        "color": "#ff666c",
+        "radius": 7.418
+      },
+      {
+        "x": 486.655,
+        "y": 363.018,
+        "w": 50.691,
+        "h": 50.691,
+        "color": "#ff666c",
+        "radius": 7.418
+      },
+      {
+        "x": 424.836,
+        "y": 424.836,
+        "w": 50.691,
+        "h": 50.691,
+        "color": "#ff666c",
+        "radius": 7.418
+      },
+      {
+        "x": 548.473,
+        "y": 424.836,
+        "w": 50.691,
+        "h": 50.691,
+        "color": "#ff666c",
+        "radius": 7.418
+      },
+      {
+        "x": 424.836,
+        "y": 486.655,
+        "w": 50.691,
+        "h": 50.691,
+        "color": "#ff666c",
+        "radius": 7.418
+      },
+      {
+        "x": 548.473,
+        "y": 486.655,
+        "w": 50.691,
+        "h": 50.691,
+        "color": "#ff666c",
+        "radius": 7.418
+      },
+      {
+        "x": 424.836,
+        "y": 548.473,
+        "w": 50.691,
+        "h": 50.691,
+        "color": "#ff666c",
+        "radius": 7.418
+      },
+      {
+        "x": 548.473,
+        "y": 548.473,
+        "w": 50.691,
+        "h": 50.691,
+        "color": "#ff666c",
+        "radius": 7.418
+      },
+      {
+        "x": 424.836,
+        "y": 610.291,
+        "w": 50.691,
+        "h": 50.691,
+        "color": "#ff666c",
+        "radius": 7.418
+      },
+      {
+        "x": 486.655,
+        "y": 610.291,
+        "w": 50.691,
+        "h": 50.691,
+        "color": "#ff666c",
+        "radius": 7.418
+      },
+      {
+        "x": 672.109,
+        "y": 363.018,
+        "w": 50.691,
+        "h": 50.691,
+        "color": "#ff666c",
+        "radius": 7.418
+      },
+      {
+        "x": 733.927,
+        "y": 363.018,
+        "w": 50.691,
+        "h": 50.691,
+        "color": "#ff666c",
+        "radius": 7.418
+      },
+      {
+        "x": 795.745,
+        "y": 363.018,
+        "w": 50.691,
+        "h": 50.691,
+        "color": "#ff666c",
+        "radius": 7.418
+      },
+      {
+        "x": 672.109,
+        "y": 424.836,
+        "w": 50.691,
+        "h": 50.691,
+        "color": "#ff666c",
+        "radius": 7.418
+      },
+      {
+        "x": 672.109,
+        "y": 486.655,
+        "w": 50.691,
+        "h": 50.691,
+        "color": "#ff666c",
+        "radius": 7.418
+      },
+      {
+        "x": 733.927,
+        "y": 486.655,
+        "w": 50.691,
+        "h": 50.691,
+        "color": "#ff666c",
+        "radius": 7.418
+      },
+      {
+        "x": 672.109,
+        "y": 548.473,
+        "w": 50.691,
+        "h": 50.691,
+        "color": "#ff666c",
+        "radius": 7.418
+      },
+      {
+        "x": 672.109,
+        "y": 610.291,
+        "w": 50.691,
+        "h": 50.691,
+        "color": "#ff666c",
+        "radius": 7.418
+      }
+    ]
+  },
+  {
+    "id": "pixadesign",
+    "name": "PixaDesign",
+    "category": "Publishing",
+    "summary": "Make every page feel considered.",
+    "version": "0.1.0",
+    "url": "https://github.com/lukeybird/pixaeffects/releases/download/pixadesign-v0.1.0/pixadesign-0.1.0-macos-universal.dmg",
+    "size": 84424586,
+    "sha256": "19ed331774c3cee3f1c82de00000836ee14516717cb90af7da75613ab3a771b6",
+    "icon": [
+      {
+        "x": 8.0,
+        "y": 8.0,
+        "w": 1008.0,
+        "h": 1008.0,
+        "color": "#301125",
+        "radius": 220.0
+      },
+      {
+        "x": 314.6,
+        "y": 174.6,
+        "w": 114.8,
+        "h": 114.8,
+        "color": "#ff80ba",
+        "radius": 16.8
+      },
+      {
+        "x": 454.6,
+        "y": 174.6,
+        "w": 114.8,
+        "h": 114.8,
+        "color": "#ff80ba",
+        "radius": 16.8
+      },
+      {
+        "x": 314.6,
+        "y": 314.6,
+        "w": 114.8,
+        "h": 114.8,
+        "color": "#ff80ba",
+        "radius": 16.8
+      },
+      {
+        "x": 594.6,
+        "y": 314.6,
+        "w": 114.8,
+        "h": 114.8,
+        "color": "#ff80ba",
+        "radius": 16.8
+      },
+      {
+        "x": 314.6,
+        "y": 454.6,
+        "w": 114.8,
+        "h": 114.8,
+        "color": "#ff80ba",
+        "radius": 16.8
+      },
+      {
+        "x": 594.6,
+        "y": 454.6,
+        "w": 114.8,
+        "h": 114.8,
+        "color": "#ff80ba",
+        "radius": 16.8
+      },
+      {
+        "x": 314.6,
+        "y": 594.6,
+        "w": 114.8,
+        "h": 114.8,
+        "color": "#ff80ba",
+        "radius": 16.8
+      },
+      {
+        "x": 594.6,
+        "y": 594.6,
+        "w": 114.8,
+        "h": 114.8,
+        "color": "#ff80ba",
+        "radius": 16.8
+      },
+      {
+        "x": 314.6,
+        "y": 734.6,
+        "w": 114.8,
+        "h": 114.8,
+        "color": "#ff80ba",
+        "radius": 16.8
+      },
+      {
+        "x": 454.6,
+        "y": 734.6,
+        "w": 114.8,
+        "h": 114.8,
+        "color": "#ff80ba",
+        "radius": 16.8
+      }
+    ]
+  },
+  {
+    "id": "pixainterface",
+    "name": "PixaInterface",
+    "category": "Design",
+    "summary": "From a rough idea to a clear interface.",
+    "version": "0.1.0",
+    "url": "https://github.com/lukeybird/pixaeffects/releases/download/pixainterface-v0.1.0/pixainterface-0.1.0-macos-universal.dmg",
+    "size": 66637644,
+    "sha256": "840f8ea60b1a9b085bb82ede893840fbdb8280b4ad75848071f0c214583a04de",
+    "icon": [
+      {
+        "x": 8.0,
+        "y": 8.0,
+        "w": 1008.0,
+        "h": 1008.0,
+        "color": "#2a1230",
+        "radius": 220.0
+      },
+      {
+        "x": 314.6,
+        "y": 174.6,
+        "w": 114.8,
+        "h": 114.8,
+        "color": "#ef7ade",
+        "radius": 16.8
+      },
+      {
+        "x": 454.6,
+        "y": 174.6,
+        "w": 114.8,
+        "h": 114.8,
+        "color": "#ef7ade",
+        "radius": 16.8
+      },
+      {
+        "x": 594.6,
+        "y": 174.6,
+        "w": 114.8,
+        "h": 114.8,
+        "color": "#ef7ade",
+        "radius": 16.8
+      },
+      {
+        "x": 454.6,
+        "y": 314.6,
+        "w": 114.8,
+        "h": 114.8,
+        "color": "#ef7ade",
+        "radius": 16.8
+      },
+      {
+        "x": 454.6,
+        "y": 454.6,
+        "w": 114.8,
+        "h": 114.8,
+        "color": "#ef7ade",
+        "radius": 16.8
+      },
+      {
+        "x": 454.6,
+        "y": 594.6,
+        "w": 114.8,
+        "h": 114.8,
+        "color": "#ef7ade",
+        "radius": 16.8
+      },
+      {
+        "x": 314.6,
+        "y": 734.6,
+        "w": 114.8,
+        "h": 114.8,
+        "color": "#ef7ade",
+        "radius": 16.8
+      },
+      {
+        "x": 454.6,
+        "y": 734.6,
+        "w": 114.8,
+        "h": 114.8,
+        "color": "#ef7ade",
+        "radius": 16.8
+      },
+      {
+        "x": 594.6,
+        "y": 734.6,
+        "w": 114.8,
+        "h": 114.8,
+        "color": "#ef7ade",
+        "radius": 16.8
+      }
+    ]
+  },
+  {
+    "id": "pixatexture",
+    "name": "PixaTexture",
+    "category": "3D",
+    "summary": "Give your surfaces character.",
+    "version": "0.1.0",
+    "url": "https://github.com/lukeybird/pixaeffects/releases/download/pixatexture-v0.1.0/pixatexture-0.1.0-macos-universal.dmg",
+    "size": 32994254,
+    "sha256": "0c565f7d63ef809ee7e684387e191d7cfccbfecde4aad3cc6fd4783930add252",
+    "icon": [
+      {
+        "x": 8.0,
+        "y": 8.0,
+        "w": 1008.0,
+        "h": 1008.0,
+        "color": "#1a2916",
+        "radius": 220.0
+      },
+      {
+        "x": 314.6,
+        "y": 174.6,
+        "w": 114.8,
+        "h": 114.8,
+        "color": "#a9dc69",
+        "radius": 16.8
+      },
+      {
+        "x": 454.6,
+        "y": 174.6,
+        "w": 114.8,
+        "h": 114.8,
+        "color": "#a9dc69",
+        "radius": 16.8
+      },
+      {
+        "x": 594.6,
+        "y": 174.6,
+        "w": 114.8,
+        "h": 114.8,
+        "color": "#a9dc69",
+        "radius": 16.8
+      },
+      {
+        "x": 454.6,
+        "y": 314.6,
+        "w": 114.8,
+        "h": 114.8,
+        "color": "#a9dc69",
+        "radius": 16.8
+      },
+      {
+        "x": 454.6,
+        "y": 454.6,
+        "w": 114.8,
+        "h": 114.8,
+        "color": "#a9dc69",
+        "radius": 16.8
+      },
+      {
+        "x": 454.6,
+        "y": 594.6,
+        "w": 114.8,
+        "h": 114.8,
+        "color": "#a9dc69",
+        "radius": 16.8
+      },
+      {
+        "x": 454.6,
+        "y": 734.6,
+        "w": 114.8,
+        "h": 114.8,
+        "color": "#a9dc69",
+        "radius": 16.8
+      }
+    ]
+  },
+  {
+    "id": "pixamaterial",
+    "name": "PixaMaterial",
+    "category": "3D",
+    "summary": "Build a surface from the inside out.",
+    "version": "0.1.0",
+    "url": "https://github.com/lukeybird/pixaeffects/releases/download/pixamaterial-v0.1.0/pixamaterial-0.1.0-macos-universal.dmg",
+    "size": 30667085,
+    "sha256": "e26636a67c11031edbbadd3a1351fd6b60444b3497bd348dd842735090051ca6",
+    "icon": [
+      {
+        "x": 8.0,
+        "y": 8.0,
+        "w": 1008.0,
+        "h": 1008.0,
+        "color": "#202b13",
+        "radius": 220.0
+      },
+      {
+        "x": 184.24,
+        "y": 184.24,
+        "w": 111.52,
+        "h": 111.52,
+        "color": "#b9e77a",
+        "radius": 16.32
+      },
+      {
+        "x": 728.24,
+        "y": 184.24,
+        "w": 111.52,
+        "h": 111.52,
+        "color": "#b9e77a",
+        "radius": 16.32
+      },
+      {
+        "x": 184.24,
+        "y": 320.24,
+        "w": 111.52,
+        "h": 111.52,
+        "color": "#b9e77a",
+        "radius": 16.32
+      },
+      {
+        "x": 320.24,
+        "y": 320.24,
+        "w": 111.52,
+        "h": 111.52,
+        "color": "#b9e77a",
+        "radius": 16.32
+      },
+      {
+        "x": 592.24,
+        "y": 320.24,
+        "w": 111.52,
+        "h": 111.52,
+        "color": "#b9e77a",
+        "radius": 16.32
+      },
+      {
+        "x": 728.24,
+        "y": 320.24,
+        "w": 111.52,
+        "h": 111.52,
+        "color": "#b9e77a",
+        "radius": 16.32
+      },
+      {
+        "x": 184.24,
+        "y": 456.24,
+        "w": 111.52,
+        "h": 111.52,
+        "color": "#b9e77a",
+        "radius": 16.32
+      },
+      {
+        "x": 456.24,
+        "y": 456.24,
+        "w": 111.52,
+        "h": 111.52,
+        "color": "#b9e77a",
+        "radius": 16.32
+      },
+      {
+        "x": 728.24,
+        "y": 456.24,
+        "w": 111.52,
+        "h": 111.52,
+        "color": "#b9e77a",
+        "radius": 16.32
+      },
+      {
+        "x": 184.24,
+        "y": 592.24,
+        "w": 111.52,
+        "h": 111.52,
+        "color": "#b9e77a",
+        "radius": 16.32
+      },
+      {
+        "x": 728.24,
+        "y": 592.24,
+        "w": 111.52,
+        "h": 111.52,
+        "color": "#b9e77a",
+        "radius": 16.32
+      },
+      {
+        "x": 184.24,
+        "y": 728.24,
+        "w": 111.52,
+        "h": 111.52,
+        "color": "#b9e77a",
+        "radius": 16.32
+      },
+      {
+        "x": 728.24,
+        "y": 728.24,
+        "w": 111.52,
+        "h": 111.52,
+        "color": "#b9e77a",
+        "radius": 16.32
+      }
+    ]
+  },
+  {
+    "id": "pixaword",
+    "name": "PixaWord",
+    "category": "Documents",
+    "summary": "A focused place for the words that matter.",
+    "version": "0.1.0",
+    "url": "https://github.com/lukeybird/pixaeffects/releases/download/pixaword-v0.1.0/pixaword-0.1.0-macos-universal.dmg",
+    "size": 71535081,
+    "sha256": "52d1562f454d30ee96e1d64ac881f7e7c6201a0fdfa0f4f33a2877b5f44cc66a",
+    "icon": [
+      {
+        "x": 8.0,
+        "y": 8.0,
+        "w": 1008.0,
+        "h": 1008.0,
+        "color": "#14223d",
+        "radius": 220.0
+      },
+      {
+        "x": 184.24,
+        "y": 184.24,
+        "w": 111.52,
+        "h": 111.52,
+        "color": "#7daaff",
+        "radius": 16.32
+      },
+      {
+        "x": 728.24,
+        "y": 184.24,
+        "w": 111.52,
+        "h": 111.52,
+        "color": "#7daaff",
+        "radius": 16.32
+      },
+      {
+        "x": 184.24,
+        "y": 320.24,
+        "w": 111.52,
+        "h": 111.52,
+        "color": "#7daaff",
+        "radius": 16.32
+      },
+      {
+        "x": 728.24,
+        "y": 320.24,
+        "w": 111.52,
+        "h": 111.52,
+        "color": "#7daaff",
+        "radius": 16.32
+      },
+      {
+        "x": 184.24,
+        "y": 456.24,
+        "w": 111.52,
+        "h": 111.52,
+        "color": "#7daaff",
+        "radius": 16.32
+      },
+      {
+        "x": 456.24,
+        "y": 456.24,
+        "w": 111.52,
+        "h": 111.52,
+        "color": "#7daaff",
+        "radius": 16.32
+      },
+      {
+        "x": 728.24,
+        "y": 456.24,
+        "w": 111.52,
+        "h": 111.52,
+        "color": "#7daaff",
+        "radius": 16.32
+      },
+      {
+        "x": 184.24,
+        "y": 592.24,
+        "w": 111.52,
+        "h": 111.52,
+        "color": "#7daaff",
+        "radius": 16.32
+      },
+      {
+        "x": 320.24,
+        "y": 592.24,
+        "w": 111.52,
+        "h": 111.52,
+        "color": "#7daaff",
+        "radius": 16.32
+      },
+      {
+        "x": 592.24,
+        "y": 592.24,
+        "w": 111.52,
+        "h": 111.52,
+        "color": "#7daaff",
+        "radius": 16.32
+      },
+      {
+        "x": 728.24,
+        "y": 592.24,
+        "w": 111.52,
+        "h": 111.52,
+        "color": "#7daaff",
+        "radius": 16.32
+      },
+      {
+        "x": 184.24,
+        "y": 728.24,
+        "w": 111.52,
+        "h": 111.52,
+        "color": "#7daaff",
+        "radius": 16.32
+      },
+      {
+        "x": 728.24,
+        "y": 728.24,
+        "w": 111.52,
+        "h": 111.52,
+        "color": "#7daaff",
+        "radius": 16.32
+      }
+    ]
+  },
+  {
+    "id": "pixasound",
+    "name": "PixaSound",
+    "category": "Audio",
+    "summary": "Give your ideas a voice.",
+    "version": "0.1.0",
+    "url": "https://github.com/lukeybird/pixaeffects/releases/download/pixasound-v0.1.0/pixasound-0.1.0-macos-universal.dmg",
+    "size": 33989887,
+    "sha256": "4ac66c5cf0cff81543c273df0c1e1dbcb391459701e9ed5c04aef992e0ea206c",
+    "icon": [
+      {
+        "x": 8.0,
+        "y": 8.0,
+        "w": 1008.0,
+        "h": 1008.0,
+        "color": "#102c22",
+        "radius": 220.0
+      },
+      {
+        "x": 314.6,
+        "y": 174.6,
+        "w": 114.8,
+        "h": 114.8,
+        "color": "#78e3ad",
+        "radius": 16.8
+      },
+      {
+        "x": 454.6,
+        "y": 174.6,
+        "w": 114.8,
+        "h": 114.8,
+        "color": "#78e3ad",
+        "radius": 16.8
+      },
+      {
+        "x": 594.6,
+        "y": 174.6,
+        "w": 114.8,
+        "h": 114.8,
+        "color": "#78e3ad",
+        "radius": 16.8
+      },
+      {
+        "x": 314.6,
+        "y": 314.6,
+        "w": 114.8,
+        "h": 114.8,
+        "color": "#78e3ad",
+        "radius": 16.8
+      },
+      {
+        "x": 314.6,
+        "y": 454.6,
+        "w": 114.8,
+        "h": 114.8,
+        "color": "#78e3ad",
+        "radius": 16.8
+      },
+      {
+        "x": 454.6,
+        "y": 454.6,
+        "w": 114.8,
+        "h": 114.8,
+        "color": "#78e3ad",
+        "radius": 16.8
+      },
+      {
+        "x": 594.6,
+        "y": 454.6,
+        "w": 114.8,
+        "h": 114.8,
+        "color": "#78e3ad",
+        "radius": 16.8
+      },
+      {
+        "x": 594.6,
+        "y": 594.6,
+        "w": 114.8,
+        "h": 114.8,
+        "color": "#78e3ad",
+        "radius": 16.8
+      },
+      {
+        "x": 314.6,
+        "y": 734.6,
+        "w": 114.8,
+        "h": 114.8,
+        "color": "#78e3ad",
+        "radius": 16.8
+      },
+      {
+        "x": 454.6,
+        "y": 734.6,
+        "w": 114.8,
+        "h": 114.8,
+        "color": "#78e3ad",
+        "radius": 16.8
+      },
+      {
+        "x": 594.6,
+        "y": 734.6,
+        "w": 114.8,
+        "h": 114.8,
+        "color": "#78e3ad",
+        "radius": 16.8
+      }
+    ]
+  },
+  {
+    "id": "pixadeck",
+    "name": "PixaDeck",
+    "category": "Presentations",
+    "summary": "Build a story worth following.",
+    "version": "0.1.0",
+    "url": "https://github.com/lukeybird/pixaeffects/releases/download/pixadeck-v0.1.0/pixadeck-0.1.0-macos-universal.dmg",
+    "size": 50358025,
+    "sha256": "731f25e683f39768df2203ac471b6f4d5e97d33b2942ff97e5259580681967c9",
+    "icon": [
+      {
+        "x": 8.0,
+        "y": 8.0,
+        "w": 1008.0,
+        "h": 1008.0,
+        "color": "#321d15",
+        "radius": 220.0
+      },
+      {
+        "x": 314.6,
+        "y": 174.6,
+        "w": 114.8,
+        "h": 114.8,
+        "color": "#ffa16d",
+        "radius": 16.8
+      },
+      {
+        "x": 454.6,
+        "y": 174.6,
+        "w": 114.8,
+        "h": 114.8,
+        "color": "#ffa16d",
+        "radius": 16.8
+      },
+      {
+        "x": 314.6,
+        "y": 314.6,
+        "w": 114.8,
+        "h": 114.8,
+        "color": "#ffa16d",
+        "radius": 16.8
+      },
+      {
+        "x": 594.6,
+        "y": 314.6,
+        "w": 114.8,
+        "h": 114.8,
+        "color": "#ffa16d",
+        "radius": 16.8
+      },
+      {
+        "x": 314.6,
+        "y": 454.6,
+        "w": 114.8,
+        "h": 114.8,
+        "color": "#ffa16d",
+        "radius": 16.8
+      },
+      {
+        "x": 594.6,
+        "y": 454.6,
+        "w": 114.8,
+        "h": 114.8,
+        "color": "#ffa16d",
+        "radius": 16.8
+      },
+      {
+        "x": 314.6,
+        "y": 594.6,
+        "w": 114.8,
+        "h": 114.8,
+        "color": "#ffa16d",
+        "radius": 16.8
+      },
+      {
+        "x": 594.6,
+        "y": 594.6,
+        "w": 114.8,
+        "h": 114.8,
+        "color": "#ffa16d",
+        "radius": 16.8
+      },
+      {
+        "x": 314.6,
+        "y": 734.6,
+        "w": 114.8,
+        "h": 114.8,
+        "color": "#ffa16d",
+        "radius": 16.8
+      },
+      {
+        "x": 454.6,
+        "y": 734.6,
+        "w": 114.8,
+        "h": 114.8,
+        "color": "#ffa16d",
+        "radius": 16.8
+      }
+    ]
+  },
+  {
+    "id": "pixacad",
+    "name": "PixaCAD",
+    "category": "Technical",
+    "summary": "Make room for precision.",
+    "version": "0.1.0",
+    "url": "https://github.com/lukeybird/pixaeffects/releases/download/pixacad-v0.1.0/pixacad-0.1.0-macos-universal.dmg",
+    "size": 57764845,
+    "sha256": "4473b81fcdbc146dfd82618bc07e011291d73f0648c826f70a80539cfa5dff0e",
+    "icon": [
+      {
+        "x": 8.0,
+        "y": 8.0,
+        "w": 1008.0,
+        "h": 1008.0,
+        "color": "#102832",
+        "radius": 220.0
+      },
+      {
+        "x": 177.564,
+        "y": 363.018,
+        "w": 50.691,
+        "h": 50.691,
+        "color": "#6bd5ed",
+        "radius": 7.418
+      },
+      {
+        "x": 239.382,
+        "y": 363.018,
+        "w": 50.691,
+        "h": 50.691,
+        "color": "#6bd5ed",
+        "radius": 7.418
+      },
+      {
+        "x": 301.2,
+        "y": 363.018,
+        "w": 50.691,
+        "h": 50.691,
+        "color": "#6bd5ed",
+        "radius": 7.418
+      },
+      {
+        "x": 177.564,
+        "y": 424.836,
+        "w": 50.691,
+        "h": 50.691,
+        "color": "#6bd5ed",
+        "radius": 7.418
+      },
+      {
+        "x": 177.564,
+        "y": 486.655,
+        "w": 50.691,
+        "h": 50.691,
+        "color": "#6bd5ed",
+        "radius": 7.418
+      },
+      {
+        "x": 177.564,
+        "y": 548.473,
+        "w": 50.691,
+        "h": 50.691,
+        "color": "#6bd5ed",
+        "radius": 7.418
+      },
+      {
+        "x": 177.564,
+        "y": 610.291,
+        "w": 50.691,
+        "h": 50.691,
+        "color": "#6bd5ed",
+        "radius": 7.418
+      },
+      {
+        "x": 239.382,
+        "y": 610.291,
+        "w": 50.691,
+        "h": 50.691,
+        "color": "#6bd5ed",
+        "radius": 7.418
+      },
+      {
+        "x": 301.2,
+        "y": 610.291,
+        "w": 50.691,
+        "h": 50.691,
+        "color": "#6bd5ed",
+        "radius": 7.418
+      },
+      {
+        "x": 486.655,
+        "y": 363.018,
+        "w": 50.691,
+        "h": 50.691,
+        "color": "#6bd5ed",
+        "radius": 7.418
+      },
+      {
+        "x": 424.836,
+        "y": 424.836,
+        "w": 50.691,
+        "h": 50.691,
+        "color": "#6bd5ed",
+        "radius": 7.418
+      },
+      {
+        "x": 548.473,
+        "y": 424.836,
+        "w": 50.691,
+        "h": 50.691,
+        "color": "#6bd5ed",
+        "radius": 7.418
+      },
+      {
+        "x": 424.836,
+        "y": 486.655,
+        "w": 50.691,
+        "h": 50.691,
+        "color": "#6bd5ed",
+        "radius": 7.418
+      },
+      {
+        "x": 486.655,
+        "y": 486.655,
+        "w": 50.691,
+        "h": 50.691,
+        "color": "#6bd5ed",
+        "radius": 7.418
+      },
+      {
+        "x": 548.473,
+        "y": 486.655,
+        "w": 50.691,
+        "h": 50.691,
+        "color": "#6bd5ed",
+        "radius": 7.418
+      },
+      {
+        "x": 424.836,
+        "y": 548.473,
+        "w": 50.691,
+        "h": 50.691,
+        "color": "#6bd5ed",
+        "radius": 7.418
+      },
+      {
+        "x": 548.473,
+        "y": 548.473,
+        "w": 50.691,
+        "h": 50.691,
+        "color": "#6bd5ed",
+        "radius": 7.418
+      },
+      {
+        "x": 424.836,
+        "y": 610.291,
+        "w": 50.691,
+        "h": 50.691,
+        "color": "#6bd5ed",
+        "radius": 7.418
+      },
+      {
+        "x": 548.473,
+        "y": 610.291,
+        "w": 50.691,
+        "h": 50.691,
+        "color": "#6bd5ed",
+        "radius": 7.418
+      },
+      {
+        "x": 672.109,
+        "y": 363.018,
+        "w": 50.691,
+        "h": 50.691,
+        "color": "#6bd5ed",
+        "radius": 7.418
+      },
+      {
+        "x": 733.927,
+        "y": 363.018,
+        "w": 50.691,
+        "h": 50.691,
+        "color": "#6bd5ed",
+        "radius": 7.418
+      },
+      {
+        "x": 672.109,
+        "y": 424.836,
+        "w": 50.691,
+        "h": 50.691,
+        "color": "#6bd5ed",
+        "radius": 7.418
+      },
+      {
+        "x": 795.745,
+        "y": 424.836,
+        "w": 50.691,
+        "h": 50.691,
+        "color": "#6bd5ed",
+        "radius": 7.418
+      },
+      {
+        "x": 672.109,
+        "y": 486.655,
+        "w": 50.691,
+        "h": 50.691,
+        "color": "#6bd5ed",
+        "radius": 7.418
+      },
+      {
+        "x": 795.745,
+        "y": 486.655,
+        "w": 50.691,
+        "h": 50.691,
+        "color": "#6bd5ed",
+        "radius": 7.418
+      },
+      {
+        "x": 672.109,
+        "y": 548.473,
+        "w": 50.691,
+        "h": 50.691,
+        "color": "#6bd5ed",
+        "radius": 7.418
+      },
+      {
+        "x": 795.745,
+        "y": 548.473,
+        "w": 50.691,
+        "h": 50.691,
+        "color": "#6bd5ed",
+        "radius": 7.418
+      },
+      {
+        "x": 672.109,
+        "y": 610.291,
+        "w": 50.691,
+        "h": 50.691,
+        "color": "#6bd5ed",
+        "radius": 7.418
+      },
+      {
+        "x": 733.927,
+        "y": 610.291,
+        "w": 50.691,
+        "h": 50.691,
+        "color": "#6bd5ed",
+        "radius": 7.418
+      }
+    ]
+  },
+  {
+    "id": "pixagrid",
+    "name": "PixaGrid",
+    "category": "Documents",
+    "summary": "Turn numbers into something useful.",
+    "version": "0.1.0",
+    "url": "https://github.com/lukeybird/pixaeffects/releases/download/pixagrid-v0.1.0/pixagrid-0.1.0-macos-universal.dmg",
+    "size": 41511463,
+    "sha256": "be756619c49000da209a34692b1fb4744c52d3b70884056967b621fa6f1ac3ee",
+    "icon": [
+      {
+        "x": 8.0,
+        "y": 8.0,
+        "w": 1008.0,
+        "h": 1008.0,
+        "color": "#152c20",
+        "radius": 220.0
+      },
+      {
+        "x": 314.6,
+        "y": 174.6,
+        "w": 114.8,
+        "h": 114.8,
+        "color": "#7bd797",
+        "radius": 16.8
+      },
+      {
+        "x": 454.6,
+        "y": 174.6,
+        "w": 114.8,
+        "h": 114.8,
+        "color": "#7bd797",
+        "radius": 16.8
+      },
+      {
+        "x": 594.6,
+        "y": 174.6,
+        "w": 114.8,
+        "h": 114.8,
+        "color": "#7bd797",
+        "radius": 16.8
+      },
+      {
+        "x": 314.6,
+        "y": 314.6,
+        "w": 114.8,
+        "h": 114.8,
+        "color": "#7bd797",
+        "radius": 16.8
+      },
+      {
+        "x": 314.6,
+        "y": 454.6,
+        "w": 114.8,
+        "h": 114.8,
+        "color": "#7bd797",
+        "radius": 16.8
+      },
+      {
+        "x": 594.6,
+        "y": 454.6,
+        "w": 114.8,
+        "h": 114.8,
+        "color": "#7bd797",
+        "radius": 16.8
+      },
+      {
+        "x": 314.6,
+        "y": 594.6,
+        "w": 114.8,
+        "h": 114.8,
+        "color": "#7bd797",
+        "radius": 16.8
+      },
+      {
+        "x": 594.6,
+        "y": 594.6,
+        "w": 114.8,
+        "h": 114.8,
+        "color": "#7bd797",
+        "radius": 16.8
+      },
+      {
+        "x": 314.6,
+        "y": 734.6,
+        "w": 114.8,
+        "h": 114.8,
+        "color": "#7bd797",
+        "radius": 16.8
+      },
+      {
+        "x": 454.6,
+        "y": 734.6,
+        "w": 114.8,
+        "h": 114.8,
+        "color": "#7bd797",
+        "radius": 16.8
+      },
+      {
+        "x": 594.6,
+        "y": 734.6,
+        "w": 114.8,
+        "h": 114.8,
+        "color": "#7bd797",
+        "radius": 16.8
+      }
+    ]
+  },
+  {
+    "id": "pixaanything",
+    "name": "PixaAnything",
+    "category": "Creation",
+    "summary": "A place to try what comes next.",
+    "version": "0.1.0",
+    "url": "https://github.com/lukeybird/pixaeffects/releases/download/pixaanything-v0.1.0/pixaanything-0.1.0-macos-universal.dmg",
+    "size": 48276443,
+    "sha256": "fe1d564e2fbad03e712d268de50a8a294e08e6516946450060217b8b49c61383",
+    "icon": [
+      {
+        "x": 8.0,
+        "y": 8.0,
+        "w": 1008.0,
+        "h": 1008.0,
+        "color": "#251738",
+        "radius": 220.0
+      },
+      {
+        "x": 454.6,
+        "y": 174.6,
+        "w": 114.8,
+        "h": 114.8,
+        "color": "#c4a1ff",
+        "radius": 16.8
+      },
+      {
+        "x": 314.6,
+        "y": 314.6,
+        "w": 114.8,
+        "h": 114.8,
+        "color": "#c4a1ff",
+        "radius": 16.8
+      },
+      {
+        "x": 594.6,
+        "y": 314.6,
+        "w": 114.8,
+        "h": 114.8,
+        "color": "#c4a1ff",
+        "radius": 16.8
+      },
+      {
+        "x": 314.6,
+        "y": 454.6,
+        "w": 114.8,
+        "h": 114.8,
+        "color": "#c4a1ff",
+        "radius": 16.8
+      },
+      {
+        "x": 454.6,
+        "y": 454.6,
+        "w": 114.8,
+        "h": 114.8,
+        "color": "#c4a1ff",
+        "radius": 16.8
+      },
+      {
+        "x": 594.6,
+        "y": 454.6,
+        "w": 114.8,
+        "h": 114.8,
+        "color": "#c4a1ff",
+        "radius": 16.8
+      },
+      {
+        "x": 314.6,
+        "y": 594.6,
+        "w": 114.8,
+        "h": 114.8,
+        "color": "#c4a1ff",
+        "radius": 16.8
+      },
+      {
+        "x": 594.6,
+        "y": 594.6,
+        "w": 114.8,
+        "h": 114.8,
+        "color": "#c4a1ff",
+        "radius": 16.8
+      },
+      {
+        "x": 314.6,
+        "y": 734.6,
+        "w": 114.8,
+        "h": 114.8,
+        "color": "#c4a1ff",
+        "radius": 16.8
+      },
+      {
+        "x": 594.6,
+        "y": 734.6,
+        "w": 114.8,
+        "h": 114.8,
+        "color": "#c4a1ff",
+        "radius": 16.8
+      }
+    ]
+  }
+]

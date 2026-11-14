@@ -1,0 +1,27 @@
+PIXA LAUNCHER 0.2.0 — MAC BUILD / ACCEPTANCE / SIGNING HANDOFF
+
+Repository: lukeybird/pixaeffects
+Branch: pixa-suite-product
+Source: pixa-launcher/ (native Rust/egui; no webview)
+Read pixa-launcher/README.md and the current CURSOR_PROJECT_STATUS.txt first. Preserve local/uncommitted work. Refresh the branch before checking out the launcher; do not reset, clean or force-push.
+
+WHAT EXISTS
+Sixteen-product library, original icons, search, installed-only filter, install confirmation, progress/cancel, installed detection/Open, stable-release checking, Mac hash/identity/architecture/Apple-publisher/Gatekeeper validation, serial user-local installation and previous-app preservation. Account settings opens the existing Pixa browser account; editors still perform activation. Offline Help is included. No private key is required by the launcher itself.
+
+NEXT ON THE PUBLISHER MAC
+1. Confirm enough free space without deleting user data. Check Rust and the Xcode command-line tools. If absent, install them normally; do not use the earlier low-space Mac blindly.
+2. Run cargo test --locked --manifest-path pixa-launcher/Cargo.toml and cargo clippy --locked --manifest-path pixa-launcher/Cargo.toml --all-targets -- -D warnings.
+3. Build both slices and assemble the candidate with:
+   python3 pixa-launcher/package_macos.py --out "$HOME/Downloads/PixaLauncher-0.2.0-candidate"
+   Use a new output path if it already exists. The script does not delete or overwrite outputs and does not notarize.
+4. Inspect CANDIDATE.json, Info.plist, executable architectures and notices. Record the exact source commit and whether the checkout was dirty. Do not label a host-only binary universal.
+5. Complete every real-Mac acceptance item in README. The Linux host tests are not a Mac installation pass. Resolve failures before signing. Confirm an app can install and open, a running app blocks replacement, corrupt bytes are refused, cancel/retry is safe, documents survive and browser/editor account activation still works.
+6. Only then use the existing local Developer ID Application identity for Team 945M5X4DY3. Use the actual Keychain profile present on this Mac (earlier records include pixaWorld and PixaShop-Notary). Never export a .p12 or put an Apple password in a shell argument. Sign the assembled Pixa Launcher.app with hardened runtime and secure timestamp, verify the full signature, submit a ditto-created ZIP using notarytool with the Keychain profile, wait for Accepted, staple and validate the app. No entitlement allowing unsigned executable code is needed.
+7. Create a DMG containing the stapled app plus an Applications alias. Sign the DMG, submit it through the same Keychain profile, wait for Accepted, staple and validate the DMG. Re-mount and verify the enclosed app, then install/open the downloaded final bytes on a Mac. Record notarization submission IDs and artifact SHA-256/size. Preserve previous good installer/rollback targets.
+8. Publish only the final verified DMG and its checksum as a dedicated pixalauncher-v0.2.0 release. Do not place secrets in the release. Do not mark the launcher Ready from source tests or an unsigned candidate.
+9. Update only the marketing launcher download page and navigation to use the exact final release asset URL, correct version, Mac architecture and verified checksum. Recover CURRENT production source/routes before deployment, stage a preview, test and promote the same static build. Preserve all existing sixteen app downloads, backend, billing, activation APIs and user entitlements. Do not deploy stale website main.
+
+LIMITS TO COMMUNICATE
+Mac launcher installation only; Linux/Windows builds are library previews. Editor updates are explicit; the user quits the app and selects Update. Launcher self-update is not implemented. Existing strict Ed25519 manifest API is not a configured production feed; live discovery uses HTTPS GitHub metadata plus independently verified Apple app signatures/publisher identity. No claim of complete editor feature parity follows from launcher installation.
+
+The website launcher remains Coming soon until step 8/9. It must not advertise a nonexistent or unsigned launcher installer.

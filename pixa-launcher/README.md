@@ -1,33 +1,68 @@
-# Pixa launcher
+# Pixa Launcher 0.2.0
 
-The launcher is not a finished product. This directory is the catalog and download gate that has to exist before a desktop shell can install editors.
+Native Rust/egui desktop library for all sixteen Pixa editors. The Mac installer and release-discovery implementation now exist. This source is not an Apple-signed launcher release; the website launcher download must remain unavailable until the universal Mac candidate passes real-Mac acceptance and notarization.
 
-## Stack
+## What it does
 
-The validation core is a small Rust library, the same language as the editors. It has no GUI yet. A window that lists the sixteen apps comes after one editor can be installed from a signed manifest. The editors stay independently installable.
+- Browse sixteen apps with original Pixa product icons, category, search and installed-only filter.
+- Show Install, Update, Reinstall and Open, including installed and available versions.
+- Confirm each install; stream the download with progress/cancel and an exact size/SHA-256 check.
+- Check current stable GitHub releases on demand. Only the publisher repositories, exact product-prefixed tags (Shop uses vVERSION), matching universal DMG asset names and API SHA-256 digests are accepted. A missing digest or older release is never installed as an update.
+- On Mac, mount read-only, verify the app's exact bundle ID/version, universal Mach-O architectures, Apple signing chain, publisher Team 945M5X4DY3, and Gatekeeper verdict. Verify the staged copy again before replacement.
+- Install without elevation into ~/Applications. Existing /Applications apps can be opened; the launcher does not overwrite system-wide apps or request an administrator password.
+- Refuse replacement of a running app, a newer local version, a symlink destination or an untrusted existing app. Serialize installs across launcher processes with a filesystem lock.
+- Preserve a previous app in a hidden .pixa-previous-* folder. A failed file promotion restores it. Never remove documents, app data, or accounts.
+- Open account settings in the browser. Editors retain their own activation screens and account checks; the launcher does not create a second login/billing system or bypass editor access.
+- Provide an offline Help window with installation, updates, cancellation, account and recovery guidance.
 
-## Trust
+## Build and test
 
-A manifest entry is installable only when all of these hold:
+Requires Rust stable with rustfmt/clippy and platform build tools.
 
-- The product id is one of the sixteen explicit editor IDs, and its bundle ID matches that exact product.
-- The version is plain numeric semver, with no prerelease tag.
-- Artifact URLs match the exact product/version/architecture contract. Shop uses `lukeybird/pixashop` with `vVERSION`; Effects uses `lukeybird/pixaeffects` with `vVERSION`; other editors use product-prefixed tags in `lukeybird/pixaeffects`. Only universal Mac assets are currently accepted.
-- The URL path does not contain `.` or `..` segments.
-- Size is present, greater than zero, and at most 8 GiB.
-- SHA-256 is 64 hex characters.
-- The manifest body is exactly the bytes covered by a strict Ed25519 signature from the caller-supplied trusted verifying key, including whitespace. No production key is pinned yet.
-- Schema 2 requires positive `sequence` and Unix-second `expires_at`; entries must be unexpired and no more than 31 days from the trusted current time. The caller supplies trusted current time and a persisted minimum sequence, not values from the received entry.
-- Unknown/duplicate fields, bodies over 64 KiB, a foreign publisher and mismatched product/bundle/architecture are refused. Publisher identity is fixed to Team 945M5X4DY3.
+```
+cargo test --locked --manifest-path pixa-launcher/Cargo.toml
+cargo clippy --locked --manifest-path pixa-launcher/Cargo.toml --all-targets -- -D warnings
+cargo run --locked --manifest-path pixa-launcher/Cargo.toml
+cargo run --locked --manifest-path pixa-launcher/Cargo.toml -- --check-releases
+```
 
-API: `accept_manifest(body, signature_hex, verifying_key, now_unix_seconds, persisted_minimum_sequence)`. The installer must persist rollback protection and enforce minimum OS and installed-version ordering; the returned metadata is not installation approval.
+Linux/Windows builds are catalog previews: native install/Open is Mac only. They are not advertised as Windows/Linux launcher installers.
 
-The signing private key stays off this repository, off GitHub Actions artifacts, and off the website. Key rotation means shipping a new launcher build whose pinned verifying key accepts the next manifest key, then rejecting the old key after that launcher is itself installed. Expired or unsigned manifests are refused by the core. Rotation is a design requirement; an operational rotation/expiry state store is not implemented. There is no “latest” URL.
+## Universal Mac candidate
 
-## What this does not do yet
+On a Mac with Rust, the Xcode command-line tools and sufficient free disk:
 
-It does not download, mount, or launch an editor. It does not talk to the account service. It does not replace the website.
+```
+python3 pixa-launcher/package_macos.py --out "$HOME/Downloads/PixaLauncher-0.2.0-candidate"
+```
 
-## Current verification
+This builds both aarch64-apple-darwin and x86_64-apple-darwin with Cargo.lock, combines them, generates the original launcher icon and bundle metadata, includes notices, ad-hoc signs the local candidate, verifies its structure and records provenance in CANDIDATE.json. It refuses an existing output folder. It never submits to Apple or exports a key. You can provide already-built --arm64 and --intel binaries to avoid rebuilding; both are required.
 
-Five Rust tests pass, including signed wrong-bundle/publisher/architecture rejection, expiry/replay, duplicate fields, tampering and bounded manifest input. The wrong-bundle regression failed against the previous core. Optimized Linux library compilation passes; this is not a runnable launcher or an installer. GUI, actual download/install/open/uninstall/rollback, pinned production key, account integration, OS builds and native acceptance remain pending. Do not mark the launcher ready for notarization.
+The candidate has an ad-hoc signature, not a Developer ID identity. Do not publish it to customers or bypass Gatekeeper settings to call it approved.
+
+## Mac acceptance before signing
+
+Read ../CURSOR_PIXA_LAUNCHER_HANDOFF.txt. Exercise the actual candidate on a Mac:
+
+1. Library, icons, search, installed-only, Help and resize at minimum/default sizes.
+2. Live release discovery and offline/error fallback; independent versions and correct product pages.
+3. Install one small app and one larger app; observe real hash, mount, app signature, exact bundle/version, universal architecture and Gatekeeper checks. Verify the launcher refuses deliberately corrupt/foreign local fixtures in the unit tests.
+4. Cancel a download, retry, and close while busy. No partial app may appear.
+5. Open a correctly signed existing app. A running editor must block replacement. Save a document, quit, reinstall/update, then reopen and confirm the document remains intact.
+6. Verify another launcher instance cannot install concurrently. Previous app is preserved; restore it using the Help instructions if needed.
+7. Activation/account settings remain in the editor/browser. Test one real account without printing credentials.
+8. Retest installation after Apple signing/notarization before public distribution.
+
+## Release trust and updates
+
+The catalog shipped in the launcher is a fixed versioned fallback. Live discovery uses HTTPS and GitHub's published asset digests; it is **not** an Ed25519-signed feed. No discovered executable is trusted solely because GitHub returned it: the native install gate independently requires the exact Pixa bundle identity and publisher's Apple signature/Gatekeeper acceptance.
+
+The previous strict schema-2 Ed25519 manifest validator remains as a separate library API with expiry/sequence protections and tests. It is not presented as a configured production feed: no production Ed25519 key, rotation, or persistent signed-feed sequence store is installed. Do not confuse that unused API with live GitHub discovery.
+
+Check for app updates discovers editor releases only. It does not update/restart the launcher itself. Launcher self-update and automatic silent installs are deliberately absent; obtain future signed launcher versions from the website. Updates of editors are explicit and require quitting the editor.
+
+## Platform tools
+
+End-user Macs use /usr/bin/hdiutil, /usr/bin/ditto, /usr/bin/codesign, /usr/sbin/spctl, /usr/bin/sw_vers, /bin/ps and /usr/bin/open. The launcher reads the Mach-O universal header itself; customers do not need Rust, Xcode or lipo. Only the publisher's packaging script uses lipo/iconutil and Rust.
+
+No website, billing, editor binary, signing identity or published download is changed by building the launcher. No credentials belong in source or command arguments.
