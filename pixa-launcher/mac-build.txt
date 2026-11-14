@@ -1,0 +1,1 @@
+Pixa Launcher 0.2.0 universal unsigned candidate. Build only; Mac acceptance and Developer ID signing/notarization remain required before public download.

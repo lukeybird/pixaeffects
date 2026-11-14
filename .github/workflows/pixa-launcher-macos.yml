@@ -1,0 +1,70 @@
+name: Pixa Launcher Mac candidate
+on:
+  push:
+    branches: [pixa-suite-product]
+    paths:
+      - pixa-launcher/mac-build.txt
+      - .github/workflows/pixa-launcher-macos.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: pixa-launcher-mac-candidate
+  cancel-in-progress: false
+jobs:
+  universal-candidate:
+    runs-on: macos-15-intel
+    timeout-minutes: 90
+    env:
+      MACOSX_DEPLOYMENT_TARGET: "11.0"
+      CARGO_BUILD_JOBS: "3"
+      CARGO_INCREMENTAL: "0"
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      - name: Install Rust build tools
+        run: |
+          rustup toolchain install stable --profile minimal --component rustfmt --component clippy
+          rustup default stable
+          rustup target add aarch64-apple-darwin x86_64-apple-darwin
+      - name: Test launcher
+        run: |
+          cargo fmt --check --manifest-path pixa-launcher/Cargo.toml
+          cargo test --locked --manifest-path pixa-launcher/Cargo.toml
+          cargo clippy --locked --manifest-path pixa-launcher/Cargo.toml --all-targets -- -D warnings
+          python3 -m unittest discover -s pixa-launcher/tests -v
+      - name: Build and assemble both Mac architectures
+        run: python3 pixa-launcher/package_macos.py --out "$RUNNER_TEMP/PixaLauncher-0.2.0-candidate"
+      - name: Verify exact candidate and archive
+        shell: bash
+        run: |
+          set -euo pipefail
+          candidate="$RUNNER_TEMP/PixaLauncher-0.2.0-candidate"
+          app="$candidate/Pixa Launcher.app"
+          /usr/bin/lipo -archs "$app/Contents/MacOS/pixa-launcher"
+          /usr/bin/codesign --verify --deep --strict "$app"
+          "$app/Contents/MacOS/pixa-launcher" --version
+          python3 - "$candidate" "$GITHUB_SHA" <<'PY'
+          import hashlib,json,plistlib,sys
+          from pathlib import Path
+          root=Path(sys.argv[1]);app=root/'Pixa Launcher.app'
+          report=json.loads((root/'CANDIDATE.json').read_text())
+          assert report['source_commit']==sys.argv[2]
+          assert report['architecture']=='universal'
+          assert not report['source_dirty']
+          assert not report['notarized'] and not report['apple_signed']
+          info=plistlib.loads((app/'Contents/Info.plist').read_bytes())
+          assert info['CFBundleIdentifier']=='com.aiwebdesignfirm.pixalauncher'
+          assert info['CFBundleShortVersionString']=='0.2.0'
+          assert hashlib.sha256((app/'Contents/MacOS/pixa-launcher').read_bytes()).hexdigest()==report['executable_sha256']
+          PY
+          mkdir -p dist
+          /usr/bin/ditto -c -k --keepParent "$app" dist/pixa-launcher-0.2.0-macos-universal-UNSIGNED.zip
+          cp "$candidate/CANDIDATE.json" dist/CANDIDATE.json
+          shasum -a 256 dist/*.zip > dist/SHA256SUMS.txt
+      - name: Upload unsigned Mac test candidate
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: PixaLauncher-0.2.0-macOS-universal-UNSIGNED
+          path: dist/
+          retention-days: 14
+          if-no-files-found: error
