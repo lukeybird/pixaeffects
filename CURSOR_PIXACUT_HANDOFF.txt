@@ -1,0 +1,18 @@
+PIXACUT — START HERE
+
+Repository: lukeybird/pixaeffects
+Branch: pixacut-product
+Source preparation: pixacut/
+Full reconstructed application: pixacut/sources/PixaCut/
+
+1. Check out this branch in a separate clean checkout/worktree. Preserve unrelated work; never reset, clean or force-push. Do not build the EffectCraft app at the repository root.
+2. Read pixacut/README.md and pixacut/SOURCE.json. Run python3 pixacut/prepare.py. It reconstructs the complete source from the pinned public Nuzky commit and verified PixaCut changes; no ZIP upload or manual copy from ChatGPT is needed.
+3. In the reconstructed folder, read README.md, AGENTS.md, PIXACUT_STATUS.json, PIXACUT_ORIGIN.json, MODIFICATIONS.md, docs/BUILDING.md and docs/PIXACUT_GETTING_STARTED.md. Follow Nuzky/PixaCut's native build requirements, not the other editor forks' Rust-only assumptions. This app uses Tauri/React, FFmpeg, Whisper and ONNX.
+4. Finish the native branding/isolation and packaging audit. Keep original copyrights, GPL and third-party notices. Internal nuzky crate/binary names and .nuzky project format were retained for compatibility. Default app storage, Keychain service and IPC/MCP integration are separated. Check native agent-connection and packaging paths carefully. Settings contains a quick guide and retained tour; the new branding E2E scenario is tests/e2e/pixacut_branding.py and has not been run.
+5. Frontend lint, TypeScript and production frontend build passed in the preparation workspace. They do NOT establish native runtime success. Install the documented native SDKs/dependencies; run narrow tests and isolated repro flows, including branding, importing, editing, local captions, saving/reopening, audio/video export and recovery. Do not use real customer projects. Existing updater/feedback flows need adaptation because publisher updates and external support submission are deliberately disabled. Do not label the release complete from compile results alone.
+6. Build the actual Mac .app and verify its identity com.aiwebdesignfirm.pixacut, version and architecture. Upstream minimum macOS is 15.0. Do not call a host-only build universal. Determine whether both Intel and Apple Silicon are supported by the actual dependency stack before packaging; accurately label the architecture.
+7. Only after native acceptance, sign and notarize on the publisher Mac using the existing Developer ID Application identity for Team 945M5X4DY3 and its existing notarytool Keychain profile. Earlier machine records use pixaWorld / PixaShop-Notary; inspect which is actually present. Never export a .p12 or put an Apple password in an argument or GitHub. PixaCut is a Tauri app with native dependencies, so audit/sign nested code and required entitlements according to its build docs rather than blindly using the other editors' Rust-only packaging scripts.
+8. Configure only a PixaCut-owned updater key/feed if implementing updates; never restore the upstream key/feed. Keep suite billing/account changes separate and deliberate. No Pixa suite activation has been integrated into this prototype.
+9. A future binary release must include matching GPL corresponding source, build scripts and notices. This source branch is not proprietary relicensing, a signed release or website download approval. Publish source/binaries and a matching checksum only after verification. Preserve all other Pixa app release assets and the current production website/billing.
+
+No native build, installer, Apple acceptance or website availability is claimed by this handoff. Do not advertise PixaCut Ready yet.

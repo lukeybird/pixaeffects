@@ -1,0 +1,12 @@
+{
+  "name": "PixaCut",
+  "version": "0.1.10-alpha",
+  "upstream": "https://github.com/nuzkyapp/nuzky",
+  "upstream_commit": "13dec1d70da91b5506ccceec3e05b275de708314",
+  "license": "GPL-3.0-or-later",
+  "bundle_id": "com.aiwebdesignfirm.pixacut",
+  "status": "private local rebranding prototype; not a signed installer",
+  "updates": "disabled pending publisher key/feed",
+  "publication": "pending user licensing choice; no repository or public release created",
+  "compatibility": "internal nuzky crate/protocol identifiers and .nuzky documents retained"
+}

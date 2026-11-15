@@ -1,0 +1,32 @@
+{
+  "name": "PixaCut",
+  "upstream_commit": "13dec1d70da91b5506ccceec3e05b275de708314",
+  "stage": "local branding prototype",
+  "implemented": [
+    "PixaCut display branding and original pixel C icons",
+    "separate application bundle identity",
+    "separate default data/cache/IPC/Keychain/MCP identities",
+    "retained built-in tour and added Settings quick guide",
+    "upstream signed updater disabled; key/config removed",
+    "external support submissions disabled; diagnostic reports remain local",
+    "GPL and upstream attributions retained"
+  ],
+  "checks": {
+    "frontend_lint": "passed",
+    "typescript_and_frontend_production_build": "passed",
+    "native_compile": "not run; Rust toolchain and WebKitGTK SDK are unavailable in this workspace",
+    "native_gui_and_editor_export": "not run",
+    "new_native_branding_e2e": "scenario added; not run",
+    "Mac_signing_notarization": "not done"
+  },
+  "pending": [
+    "owner GPL distribution decision",
+    "complete native branding and packaging audit",
+    "Rust/native build and actual editor/AI/save/import/export acceptance",
+    "own publisher updater key/feed",
+    "Pixa account integration if desired",
+    "platform installers and Apple signing/notarization",
+    "own repository/publication/website/launcher integration"
+  ],
+  "published": false
+}
