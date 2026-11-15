@@ -1,0 +1,1 @@
+Check existing CI credentials for PixaCut Apple notarization. Do not expose credentials, export keys, publish unsigned downloads or claim Apple acceptance from preflight.

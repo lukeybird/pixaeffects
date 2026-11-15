@@ -1,0 +1,38 @@
+name: PixaCut Apple notarization preflight
+on:
+  push:
+    branches: [pixacut-product]
+    paths:
+      - .github/workflows/pixacut-apple-preflight.yml
+      - pixacut/apple-notary-request.txt
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  apple-credentials:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      # No checkout or dependency code runs in this credential-bearing job.
+      # Report missing variable names only, never values or certificate contents.
+      - name: Verify existing CI signing and notarization credentials
+        env:
+          APPLE_CERTIFICATE: ${{ secrets.APPLE_CERTIFICATE }}
+          APPLE_CERTIFICATE_PASSWORD: ${{ secrets.APPLE_CERTIFICATE_PASSWORD }}
+          APPLE_ID: ${{ secrets.APPLE_ID }}
+          APPLE_APP_PASSWORD: ${{ secrets.APPLE_APP_PASSWORD }}
+          APPLE_PASSWORD: ${{ secrets.APPLE_PASSWORD }}
+        run: |
+          python3 - <<'PY'
+          import os, sys
+          required = ['APPLE_CERTIFICATE', 'APPLE_CERTIFICATE_PASSWORD', 'APPLE_ID']
+          missing = [name for name in required if not os.environ.get(name)]
+          if not (os.environ.get('APPLE_APP_PASSWORD') or os.environ.get('APPLE_PASSWORD')):
+              missing.append('APPLE_APP_PASSWORD (or APPLE_PASSWORD)')
+          if missing:
+              print('::error::PixaCut notarization blocked: missing repository Actions secrets: ' + ', '.join(missing))
+              print('No certificate was decoded, no signing key was exported and no Apple submission was made.')
+              sys.exit(1)
+          print('Required CI credential fields are configured. Values were not displayed or decoded.')
+          print('Next gates: build a PixaCut Mac app, verify its bundle/team/architecture, then sign and submit from a fresh signing job.')
+          PY
