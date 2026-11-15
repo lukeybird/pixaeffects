@@ -1,0 +1,22 @@
+{
+  "checked_at": "2026-11-15",
+  "repository": "lukeybird/pixaeffects",
+  "branch": "pixacut-product",
+  "run_id": 43749518211,
+  "run_url": "https://github.com/lukeybird/pixaeffects/actions/runs/43749518211",
+  "source_commit": "3f163992e7266a44e546cdea3b70f25b8fa1069c",
+  "conclusion": "blocked: missing CI Apple credentials",
+  "missing_actions_secrets": [
+    "APPLE_CERTIFICATE",
+    "APPLE_CERTIFICATE_PASSWORD",
+    "APPLE_ID",
+    "APPLE_APP_PASSWORD (or APPLE_PASSWORD)"
+  ],
+  "apple_submission_made": false,
+  "notarized": false,
+  "signing_key_exported": false,
+  "certificate_decoded": false,
+  "customer_release_published": false,
+  "website_changed": false,
+  "next": "Configure an owner-approved isolated CI signing route. A dedicated Mac signing runner may use the existing Keychain identity/profile without exporting keys; GitHub-hosted signing requires securely provisioned CI credentials. Neither is available to this workspace. Do not send secret values in chat or commit them."
+}

@@ -1,3 +1,10 @@
+GITHUB APPLE NOTARIZATION ATTEMPT — 2026-11-15
+Ran https://github.com/lukeybird/pixaeffects/actions/runs/43749518211 on exact source 3f163992e7266a44e546cdea3b70f25b8fa1069c. Credential preflight failed because APPLE_CERTIFICATE, APPLE_CERTIFICATE_PASSWORD, APPLE_ID and APPLE_APP_PASSWORD (or APPLE_PASSWORD) are absent in this repository's Actions context. This is not an Apple rejection: no certificate was decoded, no signing key was exported and no Apple submission was made. See pixacut/APPLE_NOTARIZATION_STATUS.json. PixaCut remains unbuilt/unnotarized as a native Mac release; source/frontend preparation is not a finished installer.
+
+For GitHub automation, configure an owner-approved signing route first. Prefer a dedicated isolated Mac signing runner that uses an existing Keychain identity/profile if the owner prohibits exporting keys. Do not expose a personal Mac or its files to untrusted PR jobs. A GitHub-hosted signing job instead needs securely provisioned Apple CI credentials; none were found. Do not retrieve secret values into chat/logs, export an existing private key without authorization, commit credentials or pretend GitHub access provides Apple signing access. The credential-check workflow currently checks GitHub-hosted secret availability only; it does not test any external Mac Keychain. Native build/testing and final notarization/publication remain separate required gates.
+
+PREVIOUS SOURCE HANDOFF (preserved)
+
 PIXACUT — START HERE
 
 Repository: lukeybird/pixaeffects
